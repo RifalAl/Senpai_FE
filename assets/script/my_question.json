@@ -1,0 +1,47 @@
+{
+    "iTotalRecords": 5,
+    "iTotalDisplayRecords": 5,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": null,
+                 "date" : "20/11/2019",
+                 "question" : "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
+                 "asked_by" : "Rifaldi ",
+                 "answers" : "7",
+                 "status" : "Open",
+                 "action" : null
+                
+             },
+             {
+                 "no": null,
+                 "date" : "20/02/2020",
+                 "question" : "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
+                 "asked_by" : "Rifaldi ",
+                 "answers" : "5",
+                 "status" : "Open",
+                 "action" : null
+                
+             },
+             {
+                 "no": null,
+                 "date" : "20/02/2020",
+                 "question" : "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
+                 "asked_by" : "Rifaldi ",
+                 "answers" : "5",
+                 "status" : "Open",
+                 "action" : null
+                
+             },
+             {
+                 "no": null,
+                 "date" : "20/02/2020",
+                 "question" : "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
+                 "asked_by" : "Rifaldi ",
+                 "answers" : "5",
+                 "status" : "Open",
+                 "action" : null
+                
+             }
+]
+}

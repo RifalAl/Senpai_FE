@@ -1,0 +1,119 @@
+.kt-container {
+	width: 100%;
+	padding: 10px;
+}
+.kt-portlet .kt-portlet__body {
+	padding: 10px 10px;
+}
+.icon-size{
+	width: 25px;
+}
+
+.image-cropper {
+	position: relative;
+	overflow: hidden;
+}
+
+#foto_user{
+	/*display: inline;
+	margin: 0 auto;
+	height: 100%;
+	width: auto;
+	object-fit: cover;
+	object-position: center right;*/
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	margin: 5px;
+
+	object-fit: cover;
+	object-position: center right;
+}
+
+.image-cropper-background {
+	width: 100%;
+	height: 170px;
+	position: absolute;
+	overflow: hidden;
+	border-radius: 5px;
+	left: 0;
+	top: 0;
+}
+
+#background_user{
+	display: inline;
+	margin: 0 auto;
+	height: auto;
+	width: 100%;
+}
+
+input[type=file]{
+	display: none;
+	/*padding: 5px;
+	margin-top: 15px;
+	background: #dedede;
+	width: inherit;
+	max-width: 250px;
+	border-radius: 4px;*/
+}
+.custom-file-upload {
+	border: 1px solid #ccc;
+	display: inline-block;
+	padding: 6px 12px;
+	cursor: pointer;
+}
+.kt-widget.kt-widget--user-profile-4 .kt-widget__head .kt-widget__media .kt-widget__img {
+	max-width: 90px;
+	max-height: 90px;
+}
+
+.container-change-img {
+	position: absolute;
+	bottom: 0px;
+	right: 110px;
+}
+
+.container-change-bg {
+	position: absolute;
+	bottom: -43px;
+	right: 0px;
+}
+
+.button-success {
+	border-radius: 50%;
+}
+
+.portlet-description {
+	padding: 15px;
+	margin-top: 40px;
+}
+
+input[type=text] {
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  font-size: 1.3rem;
+  width: 210px;
+  height: 20px;
+  color: white;
+  text-align: center;
+  border-bottom: 1px solid gray;
+}
+
+input[type=text]:focus {
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  outline: 0;
+  width: 210px;
+  height: 30px;
+}
+
+.center { 
+  height: 30px;
+  width: 210px; 
+  overflow: auto;
+  margin: auto; 
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0; 
+}
