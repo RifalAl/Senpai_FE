@@ -88,32 +88,37 @@ input[type=file]{
 	margin-top: 40px;
 }
 
-input[type=text] {
-  border: none;
-  background-color: transparent;
-  outline: 0;
-  font-size: 1.3rem;
-  width: 210px;
-  height: 20px;
-  color: white;
-  text-align: center;
-  border-bottom: 1px solid gray;
+#name {
+	border: none;
+	background-color: transparent;
+	outline: 0;
+	font-size: 1.3rem;
+	width: 210px;
+	height: 20px;
+	color: white;
+	text-align: center;
+	border-bottom: 1px solid gray;
 }
 
-input[type=text]:focus {
-  border: none;
-  border-bottom: 1px solid white;
-  background-color: transparent;
-  outline: 0;
-  width: 210px;
-  height: 30px;
+#name:focus {
+	border: none;
+	border-bottom: 1px solid white;
+	background-color: transparent;
+	outline: 0;
+	width: 210px;
+	height: 30px;
 }
 
 .center { 
-  height: 30px;
-  width: 210px; 
-  overflow: auto;
-  margin: auto; 
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0; 
+	height: 30px;
+	width: 210px; 
+	overflow: auto;
+	margin: auto; 
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0; 
 }
+
+.form-group {
+	margin-bottom: 1.1rem;
+}
+
