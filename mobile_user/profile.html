@@ -50,6 +50,21 @@
 			left: 70px;
 			bottom: 15px;
 		}
+		.image-cropper-background {
+			width: 100%;
+			height: 190px;
+			position: absolute;
+			overflow: hidden;
+			border-radius: 5px;
+			left: 0;
+			top: 0;
+		}
+		#background_user{
+			display: inline;
+			margin: 0 auto;
+			height: auto;
+			width: 100%;
+		}
 		@media (max-width: 720px){
 			.question-info {
 				left: 55px;
@@ -595,8 +610,11 @@
 								<div class="kt-portlet">
 									<div class="kt-portlet__body portlet_profil">
 										<div class="kt-widget kt-widget--user-profile-4">
-											<div id="bg-image" class="bg" style="background-image: url('../assets/media/bg/bg-10.jpg');">
-												<div class="kt-widget__head">
+											<div id="bg-image" class="bg" style="position: relative;">
+												<div align="center" class="image-cropper-background">
+													<img id="background_user" name="foto_user" style="" src="../assets/media/bg/bg-10.jpg" alt="image">
+												</div>
+												<div class="kt-widget__head" style="position: relative;">
 													<div class="kt-widget__media">
 														<img style="" class="kt-widget__img kt-hidden-" src="../assets/media//users/user5.jpg" alt="image">
 														<div class="round-badge">

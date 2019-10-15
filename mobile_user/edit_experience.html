@@ -544,14 +544,11 @@
 									<div class="kt-portlet__head">
 										<div class="kt-portlet__head-label">
 											<h3 class="kt-portlet__head-title">
-												Edit Profile
+												Edit Experience
 											</h3>
 										</div>
 										<div class="kt-portlet__head-toolbar">
 											<div class="kt-portlet__head-actions">
-												<!-- <button class="btn btn-success btn-sm btn-bold">
-													Save
-												</button> -->
 											</div>
 										</div>
 									</div>
@@ -559,75 +556,41 @@
 										<form class="kt-form">
 											<div class="kt-portlet__body portlet_profil">
 												<div class="kt-widget kt-widget--user-profile-4">
-													<div id="bg-image" class="bg" style="position: relative;">
-														<div align="center" class="image-cropper-background">
-															<img id="background_user" name="foto_user" style="" src="../assets/media/bg/bg-10.jpg" alt="image">
-														</div>
-														<div class="kt-widget__head" style="position: relative;">
-															<div class="kt-widget__media">
-																<div align="center" class="image-cropper">
-																	<img id="foto_user" name="foto_user" style="" src="../assets/media/users/user5.jpg" alt="image">
-																</div>
+													<div id="container-experience" style="padding:8px">
+														<div style="position: relative;" class="list-experience">
+															<div class="container-del">
+																<button id="btn_hapus_input" class="btn btn-sm btn-outline-secondary kt-hidden">
+																	<span class="fa fa-trash-alt"></span> Delete
+																</button>
 															</div>
-															<div class="container-change-img">
-																<label for="upload_foto" class="btn btn-outline-hover-info">
-																	<span style="font-size: 1.5rem;color: white" class="fa fa-camera"></span>
-																</label>
-																<input id="upload_foto" name="upload_foto" type='file' onchange="readURL(this);" />
+															<div class="form-group">
+																<label>Experience Tittle</label>
+																<input id="experience_title" name="experience_title" type="text" class="form-control" placeholder="enter your experience tittle">
 															</div>
-															<div style="position: absolute;left:0;right: 0;bottom: -20px" class="kt-widget__content">
-																<div class="kt-widget__section">
-																	<input id="name" name="name" type="text" class="center" value="Sean Stone" />
-																</div>
+															<div class="form-group">
+																<label>Company</label>
+																<input id="experince_office" name="experince_office" type="text" class="form-control" placeholder="enter your experience company">
 															</div>
-															
-														</div>
-														<div class="container-change-bg">
-															<label for="upload_bg" class="btn btn-outline-hover-info">
-																<span style="font-size: 1.5rem;color: white" class="fa fa-camera"></span>
-															</label>
-															<input id="upload_bg" name="upload_bg" type='file' onchange="readURL_bg(this);" />
-														</div>
-													</div>
-													<div class="portlet-description">
-														<div class="form-group">
-															<label>Job</label>
-															<input id="job" name="job" type="text" class="form-control" placeholder="enter your job">
-														</div>
-														<div class="form-group">
-															<label>City</label>
-															<input id="city" name="city" type="text" class="form-control" placeholder="enter your city">
-														</div>
-														<div class="form-group">
-															<label for="description">Description</label>
-															<textarea class="form-control" id="description" placeholder="tell everyone about you" rows="3"></textarea>
-														</div>
-														<div class="form-group">
-															<label>Interest</label>
-															<input id="tag_interest" name='tags' placeholder='type interest...' value='#BigData,#DataAnalys,#Housing' autofocus data-blacklist='.NET,PHP'>
-														</div>
-														<div class="form-group">
-															<label>Current Goals</label>
-															<input id="tag_goals" placeholder='type current goals' value='Back to the Future, Whiplash' autofocus data-blacklist='.NET,PHP'>	
-														</div>
-														<div class="form-group">
-															<label> <i class="socicon-facebook"></i> Facebook</label>
-															<input id="facebook_link" name="facebook_link" type="text" class="form-control" placeholder="enter your facebook">
-														</div>
-														<div class="form-group">
-															<label> <i class="socicon-twitter"></i> Twitter</label>
-															<input id="twitter_link" name="twitter_link" type="text" class="form-control" placeholder="enter your twitter">
-														</div>
-														<div class="form-group">
-															<label> <i class="socicon-linkedin"></i> Linked In</label>
-															<input id="linkedin_link" name="linkedin_link" type="text" class="form-control" placeholder="enter your LinkedIn">
+															<div class="form-group">
+																<label >Date</label>
+																<input id="experience_date" name="experience_date" type="text" class="form-control datepicker_mode" placeholder="enter your experience date">
+															</div>
+															<div class="form-group">
+																<label>Location</label>
+																<input id="experince_location" name="experince_location" type="text" class="form-control" placeholder="enter your experience location">
+															</div>
+															<div class="form-group">
+																<label for="experience_description">Description</label>
+																<textarea class="form-control" id="experience_description" placeholder="tell more about your experience" rows="3"></textarea>
+															</div>
+															<div class="kt-separator kt-separator--dashed"></div>
 														</div>
 													</div>
 												</div>
 												<div class="kt-portlet__foot kt-align-right">
-													<a href="edit_experience.html" class="btn  btn-info btn-bold">
-														<i class="fa fa-clipboard"></i> Edit Experience
-													</a>
+													<button id="btn_add_experience" type="button" class="btn  btn-info btn-bold">
+														<i class="fa fa-plus"></i> Add Experience
+													</button>
 													<button class="btn  btn-success btn-bold">
 														<i class="fa fa-save"></i> Save
 													</button>
@@ -1128,156 +1091,92 @@
 	<!--end::Global Theme Bundle -->
 	<!--begin::Page Vendors(used by this page) -->
 	<script src="../assets/plugins/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
-	<script src="../assets/plugins/custom/gmaps/gmaps.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
 	<!--begin::Page Scripts(used by this page) -->
 	<!--end::Page Scripts -->
 	<script>
-		function readURL(input) {
-			if (input.files && input.files[0]) {
-				var reader = new FileReader();
-				reader.onload = function (e) {
-					$('#foto_user')
-					.attr('src', e.target.result);
-				};
-				reader.readAsDataURL(input.files[0]);
-			}
-		}
-		function readURL_bg(input) {
-			if (input.files && input.files[0]) {
-				var reader = new FileReader();
-				reader.onload = function (e) {
-					$('#background_user')
-					.attr('src', e.target.result);
-				};
-				reader.readAsDataURL(input.files[0]);
-			}
-		}
-	</script>
-	<script>
-		var KTTagify = function() {
-			var demo1 = function() {
-				var input = document.getElementById('tag_interest'),
-				tagify = new Tagify(input, {
-					whitelist: ["#DataVisualization","#DataAnalys","#BigData","Housing","A# .NET", "A# (Axiom)", "A-0 System", "A+", "A++", "ABAP", "ABC", "ABC ALGOL", "ABSET", "ABSYS", "ACC", "Accent", "Ace DASL", "ACL2", "Avicsoft", "ACT-III", "Action!", "ActionScript", "Ada", "Adenine", "Agda", "Agilent VEE", "Agora", "AIMMS", "Alef", "ALF", "ALGOL 58", "ALGOL 60", "ALGOL 68", "ALGOL W", "Alice", "Alma-0", "AmbientTalk", "Amiga E", "AMOS", "AMPL", "Apex (Salesforce.com)", "APL", "AppleScript", "Arc", "ARexx", "Argus", "AspectJ", "Assembly language", "ATS", "Ateji PX", "AutoHotkey", "Autocoder", "AutoIt", "AutoLISP / Visual LISP", "Averest", "AWK", "Axum", "Active Server Pages", "ASP.NET", "B", "Babbage", "Bash", "BASIC", "bc", "BCPL", "BeanShell", "Batch (Windows/Dos)", "Bertrand", "BETA", "Bigwig", "Bistro", "BitC", "BLISS", "Blockly", "BlooP", "Blue", "Boo", "Boomerang", "Bourne shell (including bash and ksh)", "BREW", "BPEL", "B", "C--", "C++ – ISO/IEC 14882", "C# – ISO/IEC 23270", "C/AL", "Caché ObjectScript", "C Shell", "Caml", "Cayenne", "CDuce", "Cecil", "Cesil", "Céu", "Ceylon", "CFEngine", "CFML", "Cg", "Ch", "Chapel", "Charity", "Charm", "Chef", "CHILL", "CHIP-8", "chomski", "ChucK", "CICS", "Cilk", "Citrine (programming language)", "CL (IBM)", "Claire", "Clarion", "Clean", "Clipper", "CLIPS", "CLIST", "Clojure", "CLU", "CMS-2", "COBOL – ISO/IEC 1989", "CobolScript – COBOL Scripting language", "Cobra", "CODE", "CoffeeScript", "ColdFusion", "COMAL", "Combined Programming Language (CPL)", "COMIT", "Common Intermediate Language (CIL)", "Common Lisp (also known as CL)", "COMPASS", "Component Pascal", "Constraint Handling Rules (CHR)", "COMTRAN", "Converge", "Cool", "Coq", "Coral 66", "Corn", "CorVision", "COWSEL", "CPL", "CPL", "Cryptol", "csh", "Csound", "CSP", "CUDA", "Curl", "Curry", "Cybil", "Cyclone", "Cython", "Java", "Javascript", "M2001", "M4", "M#", "Machine code", "MAD (Michigan Algorithm Decoder)", "MAD/I", "Magik", "Magma", "make", "Maple", "MAPPER now part of BIS", "MARK-IV now VISION:BUILDER", "Mary", "MASM Microsoft Assembly x86", "MATH-MATIC", "Mathematica", "MATLAB", "Maxima (see also Macsyma)", "Max (Max Msp – Graphical Programming Environment)", "Maya (MEL)", "MDL", "Mercury", "Mesa", "Metafont", "Microcode", "MicroScript", "MIIS", "Milk (programming language)", "MIMIC", "Mirah", "Miranda", "MIVA Script", "ML", "Model 204", "Modelica", "Modula", "Modula-2", "Modula-3", "Mohol", "MOO", "Mortran", "Mouse", "MPD", "Mathcad", "MSIL – deprecated name for CIL", "MSL", "MUMPS", "Mystic Programming L"],
-					blacklist: [".NET", "PHP"],
-				})
-
-
-				// document.getElementById('tag_interest_remove').addEventListener('click', tagify.removeAllTags.bind(tagify))
-
-				tagify.on('add', onAddTag)
-				.on('remove', onRemoveTag)
-				.on('input', onInput)
-				.on('edit', onTagEdit)
-				.on('invalid', onInvalidTag)
-				.on('click', onTagClick)
-				.on('dropdown:show', onDropdownShow)
-				.on('dropdown:hide', onDropdownHide)
-
-				function onAddTag(e) {
-					console.log("onAddTag: ", e.detail);
-					console.log("original input value: ", input.value)
-					tagify.off('add', onAddTag) 
+		var KTBootstrapDatepicker = function () {
+			var arrows;
+			if (KTUtil.isRTL()) {
+				arrows = {
+					leftArrow: '<i class="la la-angle-right"></i>',
+					rightArrow: '<i class="la la-angle-left"></i>'
 				}
-
-				function onRemoveTag(e) {
-					console.log(e.detail);
-					console.log("tagify instance value:", tagify.value)
-				}
-
-				function onInput(e) {
-					console.log(e.detail);
-					console.log("onInput: ", e.detail);
-				}
-
-				function onTagEdit(e) {
-					console.log("onTagEdit: ", e.detail);
-				}
-
-				function onInvalidTag(e) {
-					console.log("onInvalidTag: ", e.detail);
-				}
-
-				function onTagClick(e) {
-					console.log(e.detail);
-					console.log("onTagClick: ", e.detail);
-				}
-
-				function onDropdownShow(e) {
-					console.log("onDropdownShow: ", e.detail)
-				}
-
-				function onDropdownHide(e) {
-					console.log("onDropdownHide: ", e.detail)
+			} else {
+				arrows = {
+					leftArrow: '<i class="la la-angle-left"></i>',
+					rightArrow: '<i class="la la-angle-right"></i>'
 				}
 			}
-			var demo2 = function() {
-				var input = document.getElementById('tag_goals'),
-				tagify = new Tagify(input, {
-					whitelist: ["#DataVisualization","#DataAnalys","#BigData","Housing","A# .NET", "A# (Axiom)", "A-0 System", "A+", "A++", "ABAP", "ABC", "ABC ALGOL", "ABSET", "ABSYS", "ACC", "Accent", "Ace DASL", "ACL2", "Avicsoft", "ACT-III", "Action!", "ActionScript", "Ada", "Adenine", "Agda", "Agilent VEE", "Agora", "AIMMS", "Alef", "ALF", "ALGOL 58", "ALGOL 60", "ALGOL 68", "ALGOL W", "Alice", "Alma-0", "AmbientTalk", "Amiga E", "AMOS", "AMPL", "Apex (Salesforce.com)", "APL", "AppleScript", "Arc", "ARexx", "Argus", "AspectJ", "Assembly language", "ATS", "Ateji PX", "AutoHotkey", "Autocoder", "AutoIt", "AutoLISP / Visual LISP", "Averest", "AWK", "Axum", "Active Server Pages", "ASP.NET", "B", "Babbage", "Bash", "BASIC", "bc", "BCPL", "BeanShell", "Batch (Windows/Dos)", "Bertrand", "BETA", "Bigwig", "Bistro", "BitC", "BLISS", "Blockly", "BlooP", "Blue", "Boo", "Boomerang", "Bourne shell (including bash and ksh)", "BREW", "BPEL", "B", "C--", "C++ – ISO/IEC 14882", "C# – ISO/IEC 23270", "C/AL", "Caché ObjectScript", "C Shell", "Caml", "Cayenne", "CDuce", "Cecil", "Cesil", "Céu", "Ceylon", "CFEngine", "CFML", "Cg", "Ch", "Chapel", "Charity", "Charm", "Chef", "CHILL", "CHIP-8", "chomski", "ChucK", "CICS", "Cilk", "Citrine (programming language)", "CL (IBM)", "Claire", "Clarion", "Clean", "Clipper", "CLIPS", "CLIST", "Clojure", "CLU", "CMS-2", "COBOL – ISO/IEC 1989", "CobolScript – COBOL Scripting language", "Cobra", "CODE", "CoffeeScript", "ColdFusion", "COMAL", "Combined Programming Language (CPL)", "COMIT", "Common Intermediate Language (CIL)", "Common Lisp (also known as CL)", "COMPASS", "Component Pascal", "Constraint Handling Rules (CHR)", "COMTRAN", "Converge", "Cool", "Coq", "Coral 66", "Corn", "CorVision", "COWSEL", "CPL", "CPL", "Cryptol", "csh", "Csound", "CSP", "CUDA", "Curl", "Curry", "Cybil", "Cyclone", "Cython", "Java", "Javascript", "M2001", "M4", "M#", "Machine code", "MAD (Michigan Algorithm Decoder)", "MAD/I", "Magik", "Magma", "make", "Maple", "MAPPER now part of BIS", "MARK-IV now VISION:BUILDER", "Mary", "MASM Microsoft Assembly x86", "MATH-MATIC", "Mathematica", "MATLAB", "Maxima (see also Macsyma)", "Max (Max Msp – Graphical Programming Environment)", "Maya (MEL)", "MDL", "Mercury", "Mesa", "Metafont", "Microcode", "MicroScript", "MIIS", "Milk (programming language)", "MIMIC", "Mirah", "Miranda", "MIVA Script", "ML", "Model 204", "Modelica", "Modula", "Modula-2", "Modula-3", "Mohol", "MOO", "Mortran", "Mouse", "MPD", "Mathcad", "MSIL – deprecated name for CIL", "MSL", "MUMPS", "Mystic Programming L"],
-					blacklist: [".NET", "PHP"],
-				})
+			var demos = function () {
+				$('.datepicker_mode, .datepicker_mode_validate').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows,
+					format: 'dd/MM/yyyy'
+				});
 
+				$('.datepicker_mode_modal').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows
+				});
 
-				// document.getElementById('tag_goals_remove').addEventListener('click', tagify.removeAllTags.bind(tagify))
-
-				tagify.on('add', onAddTag)
-				.on('remove', onRemoveTag)
-				.on('input', onInput)
-				.on('edit', onTagEdit)
-				.on('invalid', onInvalidTag)
-				.on('click', onTagClick)
-				.on('dropdown:show', onDropdownShow)
-				.on('dropdown:hide', onDropdownHide)
-
-				function onAddTag(e) {
-					console.log("onAddTag: ", e.detail);
-					console.log("original input value: ", input.value)
-					tagify.off('add', onAddTag) 
-				}
-
-				function onRemoveTag(e) {
-					console.log(e.detail);
-					console.log("tagify instance value:", tagify.value)
-				}
-
-				function onInput(e) {
-					console.log(e.detail);
-					console.log("onInput: ", e.detail);
-				}
-
-				function onTagEdit(e) {
-					console.log("onTagEdit: ", e.detail);
-				}
-
-				function onInvalidTag(e) {
-					console.log("onInvalidTag: ", e.detail);
-				}
-
-				function onTagClick(e) {
-					console.log(e.detail);
-					console.log("onTagClick: ", e.detail);
-				}
-
-				function onDropdownShow(e) {
-					console.log("onDropdownShow: ", e.detail)
-				}
-
-				function onDropdownHide(e) {
-					console.log("onDropdownHide: ", e.detail)
-				}
 			}
+
 			return {
 				init: function() {
-					demo1();
-					demo2();
+					demos(); 
 				}
 			};
 		}();
 
-		jQuery(document).ready(function() {
-			KTTagify.init();
+		jQuery(document).ready(function() {    
+			KTBootstrapDatepicker.init();
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			var i = 2;
+			$("#btn_add_experience").click(function() {
+				$("#container-experience").append(`
+					<div data-id=`+i+` style="position: relative;" class="list-experience list-exp">
+					<div class="container-del">
+					<button data-id=`+i+` id="btn_hapus_input" class="btn btn-sm btn-outline-secondary">
+					<span class="fa fa-trash-alt"></span> Delete
+					</button>
+					</div>
+					<div class="form-group">
+					<label>Experience Tittle</label>
+					<input id="experience_title" name="experience_title" type="text" class="form-control" placeholder="enter your experience tittle">
+					</div>
+					<div class="form-group">
+					<label>Company</label>
+					<input id="experince_office" name="experince_office" type="text" class="form-control" placeholder="enter your experience company">
+					</div>
+					<div class="form-group">
+					<label >Date</label>
+					<input id="experience_date" name="experience_date" type="text" class="form-control datepicker_mode" placeholder="enter your experience date">
+					</div>
+					<div class="form-group">
+					<label>Location</label>
+					<input id="experince_location" name="experince_location" type="text" class="form-control" placeholder="enter your experience location">
+					</div>
+					<div class="form-group">
+					<label for="experience_description">Description</label>
+					<textarea class="form-control" id="experience_description" placeholder="tell more about your experience" rows="3"></textarea>
+					</div>
+					<div class="kt-separator kt-separator--dashed"></div>
+					</div>`);
+				i++;
+			});
+			$('#container-experience').on('click','#btn_hapus_input', function (e) {
+				let id = $(this).data('id');
+				console.log(id);
+				$('.list-exp[data-id="' + id + '"]').remove();
+			});
 		});
 	</script>
 </body>
