@@ -329,7 +329,14 @@ html {
 	right: -5px;
 	top: 0;
 }
-
+.solved-badge {
+	position: absolute;
+	bottom: -2px;
+	right: 55px;
+}
+.verified-badge-out {
+	padding: .4rem .75rem !important; 
+}
 
 .
 
@@ -901,6 +908,30 @@ html {
 		background-color: white;
 		width: 100%;
 	}
+	.solved-badge {
+		position: absolute;
+		bottom: 3px;
+		right: 188px;
+	}
+	.change-padding {
+		font-size: 0.8rem !important;
+		padding: 0.55rem 0.75rem !important;
+	}
+	.verified-badge {
+		position: absolute;
+		bottom: 2px;
+		left: 90px;
+		font-size: 0.7rem !important;
+		padding: .1rem .75rem !important;
+	}
+}
+
+@media(max-width: 360px){
+	.solved-badge {
+		position: absolute;
+		bottom: 3px;
+		right: 176px;
+	}
 }
 
 @media (max-width: 320px) {
@@ -1050,6 +1081,22 @@ html {
 		bottom: 45px;
 		background-color: white;
 		width: 100%;
+	}
+	.solved-badge {
+		position: absolute;
+		bottom: 3px;
+		right: 135px;
+	}
+	.change-padding {
+		font-size: 0.8rem !important;
+		padding: 0.55rem 0.75rem !important;
+	}
+	.verified-badge {
+		position: absolute;
+		bottom: 2px;
+		left: 90px;
+		font-size: 0.7rem !important;
+		padding: .1rem .75rem !important;
 	}
 
 }

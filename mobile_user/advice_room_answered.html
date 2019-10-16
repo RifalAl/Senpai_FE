@@ -637,7 +637,7 @@
 									<div class="portlet-komentar">
 										<div style="padding: 10px;margin-top:10px" class="kt-portlet__body">
 											<div class="" id="all_questions" name="all_questions">
-												<div class="kt-portlet">
+												<div style="position: relative;" class="kt-portlet">
 													<div class="kt-portlet__head">
 														<div class="kt-portlet__head-label">
 															<a href="#" class="kt-media kt-media--sm kt-media--circle">
@@ -647,14 +647,12 @@
 														<div class="question-info">
 															<h6><span id="the_answer" name="the_answer">Fascal Ivandry</span></h6>
 															<p><span id="answer_job" name="answer_job">Product Manager at Artistektur</span></p>
-															<div style="flex-wrap : wrap;">
-																<span id="answer_time">4d ago</span>
-																<span id="badge_status" name="badge_status" class="btn btn-sm btn-label-success btn-pill badge_kecil badge-verified">Verified Senpai</span>
-															</div>
+															<p id="answer_time">4d ago</p>
 														</div>
+														<span style="" class="btn btn-sm btn-label-success btn-pill verified-badge change-padding badge_status badge-verified">Verified Senpai</span>
 														<div class="kt-portlet__head-toolbar">
 															<div class="kt-portlet__head-actions">
-																<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill badge_kecil badge-verified-2">Verified Senpai</span>
+																<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill badge_kecil badge-verified-2 verified-badge-out">Verified Senpai</span>
 																<a  id="add_user_2" name="add_user_2" href="#" class="btn btn-clean btn-sm padding-lr-01">
 																	<i class="fa fa-user-plus"></i>
 																</a>
@@ -691,9 +689,7 @@
 																<div class="question-info">
 																	<h6><span id="the_answer" name="the_answer">Fascal Ivandry</span></h6>
 																	<p><span id="answer_job" name="answer_job">Product Manager at Artistektur</span></p>
-																	<div style="flex-wrap : wrap;">
-																		<span id="answer_time">4d ago</span>
-																	</div>
+																	<p id="answer_time">4d ago</p>
 																</div>
 																<div class="kt-portlet__head-toolbar">
 																	<div class="kt-portlet__head-actions">
@@ -728,7 +724,7 @@
 									<div class="portlet-komentar">
 										<div style="padding: 10px;margin-top:10px" class="kt-portlet__body">
 											<div class="" id="all_questions" name="all_questions">
-												<div class="kt-portlet">
+												<div style="position: relative;" class="kt-portlet">
 													<div class="kt-portlet__head">
 														<div class="kt-portlet__head-label">
 															<a href="#" class="kt-media kt-media--sm kt-media--circle">
@@ -738,14 +734,12 @@
 														<div class="question-info">
 															<h6><span id="the_answer" name="the_answer">Aigi Walie</span></h6>
 															<p><span id="answer_job" name="answer_job">Product Manager at Tonash inc</span></p>
-															<div style="flex-wrap : wrap;">
-																<span id="answer_time">5d ago</span>
-																<span id="badge_status" name="badge_status" class="btn btn-sm btn-label-success btn-pill badge_kecil badge-verified">Verified Senpai</span>
-															</div>
+															<p id="answer_time">5d ago</p>
 														</div>
-														<div class="kt-portlet__head-toolbar">
+														<span style="" class="btn btn-sm btn-label-success btn-pill verified-badge change-padding badge_status badge-verified">Verified Senpai</span>
+														<divver class="kt-portlet__head-toolbar">
 															<div class="kt-portlet__head-actions">
-																<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill badge_kecil badge-verified-2">Verified Senpai</span>
+																<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill badge_kecil verified-badge-out badge-verified-2">Verified Senpai</span>
 																<a  id="add_user_2" name="add_user_2" href="#" class="btn btn-clean btn-sm padding-lr-01">
 																	<i class="fa fa-user-plus"></i>
 																</a>
@@ -759,7 +753,7 @@
 														<p justify="center" id="question_description" name="question_descri">
 															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
 														</p>
-													</div>
+													</div>ver
 													<div class="kt-portlet__footer padding-all-5">
 														<button  id="btn_vote_2" name="btn_vote_2" class="btn btn-sm btn-outline-brand">
 															<i class="fa fa-caret-square-up"></i> <span id="jumlah_vote_2" name="jumlah_vote_2">44</span> Votes
@@ -788,7 +782,7 @@
 																</div>
 																<div class="kt-portlet__head-toolbar">
 																	<div class="kt-portlet__head-actions">
-																		<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill badge_kecil">Verified Senpai</span>
+																		<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill  badge_kecil">Verified Senpai</span>
 																		<a  id="add_user_2" name="add_user_2" href="#" class="btn btn-clean btn-sm padding-lr-01">
 																			<i class="fa fa-user-plus"></i>
 																		</a>
@@ -822,7 +816,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- begin:: Footer -->
 	<div class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop kt-hidden" id="kt_footer">
 		<div class="kt-container  kt-container--fluid ">
@@ -1325,7 +1319,7 @@
 	<script>
 		function toggle_comment() {
 			var x = document.getElementById("komentar");
-			
+
 
 			if (x.style.display === "none") {
 				x.style.display = "block";
