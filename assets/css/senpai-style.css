@@ -54,7 +54,7 @@
 .experince-portlet,
 .dashed-bottom {
 	margin-bottom: 20px;
-	border-bottom: 2px dashed #ebedf2;
+	border-bottom: 1.5px solid #ebedf2;
 }
 
 .nor_line {
@@ -239,7 +239,7 @@
 	margin-bottom: 0px;
 }
 .kt-portlet .kt-portlet__head {
-	padding-bottom: 5px;
+	padding-bottom: 0px;
 }
 #all_question {
 	pointer-events: none;
@@ -327,7 +327,7 @@ html {
 .btn-lihat-container {
 	position: absolute;
 	right: -5px;
-	top: 0;
+	bottom: 5px;;
 }
 .solved-badge {
 	position: absolute;
@@ -336,6 +336,32 @@ html {
 }
 .verified-badge-out {
 	padding: .4rem .75rem !important; 
+}
+.alert {
+	border-radius: 9px;
+}
+.nav-tabs.nav-tabs-line {
+	border-bottom: 4px solid #ebedf2;
+	width: 93%;
+	align-self: center;
+}
+.nav-tabs.nav-tabs-line.nav.nav-tabs .nav-link.active,
+.nav-tabs.nav-tabs-line a.nav-link.active {
+	border-bottom: 2px solid #5d78ff;
+}
+.border-style {
+	border: 1.2px solid #e8effc;
+}
+#chat-height {
+	padding-top: 15px;
+}
+.chat-body {
+	padding: 15px !important;
+}
+.see-all-width {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
 }
 
 .
@@ -380,6 +406,10 @@ html {
 	}
 	.padding-all {
 		padding: 15px !important;
+	}
+	.no_pad .col-sm-3 {
+		padding-right: 5px !important;
+		padding-left: 5px !important;
 	}
 }
 
@@ -503,7 +533,10 @@ html {
 		margin-bottom: 0px;
 	}
 	.kt-portlet .kt-portlet__head {
-		padding-bottom: 5px;
+		padding-bottom: 0px;
+	}
+	.kt-app .kt-app__aside.kt-app__aside--fit {
+		padding: 0px 0 0 0;
 	}
 	
 
@@ -632,7 +665,7 @@ html {
 		margin-bottom: 0px;
 	}
 	.kt-portlet .kt-portlet__head {
-		padding-bottom: 5px;
+		padding-bottom: 0px;
 	}
 
 
@@ -766,7 +799,7 @@ html {
 		margin-bottom: 0px;
 	}
 	.kt-portlet .kt-portlet__head {
-		padding-bottom: 5px;
+		padding-bottom: 0px;
 	}
 
 }
@@ -896,7 +929,7 @@ html {
 		margin-bottom: 0px;
 	}
 	.kt-portlet .kt-portlet__head {
-		padding-bottom: 5px;
+		padding-bottom: 0px;
 	}
 	.badge_kecil {
 		padding: 5px 5px !important;
@@ -1068,7 +1101,7 @@ html {
 		margin-bottom: 0px;
 	}
 	.kt-portlet .kt-portlet__head {
-		padding-bottom: 5px;
+		padding-bottom: 0px;
 	}
 	.badge_kecil {
 		padding: 5px 5px !important;
@@ -1098,8 +1131,13 @@ html {
 		font-size: 0.7rem !important;
 		padding: .1rem .75rem !important;
 	}
+	.chat-body {
+		padding: 5px !important;
+	}
 
 }
+
+
 
 @media (max-height: 1280px) {
 	.kt-height-chat {

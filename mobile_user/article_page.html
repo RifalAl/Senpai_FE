@@ -4,14 +4,13 @@
 <head>
 	<base href="">
 	<meta charset="utf-8" />
-	<title>Senpai | My Question</title>
+	<title>Senpai | Advice Room - Answered</title>
 	<meta name="description" content="Updates and statistics">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--begin::Fonts -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
 	<!--end::Fonts -->
 	<!--begin::Page Vendors Styles(used by this page) -->
-	<link href="../assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
 	<!--end::Page Vendors Styles -->
 	<!--begin::Global Theme Styles(used by all pages) -->
@@ -24,31 +23,10 @@
 	<link href="../assets/css/skins/brand/dark.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/css/skins/aside/dark.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/css/senpai-style.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/article-style.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/css/senpai-theme.css" rel="stylesheet" type="text/css" />
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
-	<style>
-		.kt-container {
-			width: 100%;
-			padding: 10px;
-		}
-		.kt-portlet .kt-portlet__body {
-			padding: 15px;
-		}
-		#all_questions .kt-portlet {
-			background-color: transparent;
-			box-shadow: 0px 0px 13px 0px rgba(82, 63, 105,0) !important;
-		}
-		.dataTables_length,
-		.dataTables_filter {
-			display: none
-		}
-		.dataTables_wrapper .dataTable td .kt-checkbox {
-			margin-top: 0.3rem;
-			margin-bottom: 1.1rem;
-			margin-left:1.1rem;
-		}
-	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -231,6 +209,11 @@
 					<!--end: Navigation -->
 				</div>
 			</div>
+			<!-- <button style="font-size: 1.5rem;margin-left: 10px;color:#dbdbdb" class="kt-header-mobile__topbar-toggler" id="kt_aside_mobile_toggler">
+				<i class="flaticon-more"></i>
+			</button> -->
+			<!-- <button class="kt-header-mobile__toggler" id="kt_header_mobile_toggler"><span></span></button> -->
+			<!-- <button class="kt-header-mobile__topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button> -->
 		</div>
 	</div>
 	<!-- end:: Header Mobile -->
@@ -280,7 +263,7 @@
 									<span class="kt-menu__link-text">Lounge</span>
 								</a>
 							</li>
-							<li class="kt-menu__item" aria-haspopup="true">
+							<li class="kt-menu__item " aria-haspopup="true">
 								<a href="advice_room.html" class="kt-menu__link ">
 									<i class="kt-menu__link-icon flaticon2-chat"></i>
 									<span class="kt-menu__link-text">Advice Room</span>
@@ -566,169 +549,26 @@
 					</div>
 					<div  class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid" >
 						<div class="row">
-							<div class="col-lg-12">
+							<div class="col-md-12 col-lg-10 offset-lg-1">
 								<!--begin::Portlet-->
-								<div class="kt-portlet kt-portlet--mobile">
-									<div class="kt-portlet__head">
-										<div class="kt-portlet__head-label">
-											<h3 class="kt-portlet__head-title">
-												My Question
-											</h3>
+								<div class="kt-portlet">
+									<div style="position: relative;" class="kt-portlet__head" style="">
+										<img class="article_img" src="../assets/media/bg/bg-11.jpg">
+
+										<div class="bookmark-portlet">
+											<button id="btn_bookmark" class="btn btn-warning btn-elevate">
+												<span class="fa fa-bookmark"></span>
+											</button>
 										</div>
 									</div>
-									<div style="display: none" class="kt-portlet__body" id="table_container">
-										<table class="table responsive no-wrap" id="tbl_myQuestion">
-											<thead class="thead-light">
-											</thead>
-										</table>
-									</div>
-									<div style="display: none" class="kt-portlet__body bookmark-list" id="mobile_container" style="">
-										<div class="bookmark-item">
-											<div  class="bookmark-info">
-												<span class="judul-item">
-													What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?
-												</span>
-												<span class="form-text text-muted">
-													Answers <span id="jumlah_jawaban">7</span> | <span id="tgl_bertanya">20/11/19</span>
-												</span>
-											</div>
-											<div class="btn-lihat-container">
-												<div class="dropdown dropdown-inline">
-													<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-														<i class="flaticon-more"></i>
-													</button>
-													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-149px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-														<a class="dropdown-item" href="#"><i class="fa fa-arrow-right"></i> Go to Question</a>
-														<a class="dropdown-item" href="#"><i class="fa fa-times"></i> Delete</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="bookmark-item">
-											<div  class="bookmark-info">
-												<span class="judul-item">
-													What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?
-												</span>
-												<span class="form-text text-muted">
-													Answers <span id="jumlah_jawaban">7</span> | <span id="tgl_bertanya">20/11/19</span>
-												</span>
-											</div>
-											<div class="btn-lihat-container">
-												<div class="dropdown dropdown-inline">
-													<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-														<i class="flaticon-more"></i>
-													</button>
-													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-149px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-														<a class="dropdown-item" href="#"><i class="fa fa-arrow-right"></i> Go to Question</a>
-														<a class="dropdown-item" href="#"><i class="fa fa-times"></i> Delete</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="bookmark-item">
-											<div  class="bookmark-info">
-												<span class="judul-item">
-													Apa yang dimaksud dengan pertanyaan sdfsdfsdf ?
-												</span>
-												<span class="form-text text-muted">
-													Answers <span id="jumlah_jawaban">7</span> | <span id="tgl_bertanya">20/11/19</span>
-												</span>
-											</div>
-											<div class="btn-lihat-container">
-												<div class="dropdown dropdown-inline">
-													<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-														<i class="flaticon-more"></i>
-													</button>
-													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-149px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-														<a class="dropdown-item" href="#"><i class="fa fa-arrow-right"></i> Go to Question</a>
-														<a class="dropdown-item" href="#"><i class="fa fa-times"></i> Delete</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="bookmark-item">
-											<div  class="bookmark-info">
-												<span class="judul-item">
-													What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?
-												</span>
-												<span class="form-text text-muted">
-													Answers <span id="jumlah_jawaban">7</span> | <span id="tgl_bertanya">20/11/19</span>
-												</span>
-											</div>
-											<div class="btn-lihat-container">
-												<div class="dropdown dropdown-inline">
-													<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-														<i class="flaticon-more"></i>
-													</button>
-													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-149px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-														<a class="dropdown-item" href="#"><i class="fa fa-arrow-right"></i> Go to Question</a>
-														<a class="dropdown-item" href="#"><i class="fa fa-times"></i> Delete</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="bookmark-item">
-											<div  class="bookmark-info">
-												<span class="judul-item">
-													What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?
-												</span>
-												<span class="form-text text-muted">
-													Answers <span id="jumlah_jawaban">7</span> | <span id="tgl_bertanya">20/11/19</span>
-												</span>
-											</div>
-											<div class="btn-lihat-container">
-												<div class="dropdown dropdown-inline">
-													<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-														<i class="flaticon-more"></i>
-													</button>
-													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-149px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-														<a class="dropdown-item" href="#"><i class="fa fa-arrow-right"></i> Go to Question</a>
-														<a class="dropdown-item" href="#"><i class="fa fa-times"></i> Delete</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="bookmark-item">
-											<div  class="bookmark-info">
-												<span class="judul-item">
-													What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?
-												</span>
-												<span class="form-text text-muted">
-													Answers <span id="jumlah_jawaban">7</span> | <span id="tgl_bertanya">20/11/19</span>
-												</span>
-											</div>
-											<div class="btn-lihat-container">
-												<div class="dropdown dropdown-inline">
-													<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-														<i class="flaticon-more"></i>
-													</button>
-													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-149px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-														<a class="dropdown-item" href="#"><i class="fa fa-arrow-right"></i> Go to Question</a>
-														<a class="dropdown-item" href="#"><i class="fa fa-times"></i> Delete</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="bookmark-item">
-											<div  class="bookmark-info">
-												<span class="judul-item">
-													What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?
-												</span>
-												<span class="form-text text-muted">
-													Answers <span id="jumlah_jawaban">7</span> | <span id="tgl_bertanya">20/11/19</span>
-												</span>
-											</div>
-											<div class="btn-lihat-container">
-												<div class="dropdown dropdown-inline">
-													<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-														<i class="flaticon-more"></i>
-													</button>
-													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-149px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-														<a class="dropdown-item" href="#"><i class="fa fa-arrow-right"></i> Go to Question</a>
-														<a class="dropdown-item" href="#"><i class="fa fa-times"></i> Delete</a>
-													</div>
-												</div>
-											</div>
+									<div class=" kt-portlet__body padding-all-5 ">
+										<div class="alert-text padding-all-10">
+											<h5 id="judul_article" class="alert-heading">Best Place to Stay in Japan</h5>
+											<span class="emergency-icon">
+											</span>
+											<p id="isi_article" align="justify">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat sem at mauris suscipit porta. Cras metus velit, elementum sed pellentesque a, pharetra eu eros. Etiam facilisis placerat euismod. Nam faucibus neque arcu, quis accumsan leo tincidunt varius. In vel diam enim. Sed id ultrices ligula. Maecenas at urna arcu. Sed quis nulla sapien. Nam felis mauris, tincidunt at convallis id, tempor molestie libero. Quisque viverra sollicitudin nisl sit amet hendrerit. Etiam sit amet arcu sem. Morbi eu nibh condimentum, interdum est quis, tempor nisi. Vivamus convallis erat in pharetra elementum. Phasellus metus neque, commodo vitae venenatis sed, pellentesque non purus. Pellentesque egestas convallis suscipit. Ut luctus, leo quis porta vulputate, purus purus pellentesque ex, id consequat mi nisl quis eros. Integer ornare libero quis risus fermentum consequat. Mauris pharetra odio sagittis, vulputate magna at, lobortis nulla. Proin efficitur, nisi vel finibus elementum, orci sem volutpat eros, eget ultrices velit mi sagittis massa. Vestibulum sagittis ullamcorper cursus. Ut turpis dolor, tempor ut tellus et, sodales ultricies elit. Ut pharetra tristique est ac dictum. Integer ac consectetur purus, vehicula efficitur urna. Donec ultrices accumsan ipsum vitae faucibus. Quisque malesuada ex nisi, a bibendum erat commodo in. Pellentesque suscipit varius gravida. Nam scelerisque est sit amet laoreet pharetra. Vivamus quis ligula sed lacus mattis mollis. Vivamus facilisis orci rutrum nulla porta dignissim. Fusce fermentum id nibh laoreet volutpat.<br> Suspendisse venenatis, risus sed euismod finibus, risus arcu fringilla augue, nec vulputate felis nisl et enim. In ornare, massa a cursus cursus, nisl mi ornare mauris, nec porttitor risus erat ut odio. Integer malesuada hendrerit purus ullamcorper molestie. Fusce imperdiet orci vitae purus suscipit rutrum. Nunc ac metus ac mi commodo sagittis at in leo. Vestibulum est lorem, consequat vel dictum non, imperdiet eu felis. Vivamus molestie sapien id quam rutrum, eget hendrerit eros finibus. Morbi in justo at felis blandit fringilla at faucibus purus. Donec ac aliquet purus, vitae tincidunt nulla. Curabitur ultricies auctor quam tincidunt molestie. Quisque tristique metus nunc, in pretium lectus dictum at. Nullam scelerisque placerat dui, maximus commodo augue mollis quis. Nulla gravida ex sed lectus consectetur laoreet et vel ex. Proin pretium libero non leo mattis, ullamcorper scelerisque diam hendrerit. Quisque gravida, dui a porttitor interdum, velit quam pulvinar arcu, eu blandit sapien velit ut lacus. Vestibulum congue eleifend odio, in aliquam leo sodales sed. Nam eu lacinia ipsum. Aenean sagittis nisl eu sodales lacinia. Duis nulla ante, suscipit a nibh sit amet, blandit luctus elit. Etiam a pellentesque lectus. Morbi pulvinar dolor a mi volutpat, sit amet finibus est mattis. Nunc egestas feugiat odio sed mollis. Vestibulum accumsan, velit id facilisis fermentum, nisi risus faucibus nulla, non condimentum mauris tortor eu dui. In urna ante, consectetur ac nunc in, hendrerit elementum lacus. Pellentesque pharetra felis sit amet erat pellentesque malesuada. Sed vel placerat lectus. Pellentesque habitant morbi tristique.
+											</p>
 										</div>
 									</div>
 								</div>
@@ -740,7 +580,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- begin:: Footer -->
 	<div class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop kt-hidden" id="kt_footer">
 		<div class="kt-container  kt-container--fluid ">
@@ -763,7 +603,7 @@
 			</div>
 			<div class="col-sm-3">
 				<a href="advice_room.html">
-					<i class="flaticon2-chat menu-icon active-mobile-menu"></i>
+					<i class="flaticon2-chat menu-icon"></i>
 				</a>
 			</div>
 			<div class="col-sm-3">
@@ -1223,113 +1063,13 @@
 	<!--begin::Page Vendors(used by this page) -->
 	<script src="../assets/plugins/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 	<script src="../assets/js/pages/custom/chat/chat.js" type="text/javascript"></script>
-	<script src="../assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
 	<!--begin::Page Scripts(used by this page) -->
+
+	<!--end::Page Scripts -->
 	<script>
-		var KTDatatablesDataSourceAjaxClient = function() {
-
-			var initTable1 = function() {
-				var table = $('#tbl_myQuestion');
-
-		// begin first table
-		table.DataTable({
-			responsive: true,
-			ajax: {
-				url: '../assets/script/my_question.json',
-				type: 'POST',
-				data: {
-					pagination: {
-						perpage: 50,
-					},
-				},
-			},
-			columns: [
-			{
-				data: 'no',
-				title: '-',
-				width: 35,
-				render: function(data, type, full, meta) {
-					return `
-					<label class="kt-checkbox kt-checkbox--tick kt-checkbox--success">
-					<input type="checkbox">
-					<span class="checkmark"></span>
-					</label>`;
-				},
-			},{
-				data: 'date',
-				title: 'Date',
-				width: 100,
-			},{
-				data: 'question',
-				responsivePriority: -1,
-				title: 'Question',
-			},{
-				data: 'answers',
-				title: 'Answers',
-				width: 50,
-			},{
-				data: 'status',
-				title: 'Status',
-				width: 50,
-			},{
-				field: 'action',
-				title: 'Action',
-				width: 80,
-				responsivePriority: -1,
-				className: 'text-center',
-				orderable: false,
-				render: function(data, type, full, meta) {
-					return `
-					<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<i class="flaticon-more"></i>
-					</button>
-					<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
-					<a href="#" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-arrow-right"></i> Go</button>
-					<a href="#"  class="dropdown-item btn btn-secondary">  <i class="fa fa-times"></i> Delete</a>` 
-					;
-				},
-			}],
-			columnDefs: [
-			{
-				targets: [0,1,2,3,4,5],
-				className: 'text-center',
-				orderable: false,
-			}
-			],
-		});
-	};
-
-	return {
-
-		init: function() {
-			initTable1();
-		},
-
-	};
-
-}();
-
-jQuery(document).ready(function() {
-	KTDatatablesDataSourceAjaxClient.init();
-});
-</script>
-<script>
-	var screenWidth = screen.width;
-	var tbl_bookmark = document.getElementById('table_container');
-	var mobile_bookmark = document.getElementById('mobile_container');
-
-	if (screenWidth <= 720) {
-		tbl_bookmark.style.display = "none";
-		mobile_bookmark.style.display = "block";
-	}
-	if (screenWidth > 720) {
-		mobile_bookmark.style.display = "none";
-		tbl_bookmark.style.display = "block";
-	}
-</script>
-
-<!--end::Page Scripts -->
+		
+	</script>
 </body>
 <!-- end::Body -->
 </html>

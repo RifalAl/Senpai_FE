@@ -241,7 +241,7 @@
 							<img class="mobile-logo" alt="Logo" src="../assets/media/logos/logo_senpai.png" />
 						</a>
 					</div>
-					<div class="kt-aside__brand-tools">
+					<div class="kt-aside__brand-tools kt-hidden">
 						<button class="kt-aside__brand-aside-toggler" id="kt_aside_toggler">
 							<span>
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
@@ -561,7 +561,7 @@
 					</div>
 					<div  class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid" >
 						<div class="row">
-							<div class="col-lg-6">
+							<div class="col-lg-8">
 								<!--begin::Portlet-->
 								<div class="kt-portlet kt-portlet--mobile">
 									<div class="kt-portlet__head">
@@ -618,7 +618,7 @@
 								</div>
 								<!--end::Portlet-->
 							</div>
-							<div class="col-lg-6">
+							<div class="col-lg-8">
 								<div class="kt-portlet kt-portlet--mobile">
 									<div style="background-color: #F0FBFF;" class="kt-portlet__head padding-all-15">
 										<div class="kt-portlet__head-label">
@@ -668,7 +668,7 @@
 														</p>
 													</div>
 													<div class="kt-portlet__footer padding-all-5">
-														<button  id="btn_vote" name="btn_vote" class="btn btn-sm btn-outline-brand">
+														<button  id="btn_vote" name="btn_vote" onclick="vote()" class="btn btn-sm btn-outline-brand">
 															<i class="fa fa-caret-square-up"></i> <span id="jumlah_vote" name="jumlah_vote">59</span> Votes
 														</button>
 														<button onclick="toggle_comment()" type="button" class="btn btn-primary btn-sm">
@@ -732,7 +732,7 @@
 															</a>
 														</div>
 														<div class="question-info">
-															<h6><span id="the_answer" name="the_answer">Aigi Walie</span></h6>
+															<h6><span id="user_name" name="the_answer">Aigi Walie</span></h6>
 															<p><span id="answer_job" name="answer_job">Product Manager at Tonash inc</span></p>
 															<p id="answer_time">5d ago</p>
 														</div>
@@ -1338,12 +1338,23 @@
 			}
 		}
 
-		$("#btn_vote").click(function () {
+		
+		// $("#btn_vote").click(function () {
+		// 	$("#jumlah_vote").text(function(){return ~~$(this).text() + 1});
+
+		// });
+		// 
+		function timeout_trigger(){
 			$("#jumlah_vote").text(function(){return ~~$(this).text() + 1});
+		}
+		function vote () {
+			setTimeout('timeout_trigger()',2000);
+		}
+		$("#btn_vote").dblclick(function () {
+			$("#jumlah_vote").text(function(){return ~~$(this).text() - 1});
 		});
-		$("#btn_vote_2").click(function () {
-			$("#jumlah_vote_2").text(function(){return ~~$(this).text() + 1});
-		});  
+		
+		
 	</script>
 
 	<!--end::Page Scripts -->

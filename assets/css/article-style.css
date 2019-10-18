@@ -1,0 +1,100 @@
+.kt-container {
+	width: 100%;
+	padding: 10px;
+}
+.ky-portlet__head {
+	padding: 0 0px;
+}
+.kt-portlet .kt-portlet__body {
+	padding: 25px;
+}
+#all_questions .kt-portlet {
+	background-color: transparent;
+	box-shadow: 0px 0px 13px 0px rgba(82, 63, 105,0) !important;
+}
+.kt-portlet .kt-portlet__head {
+	padding: 0 0px;
+}
+.bookmark-portlet {
+	position: absolute;
+	top: 7px;
+	right: 7px;
+}
+
+
+@media (min-width: 1024px) {
+	.article_img {
+		height: 250px;
+	}
+	.padding-all-10 {
+		padding: 20px!important;
+	}
+	#judul_article {
+		font-size: 1.6rem !important;
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 1023px) {
+	.article_img {
+		height: 270px;
+	}
+	.padding-all-10 {
+		padding: 20px!important;
+	}
+	#judul_article {
+		font-size: 1.7rem !important;
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 800px) {
+	.article_img {
+		height: 270px;
+	}
+	.padding-all-10 {
+		padding: 20px!important;
+	}
+	#judul_article {
+		font-size: 1.7rem !important;
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 720px) {
+	.article_img {
+		height: 250px;
+	}
+	.padding-all-10 {
+		padding: 15px!important;
+	}
+	#judul_article {
+		font-size: 1.5rem !important;
+		margin-bottom: 20px;
+	}
+
+}
+@media (max-width: 480px) {
+	.article_img {
+		height: 170px;
+	}
+	.padding-all-10 {
+		padding: 5px!important;
+	}
+	#judul_article {
+		font-size: 1.4rem !important;
+		margin-bottom: 15px;
+	}
+
+}
+@media (max-width: 320px) {
+	.article_img {
+		height: 130px;
+	}
+	.padding-all-10 {
+		padding: 5px!important;
+	}
+	#judul_article {
+		font-size: 1.3rem !important;
+		margin-bottom: 15px;
+	}
+}
