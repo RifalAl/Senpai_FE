@@ -363,8 +363,25 @@ html {
 	bottom: 10px;
 	right: 10px;
 }
+.badge-icon {
+	border: 2px solid #BDBDBD;
+}
+.embassy-head {
+	background-color: #448AFF;
+}
+.embassy-head {
+	color: white;
 
-.
+}
+.post-bg {
+	background-color: #607D8B;
+	border-radius: 9px !important;
+}
+.tips-icon {
+	width: 70% !important;
+}
+
+.	
 
 
 /*Responsive*/
@@ -538,6 +555,9 @@ html {
 	.kt-app .kt-app__aside.kt-app__aside--fit {
 		padding: 0px 0 0 0;
 	}
+	.tips-icon {
+		width: 80% !important;
+	}
 	
 
 }
@@ -666,6 +686,13 @@ html {
 	}
 	.kt-portlet .kt-portlet__head {
 		padding-bottom: 0px;
+	}
+	.embassy-head {
+		font-size: 1.5rem;
+
+	}
+	.tips-icon {
+		width: 90% !important;
 	}
 
 
@@ -800,6 +827,9 @@ html {
 	}
 	.kt-portlet .kt-portlet__head {
 		padding-bottom: 0px;
+	}
+	.tips-icon {
+		width: 100% !important;
 	}
 
 }
@@ -957,6 +987,13 @@ html {
 		font-size: 0.7rem !important;
 		padding: .1rem .75rem !important;
 	}
+	.embassy-head {
+		font-size: 1.2rem;
+
+	}
+	.tips-icon {
+		width: 100% !important;
+	}
 }
 
 @media(max-width: 360px){
@@ -964,6 +1001,10 @@ html {
 		position: absolute;
 		bottom: 3px;
 		right: 176px;
+	}
+	.embassy-head {
+		font-size: 1.1rem;
+
 	}
 }
 
@@ -1133,6 +1174,13 @@ html {
 	}
 	.chat-body {
 		padding: 5px !important;
+	}
+	.embassy-head {
+		font-size: 1.1rem;
+
+	}
+	.tips-icon {
+		width: 100% !important;
 	}
 
 }
