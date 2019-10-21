@@ -419,7 +419,7 @@ html {
 
 @media(max-width: 1440px) {
 	.question-info {
-		bottom: 5px;
+		bottom: 15px;
 	}
 	.padding-all {
 		padding: 15px !important;
