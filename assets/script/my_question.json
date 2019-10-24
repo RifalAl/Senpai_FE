@@ -6,40 +6,44 @@
     "aaData": [{
                  "no": null,
                  "date" : "20/11/2019",
+                 "posts" : "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
                  "question" : "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
                  "asked_by" : "Rifaldi ",
                  "answers" : "7",
-                 "status" : "Open",
+                 "type" : "Post",
                  "action" : null
                 
              },
              {
                  "no": null,
                  "date" : "20/02/2020",
+                 "posts" : "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
                  "question" : "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
                  "asked_by" : "Rifaldi ",
                  "answers" : "5",
-                 "status" : "Open",
+                 "type" : "Question",
                  "action" : null
                 
              },
              {
                  "no": null,
                  "date" : "20/02/2020",
+                 "posts" : "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
                  "question" : "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
                  "asked_by" : "Rifaldi ",
                  "answers" : "5",
-                 "status" : "Open",
+                 "type" : "Article",
                  "action" : null
                 
              },
              {
                  "no": null,
                  "date" : "20/02/2020",
+                 "posts" : "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
                  "question" : "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
                  "asked_by" : "Rifaldi ",
                  "answers" : "5",
-                 "status" : "Open",
+                 "type" : "Article",
                  "action" : null
                 
              }

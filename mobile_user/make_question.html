@@ -4,7 +4,7 @@
 <head>
 	<base href="">
 	<meta charset="utf-8" />
-	<title>Senpai | Advice Room</title>
+	<title>Senpai | Make Question</title>
 	<meta name="description" content="Updates and statistics">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--begin::Fonts -->
@@ -33,6 +33,9 @@
 		}
 		.kt-portlet .kt-portlet__body {
 			padding: 25px;
+		}
+		.form-group {
+			margin-bottom: 1rem;
 		}
 	</style>
 </head>
@@ -399,336 +402,32 @@
 								<div class="kt-portlet kt-portlet--mobile">
 									<div class="kt-portlet__head">
 										<div class="kt-portlet__head-label">
-											<h3 class="kt-portlet__head-title head-title">
-												Advice Room
+											<h3 class="kt-portlet__head-title">
+												Make question
 											</h3>
 										</div>
 									</div>
-									<div style="padding: 10px" class="kt-portlet__body">
-										<div onclick="location.href='make_question.html';" id="btn_make_question" name="btn_make_question" style="padding: 7px" class="search_div" >
-											<p>make a question...</p>
+									<div style="padding: 15px" class="kt-portlet__body">
+										<div class="form-group">
+											<label class="form-control-label">Title:</label>
+											<input placeholder="input title..." type="text" class="form-control" id="question_title" name="question_title">
 										</div>
-										<div style="display: none" id="make_question" name="make_question">
-											<textarea placeholder="make a question" class="form-control" id="exampleTextarea" rows="3"></textarea>
+										<div class="form-group">
+											<label class="form-control-label">Question:</label>
+											<textarea onkeyup="textAreaAdjust(this)" placeholder="input question..." class="form-control" id="question" name="question"></textarea>
 										</div>
-										<div style="padding: 10px">
-											<div class="row no_wrap">
-												<div class="col-sm">
-													<h5>Topics</h5>
-												</div>
-												<div align="right" class="col-sm">
-													<a href="see_more_topics.html">
-														<p>See More</p>
-													</a>
-												</div>
-											</div>
+										<div class="form-group">
+											<label>Topic</label>
+											<input id="tag_topics" name='tags' placeholder='type topic...' value=''  >
 										</div>
-										<div style="padding: 5px;margin-top:-10px" class="row no_wrap no_pad">
-											<div class="col-sm-3">
-												<div onclick="location.href='topic_search.html';" class="box-icon">
-													<img class="icon-size" src="../assets/media/icons/senpai/arrow.svg">
-													<h6>Trending</h6>
-												</div>
-											</div>
-											<div class="col-sm-3">
-												<div onclick="location.href='topic_search.html';" class="box-icon">
-													<img class="icon-size" src="../assets/media/icons/senpai/suitcase.svg">
-													<h6>Business</h6>
-												</div>
-											</div>
-											<div class="col-sm-3">
-												<div onclick="location.href='topic_search.html';" class="box-icon">
-													<img class="icon-size" src="../assets/media/icons/senpai/group.svg">
-													<h6>Working Culture</h6>
-												</div>
-											</div>
-											<div class="col-sm-3">
-												<div onclick="location.href='topic_search.html';" class="box-icon">
-													<img class="icon-size" src="../assets/media/icons/senpai/apartment.svg">
-													<h6>Apartment</h6>
-												</div>
-											</div>
-										</div>
+									</div>
+									<div class="kt-portlet__foot">
+										<button style="width: 100%" class="btn btn-primary">
+											Send
+										</button>
 									</div>
 								</div>
 								<!--end::Portlet-->
-							</div>
-							<div class="col-md-12 col-lg-10 offset-lg-1">
-								<div class="kt-portlet kt-portlet--mobile">
-									<div class="kt-portlet__body padding-all-10">
-										<ul class="nav nav-tabs nav-tabs-line" role="tablist">
-											<li class="nav-item">
-												<a class="nav-link active nav_tab" data-toggle="tab" href="#show_all_tab" role="tab">Show All</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link nav_tab" data-toggle="tab" href="#answered_tab" role="tab">Answered</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link nav_tab" data-toggle="tab" href="#not_answered_tab" role="tab">Not Answered</a>
-											</li>
-										</ul>
-										<div class="tab-content">
-											<div class="tab-pane active" id="show_all_tab" role="tabpanel">
-												<div  class="" id="all_questions" name="all_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_3.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Fascal Ivandry</h6>
-																<p>Product Manager at Artistektur</p>
-																<p>2d Ago</p>
-															</div>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-																		<span class="fa fa-link"></span>
-																	</a>
-																	
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-												<div  class="" id="all_questions" name="all_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head padding-top-10">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_5.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Ahmad Rifaldi</h6>
-																<p>Product Manager at Artistektur</p>
-																<p>2d Ago</p>
-																
-															</div>
-															<span style="" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge change-padding">Solved</span>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<span style="display: none" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge-2">Solved</span>
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-																		<span class="fa fa-link"></span>
-																	</a>
-																	
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-												<div  class="" id="all_questions" name="all_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_1.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Ahmad Rifaldi</h6>
-																<p>Product Manager at Pesona</p>
-																<p>4d Ago</p>
-															</div>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<button class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-																		<span class="fa fa-link"></span>
-																	</a>
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="tab-pane" id="answered_tab" role="tabpanel">
-												<div  class="" id="answered_questions" name="answered_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_5.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Ahmad Rifaldi</h6>
-																<p>Product Manager at Artistektur</p>
-																<p>2d Ago</p>
-																
-															</div>
-															<span style="" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge change-padding">Solved</span>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<span style="display: none" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge-2">Solved</span>
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-																		<span class="fa fa-link"></span>
-																	</a>
-																	
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-												<div  class="" id="answered_questions" name="answered_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_5.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Ahmad Rifaldi</h6>
-																<p>Front End at Arsitektur</p>
-																<p>2d Ago</p>
-															</div>
-															<span style="" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge change-padding">Solved</span>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<span style="display: none" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge-2">Solved</span>
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-																		<span class="fa fa-link"></span>
-																	</a>
-																	
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="tab-pane" id="not_answered_tab" role="tabpanel">
-												<div  class="" id="non_answered_questions" name="non_answered_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_1.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Ahmad Rifaldi</h6>
-																<p>Product Manager at Pesona</p>
-																<p>4d Ago</p>
-															</div>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-																		<span class="fa fa-link"></span>
-																	</a>
-																	
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-												<div  class="" id="non_answered_questions" name="non_answered_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head padding-top-10">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_1.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Ahmad Rifaldi</h6>
-																<p>Product Manager at Pinoki</p>
-																<p>4d Ago</p>
-															</div>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-																		<span class="fa fa-link"></span>
-																	</a>
-																	
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -1256,43 +955,79 @@
 	<!--end::Page Vendors -->
 	<!--begin::Page Scripts(used by this page) -->
 	<script>
-		var widthScreen = screen.width;
-		console.log(widthScreen);
-		if (widthScreen >= 1024) {
-			$("#portlet-pesan").removeClass("position-fixed");
-		}
-		if (widthScreen >= 400) {
-			$(".solved-badge").hide();
-			$(".solved-badge-2").show();
-		}
-		// if (widthScreen >= 1024) {
-		// 	$("#btn_make_question").hide();
-		// 	$("#make_question").show();
-		// }
-	</script>
-	<!--end::Page Scripts -->
-	<script>
-		var KTSweetAlert2Demo = function() {
-			var initDemos = function() {
-				$('.btn_bookmark').click(function(e) {
-					swal.fire({
-						position: 'center',
-						type: 'success',
-						title: 'This Post Bookmark',
-						showConfirmButton: false,
-						timer: 1300
-					});
-				});
-			};
+		var KTTagify = function() {
+			var demo1 = function() {
+				var input = document.getElementById('tag_topics'),
+				tagify = new Tagify(input, {
+					whitelist: ["Apartment","Business","Trending","Working Culture","A# .NET", "A# (Axiom)", "A-0 System", "A+", "A++", "ABAP", "ABC", "ABC ALGOL", "ABSET", "ABSYS", "ACC", "Accent", "Ace DASL", "ACL2", "Avicsoft", "ACT-III", "Action!", "ActionScript", "Ada", "Adenine", "Agda", "Agilent VEE", "Agora", "AIMMS", "Alef", "ALF", "ALGOL 58", "ALGOL 60", "ALGOL 68", "ALGOL W", "Alice", "Alma-0", "AmbientTalk", "Amiga E", "AMOS", "AMPL", "Apex (Salesforce.com)", "APL", "AppleScript", "Arc", "ARexx", "Argus", "AspectJ", "Assembly language", "ATS", "Ateji PX", "AutoHotkey", "Autocoder", "AutoIt", "AutoLISP / Visual LISP", "Averest", "AWK", "Axum", "Active Server Pages", "ASP.NET", "B", "Babbage", "Bash", "BASIC", "bc", "BCPL", "BeanShell", "Batch (Windows/Dos)", "Bertrand", "BETA", "Bigwig", "Bistro", "BitC", "BLISS", "Blockly", "BlooP", "Blue", "Boo", "Boomerang", "Bourne shell (including bash and ksh)", "BREW", "BPEL", "B", "C--", "C++ – ISO/IEC 14882", "C# – ISO/IEC 23270", "C/AL", "Caché ObjectScript", "C Shell", "Caml", "Cayenne", "CDuce", "Cecil", "Cesil", "Céu", "Ceylon", "CFEngine", "CFML", "Cg", "Ch", "Chapel", "Charity", "Charm", "Chef", "CHILL", "CHIP-8", "chomski", "ChucK", "CICS", "Cilk", "Citrine (programming language)", "CL (IBM)", "Claire", "Clarion", "Clean", "Clipper", "CLIPS", "CLIST", "Clojure", "CLU", "CMS-2", "COBOL – ISO/IEC 1989", "CobolScript – COBOL Scripting language", "Cobra", "CODE", "CoffeeScript", "ColdFusion", "COMAL", "Combined Programming Language (CPL)", "COMIT", "Common Intermediate Language (CIL)", "Common Lisp (also known as CL)", "COMPASS", "Component Pascal", "Constraint Handling Rules (CHR)", "COMTRAN", "Converge", "Cool", "Coq", "Coral 66", "Corn", "CorVision", "COWSEL", "CPL", "CPL", "Cryptol", "csh", "Csound", "CSP", "CUDA", "Curl", "Curry", "Cybil", "Cyclone", "Cython", "Java", "Javascript", "M2001", "M4", "M#", "Machine code", "MAD (Michigan Algorithm Decoder)", "MAD/I", "Magik", "Magma", "make", "Maple", "MAPPER now part of BIS", "MARK-IV now VISION:BUILDER", "Mary", "MASM Microsoft Assembly x86", "MATH-MATIC", "Mathematica", "MATLAB", "Maxima (see also Macsyma)", "Max (Max Msp – Graphical Programming Environment)", "Maya (MEL)", "MDL", "Mercury", "Mesa", "Metafont", "Microcode", "MicroScript", "MIIS", "Milk (programming language)", "MIMIC", "Mirah", "Miranda", "MIVA Script", "ML", "Model 204", "Modelica", "Modula", "Modula-2", "Modula-3", "Mohol", "MOO", "Mortran", "Mouse", "MPD", "Mathcad", "MSIL – deprecated name for CIL", "MSL", "MUMPS", "Mystic Programming L"],
+					blacklist: [".NET", "PHP"],
+				})
+
+
+				// document.getElementById('tag_interest_remove').addEventListener('click', tagify.removeAllTags.bind(tagify))
+
+				tagify.on('add', onAddTag)
+				.on('remove', onRemoveTag)
+				.on('input', onInput)
+				.on('edit', onTagEdit)
+				.on('invalid', onInvalidTag)
+				.on('click', onTagClick)
+				.on('dropdown:show', onDropdownShow)
+				.on('dropdown:hide', onDropdownHide)
+
+				function onAddTag(e) {
+					console.log("onAddTag: ", e.detail);
+					console.log("original input value: ", input.value)
+					tagify.off('add', onAddTag) 
+				}
+
+				function onRemoveTag(e) {
+					console.log(e.detail);
+					console.log("tagify instance value:", tagify.value)
+				}
+
+				function onInput(e) {
+					console.log(e.detail);
+					console.log("onInput: ", e.detail);
+				}
+
+				function onTagEdit(e) {
+					console.log("onTagEdit: ", e.detail);
+				}
+
+				function onInvalidTag(e) {
+					console.log("onInvalidTag: ", e.detail);
+				}
+
+				function onTagClick(e) {
+					console.log(e.detail);
+					console.log("onTagClick: ", e.detail);
+				}
+
+				function onDropdownShow(e) {
+					console.log("onDropdownShow: ", e.detail)
+				}
+
+				function onDropdownHide(e) {
+					console.log("onDropdownHide: ", e.detail)
+				}
+			}
 			return {
 				init: function() {
-					initDemos();
-				},
+					demo1();
+				}
 			};
 		}();
+
 		jQuery(document).ready(function() {
-			KTSweetAlert2Demo.init();
+			KTTagify.init();
 		});
+	</script>
+	<script>
+		function textAreaAdjust(o) {
+			o.style.height = "1px";
+			o.style.height = (25+o.scrollHeight)+"px";
+		}
 	</script>
 </body>
 <!-- end::Body -->

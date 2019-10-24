@@ -52,13 +52,13 @@
 			</a>
 		</div>
 		<div class="kt-header-mobile__toolbar">
-			<div class="kt-header__topbar-item dropdown">
+			<div class="kt-header__topbar-item dropdown kt-hidden">
 				<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
 					<span class="kt-header__topbar-icon">
 						<i style="font-size: 1.5rem;margin-top: 5px;color:#dbdbdb" class="fa fa-search"></i>
 					</span>
 				</div>
-				<div id="sdfd" class="dropdown-menu dropdown-menu-fit dropdown-menu-left dropdown-menu-anim dropdown-menu-lg ">
+				<div class="dropdown-menu dropdown-menu-fit dropdown-menu-left dropdown-menu-anim dropdown-menu-lg">
 					<div class="kt-quick-search kt-quick-search--dropdown kt-quick-search--result-compact" id="kt_quick_search_dropdown">
 						<form method="get" class="kt-quick-search__form">
 							<div class="input-group">
@@ -73,91 +73,11 @@
 				</div>
 			</div>
 			<div class="kt-header__topbar-item dropdown">
-				<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
+				<a href="notification.html" class="kt-header__topbar-wrapper">
 					<span class="kt-header__topbar-icon">
 						<i style="font-size: 1.5rem;margin-top: 5px;margin-left: 10px;margin-right: 10px;color:#dbdbdb" class="fa fa-bell"></i>
 					</span>
-				</div>
-				<div class="dropdown-menu dropdown-menu-fit dropdown-menu-left dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-sm">
-					<form>
-						<div class="kt-head kt-head-10 kt-head--skin-light kt-head--fit-x kt-head--fit-b">
-							<h3 class="kt-head__title">
-								Your Notifications
-								&nbsp;
-								<span class="btn btn-label-primary btn-sm btn-bold btn-font-md">23 new</span>
-							</h3>
-						</div>
-						<div class="tab-content">
-							<div class="tab-pane active show" id="topbar_notifications_notifications" role="tabpanel">
-								<div class="kt-notification kt-margin-t-10 kt-margin-b-10 kt-scroll ps" data-scroll="true" data-height="300" data-mobile-height="200" style="height: 300px; overflow: hidden;">
-									<a href="#" class="kt-notification__item">
-										<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/user2.jpg">
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title">
-												<span id="another_user" name="another_user">George</span> follows you
-											</div>
-											<div class="kt-notification__item-time">
-												1 days ago
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/100_11.jpg">
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title">
-												<span id="another_user" name="another_user">Stephanie</span> follows you
-											</div>
-											<div class="kt-notification__item-time">
-												1 days ago
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/100_13.jpg">
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title">
-												<span id="another_user" name="another_user">Steven</span> follows you
-											</div>
-											<div class="kt-notification__item-time">
-												1 days ago
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/300_15.jpg">
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title">
-												<span id="another_user" name="another_user">Ajax</span> follows you
-											</div>
-											<div class="kt-notification__item-time">
-												1 days ago
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/300_19.jpg">
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title">
-												<span id="another_user" name="another_user">Root</span> follows you
-											</div>
-											<div class="kt-notification__item-time">
-												1 days ago
-											</div>
-										</div>
-									</a>
-									<div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-										<div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;">\
-										</div>
-									</div>
-									<div class="ps__rail-y" style="top: 0px; right: 0px;">
-										<div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
+				</a>
 			</div>
 			<div class="kt-header__topbar-item dropdown">
 				<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
@@ -275,6 +195,12 @@
 									<span class="kt-menu__link-text">Lounge</span>
 								</a>
 							</li>
+							<li class="kt-menu__item " aria-haspopup="true">
+								<a href="search.html" class="kt-menu__link ">
+									<i class="kt-menu__link-icon fa fa-search"></i>
+									<span class="kt-menu__link-text">Search</span>
+								</a>
+							</li>
 							<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true">
 								<a href="advice_room.html" class="kt-menu__link ">
 									<i class="kt-menu__link-icon flaticon2-chat"></i>
@@ -293,6 +219,12 @@
 									<span class="kt-menu__link-text">Profile</span>
 								</a>
 							</li>
+							<li class="kt-menu__item" aria-haspopup="true">
+								<a href="terms_and_condition.html" class="kt-menu__link ">
+									<i class="kt-menu__link-icon fa fa-exclamation-triangle "></i>
+									<span class="kt-menu__link-text">Terms & Condition</span>
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -305,102 +237,17 @@
 					<!-- begin:: Header Menu -->
 					<div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
 						<div style="width: 250%" id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout-default ">
-							<div id="search-desktop" style="margin-top: 13px;width: 60vw;" class="kt-searchbar search-all-bar">
-								<div class="input-group">
-									<div class="input-group-prepend"><span class="input-group-text" id="basic-addon1"><i class="flaticon-search"></i></span></div>
-									<input id="search-desktop" type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon1">
-								</div>
-							</div>
+							
 						</div>
 					</div>
 					<!-- end:: Header Menu -->
 					<!-- begin:: Header Topbar -->
 					<div class="kt-header__topbar">
 						<div class="kt-header__topbar-item dropdown">
-							<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px" aria-expanded="true">
+							<a href="notification.html" class="kt-header__topbar-wrapper">
 								<span class="kt-header__topbar-icon"><i class="flaticon2-bell-alarm-symbol"></i></span>
 								<span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span>
-							</div>
-							<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
-								<form>
-									<div class="kt-head kt-head-10 kt-head--skin-light kt-head--fit-x kt-head--fit-b">
-										<h3 class="kt-head__title">
-											Your Notifications
-											&nbsp;
-											<span class="btn btn-label-primary btn-sm btn-bold btn-font-md">23 new</span>
-										</h3>
-									</div>
-									<div class="tab-content">
-										<div class="tab-pane active show" id="topbar_notifications_notifications" role="tabpanel">
-											<div class="kt-notification kt-margin-t-10 kt-margin-b-10 kt-scroll ps" data-scroll="true" data-height="300" data-mobile-height="200" style="height: 300px; overflow: hidden;">
-												<a href="#" class="kt-notification__item">
-													<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/user2.jpg">
-													<div class="kt-notification__item-details">
-														<div class="kt-notification__item-title">
-															<span id="another_user" name="another_user">George</span> follows you
-														</div>
-														<div class="kt-notification__item-time">
-															1 days ago
-														</div>
-													</div>
-												</a>
-												<a href="#" class="kt-notification__item">
-													<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/100_11.jpg">
-													<div class="kt-notification__item-details">
-														<div class="kt-notification__item-title">
-															<span id="another_user" name="another_user">Stephanie</span> follows you
-														</div>
-														<div class="kt-notification__item-time">
-															1 days ago
-														</div>
-													</div>
-												</a>
-												<a href="#" class="kt-notification__item">
-													<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/100_13.jpg">
-													<div class="kt-notification__item-details">
-														<div class="kt-notification__item-title">
-															<span id="another_user" name="another_user">Steven</span> follows you
-														</div>
-														<div class="kt-notification__item-time">
-															1 days ago
-														</div>
-													</div>
-												</a>
-												<a href="#" class="kt-notification__item">
-													<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/300_15.jpg">
-													<div class="kt-notification__item-details">
-														<div class="kt-notification__item-title">
-															<span id="another_user" name="another_user">Ajax</span> follows you
-														</div>
-														<div class="kt-notification__item-time">
-															1 days ago
-														</div>
-													</div>
-												</a>
-												<a href="#" class="kt-notification__item">
-													<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/300_19.jpg">
-													<div class="kt-notification__item-details">
-														<div class="kt-notification__item-title">
-															<span id="another_user" name="another_user">Root</span> follows you
-														</div>
-														<div class="kt-notification__item-time">
-															1 days ago
-														</div>
-													</div>
-												</a>
-												<div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-													<div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;">\
-													</div>
-												</div>
-												<div class="ps__rail-y" style="top: 0px; right: 0px;">
-													<div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
+							</a>
 						</div>
 						<div class="kt-header__topbar-item kt-header__topbar-item--user">
 							<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
@@ -561,13 +408,13 @@
 					</div>
 					<div  class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid" >
 						<div class="row">
-							<div class="col-lg-8">
+							<div class="col-lg-10 offset-lg-1">
 								<!--begin::Portlet-->
 								<div class="kt-portlet kt-portlet--mobile">
 									<div class="kt-portlet__head">
 										<div class="kt-portlet__head-label">
 											<h6 class="bread_crumb">
-												Advice Room <i class="fa fa"></i>
+												Answers Room
 											</h6>
 										</div>
 									</div>
@@ -576,8 +423,8 @@
 											<div class="kt-portlet">
 												<div class="kt-portlet__head">
 													<div class="kt-portlet__head-label">
-														<a href="#" class="kt-media kt-media--sm kt-media--circle">
-															<img src="../assets/media/users/100_3.jpg" alt="image">
+														<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+															<img id="user_pic" name="user_pic" src="../assets/media/users/100_3.jpg" alt="image">
 														</a>
 													</div>
 													<div class="question-info">
@@ -587,9 +434,9 @@
 													</div>
 													<div class="kt-portlet__head-toolbar">
 														<div class="kt-portlet__head-actions">
-															<a href="#" class="btn btn-clean btn-sm padding-lr-01">
+															<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
 																<span class="la la-bookmark"></span>
-															</a>
+															</button>
 															<a href="#" class="btn btn-clean btn-sm padding-lr-01">
 																<span class="la la-mail-forward"></span>
 															</a>
@@ -605,11 +452,11 @@
 													</p>
 												</div>
 												<div class="kt-portlet__footer padding-all-5">
-													<div class="kt-input-icon kt-input-icon--left">
-														<input style="border-radius: 20px" type="text" class="form-control" placeholder="Answer..." id="input_answer">
-														<span class="kt-input-icon__icon kt-input-icon__icon--left">
-															<span><i class="fa fa-edit"></i></span>
-														</span>
+													<div class="input-group">
+														<input type="text" class="form-control answers-input" placeholder="answers..">
+														<div class="input-group-append">
+															<button class="btn btn-secondary send-answers" type="button">Send</button>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -618,7 +465,7 @@
 								</div>
 								<!--end::Portlet-->
 							</div>
-							<div class="col-lg-8">
+							<div class="col-lg-10 offset-lg-1">
 								<div class="kt-portlet kt-portlet--mobile">
 									<div style="background-color: #F0FBFF;" class="kt-portlet__head padding-all-15">
 										<div class="kt-portlet__head-label">
@@ -635,13 +482,13 @@
 								</div>
 								<div class="kt-portlet kt-portlet--mobile">
 									<div class="portlet-komentar">
-										<div style="padding: 10px;margin-top:10px" class="kt-portlet__body">
+										<div style="padding: 10px;margin-top:0px" class="kt-portlet__body">
 											<div class="" id="all_questions" name="all_questions">
 												<div style="position: relative;" class="kt-portlet">
 													<div class="kt-portlet__head">
 														<div class="kt-portlet__head-label">
-															<a href="#" class="kt-media kt-media--sm kt-media--circle">
-																<img class="with_badge" src="../assets/media/users/100_3.jpg" alt="image">
+															<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+																<img id="user_pic" name="user_pic" src="../assets/media/users/100_3.jpg" alt="image">
 															</a>
 														</div>
 														<div class="question-info">
@@ -653,9 +500,6 @@
 														<div class="kt-portlet__head-toolbar">
 															<div class="kt-portlet__head-actions">
 																<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill badge_kecil badge-verified-2 verified-badge-out">Verified Senpai</span>
-																<a  id="add_user_2" name="add_user_2" href="#" class="btn btn-clean btn-sm padding-lr-01">
-																	<i class="fa fa-user-plus"></i>
-																</a>
 															</div>
 														</div>
 													</div>
@@ -668,22 +512,31 @@
 														</p>
 													</div>
 													<div class="kt-portlet__footer padding-all-5">
-														<button  id="btn_vote" name="btn_vote" onclick="vote()" class="btn btn-sm btn-outline-brand">
-															<i class="fa fa-caret-square-up"></i> <span id="jumlah_vote" name="jumlah_vote">59</span> Votes
+														<button  id="btn_vote" name="btn_vote" class="btn btn-sm btn-outline-brand">
+															<i id="icon-vote" class="fa fa-caret-square-up"></i> <span id="jumlah_vote" name="jumlah_vote">59</span> <span id="vote-unvote">Vote</span>
 														</button>
 														<button onclick="toggle_comment()" type="button" class="btn btn-primary btn-sm">
-															<i class="fa fa-comment-alt"></i> Comment
+															<i class="fa fa-comment-alt"></i> Answers
+														</button>
+														<button id="btn_solved" class="btn btn-sm btn-success">
+															<i id="icon_solved" class="fa fa-check"></i>
+															<span id="solved_unsolved">Mark as solved</span>
 														</button>
 													</div>
-													<div style="display: none; " id="komentar">
+													<div style="" id="komentar">
 														<div class="kt-portlet__footer padding-all-5 padding-top-10">
-															<input style="border-radius: 20px" type="text" class="form-control" placeholder="Add a comment..." id="input_answer">
+															<div class="input-group">
+																<input type="text" class="form-control answers-input" placeholder="add a answers..">
+																<div class="input-group-append">
+																	<button class="btn btn-secondary send-answers" type="button">Send</button>
+																</div>
+															</div>
 														</div>
-														<div  class="kt-portlet__body padding-all-5 padding-top-10">
+														<div  class="kt-portlet__body padding-all-5 padding-top-10 isi-komentar">
 															<div class="kt-portlet__head">
 																<div class="kt-portlet__head-label">
-																	<a href="#" class="kt-media kt-media--sm kt-media--circle">
-																		<img class="with_badge" src="../assets/media/users/100_3.jpg" alt="image">
+																	<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+																		<img id="user_pic" name="user_pic" src="../assets/media/users/100_3.jpg" alt="image">
 																	</a>
 																</div>
 																<div class="question-info">
@@ -694,25 +547,95 @@
 																<div class="kt-portlet__head-toolbar">
 																	<div class="kt-portlet__head-actions">
 																		<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill badge_kecil badge-verified">Verified Senpai</span>
-																		<a  id="add_user_2" name="add_user_2" href="#" class="btn btn-clean btn-sm padding-lr-01">
-																			<i class="fa fa-user-plus"></i>
-																		</a>
 																	</div>
 																</div>
 															</div>
-															<div class="kt-portlet__body padding-all-5 padding-top-10">
+															<div class="kt-portlet__body padding-all-5 padding-top-10 dashed-light-bottom">
 																<p justify="center" id="question_description" name="question_descri">
 																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
 																</p>
 															</div>
-															<div class="dashed-light-bottom kt-portlet__footer">
-																<button id="jumlah_vote_komentar" name="jumlah_vote_komentar" class="btn btn-sm btn-link">
-																	<i class="fa fa-caret-square-up"></i> <span id="jumlah_vote_komentar" name="jumlah_vote_komentar">4</span>
-																</button>
-																<button id="reply_btn" name="reply_btn" class="btn btn-sm btn-link">
-																	Reply
-																</button>
+														</div>
+														<div class="kt-portlet__body padding-all-5 padding-top-10 isi-komentar">
+															<div class="kt-portlet__head">
+																<div class="kt-portlet__head-label">
+																	<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+																		<img id="user_pic" name="user_pic" src="../assets/media/users/100_4.jpg" alt="image">
+																	</a>
+																</div>
+																<div class="question-info">
+																	<h6><span id="the_answer" name="the_answer">Fascal Ivandry</span></h6>
+																	<p><span id="answer_job" name="answer_job">Product Manager at Artistektur</span></p>
+																	<div style="flex-wrap : wrap;">
+																		<span id="answer_time">4d ago</span>
+																	</div>
+																</div>
+																<div class="kt-portlet__head-toolbar">
+																	<div class="kt-portlet__head-actions">
+																		<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill  badge_kecil">Verified Senpai</span>
+																	</div>
+																</div>
 															</div>
+															<div class="kt-portlet__body padding-all-5 padding-top-10 dashed-light-bottom">
+																<p justify="center" id="question_description" name="question_descri">
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
+																</p>
+															</div>
+														</div>
+														<div style="display: none" id="see_more_komentar">
+															<div  class="kt-portlet__body padding-all-5 padding-top-10 isi-komentar">
+																<div class="kt-portlet__head">
+																	<div class="kt-portlet__head-label">
+																		<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+																			<img id="user_pic" name="user_pic" src="../assets/media/users/100_3.jpg" alt="image">
+																		</a>
+																	</div>
+																	<div class="question-info">
+																		<h6><span id="the_answer" name="the_answer">Fascal Ivandry</span></h6>
+																		<p><span id="answer_job" name="answer_job">Product Manager at Artistektur</span></p>
+																		<p id="answer_time">4d ago</p>
+																	</div>
+																	<div class="kt-portlet__head-toolbar">
+																		<div class="kt-portlet__head-actions">
+																			<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill badge_kecil badge-verified">Verified Senpai</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="kt-portlet__body padding-all-5 padding-top-10 dashed-light-bottom">
+																	<p justify="center" id="question_description" name="question_descri">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
+																	</p>
+																</div>
+															</div>
+															<div class="kt-portlet__body padding-all-5 padding-top-10 isi-komentar">
+																<div class="kt-portlet__head">
+																	<div class="kt-portlet__head-label">
+																		<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+																			<img id="user_pic" name="user_pic" src="../assets/media/users/100_4.jpg" alt="image">
+																		</a>
+																	</div>
+																	<div class="question-info">
+																		<h6><span id="the_answer" name="the_answer">Fascal Ivandry</span></h6>
+																		<p><span id="answer_job" name="answer_job">Product Manager at Artistektur</span></p>
+																		<div style="flex-wrap : wrap;">
+																			<span id="answer_time">4d ago</span>
+																		</div>
+																	</div>
+																	<div class="kt-portlet__head-toolbar">
+																		<div class="kt-portlet__head-actions">
+																			<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill  badge_kecil">Verified Senpai</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="kt-portlet__body padding-all-5 padding-top-10 dashed-light-bottom">
+																	<p justify="center" id="question_description" name="question_descri">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="kt-portlet__footer kt-align-right">
+															<button onclick="toggle_seeMore()" id="btn_see_more" class="btn btn-link">See more	</button>
 														</div>
 													</div>
 												</div>
@@ -722,13 +645,13 @@
 								</div>
 								<div class="kt-portlet kt-portlet--mobile">
 									<div class="portlet-komentar">
-										<div style="padding: 10px;margin-top:10px" class="kt-portlet__body">
+										<div style="padding: 10px;margin-top:0px" class="kt-portlet__body">
 											<div class="" id="all_questions" name="all_questions">
 												<div style="position: relative;" class="kt-portlet">
 													<div class="kt-portlet__head">
 														<div class="kt-portlet__head-label">
-															<a href="#" class="kt-media kt-media--sm kt-media--circle">
-																<img class="with_badge" src="../assets/media/users/100_3.jpg" alt="image">
+															<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+																<img id="user_pic" name="user_pic" src="../assets/media/users/100_3.jpg" alt="image">
 															</a>
 														</div>
 														<div class="question-info">
@@ -740,9 +663,6 @@
 														<divver class="kt-portlet__head-toolbar">
 															<div class="kt-portlet__head-actions">
 																<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill badge_kecil verified-badge-out badge-verified-2">Verified Senpai</span>
-																<a  id="add_user_2" name="add_user_2" href="#" class="btn btn-clean btn-sm padding-lr-01">
-																	<i class="fa fa-user-plus"></i>
-																</a>
 															</div>
 														</div>
 													</div>
@@ -756,21 +676,26 @@
 													</div>ver
 													<div class="kt-portlet__footer padding-all-5">
 														<button  id="btn_vote_2" name="btn_vote_2" class="btn btn-sm btn-outline-brand">
-															<i class="fa fa-caret-square-up"></i> <span id="jumlah_vote_2" name="jumlah_vote_2">44</span> Votes
+															<i id="icon-vote_2" class="fa fa-caret-square-up"></i> <span id="jumlah_vote_2" name="jumlah_vote_2">44</span> <span id="vote-unvote_2">Vote</span>
 														</button>
 														<button onclick="toggle_comment_2()" type="button" class="btn btn-primary btn-sm">
-															<i class="fa fa-comment-alt"></i> Comment
+															<i class="fa fa-comment-alt"></i> Answers
 														</button>
 													</div>
-													<div style="display: none" id="komentar_2">
+													<div style="" id="komentar_2">
 														<div class="kt-portlet__footer padding-all-5 padding-top-10">
-															<input style="border-radius: 20px" type="text" class="form-control" placeholder="Add a comment..." id="input_answer">
+															<div class="input-group">
+																<input type="text" class="form-control answers-input" placeholder="add a answers..">
+																<div class="input-group-append">
+																	<button class="btn btn-secondary send-answers" type="button">Send</button>
+																</div>
+															</div>
 														</div>
-														<div class="kt-portlet__body padding-all-5 padding-top-10">
+														<div class="kt-portlet__body padding-all-5 padding-top-10 isi-komentar">
 															<div class="kt-portlet__head">
 																<div class="kt-portlet__head-label">
-																	<a href="#" class="kt-media kt-media--sm kt-media--circle">
-																		<img class="with_badge" src="../assets/media/users/100_3.jpg" alt="image">
+																	<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+																		<img id="user_pic" name="user_pic" src="../assets/media/users/100_4.jpg" alt="image">
 																	</a>
 																</div>
 																<div class="question-info">
@@ -783,25 +708,95 @@
 																<div class="kt-portlet__head-toolbar">
 																	<div class="kt-portlet__head-actions">
 																		<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill  badge_kecil">Verified Senpai</span>
-																		<a  id="add_user_2" name="add_user_2" href="#" class="btn btn-clean btn-sm padding-lr-01">
-																			<i class="fa fa-user-plus"></i>
-																		</a>
 																	</div>
 																</div>
 															</div>
-															<div class="kt-portlet__body padding-all-5 padding-top-10">
+															<div class="kt-portlet__body padding-all-5 padding-top-10 dashed-light-bottom">
 																<p justify="center" id="question_description" name="question_descri">
 																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
 																</p>
 															</div>
-															<div class="dashed-light-bottom kt-portlet__footer">
-																<button id="jumlah_vote_komentar" name="jumlah_vote_komentar" class="btn btn-sm btn-link">
-																	<i class="fa fa-caret-square-up"></i> <span id="jumlah_vote_komentar" name="jumlah_vote_komentar">4</span>
-																</button>
-																<button id="reply_btn" name="reply_btn" class="btn btn-sm btn-link">
-																	Reply
-																</button>
+														</div>
+														<div class="kt-portlet__body padding-all-5 padding-top-10 isi-komentar">
+															<div class="kt-portlet__head">
+																<div class="kt-portlet__head-label">
+																	<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+																		<img id="user_pic" name="user_pic" src="../assets/media/users/100_4.jpg" alt="image">
+																	</a>
+																</div>
+																<div class="question-info">
+																	<h6><span id="the_answer" name="the_answer">Fascal Ivandry</span></h6>
+																	<p><span id="answer_job" name="answer_job">Product Manager at Artistektur</span></p>
+																	<div style="flex-wrap : wrap;">
+																		<span id="answer_time">4d ago</span>
+																	</div>
+																</div>
+																<div class="kt-portlet__head-toolbar">
+																	<div class="kt-portlet__head-actions">
+																		<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill  badge_kecil">Verified Senpai</span>
+																	</div>
+																</div>
 															</div>
+															<div class="kt-portlet__body padding-all-5 padding-top-10 dashed-light-bottom">
+																<p justify="center" id="question_description" name="question_descri">
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
+																</p>
+															</div>
+														</div>
+														<div style="display: none" id="see_more_komentar_2">
+															<div  class="kt-portlet__body padding-all-5 padding-top-10 isi-komentar">
+																<div class="kt-portlet__head">
+																	<div class="kt-portlet__head-label">
+																		<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+																			<img id="user_pic" name="user_pic" src="../assets/media/users/100_3.jpg" alt="image">
+																		</a>
+																	</div>
+																	<div class="question-info">
+																		<h6><span id="the_answer" name="the_answer">Fascal Ivandry</span></h6>
+																		<p><span id="answer_job" name="answer_job">Product Manager at Artistektur</span></p>
+																		<p id="answer_time">4d ago</p>
+																	</div>
+																	<div class="kt-portlet__head-toolbar">
+																		<div class="kt-portlet__head-actions">
+																			<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill badge_kecil badge-verified">Verified Senpai</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="kt-portlet__body padding-all-5 padding-top-10 dashed-light-bottom">
+																	<p justify="center" id="question_description" name="question_descri">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
+																	</p>
+																</div>
+															</div>
+															<div class="kt-portlet__body padding-all-5 padding-top-10 isi-komentar">
+																<div class="kt-portlet__head">
+																	<div class="kt-portlet__head-label">
+																		<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+																			<img id="user_pic" name="user_pic" src="../assets/media/users/100_4.jpg" alt="image">
+																		</a>
+																	</div>
+																	<div class="question-info">
+																		<h6><span id="the_answer" name="the_answer">Fascal Ivandry</span></h6>
+																		<p><span id="answer_job" name="answer_job">Product Manager at Artistektur</span></p>
+																		<div style="flex-wrap : wrap;">
+																			<span id="answer_time">4d ago</span>
+																		</div>
+																	</div>
+																	<div class="kt-portlet__head-toolbar">
+																		<div class="kt-portlet__head-actions">
+																			<span style="display: none" id="badge_status_2" name="badge_status_2" class="btn btn-sm btn-label-success btn-pill  badge_kecil">Verified Senpai</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="kt-portlet__body padding-all-5 padding-top-10 dashed-light-bottom">
+																	<p justify="center" id="question_description" name="question_descri">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="kt-portlet__footer kt-align-right">
+															<button onclick="toggle_seeMore_2()" id="btn_see_more_2" class="btn  btn-link">see more</button>
 														</div>
 													</div>
 												</div>
@@ -832,26 +827,32 @@
 	</div>
 	<div style="display: none" class="footer">
 		<div class="row portlet-menu-footer">
-			<div class="col-sm-3">
+			<div class="offset-1 col-2">
 				<a href="index.html">
 					<i class="fa fa-home menu-icon"></i>
 				</a>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-2">
+				<a href="search.html">
+					<i class="fa fa-search menu-icon"></i>
+				</a>
+			</div>
+			<div class="col-2">
 				<a href="advice_room.html">
 					<i class="flaticon2-chat menu-icon active-mobile-menu"></i>
 				</a>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-2">
 				<a href="messages.html">
 					<i class="flaticon-multimedia menu-icon"></i>
 				</a>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-2">
 				<a href="profile.html">
 					<i class="flaticon2-user menu-icon"></i>
 				</a>
 			</div>
+
 		</div>
 	</div>
 	<!-- end:: Footer -->
@@ -1307,7 +1308,6 @@
 			$("#portlet-pesan").removeClass("position-fixed");
 		}
 	</script>
-
 	<script>
 		var widthScreen = screen.width;
 		if (widthScreen > 410) {
@@ -1315,7 +1315,6 @@
 			$(".badge-verified-2").show();
 		}
 	</script>
-
 	<script>
 		function toggle_comment() {
 			var x = document.getElementById("komentar");
@@ -1338,22 +1337,136 @@
 			}
 		}
 
-		
-		// $("#btn_vote").click(function () {
-		// 	$("#jumlah_vote").text(function(){return ~~$(this).text() + 1});
+		function toggle_seeMore() {
+			var x = document.getElementById("see_more_komentar");
+			var y = document.getElementById("btn_see_more")
+			if (x.style.display === "none") {
+				x.style.display = "block";
+				x.scrollIntoView();
+				y.innerHTML = 'Hide';
 
-		// });
-		// 
-		function timeout_trigger(){
-			$("#jumlah_vote").text(function(){return ~~$(this).text() + 1});
+			} else {
+				x.style.display = "none";
+				x.scrollIntoView();
+				y.innerHTML = 'See More';
+			}
+
 		}
-		function vote () {
-			setTimeout('timeout_trigger()',2000);
+
+		function toggle_seeMore_2() {
+			var x = document.getElementById("see_more_komentar_2");
+			var y = document.getElementById("btn_see_more_2")
+			if (x.style.display === "none") {
+				x.style.display = "block";
+				x.scrollIntoView();
+				y.innerHTML = 'Hide';
+
+			} else {
+				x.style.display = "none";
+				x.scrollIntoView();
+				y.innerHTML = 'See More';
+			}
+
 		}
-		$("#btn_vote").dblclick(function () {
-			$("#jumlah_vote").text(function(){return ~~$(this).text() - 1});
-		});
 		
+	</script>
+	<script>
+		var vote = document.getElementById('btn_vote');
+		var jum_vote = document.getElementById('jumlah_vote');
+		var tulisan = document.getElementById("vote-unvote");
+		jum_vote.value = jum_vote.innerText;
+		var hasil_awal = parseInt(jum_vote.value);
+
+
+
+		vote.addEventListener("click",function(){
+			jum_vote.value = jum_vote.innerText;
+			var hasil_vote = parseInt(jum_vote.value);
+			var a = hasil_vote;
+			if (hasil_awal == a) {
+				$("#jumlah_vote").text(function(){return ~~$(this).text() + 1});
+				jQuery('#icon-vote').addClass('fa-caret-square-down').removeClass('fa-caret-square-up');
+				tulisan.innerHTML = "Unvote";
+				jQuery('#btn_vote').addClass('btn-outline-secondary').removeClass('btn-outline-brand');
+
+			}
+			else if (hasil_awal !== a) {
+				$("#jumlah_vote").text(function(){return ~~$(this).text() - 1});
+				jQuery('#icon-vote').addClass('fa-caret-square-up').removeClass('fa-caret-square-down');
+				tulisan.innerHTML = "Vote";
+				jQuery('#btn_vote').addClass('btn-outline-brand').removeClass('btn-outline-secondary');
+			}
+		})
+
+	</script>
+	<script>
+		var vote_2 = document.getElementById('btn_vote_2');
+		var jum_vote_2 = document.getElementById('jumlah_vote_2');
+		var tulisan_2 = document.getElementById("vote-unvote_2");
+		jum_vote_2.value = jum_vote_2.innerText;
+		var hasil_awal_2 = parseInt(jum_vote_2.value);
+
+		vote_2.addEventListener("click",function(){
+			jum_vote_2.value = jum_vote_2.innerText;
+			var hasil_vote_2 = parseInt(jum_vote_2.value);
+			var b = hasil_vote_2;
+			if (hasil_awal_2 == b) {
+				$("#jumlah_vote_2").text(function(){return ~~$(this).text() + 1});
+				jQuery('#icon-vote_2').addClass('fa-caret-square-down').removeClass('fa-caret-square-up');
+				tulisan_2.innerHTML = "Unvote";
+				jQuery('#btn_vote_2').addClass('btn-outline-secondary').removeClass('btn-outline-brand');
+
+			}
+			else if (hasil_awal !== b) {
+				$("#jumlah_vote_2").text(function(){return ~~$(this).text() - 1});
+				jQuery('#icon-vote_2').addClass('fa-caret-square-up').removeClass('fa-caret-square-down');
+				tulisan_2.innerHTML = "Vote";
+				jQuery('#btn_vote_2').addClass('btn-outline-brand').removeClass('btn-outline-secondary');
+			}
+		})
+
+	</script>
+	<script>
+		var btn_solved = document.getElementById('btn_solved');
+		var icon_solved = document.getElementById('icon_solved');
+		var tulisan = document.getElementById('solved_unsolved');
+		
+		btn_solved.addEventListener("click",function(){
+			var a = tulisan.innerText;
+			if (a == "Mark as solved") {
+				tulisan.innerText = "Solved";
+				jQuery('#btn_solved').addClass('btn-warning').removeClass('btn-success');
+			}
+			else {
+				tulisan.innerText = "Mark as solved";
+				jQuery('#btn_solved').addClass('btn-success').removeClass('btn-warning');
+			}
+		})
+	</script>
+	<script>
+		var KTSweetAlert2Demo = function() {
+			var initDemos = function() {
+				$('.btn_bookmark').click(function(e) {
+					swal.fire({
+						position: 'center',
+						type: 'success',
+						title: 'This Post Bookmark',
+						showConfirmButton: false,
+						timer: 1300
+					});
+				});
+			};
+			return {
+				init: function() {
+					initDemos();
+				},
+			};
+		}();
+		jQuery(document).ready(function() {
+			KTSweetAlert2Demo.init();
+		});
+	</script>
+	<script>
 		
 	</script>
 

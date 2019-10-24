@@ -62,13 +62,13 @@
 			</a>
 		</div>
 		<div class="kt-header-mobile__toolbar">
-			<div class="kt-header__topbar-item dropdown">
+			<div class="kt-header__topbar-item dropdown kt-hidden">
 				<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
 					<span class="kt-header__topbar-icon">
 						<i style="font-size: 1.5rem;margin-top: 5px;color:#dbdbdb" class="fa fa-search"></i>
 					</span>
 				</div>
-				<div id="sdfd" class="dropdown-menu dropdown-menu-fit dropdown-menu-left dropdown-menu-anim dropdown-menu-lg ">
+				<div class="dropdown-menu dropdown-menu-fit dropdown-menu-left dropdown-menu-anim dropdown-menu-lg">
 					<div class="kt-quick-search kt-quick-search--dropdown kt-quick-search--result-compact" id="kt_quick_search_dropdown">
 						<form method="get" class="kt-quick-search__form">
 							<div class="input-group">
@@ -83,91 +83,11 @@
 				</div>
 			</div>
 			<div class="kt-header__topbar-item dropdown">
-				<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
+				<a href="notification.html" class="kt-header__topbar-wrapper">
 					<span class="kt-header__topbar-icon">
 						<i style="font-size: 1.5rem;margin-top: 5px;margin-left: 10px;margin-right: 10px;color:#dbdbdb" class="fa fa-bell"></i>
 					</span>
-				</div>
-				<div class="dropdown-menu dropdown-menu-fit dropdown-menu-left dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-sm">
-					<form>
-						<div class="kt-head kt-head-10 kt-head--skin-light kt-head--fit-x kt-head--fit-b">
-							<h3 class="kt-head__title">
-								Your Notifications
-								&nbsp;
-								<span class="btn btn-label-primary btn-sm btn-bold btn-font-md">23 new</span>
-							</h3>
-						</div>
-						<div class="tab-content">
-							<div class="tab-pane active show" id="topbar_notifications_notifications" role="tabpanel">
-								<div class="kt-notification kt-margin-t-10 kt-margin-b-10 kt-scroll ps" data-scroll="true" data-height="300" data-mobile-height="200" style="height: 300px; overflow: hidden;">
-									<a href="#" class="kt-notification__item">
-										<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/user2.jpg">
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title">
-												<span id="another_user" name="another_user">George</span> follows you
-											</div>
-											<div class="kt-notification__item-time">
-												1 days ago
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/100_11.jpg">
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title">
-												<span id="another_user" name="another_user">Stephanie</span> follows you
-											</div>
-											<div class="kt-notification__item-time">
-												1 days ago
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/100_13.jpg">
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title">
-												<span id="another_user" name="another_user">Steven</span> follows you
-											</div>
-											<div class="kt-notification__item-time">
-												1 days ago
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/300_15.jpg">
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title">
-												<span id="another_user" name="another_user">Ajax</span> follows you
-											</div>
-											<div class="kt-notification__item-time">
-												1 days ago
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/300_19.jpg">
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title">
-												<span id="another_user" name="another_user">Root</span> follows you
-											</div>
-											<div class="kt-notification__item-time">
-												1 days ago
-											</div>
-										</div>
-									</a>
-									<div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-										<div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;">\
-										</div>
-									</div>
-									<div class="ps__rail-y" style="top: 0px; right: 0px;">
-										<div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
+				</a>
 			</div>
 			<div class="kt-header__topbar-item dropdown">
 				<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
@@ -280,6 +200,12 @@
 									<span class="kt-menu__link-text">Lounge</span>
 								</a>
 							</li>
+							<li class="kt-menu__item " aria-haspopup="true">
+								<a href="search.html" class="kt-menu__link ">
+									<i class="kt-menu__link-icon fa fa-search"></i>
+									<span class="kt-menu__link-text">Search</span>
+								</a>
+							</li>
 							<li class="kt-menu__item" aria-haspopup="true">
 								<a href="advice_room.html" class="kt-menu__link ">
 									<i class="kt-menu__link-icon flaticon2-chat"></i>
@@ -298,6 +224,12 @@
 									<span class="kt-menu__link-text">Profile</span>
 								</a>
 							</li>
+							<li class="kt-menu__item" aria-haspopup="true">
+								<a href="terms_and_condition.html" class="kt-menu__link ">
+									<i class="kt-menu__link-icon fa fa-exclamation-triangle "></i>
+									<span class="kt-menu__link-text">Terms & Condition</span>
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -310,7 +242,7 @@
 					<!-- begin:: Header Menu -->
 					<div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
 						<div style="width: 250%" id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout-default ">
-							<div id="search-desktop" style="margin-top: 13px;width: 60vw;" class="kt-searchbar search-all-bar">
+							<div id="search-desktop" style="margin-top: 13px;width: 60vw;" class="kt-searchbar search-all-bar kt-hidden">
 								<div class="input-group">
 									<div class="input-group-prepend"><span class="input-group-text" id="basic-addon1"><i class="flaticon-search"></i></span></div>
 									<input id="search-desktop" type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon1">
@@ -322,90 +254,10 @@
 					<!-- begin:: Header Topbar -->
 					<div class="kt-header__topbar">
 						<div class="kt-header__topbar-item dropdown">
-							<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px" aria-expanded="true">
+							<a href="notification.html" class="kt-header__topbar-wrapper">
 								<span class="kt-header__topbar-icon"><i class="flaticon2-bell-alarm-symbol"></i></span>
 								<span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span>
-							</div>
-							<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
-								<form>
-									<div class="kt-head kt-head-10 kt-head--skin-light kt-head--fit-x kt-head--fit-b">
-										<h3 class="kt-head__title">
-											Your Notifications
-											&nbsp;
-											<span class="btn btn-label-primary btn-sm btn-bold btn-font-md">23 new</span>
-										</h3>
-									</div>
-									<div class="tab-content">
-										<div class="tab-pane active show" id="topbar_notifications_notifications" role="tabpanel">
-											<div class="kt-notification kt-margin-t-10 kt-margin-b-10 kt-scroll ps" data-scroll="true" data-height="300" data-mobile-height="200" style="height: 300px; overflow: hidden;">
-												<a href="#" class="kt-notification__item">
-													<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/user2.jpg">
-													<div class="kt-notification__item-details">
-														<div class="kt-notification__item-title">
-															<span id="another_user" name="another_user">George</span> follows you
-														</div>
-														<div class="kt-notification__item-time">
-															1 days ago
-														</div>
-													</div>
-												</a>
-												<a href="#" class="kt-notification__item">
-													<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/100_11.jpg">
-													<div class="kt-notification__item-details">
-														<div class="kt-notification__item-title">
-															<span id="another_user" name="another_user">Stephanie</span> follows you
-														</div>
-														<div class="kt-notification__item-time">
-															1 days ago
-														</div>
-													</div>
-												</a>
-												<a href="#" class="kt-notification__item">
-													<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/100_13.jpg">
-													<div class="kt-notification__item-details">
-														<div class="kt-notification__item-title">
-															<span id="another_user" name="another_user">Steven</span> follows you
-														</div>
-														<div class="kt-notification__item-time">
-															1 days ago
-														</div>
-													</div>
-												</a>
-												<a href="#" class="kt-notification__item">
-													<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/300_15.jpg">
-													<div class="kt-notification__item-details">
-														<div class="kt-notification__item-title">
-															<span id="another_user" name="another_user">Ajax</span> follows you
-														</div>
-														<div class="kt-notification__item-time">
-															1 days ago
-														</div>
-													</div>
-												</a>
-												<a href="#" class="kt-notification__item">
-													<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/300_19.jpg">
-													<div class="kt-notification__item-details">
-														<div class="kt-notification__item-title">
-															<span id="another_user" name="another_user">Root</span> follows you
-														</div>
-														<div class="kt-notification__item-time">
-															1 days ago
-														</div>
-													</div>
-												</a>
-												<div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-													<div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;">\
-													</div>
-												</div>
-												<div class="ps__rail-y" style="top: 0px; right: 0px;">
-													<div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
+							</a>
 						</div>
 						<div class="kt-header__topbar-item kt-header__topbar-item--user">
 							<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
@@ -589,7 +441,7 @@
 													What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?
 												</span>
 												<span class="form-text text-muted">
-													Asked by <span id="nama_penanya">Rifal</span> | <span id="tgl_bertanya">20/11/19</span>
+													Asked by <span id="nama_penanya" name="nama_penanya">Rifal</span> | <span id="tgl_bertanya" name="tgl_bertanya">20/11/19</span> | <span id="type" name="type"> Post</span>
 												</span>
 											</div>
 											<div class="btn-lihat-container">
@@ -610,7 +462,7 @@
 													What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?
 												</span>
 												<span class="form-text text-muted">
-													Asked by <span id="nama_penanya">Rifal</span> | <span id="tgl_bertanya">20/11/19</span>
+													Asked by <span id="nama_penanya" name="nama_penanya">Rifal</span> | <span id="tgl_bertanya" name="tgl_bertanya">20/11/19</span> | <span id="type" name="type"> Article</span>
 												</span>
 											</div>
 											<div class="btn-lihat-container">
@@ -631,7 +483,7 @@
 													Apa yang dimaksud dengan pertanyaan sdfsdfsdf ?
 												</span>
 												<span class="form-text text-muted">
-													Asked by <span id="nama_penanya">Rifal</span> | <span id="tgl_bertanya">20/11/19</span>
+													Asked by <span id="nama_penanya" name="nama_penanya">Rifal</span> | <span id="tgl_bertanya" name="tgl_bertanya">20/11/19</span> | <span id="type" name="type"> Question</span>
 												</span>
 											</div>
 											<div class="btn-lihat-container">
@@ -652,7 +504,7 @@
 													What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?
 												</span>
 												<span class="form-text text-muted">
-													Asked by <span id="nama_penanya">Rifal</span> | <span id="tgl_bertanya">20/11/19</span>
+													Asked by <span id="nama_penanya" name="nama_penanya">Rifal</span> | <span id="tgl_bertanya" name="tgl_bertanya">20/11/19</span> | <span id="type" name="type"> Question</span>
 												</span>
 											</div>
 											<div class="btn-lihat-container">
@@ -673,7 +525,7 @@
 													What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?
 												</span>
 												<span class="form-text text-muted">
-													Asked by <span id="nama_penanya">Rifal</span> | <span id="tgl_bertanya">20/11/19</span>
+													Asked by <span id="nama_penanya" name="nama_penanya">Rifal</span> | <span id="tgl_bertanya" name="tgl_bertanya">20/11/19</span> | <span id="type" name="type"> Question</span>
 												</span>
 											</div>
 											<div class="btn-lihat-container">
@@ -694,7 +546,7 @@
 													What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?
 												</span>
 												<span class="form-text text-muted">
-													Asked by <span id="nama_penanya">Rifal</span> | <span id="tgl_bertanya">20/11/19</span>
+													Asked by <span id="nama_penanya" name="nama_penanya">Rifal</span> | <span id="tgl_bertanya" name="tgl_bertanya">20/11/19</span> | <span id="type" name="type"> Post</span>
 												</span>
 											</div>
 											<div class="btn-lihat-container">
@@ -715,7 +567,7 @@
 													What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?
 												</span>
 												<span class="form-text text-muted">
-													Asked by <span id="nama_penanya">Rifal</span> | <span id="tgl_bertanya">20/11/19</span>
+													Asked by <span id="nama_penanya" name="nama_penanya">Rifal</span> | <span id="tgl_bertanya" name="tgl_bertanya">20/11/19</span> | <span id="type" name="type"> Post</span>
 												</span>
 											</div>
 											<div class="btn-lihat-container">
@@ -756,26 +608,32 @@
 	</div>
 	<div style="display: none" class="footer">
 		<div class="row portlet-menu-footer">
-			<div class="col-sm-3">
+			<div class="offset-1 col-2">
 				<a href="index.html">
-					<i class="fa fa-home menu-icon"></i>
+					<i class="fa fa-home menu-icon "></i>
 				</a>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-2">
+				<a href="search.html">
+					<i class="fa fa-search menu-icon"></i>
+				</a>
+			</div>
+			<div class="col-2">
 				<a href="advice_room.html">
-					<i class="flaticon2-chat menu-icon active-mobile-menu"></i>
+					<i class="flaticon2-chat menu-icon "></i>
 				</a>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-2">
 				<a href="messages.html">
 					<i class="flaticon-multimedia menu-icon"></i>
 				</a>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-2">
 				<a href="profile.html">
 					<i class="flaticon2-user menu-icon"></i>
 				</a>
 			</div>
+
 		</div>
 	</div>
 	<!-- end:: Footer -->
@@ -1261,9 +1119,9 @@
 				title: 'Date',
 				width: 100,
 			},{
-				data: 'question',
+				data: 'posts',
 				responsivePriority: -1,
-				title: 'Question',
+				title: 'Posts',
 			},{
 				data: 'asked_by',
 				title: 'Asked By',
@@ -1271,8 +1129,8 @@
 				data: 'answers',
 				title: 'Answers',
 			},{
-				data: 'status',
-				title: 'Status',
+				data: 'type',
+				title: 'Type',
 			},{
 				field: 'action',
 				title: 'Action',

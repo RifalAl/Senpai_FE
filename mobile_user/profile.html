@@ -40,7 +40,7 @@
 			</a>
 		</div>
 		<div class="kt-header-mobile__toolbar">
-			<div class="kt-header__topbar-item dropdown">
+			<div class="kt-header__topbar-item dropdown kt-hidden">
 				<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
 					<span class="kt-header__topbar-icon">
 						<i style="font-size: 1.5rem;margin-top: 5px;color:#dbdbdb" class="fa fa-search"></i>
@@ -61,91 +61,11 @@
 				</div>
 			</div>
 			<div class="kt-header__topbar-item dropdown">
-				<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
+				<a href="notification.html" class="kt-header__topbar-wrapper">
 					<span class="kt-header__topbar-icon">
 						<i style="font-size: 1.5rem;margin-top: 5px;margin-left: 10px;margin-right: 10px;color:#dbdbdb" class="fa fa-bell"></i>
 					</span>
-				</div>
-				<div class="dropdown-menu dropdown-menu-fit dropdown-menu-left dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-sm">
-					<form>
-						<div class="kt-head kt-head-10 kt-head--skin-light kt-head--fit-x kt-head--fit-b">
-							<h3 class="kt-head__title">
-								Your Notifications
-								&nbsp;
-								<span class="btn btn-label-primary btn-sm btn-bold btn-font-md">23 new</span>
-							</h3>
-						</div>
-						<div class="tab-content">
-							<div class="tab-pane active show" id="topbar_notifications_notifications" role="tabpanel">
-								<div class="kt-notification kt-margin-t-10 kt-margin-b-10 kt-scroll ps" data-scroll="true" data-height="300" data-mobile-height="200" style="height: 300px; overflow: hidden;">
-									<a href="#" class="kt-notification__item">
-										<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/user2.jpg">
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title">
-												<span id="another_user" name="another_user">George</span> follows you
-											</div>
-											<div class="kt-notification__item-time">
-												1 days ago
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/100_11.jpg">
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title">
-												<span id="another_user" name="another_user">Stephanie</span> follows you
-											</div>
-											<div class="kt-notification__item-time">
-												1 days ago
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/100_13.jpg">
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title">
-												<span id="another_user" name="another_user">Steven</span> follows you
-											</div>
-											<div class="kt-notification__item-time">
-												1 days ago
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/300_15.jpg">
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title">
-												<span id="another_user" name="another_user">Ajax</span> follows you
-											</div>
-											<div class="kt-notification__item-time">
-												1 days ago
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/300_19.jpg">
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title">
-												<span id="another_user" name="another_user">Root</span> follows you
-											</div>
-											<div class="kt-notification__item-time">
-												1 days ago
-											</div>
-										</div>
-									</a>
-									<div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-										<div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;">\
-										</div>
-									</div>
-									<div class="ps__rail-y" style="top: 0px; right: 0px;">
-										<div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
+				</a>
 			</div>
 			<div class="kt-header__topbar-item dropdown">
 				<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
@@ -225,22 +145,7 @@
 						</a>
 					</div>
 					<div class="kt-aside__brand-tools">
-						<button class="kt-aside__brand-aside-toggler" id="kt_aside_toggler">
-							<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-									<polygon points="0 0 24 0 24 24 0 24" />
-									<path d="M5.29288961,6.70710318 C4.90236532,6.31657888 4.90236532,5.68341391 5.29288961,5.29288961 C5.68341391,4.90236532 6.31657888,4.90236532 6.70710318,5.29288961 L12.7071032,11.2928896 C13.0856821,11.6714686 13.0989277,12.281055 12.7371505,12.675721 L7.23715054,18.675721 C6.86395813,19.08284 6.23139076,19.1103429 5.82427177,18.7371505 C5.41715278,18.3639581 5.38964985,17.7313908 5.76284226,17.3242718 L10.6158586,12.0300721 L5.29288961,6.70710318 Z" fill="#000000" fill-rule="nonzero" transform="translate(8.999997, 11.999999) scale(-1, 1) translate(-8.999997, -11.999999) " />
-									<path d="M10.7071009,15.7071068 C10.3165766,16.0976311 9.68341162,16.0976311 9.29288733,15.7071068 C8.90236304,15.3165825 8.90236304,14.6834175 9.29288733,14.2928932 L15.2928873,8.29289322 C15.6714663,7.91431428 16.2810527,7.90106866 16.6757187,8.26284586 L22.6757187,13.7628459 C23.0828377,14.1360383 23.1103407,14.7686056 22.7371482,15.1757246 C22.3639558,15.5828436 21.7313885,15.6103465 21.3242695,15.2371541 L16.0300699,10.3841378 L10.7071009,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(15.999997, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-15.999997, -11.999999) " />
-								</g>
-							</svg></span>
-							<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-									<polygon points="0 0 24 0 24 24 0 24" />
-									<path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero" />
-									<path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999) " />
-								</g>
-							</svg></span>
-						</button>
+						
 					</div>
 				</div>
 				<!-- end:: Aside -->
@@ -252,6 +157,12 @@
 								<a href="index.html" class="kt-menu__link ">
 									<i class="kt-menu__link-icon fa fa-home"></i>
 									<span class="kt-menu__link-text">Lounge</span>
+								</a>
+							</li>
+							<li class="kt-menu__item " aria-haspopup="true">
+								<a href="search.html" class="kt-menu__link ">
+									<i class="kt-menu__link-icon fa fa-search"></i>
+									<span class="kt-menu__link-text">Search</span>
 								</a>
 							</li>
 							<li class="kt-menu__item " aria-haspopup="true">
@@ -272,6 +183,12 @@
 									<span class="kt-menu__link-text">Profile</span>
 								</a>
 							</li>
+							<li class="kt-menu__item" aria-haspopup="true">
+								<a href="terms_and_condition.html" class="kt-menu__link ">
+									<i class="kt-menu__link-icon fa fa-exclamation-triangle "></i>
+									<span class="kt-menu__link-text">Terms & Condition</span>
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -284,102 +201,16 @@
 					<!-- begin:: Header Menu -->
 					<div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
 						<div style="width: 250%" id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout-default ">
-							<div style="margin-top: 13px;width: 60vw;" class="kt-searchbar">
-								<div class="input-group">
-									<div class="input-group-prepend"><span class="input-group-text" id="basic-addon1"><i class="flaticon-search"></i></span></div>
-									<input id="search-desktop" type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon1">
-								</div>
-							</div>
 						</div>
 					</div>
 					<!-- end:: Header Menu -->
 					<!-- begin:: Header Topbar -->
 					<div class="kt-header__topbar">
 						<div class="kt-header__topbar-item dropdown">
-							<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px" aria-expanded="true">
+							<a href="notification.html" class="kt-header__topbar-wrapper">
 								<span class="kt-header__topbar-icon"><i class="flaticon2-bell-alarm-symbol"></i></span>
 								<span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span>
-							</div>
-							<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
-								<form>
-									<div class="kt-head kt-head-10 kt-head--skin-light kt-head--fit-x kt-head--fit-b">
-										<h3 class="kt-head__title">
-											Your Notifications
-											&nbsp;
-											<span class="btn btn-label-primary btn-sm btn-bold btn-font-md">23 new</span>
-										</h3>
-									</div>
-									<div class="tab-content">
-										<div class="tab-pane active show" id="topbar_notifications_notifications" role="tabpanel">
-											<div class="kt-notification kt-margin-t-10 kt-margin-b-10 kt-scroll ps" data-scroll="true" data-height="300" data-mobile-height="200" style="height: 300px; overflow: hidden;">
-												<a href="#" class="kt-notification__item">
-													<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/user2.jpg">
-													<div class="kt-notification__item-details">
-														<div class="kt-notification__item-title">
-															<span id="another_user" name="another_user">George</span> follows you
-														</div>
-														<div class="kt-notification__item-time">
-															1 days ago
-														</div>
-													</div>
-												</a>
-												<a href="#" class="kt-notification__item">
-													<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/100_11.jpg">
-													<div class="kt-notification__item-details">
-														<div class="kt-notification__item-title">
-															<span id="another_user" name="another_user">Stephanie</span> follows you
-														</div>
-														<div class="kt-notification__item-time">
-															1 days ago
-														</div>
-													</div>
-												</a>
-												<a href="#" class="kt-notification__item">
-													<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/100_13.jpg">
-													<div class="kt-notification__item-details">
-														<div class="kt-notification__item-title">
-															<span id="another_user" name="another_user">Steven</span> follows you
-														</div>
-														<div class="kt-notification__item-time">
-															1 days ago
-														</div>
-													</div>
-												</a>
-												<a href="#" class="kt-notification__item">
-													<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/300_15.jpg">
-													<div class="kt-notification__item-details">
-														<div class="kt-notification__item-title">
-															<span id="another_user" name="another_user">Ajax</span> follows you
-														</div>
-														<div class="kt-notification__item-time">
-															1 days ago
-														</div>
-													</div>
-												</a>
-												<a href="#" class="kt-notification__item">
-													<img id="notification_img" name="notification_img" alt="Pic" class="kt-radius-100 avatar-img" src="../assets/media/users/300_19.jpg">
-													<div class="kt-notification__item-details">
-														<div class="kt-notification__item-title">
-															<span id="another_user" name="another_user">Root</span> follows you
-														</div>
-														<div class="kt-notification__item-time">
-															1 days ago
-														</div>
-													</div>
-												</a>
-												<div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-													<div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;">\
-													</div>
-												</div>
-												<div class="ps__rail-y" style="top: 0px; right: 0px;">
-													<div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
+							</a>
 						</div>
 						<div class="kt-header__topbar-item kt-header__topbar-item--user">
 							<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
@@ -545,6 +376,8 @@
 										<div class="kt-widget kt-widget--user-profile-4">
 											<div id="bg-image" class="bg" style="position: relative;">
 												<div align="center" class="image-cropper-background">
+													<div class="masking-black">
+													</div>
 													<img id="background_user" name="foto_user" style="" src="../assets/media/bg/bg-10.jpg" alt="image">
 												</div>
 												<div class="kt-widget__head" style="position: relative;">
@@ -575,15 +408,14 @@
 											<div class="kt-align-center">
 												<div  class="row portlet-follow">
 													<div class="col-sm">
-														<!-- <h6><span id="following" name="following">99</span> Following</h6> -->
-														<button data-toggle="modal" data-target="#modal_follower_following" class="btn btn-sm btn-label-link btn-flw">
+														<a href="following.html" class="btn btn-sm btn-label-link btn-flw">
 															<span id="following" name="following">99</span> Following
-														</button>
+														</a>
 													</div>
 													<div class="col-sm">
-														<button data-toggle="modal" data-target="#modal_follower_following" class="btn btn-sm btn-label-link btn-flw">
+														<a href="follower.html" class="btn btn-sm btn-label-link btn-flw">
 															<span id="followers" name="followers">99</span> Followers
-														</button>
+														</a>
 													</div>
 												</div>
 											</div>
@@ -714,12 +546,31 @@
 												</div>
 											</div>
 											<div class="tab-pane" id="experience_tab" role="tabpanel">
-												<h4 style="margin-bottom: 20px">Experience</h4>
-												<div class="padding-lr-5">
+												
+												<div class="row no_wrap">
+													<div class="col-10">
+														<h4 style="margin-bottom: 20px">Experience</h4>
+													</div>
+													<div align="right" class="col-2">
+														<a href="add_experience.html" class="btn btn-sm btn-link">
+															<span class="fa fa-plus"></span>
+														</a>
+													</div>
+												</div>
+												<div class="">
 													<div class="experince-portlet" id="experience" name="experience">
-														<h5>
-															<span id="experince_title" name="experience_title">New Business Development</span>
-														</h5>
+														<div class="row">
+															<div class="col-10">
+																<h5>
+																	<span id="experince_title" name="experience_title">New Business Development</span>
+																</h5>
+															</div>
+															<div class="col-2 kt-align-right">
+																<a href="edit_experience.html" class="btn btn-sm btn-link">
+																	<span class="fa fa-edit"></span>
+																</a>
+															</div>
+														</div>
 														<h6>
 															<span id="experience_office" name="expericence_office">Pasona Group Inc. Global Network</span>
 														</h6>
@@ -733,7 +584,18 @@
 														</div>
 													</div>
 													<div class="experince-portlet" id="experience" name="experience">
-														<h5><span id="experince_title" name="experience_title">New Business Development</span></h5>
+														<div class="row">
+															<div class="col-10">
+																<h5>
+																	<span id="experince_title" name="experience_title">New Business Development</span>
+																</h5>
+															</div>
+															<div class="col-2 kt-align-right">
+																<a href="edit_experience.html" class="btn btn-sm btn-link">
+																	<span class="fa fa-edit"></span>
+																</a>
+															</div>
+														</div>
 														<h6><span id="experience_office" name="expericence_office">Pasona Group Inc. Global Network</span></h6>
 														<h6><span class="experience_date" id="experince_date" name="experince_date">Nov 2017 - Present | Awaji, Japan</span></h6>
 														<div style="margin-top: 20px">
@@ -844,422 +706,6 @@
 		</div>
 	</div>
 	<!--begin::Modal-->
-	<div class="modal fade" id="modal_follower_following" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-md" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<div class="kt-portlet__head-toolbar">
-						<div class="modal-title">
-							<ul class="nav nav-fill nav-tabs nav-tabs-line nav-tabs-line-brand nav-tabs-line-2x " role="tablist">
-								<li class="nav-item">
-									<a class="nav-link active" data-toggle="tab" href="#tab_following" role="tab">
-										<span id="jumlah_following" name="jumlah_following">99</span> Following
-									</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" data-toggle="tab" href="#tab_followers" role="tab">
-										<span id="jumlah_following" name="jumlah_following">99</span> Followers
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="tab-content">
-						<div class="tab-pane active" id="tab_following" role="tabpanel">
-							<div style="margin-bottom: 15px" class="kt-searchbar">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text" id="basic-addon1"><i class="flaticon-search"></i>
-										</span>
-									</div>
-									<input id="srch_following" name="srch_following" type="text" class="form-control" placeholder="Search Following" aria-describedby="basic-addon1">
-								</div>
-							</div>
-							<div class="kt-scroll ps ps--active-y" data-scroll="true" data-height="450" data-scrollbar-shown="true" style="height: 400px; overflow: hidden;">
-								<div class="following-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand">Following</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="following-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand">Following</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="following-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand flwd">followed</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="following-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand flwd">Followed</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="following-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand flwd">Followed</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="following-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand flwd">Followed</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="following-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand flwd">Followed</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="following-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand flwd">Followed</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="following-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand flwd">Followed</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane" id="tab_followers" role="tabpanel">
-							<div style="margin-bottom: 15px" class="kt-searchbar">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text" id="basic-addon1"><i class="flaticon-search"></i>
-										</span>
-									</div>
-									<input id="srch_followers" name="srch_followers" type="text" class="form-control" placeholder="Search Followers" aria-describedby="basic-addon1">
-								</div>
-							</div>
-							<div class="kt-scroll ps ps--active-y" data-scroll="true" data-height="450" data-scrollbar-shown="true" style="height: 400px; overflow: hidden;">
-								<div class="followers-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand">Following</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="followers-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand">Following</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="followers-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand flwd">followed</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="followers-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand flwd">Followed</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="followers-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand flwd">Followed</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="followers-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand flwd">Followed</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="followers-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand flwd">Followed</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="followers-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand flwd">Followed</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="followers-friend">
-									<div class="kt-portlet margin-bottom-5">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_3.jpg" alt="image">
-												</a>
-											</div>
-											<div class="question-info">
-												<h6>Fascal Ivandry</h6>
-												<p>Upana Studio</p>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-label-brand flwd">Followed</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<!--end::Modal-->
 	<!-- begin:: Footer -->
 	<div class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop kt-hidden" id="kt_footer">
@@ -1276,26 +722,32 @@
 	</div>
 	<div style="display: none" class="footer">
 		<div class="row portlet-menu-footer">
-			<div class="col-sm-3">
+			<div class="offset-1 col-2">
 				<a href="index.html">
-					<i class="fa fa-home menu-icon"></i>
+					<i class="fa fa-home menu-icon "></i>
 				</a>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-2">
+				<a href="search.html">
+					<i class="fa fa-search menu-icon"></i>
+				</a>
+			</div>
+			<div class="col-2">
 				<a href="advice_room.html">
-					<i class="flaticon2-chat menu-icon"></i>
+					<i class="flaticon2-chat menu-icon "></i>
 				</a>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-2">
 				<a href="messages.html">
 					<i class="flaticon-multimedia menu-icon"></i>
 				</a>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-2">
 				<a href="profile.html">
 					<i class="flaticon2-user menu-icon active-mobile-menu"></i>
 				</a>
 			</div>
+
 		</div>
 	</div>
 	<!-- end:: Footer -->

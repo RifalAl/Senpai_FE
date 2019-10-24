@@ -27,6 +27,14 @@
 	height: auto;
 	width: 100%;
 }
+.masking-black{
+	background-color: rgba(0,0,0,.4);
+	position: absolute;
+	display: inline;
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+}
 @media (max-width: 720px){
 	.question-info {
 		left: 55px;

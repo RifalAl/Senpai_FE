@@ -176,19 +176,19 @@
 				<div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
 					<div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
 						<ul class="kt-menu__nav ">
-							<li class="kt-menu__item  " aria-haspopup="true">
+							<li class="kt-menu__item " aria-haspopup="true">
 								<a href="index.html" class="kt-menu__link ">
 									<i class="kt-menu__link-icon fa fa-home"></i>
 									<span class="kt-menu__link-text">Lounge</span>
 								</a>
 							</li>
-							<li class="kt-menu__item " aria-haspopup="true">
+							<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true">
 								<a href="search.html" class="kt-menu__link ">
 									<i class="kt-menu__link-icon fa fa-search"></i>
 									<span class="kt-menu__link-text">Search</span>
 								</a>
 							</li>
-							<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true">
+							<li class="kt-menu__item  " aria-haspopup="true">
 								<a href="advice_room.html" class="kt-menu__link ">
 									<i class="kt-menu__link-icon flaticon2-chat"></i>
 									<span class="kt-menu__link-text">Advice Room</span>
@@ -394,341 +394,175 @@
 					</div>
 					<div  class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid" >
 						<div class="row">
-							<div class="col-md-12 col-lg-10 offset-lg-1">
+							<div class="col-lg-10 offset-lg-1">
 								<!--begin::Portlet-->
 								<div class="kt-portlet kt-portlet--mobile">
 									<div class="kt-portlet__head">
 										<div class="kt-portlet__head-label">
-											<h3 class="kt-portlet__head-title head-title">
-												Advice Room
-											</h3>
+											<h4 class="kt-portlet__head-title head-little ">
+												People who shares similar interest with you
+											</h4>
 										</div>
 									</div>
 									<div style="padding: 10px" class="kt-portlet__body">
-										<div onclick="location.href='make_question.html';" id="btn_make_question" name="btn_make_question" style="padding: 7px" class="search_div" >
-											<p>make a question...</p>
-										</div>
-										<div style="display: none" id="make_question" name="make_question">
-											<textarea placeholder="make a question" class="form-control" id="exampleTextarea" rows="3"></textarea>
-										</div>
-										<div style="padding: 10px">
-											<div class="row no_wrap">
-												<div class="col-sm">
-													<h5>Topics</h5>
-												</div>
-												<div align="right" class="col-sm">
-													<a href="see_more_topics.html">
-														<p>See More</p>
-													</a>
-												</div>
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="Search for...">
+											<div class="input-group-append">
+												<button class="btn btn-secondary" type="button">
+													<span class="fa fa-search"></span>
+												</button>
 											</div>
 										</div>
-										<div style="padding: 5px;margin-top:-10px" class="row no_wrap no_pad">
-											<div class="col-sm-3">
-												<div onclick="location.href='topic_search.html';" class="box-icon">
-													<img class="icon-size" src="../assets/media/icons/senpai/arrow.svg">
-													<h6>Trending</h6>
-												</div>
+									</div>
+									<div style="padding:10px;padding-top: 5px" class="kt-portlet__body">
+										<div class="kt-portlet__head">
+											<div class="kt-portlet__head-label">
+												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+													<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
+												</a>
 											</div>
-											<div class="col-sm-3">
-												<div onclick="location.href='topic_search.html';" class="box-icon">
-													<img class="icon-size" src="../assets/media/icons/senpai/suitcase.svg">
-													<h6>Business</h6>
-												</div>
+											<div class="info-users">
+												<h6>Budi Darmono</h6>
+												<p>Toshiba Group</p>
 											</div>
-											<div class="col-sm-3">
-												<div onclick="location.href='topic_search.html';" class="box-icon">
-													<img class="icon-size" src="../assets/media/icons/senpai/group.svg">
-													<h6>Working Culture</h6>
-												</div>
-											</div>
-											<div class="col-sm-3">
-												<div onclick="location.href='topic_search.html';" class="box-icon">
-													<img class="icon-size" src="../assets/media/icons/senpai/apartment.svg">
-													<h6>Apartment</h6>
+											<div class="kt-portlet__head-toolbar">
+												<div class="kt-portlet__head-actions">
+													<button class="btn btn-sm btn-outline-primary">
+														View
+													</button>
 												</div>
 											</div>
 										</div>
+										<div class="kt-portlet__head">
+											<div class="kt-portlet__head-label">
+												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+													<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
+												</a>
+											</div>
+											<div class="info-users">
+												<h6>Budi Darmono</h6>
+												<p>Toshiba Group</p>
+											</div>
+											<div class="kt-portlet__head-toolbar">
+												<div class="kt-portlet__head-actions">
+													<button class="btn btn-sm btn-outline-primary">
+														View
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="kt-portlet__head">
+											<div class="kt-portlet__head-label">
+												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+													<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
+												</a>
+											</div>
+											<div class="info-users">
+												<h6>Budi Darmono</h6>
+												<p>Toshiba Group</p>
+											</div>
+											<div class="kt-portlet__head-toolbar">
+												<div class="kt-portlet__head-actions">
+													<button class="btn btn-sm btn-outline-primary">
+														View
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="kt-portlet__head">
+											<div class="kt-portlet__head-label">
+												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+													<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
+												</a>
+											</div>
+											<div class="info-users">
+												<h6>Budi Darmono</h6>
+												<p>Toshiba Group</p>
+											</div>
+											<div class="kt-portlet__head-toolbar">
+												<div class="kt-portlet__head-actions">
+													<button class="btn btn-sm btn-outline-primary">
+														View
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="kt-portlet__head">
+											<div class="kt-portlet__head-label">
+												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+													<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
+												</a>
+											</div>
+											<div class="info-users">
+												<h6>Budi Darmono</h6>
+												<p>Toshiba Group</p>
+											</div>
+											<div class="kt-portlet__head-toolbar">
+												<div class="kt-portlet__head-actions">
+													<button class="btn btn-sm btn-outline-primary">
+														View
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="kt-portlet__head">
+											<div class="kt-portlet__head-label">
+												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+													<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
+												</a>
+											</div>
+											<div class="info-users">
+												<h6>Budi Darmono</h6>
+												<p>Toshiba Group</p>
+											</div>
+											<div class="kt-portlet__head-toolbar">
+												<div class="kt-portlet__head-actions">
+													<button class="btn btn-sm btn-outline-primary">
+														View
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="kt-portlet__head">
+											<div class="kt-portlet__head-label">
+												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+													<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
+												</a>
+											</div>
+											<div class="info-users">
+												<h6>Budi Darmono</h6>
+												<p>Toshiba Group</p>
+											</div>
+											<div class="kt-portlet__head-toolbar">
+												<div class="kt-portlet__head-actions">
+													<button class="btn btn-sm btn-outline-primary">
+														View
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="kt-portlet__head">
+											<div class="kt-portlet__head-label">
+												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+													<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
+												</a>
+											</div>
+											<div class="info-users">
+												<h6>Budi Darmono</h6>
+												<p>Toshiba Group</p>
+											</div>
+											<div class="kt-portlet__head-toolbar">
+												<div class="kt-portlet__head-actions">
+													<button class="btn btn-sm btn-outline-primary">
+														View
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="kt-separator kt-separator--dashed"></div>
 									</div>
 								</div>
 								<!--end::Portlet-->
-							</div>
-							<div class="col-md-12 col-lg-10 offset-lg-1">
-								<div class="kt-portlet kt-portlet--mobile">
-									<div class="kt-portlet__body padding-all-10">
-										<ul class="nav nav-tabs nav-tabs-line" role="tablist">
-											<li class="nav-item">
-												<a class="nav-link active nav_tab" data-toggle="tab" href="#show_all_tab" role="tab">Show All</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link nav_tab" data-toggle="tab" href="#answered_tab" role="tab">Answered</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link nav_tab" data-toggle="tab" href="#not_answered_tab" role="tab">Not Answered</a>
-											</li>
-										</ul>
-										<div class="tab-content">
-											<div class="tab-pane active" id="show_all_tab" role="tabpanel">
-												<div  class="" id="all_questions" name="all_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_3.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Fascal Ivandry</h6>
-																<p>Product Manager at Artistektur</p>
-																<p>2d Ago</p>
-															</div>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-																		<span class="fa fa-link"></span>
-																	</a>
-																	
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-												<div  class="" id="all_questions" name="all_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head padding-top-10">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_5.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Ahmad Rifaldi</h6>
-																<p>Product Manager at Artistektur</p>
-																<p>2d Ago</p>
-																
-															</div>
-															<span style="" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge change-padding">Solved</span>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<span style="display: none" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge-2">Solved</span>
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-																		<span class="fa fa-link"></span>
-																	</a>
-																	
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-												<div  class="" id="all_questions" name="all_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_1.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Ahmad Rifaldi</h6>
-																<p>Product Manager at Pesona</p>
-																<p>4d Ago</p>
-															</div>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<button class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-																		<span class="fa fa-link"></span>
-																	</a>
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="tab-pane" id="answered_tab" role="tabpanel">
-												<div  class="" id="answered_questions" name="answered_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_5.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Ahmad Rifaldi</h6>
-																<p>Product Manager at Artistektur</p>
-																<p>2d Ago</p>
-																
-															</div>
-															<span style="" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge change-padding">Solved</span>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<span style="display: none" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge-2">Solved</span>
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-																		<span class="fa fa-link"></span>
-																	</a>
-																	
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-												<div  class="" id="answered_questions" name="answered_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_5.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Ahmad Rifaldi</h6>
-																<p>Front End at Arsitektur</p>
-																<p>2d Ago</p>
-															</div>
-															<span style="" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge change-padding">Solved</span>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<span style="display: none" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge-2">Solved</span>
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-																		<span class="fa fa-link"></span>
-																	</a>
-																	
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="tab-pane" id="not_answered_tab" role="tabpanel">
-												<div  class="" id="non_answered_questions" name="non_answered_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_1.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Ahmad Rifaldi</h6>
-																<p>Product Manager at Pesona</p>
-																<p>4d Ago</p>
-															</div>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-																		<span class="fa fa-link"></span>
-																	</a>
-																	
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-												<div  class="" id="non_answered_questions" name="non_answered_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head padding-top-10">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_1.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Ahmad Rifaldi</h6>
-																<p>Product Manager at Pinoki</p>
-																<p>4d Ago</p>
-															</div>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-																		<span class="fa fa-link"></span>
-																	</a>
-																	
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -737,33 +571,6 @@
 		</div>
 	</div>
 	<!--begin::Modal-->
-	<div class="modal fade" id="modal_make_question" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Make Question</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					</button>
-				</div>
-				<form>
-					<div class="modal-body">
-						<div class="form-group">
-							<label class="form-control-label">Title:</label>
-							<input type="text" class="form-control" id="question_title" name="question_title">
-						</div>
-						<div class="form-group">
-							<label class="form-control-label">Question:</label>
-							<textarea class="form-control" id="question" name="question"></textarea>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="submit" id="make_question_btn" type="button" class="btn btn-primary">Make Question</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
 	<!--end::Modal-->
 	<!-- begin:: Footer -->
 	<div class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop kt-hidden" id="kt_footer">
@@ -787,12 +594,12 @@
 			</div>
 			<div class="col-2">
 				<a href="search.html">
-					<i class="fa fa-search menu-icon"></i>
+					<i class="fa fa-search menu-icon active-mobile-menu"></i>
 				</a>
 			</div>
 			<div class="col-2">
 				<a href="advice_room.html">
-					<i class="flaticon2-chat menu-icon active-mobile-menu"></i>
+					<i class="flaticon2-chat menu-icon "></i>
 				</a>
 			</div>
 			<div class="col-2">
@@ -1255,45 +1062,7 @@
 	<script src="../assets/js/pages/custom/chat/chat.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
 	<!--begin::Page Scripts(used by this page) -->
-	<script>
-		var widthScreen = screen.width;
-		console.log(widthScreen);
-		if (widthScreen >= 1024) {
-			$("#portlet-pesan").removeClass("position-fixed");
-		}
-		if (widthScreen >= 400) {
-			$(".solved-badge").hide();
-			$(".solved-badge-2").show();
-		}
-		// if (widthScreen >= 1024) {
-		// 	$("#btn_make_question").hide();
-		// 	$("#make_question").show();
-		// }
-	</script>
 	<!--end::Page Scripts -->
-	<script>
-		var KTSweetAlert2Demo = function() {
-			var initDemos = function() {
-				$('.btn_bookmark').click(function(e) {
-					swal.fire({
-						position: 'center',
-						type: 'success',
-						title: 'This Post Bookmark',
-						showConfirmButton: false,
-						timer: 1300
-					});
-				});
-			};
-			return {
-				init: function() {
-					initDemos();
-				},
-			};
-		}();
-		jQuery(document).ready(function() {
-			KTSweetAlert2Demo.init();
-		});
-	</script>
 </body>
 <!-- end::Body -->
 </html>
