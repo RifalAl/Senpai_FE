@@ -27,6 +27,15 @@
 	<link href="../assets/css/topic_search-style.css" rel="stylesheet" type="text/css" />
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
+	<style>
+		.kt-container {
+			width: 100%;
+			padding: 10px;
+		}
+		.kt-portlet .kt-portlet__body {
+			padding: 25px;
+		}
+	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -477,113 +486,120 @@
 										</div>
 									</div>
 									<div style="padding: 10px" class="kt-portlet__body">
-										<input type="text" id="lounge_search" name="lounge_search" class="form-control" placeholder="What's on your mind ?">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="Search for...">
+											<div class="input-group-append">
+												<button class="btn btn-secondary" type="button">
+													<span class="fa fa-search"></span>
+												</button>
+											</div>
+										</div>
 									</div>
 								</div>
-								<div class="normal-post">
-									<div class="kt-portlet">
+								<div  class="" id="all_questions" name="all_questions">
+									<div style="position: relative;" class="kt-portlet border-style">
 										<div class="kt-portlet__head">
 											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_10.jpg" alt="image">
+												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+													<img id="user_pic" name="user_pic" src="../assets/media/users/100_3.jpg" alt="image">
 												</a>
 											</div>
 											<div class="question-info">
-												<h6>Clara Mosh</h6>
+												<h6>Fascal Ivandry</h6>
+												<p>Product Manager at Artistektur</p>
 												<p>2d Ago</p>
 											</div>
 											<div class="kt-portlet__head-toolbar">
 												<div class="kt-portlet__head-actions">
-													<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-														<i class="la la-bookmark"></i>
-													</a>
-													<a href="advice_room_answered.html" class="btn btn-clean btn-sm padding-lr-01">
-														<i class="la la-mail-forward"></i>
-													</a>
+													<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
+														<span class="la la-bookmark"></span>
+													</button>
+													<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
+														<span class="fa fa-link"></span>
+													</button>
+
 												</div>
 											</div>
 										</div>
-										<div class=" kt-portlet__body padding-all-10 padding-c">
+										<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
+											<h6>
+												<span id="question_title" name="question_title">Affordable Japanese language school</span>
+											</h6>
 											<p justify="center" id="question_description" name="question_descri">
-												Good afternoon everyone. I want to share  an event about "Career consultant for <br> foreigner". This event is for foreigner who looking job or need consultation. <br>
-												Venue : Pasona Job Hub Square;<br>
-												Date and Time : Friday, 20 November 2019<br>
-												For mor information visit:<br>
-												<a href="#">https://jobhubsquare.jp/foreign-event</a>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
 											</p>
 										</div>
-										<div style="position: relative;" class="kt-portlet__foot padding-all-10">
-											<div class="comment-width">
-												<input type="text" id="comment_" name="comment_" class="form-control" placeholder="comment">
-											</div>
-											<div style="position: absolute;right: 15px;bottom: 13px">
-												<button href="#" class="btn btn-clean  padding-lr-01">
-													<i class="fa fa-comment-alt"></i> <span id="jumlah_komen" name="jumlah_komen">3</span>
-												</button>
-											</div>
-										</div>
 									</div>
 								</div>
-								<div class="alert alert-light embassy-post" role="alert">
-									<div class="alert-text">
-										<div style="width: 90%">
-											<h4 class="alert-heading">UPDATE FROM INDONESIA EMBASSY</h4>	
-										</div>
-										<span class="emergency-icon">
-											<img class="icon-size" src="../assets/media/icons/senpai/indonesia.svg">
-										</span>
-										<p>
-											To Celebrate our 74th Indonesian Independence Day, <br>
-											the Indonesian Embassy in Tokyo presents : <br>
-											<br>
-											"People's Party" - United for Forward. <br>
-											Location : Kasai Rinkai Park <br>
-											Date : Sunday, 15 September 2019, <br>
-											Time : 09.00 - 17.00
-										</p>
-									</div>
-								</div>
-								<div class="normal-post">
-									<div class="kt-portlet">
-										<div class="kt-portlet__head">
+								<div  class="" id="all_questions" name="all_questions">
+									<div style="position: relative;" class="kt-portlet border-style">
+										<div class="kt-portlet__head padding-top-10">
 											<div class="kt-portlet__head-label">
-												<a href="#" class="kt-media kt-media--sm kt-media--circle">
-													<img src="../assets/media/users/100_13.jpg" alt="image">
+												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+													<img id="user_pic" name="user_pic" src="../assets/media/users/100_5.jpg" alt="image">
 												</a>
 											</div>
 											<div class="question-info">
-												<h6>George</h6>
+												<h6>Ahmad Rifaldi</h6>
+												<p>Product Manager at Artistektur</p>
+												<p>2d Ago</p>
+
+											</div>
+											<span style="" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge change-padding">Solved</span>
+											<div class="kt-portlet__head-toolbar">
+												<div class="kt-portlet__head-actions">
+													<span style="display: none" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge-2">Solved</span>
+													<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
+														<span class="la la-bookmark"></span>
+													</button>
+													<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
+														<span class="fa fa-link"></span>
+													</button>
+
+												</div>
+											</div>
+										</div>
+										<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
+											<h6>
+												<span id="question_title" name="question_title">Affordable Japanese language school</span>
+											</h6>
+											<p justify="center" id="question_description" name="question_descri">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div  class="" id="all_questions" name="all_questions">
+									<div style="position: relative;" class="kt-portlet border-style">
+										<div class="kt-portlet__head">
+											<div class="kt-portlet__head-label">
+												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+													<img id="user_pic" name="user_pic" src="../assets/media/users/100_1.jpg" alt="image">
+												</a>
+											</div>
+											<div class="question-info">
+												<h6>Ahmad Rifaldi</h6>
+												<p>Product Manager at Pesona</p>
 												<p>4d Ago</p>
 											</div>
 											<div class="kt-portlet__head-toolbar">
 												<div class="kt-portlet__head-actions">
-													<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-														<i class="la la-bookmark"></i>
-													</a>
-													<a href="advice_room_answered.html" class="btn btn-clean btn-sm padding-lr-01">
-														<i class="la la-mail-forward"></i>
-													</a>
+													<button class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
+														<span class="la la-bookmark"></span>
+													</button>
+													<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
+														<span class="fa fa-link"></span>
+													</button>
 												</div>
 											</div>
 										</div>
-										<div class=" kt-portlet__body padding-all-10 padding-c">
+										<div onclick="location.href='advice_room_answered.html';" class=" kt-portlet__body padding-all">
+											<h6>
+												<span id="question_title" name="question_title">Affordable Japanese language school</span>
+											</h6>
 											<p justify="center" id="question_description" name="question_descri">
-												Good afternoon everyone. I want to share  an event about "Career consultant for <br> foreigner". This event is for foreigner who looking job or need consultation. <br>
-												Venue : Pasona Job Hub Square;<br>
-												Date and Time : Friday, 20 November 2019<br>
-												For mor information visit:<br>
-												<a href="#">https://jobhubsquare.jp/foreign-event</a>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
 											</p>
-										</div>
-										<div style="position: relative;" class="kt-portlet__foot padding-all-10">
-											<div class="comment-width">
-												<input type="text" id="comment_" name="comment_" class="form-control" placeholder="comment">
-											</div>
-											<div style="position: absolute;right: 15px;bottom: 13px">
-												<button href="#" class="btn btn-clean  padding-lr-01">
-													<i class="fa fa-comment-alt"></i> <span id="jumlah_komen" name="jumlah_komen">3</span>
-												</button>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -1115,6 +1131,47 @@
 	<!--end::Page Vendors -->
 	<!--begin::Page Scripts(used by this page) -->
 	<!--end::Page Scripts -->
+	<script>
+		var widthScreen = screen.width;
+		// console.log(widthScreen);
+		if (widthScreen >= 400) {
+			$(".solved-badge").hide();
+			$(".solved-badge-2").show();
+		}
+	</script>
+	<script>
+		var KTSweetAlert2Demo = function() {
+			var initDemos = function() {
+				$('.btn_bookmark').click(function(e) {
+					swal.fire({
+						position: 'center',
+						type: 'success',
+						title: 'This Post Bookmark',
+						showConfirmButton: false,
+						timer: 1300
+					});
+				});
+
+				$('.btn_copy_link').click(function(e) {
+					swal.fire({
+						position: 'center',
+						type: 'success',
+						title: 'Link copied',
+						showConfirmButton: false,
+						timer: 1300
+					});
+				});
+			};
+			return {
+				init: function() {
+					initDemos();
+				},
+			};
+		}();
+		jQuery(document).ready(function() {
+			KTSweetAlert2Demo.init();
+		});
+	</script>
 </body>
 <!-- end::Body -->
 </html>

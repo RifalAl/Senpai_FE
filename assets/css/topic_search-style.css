@@ -8,11 +8,23 @@
 .icon-size{
 	width: 25px;
 }
+.solved-badge {
+	position: absolute;
+	bottom: -2px;
+	right: 55px;
+}
+
+.question-info {
+	position: absolute;
+	left: 55px;
+	bottom: 3px;	
+}
+
 @media (max-width: 1366px) {
 	.question-info {
 		position: absolute;
 		left: 70px;
-		bottom: 15px;	
+		bottom: 3px;	
 	}
 	.article_img {
 		height: 190px !important;
@@ -41,7 +53,7 @@
 	.question-info {
 		position: absolute;
 		left: 60px;
-		bottom: 12px;	
+		bottom: 3px;	
 	}
 	.article_img {
 		height: 140px !important;
@@ -49,14 +61,33 @@
 	.comment-width {
 		width: 85%;
 	}
+	.solved-badge {
+		position: absolute;
+		bottom: 3px;
+		right: 200px;
+	}
 }
+
+@media (max-width: 360px) {
+	.solved-badge {
+		position: absolute;
+		bottom: 3px;
+		right: 185px;
+	}
+}
+
 @media (max-width: 320px) {
 	.question-info {
 		position: absolute;
 		left: 55px;
-		bottom: 10px;	
+		bottom: 3px;	
 	}
 	.comment-width {
 		width: 80%;
+	}
+	.solved-badge {
+		position: absolute;
+		bottom: 3px;
+		right: 150px;
 	}
 }

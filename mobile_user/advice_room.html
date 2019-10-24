@@ -487,9 +487,9 @@
 																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
 																		<span class="la la-bookmark"></span>
 																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
+																	<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
 																		<span class="fa fa-link"></span>
-																	</a>
+																	</button>
 																	
 																</div>
 															</div>
@@ -525,9 +525,9 @@
 																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
 																		<span class="la la-bookmark"></span>
 																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
+																	<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
 																		<span class="fa fa-link"></span>
-																	</a>
+																	</button>
 																	
 																</div>
 															</div>
@@ -560,9 +560,9 @@
 																	<button class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
 																		<span class="la la-bookmark"></span>
 																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
+																	<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
 																		<span class="fa fa-link"></span>
-																	</a>
+																	</button>
 																</div>
 															</div>
 														</div>
@@ -599,9 +599,9 @@
 																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
 																		<span class="la la-bookmark"></span>
 																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
+																	<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
 																		<span class="fa fa-link"></span>
-																	</a>
+																	</button>
 																	
 																</div>
 															</div>
@@ -636,9 +636,9 @@
 																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
 																		<span class="la la-bookmark"></span>
 																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
+																	<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
 																		<span class="fa fa-link"></span>
-																	</a>
+																	</button>
 																	
 																</div>
 															</div>
@@ -673,9 +673,9 @@
 																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
 																		<span class="la la-bookmark"></span>
 																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
+																	<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
 																		<span class="fa fa-link"></span>
-																	</a>
+																	</button>
 																	
 																</div>
 															</div>
@@ -708,9 +708,9 @@
 																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
 																		<span class="la la-bookmark"></span>
 																	</button>
-																	<a href="#" class="btn btn-clean btn-sm padding-lr-01">
+																	<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
 																		<span class="fa fa-link"></span>
-																	</a>
+																	</button>
 																	
 																</div>
 															</div>
@@ -1279,6 +1279,16 @@
 						position: 'center',
 						type: 'success',
 						title: 'This Post Bookmark',
+						showConfirmButton: false,
+						timer: 1300
+					});
+				});
+
+				$('.btn_copy_link').click(function(e) {
+					swal.fire({
+						position: 'center',
+						type: 'success',
+						title: 'Link copied',
 						showConfirmButton: false,
 						timer: 1300
 					});

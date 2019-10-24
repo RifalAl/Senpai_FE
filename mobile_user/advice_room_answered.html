@@ -432,14 +432,17 @@
 														<p>Product Manager at Artistektur</p>
 														<p>2d Ago</p>
 													</div>
+													<span style="" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge change-padding">Solved</span>
 													<div class="kt-portlet__head-toolbar">
 														<div class="kt-portlet__head-actions">
+															<span style="display: none" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge-2">Solved</span>
 															<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
 																<span class="la la-bookmark"></span>
 															</button>
-															<a href="#" class="btn btn-clean btn-sm padding-lr-01">
-																<span class="la la-mail-forward"></span>
-															</a>
+															<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
+																<span class="fa fa-link"></span>
+															</button>
+
 														</div>
 													</div>
 												</div>
@@ -518,9 +521,9 @@
 														<button onclick="toggle_comment()" type="button" class="btn btn-primary btn-sm">
 															<i class="fa fa-comment-alt"></i> Answers
 														</button>
-														<button id="btn_solved" class="btn btn-sm btn-success">
+														<button id="btn_solved" class="btn btn-sm btn-outline-success solved-unsolved">
 															<i id="icon_solved" class="fa fa-check"></i>
-															<span id="solved_unsolved">Mark as solved</span>
+															<span class="solved-unsolved" id="solved_unsolved">Accept this answer</span>
 														</button>
 													</div>
 													<div style="" id="komentar">
@@ -680,6 +683,10 @@
 														</button>
 														<button onclick="toggle_comment_2()" type="button" class="btn btn-primary btn-sm">
 															<i class="fa fa-comment-alt"></i> Answers
+														</button>
+														<button id="btn_solved_2" class="btn btn-sm btn-outline-success solved-unsolved">
+															<i id="icon_solved_2" class="fa fa-check"></i>
+															<span class="" id="solved_unsolved_2">Accept this answer</span>
 														</button>
 													</div>
 													<div style="" id="komentar_2">
@@ -1304,15 +1311,13 @@
 	<!--begin::Page Scripts(used by this page) -->
 	<script>
 		var widthScreen = screen.width;
-		if (widthScreen >= 1024) {
-			$("#portlet-pesan").removeClass("position-fixed");
-		}
-	</script>
-	<script>
-		var widthScreen = screen.width;
 		if (widthScreen > 410) {
 			$(".badge-verified").hide();
 			$(".badge-verified-2").show();
+		}
+		if (widthScreen >= 400) {
+			$(".solved-badge").hide();
+			$(".solved-badge-2").show();
 		}
 	</script>
 	<script>
@@ -1429,17 +1434,35 @@
 	<script>
 		var btn_solved = document.getElementById('btn_solved');
 		var icon_solved = document.getElementById('icon_solved');
-		var tulisan = document.getElementById('solved_unsolved');
+		var tulisan_solved = document.getElementById('solved_unsolved');
 		
 		btn_solved.addEventListener("click",function(){
-			var a = tulisan.innerText;
-			if (a == "Mark as solved") {
-				tulisan.innerText = "Solved";
-				jQuery('#btn_solved').addClass('btn-warning').removeClass('btn-success');
+			var a = tulisan_solved.innerText;
+			if (a == "Accept this answer") {
+				tulisan_solved.innerText = "Accepted answer";
+				jQuery('#btn_solved').addClass('btn-success').removeClass('btn-outline-success');
 			}
 			else {
-				tulisan.innerText = "Mark as solved";
-				jQuery('#btn_solved').addClass('btn-success').removeClass('btn-warning');
+				tulisan_solved.innerText = "Accept this answer";
+				jQuery('#btn_solved').addClass('btn-outline-success').removeClass('btn-success');
+			}
+		})
+
+
+
+		var btn_solved_2 = document.getElementById('btn_solved_2');
+		var icon_solved_2 = document.getElementById('icon_solved_2');
+		var tulisan_solved_2 = document.getElementById('solved_unsolved_2');
+		
+		btn_solved_2.addEventListener("click",function(){
+			var a = tulisan_solved_2.innerText;
+			if (a == "Accept this answer") {
+				tulisan_solved_2.innerText = "Accepted answer";
+				jQuery('#btn_solved_2').addClass('btn-success').removeClass('btn-outline-success');
+			}
+			else {
+				tulisan_solved_2.innerText = "Accept this answer";
+				jQuery('#btn_solved_2').addClass('btn-outline-success').removeClass('btn-success');
 			}
 		})
 	</script>
@@ -1455,6 +1478,16 @@
 						timer: 1300
 					});
 				});
+
+				$('.btn_copy_link').click(function(e) {
+					swal.fire({
+						position: 'center',
+						type: 'success',
+						title: 'Link copied',
+						showConfirmButton: false,
+						timer: 1300
+					});
+				});
 			};
 			return {
 				init: function() {
@@ -1465,9 +1498,6 @@
 		jQuery(document).ready(function() {
 			KTSweetAlert2Demo.init();
 		});
-	</script>
-	<script>
-		
 	</script>
 
 	<!--end::Page Scripts -->

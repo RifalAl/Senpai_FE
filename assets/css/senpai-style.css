@@ -1063,6 +1063,12 @@ html {
 	}
 }
 
+@media (max-width: 372px){
+	.solved-unsolved {
+		margin-top: 5px;
+	}
+}
+
 @media(max-width: 360px){
 	.solved-badge {
 		position: absolute;
