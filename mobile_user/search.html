@@ -426,8 +426,8 @@
 													<a href="see_all_same_place.html" type="button" class="btn btn-sm btn-clean btn-bold">See all</a>
 												</div>
 											</div>
-											<div style="padding: 10px" class="kt-portlet__body">
-												<div class="kt-portlet__head">
+											<div id="container-same_place" style="padding: 10px" class="kt-portlet__body">
+												<div data-id="1" class="kt-portlet__head same-place">
 													<div class="kt-portlet__head-label">
 														<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
 															<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
@@ -439,13 +439,11 @@
 													</div>
 													<div class="kt-portlet__head-toolbar">
 														<div class="kt-portlet__head-actions">
-															<button class="btn btn-sm btn-outline-primary">
-																View
-															</button>
+															<button id="btn-follow-following" data-id="1" class="btn btn-sm btn-outline-primary btn_follow_following">Follow</button>
 														</div>
 													</div>
 												</div>
-												<div class="kt-portlet__head">
+												<div data-id="2" class="kt-portlet__head same-place">
 													<div class="kt-portlet__head-label">
 														<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
 															<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
@@ -457,13 +455,11 @@
 													</div>
 													<div class="kt-portlet__head-toolbar">
 														<div class="kt-portlet__head-actions">
-															<button class="btn btn-sm btn-outline-primary">
-																View
-															</button>
+															<button id="btn-follow-following" data-id="2" class="btn btn-sm btn-outline-primary btn_follow_following">Follow</button>
 														</div>
 													</div>
 												</div>
-												<div class="kt-portlet__head">
+												<div data-id="3" class="kt-portlet__head same-place">
 													<div class="kt-portlet__head-label">
 														<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
 															<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
@@ -475,9 +471,7 @@
 													</div>
 													<div class="kt-portlet__head-toolbar">
 														<div class="kt-portlet__head-actions">
-															<button class="btn btn-sm btn-outline-primary">
-																View
-															</button>
+															<button id="btn-follow-following" data-id="3" class="btn btn-sm btn-outline-primary btn_follow_following">Follow</button>
 														</div>
 													</div>
 												</div>
@@ -494,8 +488,8 @@
 													<a href="see_all_same_interest.html" type="button" class="btn btn-sm btn-clean btn-bold">See all</a>
 												</div>
 											</div>
-											<div style="padding: 10px" class="kt-portlet__body">
-												<div class="kt-portlet__head">
+											<div id="container-same_interest" style="padding: 10px" class="kt-portlet__body">
+												<div data-id="1" class="kt-portlet__head same-place">
 													<div class="kt-portlet__head-label">
 														<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
 															<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
@@ -507,13 +501,11 @@
 													</div>
 													<div class="kt-portlet__head-toolbar">
 														<div class="kt-portlet__head-actions">
-															<button class="btn btn-sm btn-outline-primary">
-																View
-															</button>
+															<button id="btn-follow-following-interest" data-id="1" class="btn btn-sm btn-outline-primary btn_follow_following_interest">Follow</button>
 														</div>
 													</div>
 												</div>
-												<div class="kt-portlet__head">
+												<div data-id="2" class="kt-portlet__head same-place">
 													<div class="kt-portlet__head-label">
 														<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
 															<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
@@ -525,13 +517,11 @@
 													</div>
 													<div class="kt-portlet__head-toolbar">
 														<div class="kt-portlet__head-actions">
-															<button class="btn btn-sm btn-outline-primary">
-																View
-															</button>
+															<button id="btn-follow-following-interest" data-id="2" class="btn btn-sm btn-outline-primary btn_follow_following_interest">Follow</button>
 														</div>
 													</div>
 												</div>
-												<div class="kt-portlet__head">
+												<div data-id="3" class="kt-portlet__head same-place">
 													<div class="kt-portlet__head-label">
 														<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
 															<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
@@ -543,194 +533,12 @@
 													</div>
 													<div class="kt-portlet__head-toolbar">
 														<div class="kt-portlet__head-actions">
-															<button class="btn btn-sm btn-outline-primary">
-																View
-															</button>
+															<button id="btn-follow-following-interest" data-id="3" class="btn btn-sm btn-outline-primary btn_follow_following_interest">Follow</button>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-
-
-										<!-- <ul class="nav nav-tabs nav-tabs-line nav-tabs-line-2x nav-tabs-line-success" role="tablist">
-											<li class="nav-item">
-												<a class="nav-link active" data-toggle="tab" href="#user_search" role="tab">Users</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link " data-toggle="tab" href="#question_search" role="tab">Questions</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link " data-toggle="tab" href="#post_search" role="tab">Posts</a>
-											</li>
-										</ul>
-										<div class="tab-content">
-											<div class="tab-pane active" id="user_search" role="tabpanel">
-												<div style="padding: 10px" class="kt-portlet__body user_search_portlet">
-													<div class="kt-portlet__head">
-														<div class="kt-portlet__head-label">
-															<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
-															</a>
-														</div>
-														<div class="info-users">
-															<h6>Budi Darmono</h6>
-															<p>Toshiba Group</p>
-														</div>
-														<div class="kt-portlet__head-toolbar">
-															<div class="kt-portlet__head-actions">
-																<button class="btn btn-sm btn-outline-primary">
-																	View
-																</button>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-											</div>
-											<div class="tab-pane" id="question_search" role="tabpanel">
-												<div  class="" id="all_questions" name="all_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_3.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Fascal Ivandry</h6>
-																<p>Product Manager at Artistektur</p>
-																<p>2d Ago</p>
-															</div>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<button class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
-																		<span class="fa fa-link"></span>
-																	</button>
-																	
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class="kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-												<div  class="" id="all_questions" name="all_questions">
-													<div style="position: relative;" class="kt-portlet border-style">
-														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_3.jpg" alt="image">
-																</a>
-															</div>
-															<div class="question-info">
-																<h6>Fascal Ivandry</h6>
-																<p>Product Manager at Artistektur</p>
-																<p>2d Ago</p>
-															</div>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<button type="buttom" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
-																		<span class="fa fa-link"></span>
-																	</button>
-																	
-																</div>
-															</div>
-														</div>
-														<div onclick="location.href='advice_room_answered.html';" class="kt-portlet__body padding-all">
-															<h6>
-																<span id="question_title" name="question_title">Affordable Japanese language school</span>
-															</h6>
-															<p justify="center" id="question_description" name="question_descri">
-																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
-															</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="tab-pane" id="post_search" role="tabpanel">
-												<div class="normal-post">
-													<div class="kt-portlet border-style">
-														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_5.jpg" alt="image">
-																</a>
-															</div>
-															<div class="info-users">
-																<h6>Clara Mosh</h6>
-																<p>2d Ago</p>
-															</div>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
-																		<span class="fa fa-link"></span>
-																	</button>
-																</div>
-															</div>
-														</div>
-														<div class=" kt-portlet__body padding-all-10 padding-c">
-															<p justify="center" id="question_description" name="question_description">
-																Good afternoon everyone. I want to share  an event about "Career consultant for <br> foreigner". This event is for foreigner who looking job or need consultation. <br>
-																Venue : Pasona Job Hub Square;<br>
-																Date and Time : Friday, 20 November 2019<br>
-																For mor information visit:<br>
-																<a href="#">https://jobhubsquare.jp/foreign-event</a>
-															</p>
-														</div>
-													</div>
-												</div>
-												<div class="normal-post">
-													<div class="kt-portlet border-style">
-														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
-																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
-																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_4.jpg" alt="image">
-																</a>
-															</div>
-															<div class="info-users">
-																<h6>Clara Mosh</h6>
-																<p>2d Ago</p>
-															</div>
-															<div class="kt-portlet__head-toolbar">
-																<div class="kt-portlet__head-actions">
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
-																		<span class="fa fa-link"></span>
-																	</button>
-																</div>
-															</div>
-														</div>
-														<div class=" kt-portlet__body padding-all-10 padding-c">
-															<p justify="center" id="question_description" name="question_description">
-																Good afternoon everyone. I want to share  an event about "Career consultant for <br> foreigner". This event is for foreigner who looking job or need consultation. <br>
-																Venue : Pasona Job Hub Square;<br>
-																Date and Time : Friday, 20 November 2019<br>
-																For mor information visit:<br>
-																<a href="#">https://jobhubsquare.jp/foreign-event</a>
-															</p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div> -->
 										<div class="kt-separator kt-separator--dashed"></div>
 									</div>
 								</div>
@@ -1653,6 +1461,45 @@
 	<!--end::Page Vendors -->
 	<!--begin::Page Scripts(used by this page) -->
 	<!--end::Page Scripts -->
+	<script>
+		$(document).ready(function() {
+			$('#container-same_place').on('click','#btn-follow-following', function (e) {
+				let id = $(this).data('id');
+				let btnText = $('.btn_follow_following[data-id="' + id + '"]').text();
+				if (btnText == "Follow") {
+					$('.btn_follow_following[data-id="' + id + '"]').html('Following');
+					$('.btn_follow_following[data-id="' + id + '"]').removeClass('btn-outline-primary');
+					$('.btn_follow_following[data-id="' + id + '"]').addClass('btn-outline-secondary');
+
+				}
+				else {
+					$('.btn_follow_following[data-id="' + id + '"]').html('Follow');
+					$('.btn_follow_following[data-id="' + id + '"]').removeClass('btn-outline-secondary');
+					$('.btn_follow_following[data-id="' + id + '"]').addClass('btn-outline-primary');
+				}
+
+			});
+		})
+
+		$(document).ready(function() {
+			$('#container-same_interest').on('click','#btn-follow-following-interest', function (e) {
+				let id = $(this).data('id');
+				let btnText = $('.btn_follow_following_interest[data-id="' + id + '"]').text();
+				if (btnText == "Follow") {
+					$('.btn_follow_following_interest[data-id="' + id + '"]').html('Following');
+					$('.btn_follow_following_interest[data-id="' + id + '"]').removeClass('btn-outline-primary');
+					$('.btn_follow_following_interest[data-id="' + id + '"]').addClass('btn-outline-secondary');
+
+				}
+				else {
+					$('.btn_follow_following_interest[data-id="' + id + '"]').html('Follow');
+					$('.btn_follow_following_interest[data-id="' + id + '"]').removeClass('btn-outline-secondary');
+					$('.btn_follow_following_interest[data-id="' + id + '"]').addClass('btn-outline-primary');
+				}
+
+			});
+		})
+	</script>
 </body>
 <!-- end::Body -->
 </html>

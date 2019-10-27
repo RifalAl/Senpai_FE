@@ -393,7 +393,7 @@
 					</div>
 					<div  class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid" >
 						<div class="row">
-							<div class="col-md-8">
+							<div class="col-lg-8">
 								<!--begin::Portlet-->
 								<div class="kt-portlet kt-portlet--mobile">
 									<div class="kt-portlet__head">
@@ -658,7 +658,7 @@
 								</div>
 								<!--end::Portlet-->
 							</div>
-							<div class="col-md-4">
+							<div class="col-lg-4">
 								<!--begin::Portlet-->
 								<div id="same_place" class="kt-portlet kt-portlet--mobile">
 									<div style="position: relative;" class="kt-portlet__head">
@@ -671,8 +671,8 @@
 											<a href="see_all_same_place.html" type="button" class="btn btn-sm btn-clean btn-bold">See all</a>
 										</div>
 									</div>
-									<div style="padding: 10px" class="kt-portlet__body">
-										<div class="kt-portlet__head">
+									<div id="container-same_place" style="padding: 10px" class="kt-portlet__body">
+										<div data-id="1" class="kt-portlet__head same-place">
 											<div class="kt-portlet__head-label">
 												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
 													<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
@@ -684,13 +684,11 @@
 											</div>
 											<div class="kt-portlet__head-toolbar">
 												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-outline-primary">
-														View
-													</button>
+													<button id="btn-follow-following" data-id="1" class="btn btn-sm btn-outline-primary btn_follow_following">Follow</button>
 												</div>
 											</div>
 										</div>
-										<div class="kt-portlet__head">
+										<div data-id="2" class="kt-portlet__head same-place">
 											<div class="kt-portlet__head-label">
 												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
 													<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
@@ -702,13 +700,11 @@
 											</div>
 											<div class="kt-portlet__head-toolbar">
 												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-outline-primary">
-														View
-													</button>
+													<button id="btn-follow-following" data-id="2" class="btn btn-sm btn-outline-primary btn_follow_following">Follow</button>
 												</div>
 											</div>
 										</div>
-										<div class="kt-portlet__head">
+										<div data-id="3" class="kt-portlet__head same-place">
 											<div class="kt-portlet__head-label">
 												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
 													<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
@@ -720,9 +716,7 @@
 											</div>
 											<div class="kt-portlet__head-toolbar">
 												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-outline-primary">
-														View
-													</button>
+													<button id="btn-follow-following" data-id="3" class="btn btn-sm btn-outline-primary btn_follow_following">Follow</button>
 												</div>
 											</div>
 										</div>
@@ -741,8 +735,8 @@
 											<a href="see_all_same_interest.html" type="button" class="btn btn-sm btn-clean btn-bold">See all</a>
 										</div>
 									</div>
-									<div style="padding: 10px" class="kt-portlet__body">
-										<div class="kt-portlet__head">
+									<div id="container-same_interest" style="padding: 10px" class="kt-portlet__body">
+										<div data-id="1" class="kt-portlet__head same-place">
 											<div class="kt-portlet__head-label">
 												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
 													<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
@@ -754,13 +748,11 @@
 											</div>
 											<div class="kt-portlet__head-toolbar">
 												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-outline-primary">
-														View
-													</button>
+													<button id="btn-follow-following-interest" data-id="1" class="btn btn-sm btn-outline-primary btn_follow_following_interest">Follow</button>
 												</div>
 											</div>
 										</div>
-										<div class="kt-portlet__head">
+										<div data-id="2" class="kt-portlet__head same-place">
 											<div class="kt-portlet__head-label">
 												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
 													<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
@@ -772,13 +764,11 @@
 											</div>
 											<div class="kt-portlet__head-toolbar">
 												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-outline-primary">
-														View
-													</button>
+													<button id="btn-follow-following-interest" data-id="2" class="btn btn-sm btn-outline-primary btn_follow_following_interest">Follow</button>
 												</div>
 											</div>
 										</div>
-										<div class="kt-portlet__head">
+										<div data-id="3" class="kt-portlet__head same-place">
 											<div class="kt-portlet__head-label">
 												<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
 													<img id="user_pic" name="user_pic" src="../assets/media/users/100_10.jpg" alt="image">
@@ -790,9 +780,7 @@
 											</div>
 											<div class="kt-portlet__head-toolbar">
 												<div class="kt-portlet__head-actions">
-													<button class="btn btn-sm btn-outline-primary">
-														View
-													</button>
+													<button id="btn-follow-following-interest" data-id="3" class="btn btn-sm btn-outline-primary btn_follow_following_interest">Follow</button>
 												</div>
 											</div>
 										</div>
@@ -1347,7 +1335,7 @@
 		var samePlace = document.getElementById('same_place');
 		var same_interest = document.getElementById('same_interest');
 		console.log(widthScreen);
-		if (widthScreen <= 799) {
+		if (widthScreen <= 800) {
 			samePlace.style.display = 'none';
 			same_interest.style.display = 'none';
 		}
@@ -1385,6 +1373,45 @@
 			KTSweetAlert2Demo.init();
 		});
 	</script>
+	<script>
+		$(document).ready(function() {
+			$('#container-same_place').on('click','#btn-follow-following', function (e) {
+				let id = $(this).data('id');
+				let btnText = $('.btn_follow_following[data-id="' + id + '"]').text();
+				if (btnText == "Follow") {
+					$('.btn_follow_following[data-id="' + id + '"]').html('Following');
+					$('.btn_follow_following[data-id="' + id + '"]').removeClass('btn-outline-primary');
+					$('.btn_follow_following[data-id="' + id + '"]').addClass('btn-outline-secondary');
+
+				}
+				else {
+					$('.btn_follow_following[data-id="' + id + '"]').html('Follow');
+					$('.btn_follow_following[data-id="' + id + '"]').removeClass('btn-outline-secondary');
+					$('.btn_follow_following[data-id="' + id + '"]').addClass('btn-outline-primary');
+				}
+
+			});
+		})
+
+		$(document).ready(function() {
+			$('#container-same_interest').on('click','#btn-follow-following-interest', function (e) {
+				let id = $(this).data('id');
+				let btnText = $('.btn_follow_following_interest[data-id="' + id + '"]').text();
+				if (btnText == "Follow") {
+					$('.btn_follow_following_interest[data-id="' + id + '"]').html('Following');
+					$('.btn_follow_following_interest[data-id="' + id + '"]').removeClass('btn-outline-primary');
+					$('.btn_follow_following_interest[data-id="' + id + '"]').addClass('btn-outline-secondary');
+
+				}
+				else {
+					$('.btn_follow_following_interest[data-id="' + id + '"]').html('Follow');
+					$('.btn_follow_following_interest[data-id="' + id + '"]').removeClass('btn-outline-secondary');
+					$('.btn_follow_following_interest[data-id="' + id + '"]').addClass('btn-outline-primary');
+				}
+
+			});
+		})
+	</script>	
 </body>
 <!-- end::Body -->
 </html>

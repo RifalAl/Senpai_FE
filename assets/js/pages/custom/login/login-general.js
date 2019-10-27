@@ -131,6 +131,12 @@ var KTLoginGeneral = function() {
                     },
                     agree: {
                         required: true
+                    },
+                    name: {
+                        required: true
+                    },
+                    country: {
+                        required: true
                     }
                 }
             });
