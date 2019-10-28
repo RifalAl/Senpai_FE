@@ -177,11 +177,21 @@ input[type=file]{
 		margin-top: 0%;
 	}
 }
+
+@media(max-width: 670px) {
+	.background_user {
+		object-fit: cover;
+		height: 200px;
+		width: 100%;
+	}
+}
+
 @media (max-width: 480px) {
 	.background_user {
 		margin-top: 0%;
-		height: 100%;
-		width: auto;
+		object-fit: cover;
+		height: 200px;
+		width: 100%;
 	}
 }
 
