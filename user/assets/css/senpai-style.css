@@ -1,7 +1,9 @@
 .mobile-logo {
 	height : 30px;
 }
-
+p,h1,h2,h3,h4,h5,h6 {
+	pointer-events: none;
+}
 
 /*Style warna*/
 .kt-header-mobile {
@@ -416,7 +418,9 @@ html {
 .width-mask {
 	width: 120.617px !important;
 }
-
+.alert-item {
+	padding: .4rem 1.5rem;
+}
 .	
 
 
@@ -453,6 +457,14 @@ html {
 	}
 }
 
+@media (min-width: 1337px){
+	.question-info {
+		position: absolute;
+		left: 70px;
+		bottom: 13px;
+	}
+}
+
 @media(max-width: 1440px) {
 	.question-profile {
 		left: 37px !important;
@@ -469,11 +481,7 @@ html {
 	.info-users h6 {
 		margin-bottom: 0px !important;
 	}
-	.question-info {
-		position: absolute;
-		left: 75px;
-		bottom: 4px;
-	}
+	
 	.padding-all {
 		padding: 15px !important;
 	}
