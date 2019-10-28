@@ -1,4 +1,23 @@
+
+@media (max-width: 800px) {
+	.nav-tabs.nav-tabs-line .nav-item {
+		margin-right: 70px;
+	}
+	.nav-pertama {
+		margin-left: 13%;
+	}
+	.nav-pertama-profile {
+		margin-left: 27%;
+	}
+	.nav-padding {
+		padding : 0px 7px;
+	}
+}
+
 @media (max-width: 480px) {
+	.nav-tabs.nav-tabs-line .nav-item {
+		margin-right: 18px !important;
+	}
 	.nav-pertama {
 		margin-left: 13%;
 	}
