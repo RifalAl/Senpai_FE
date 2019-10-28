@@ -1,0 +1,47 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+        "no": 1,
+        "level": 1,
+        "rank": "Kouhai",
+        "classification": "5 Vote"
+    }, {
+        "no": 2,
+        "level": 1,
+        "rank": "Kouhai",
+        "classification": "5 Vote"
+    }, {
+        "no": 3,
+        "level": 1,
+        "rank": "Kouhai",
+        "classification": "5 Vote"
+    }, {
+        "no": 4,
+        "level": 1,
+        "rank": "Kouhai",
+        "classification": "5 Vote"
+    }, {
+        "no": 5,
+        "level": 1,
+        "rank": "Kouhai",
+        "classification": "5 Vote"
+    }, {
+        "no": 6,
+        "level": 1,
+        "rank": "Kouhai",
+        "classification": "5 Vote"
+    }, {
+        "no": 7,
+        "level": 1,
+        "rank": "Kouhai",
+        "classification": "5 Vote"
+    }, {
+        "no": 8,
+        "level": 1, 
+        "rank": "Kouhai",
+        "classification": "5 Vote"
+    }]
+}

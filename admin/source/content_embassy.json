@@ -1,0 +1,55 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+        "no": 1,
+        "date": "25 October 2019",
+        "title": "Lorem ipsum dolor sit amet",
+        "nationality": "Indonesia",
+        "creator": "Ahmad Rifaldi"
+    }, {
+        "no": 2,
+        "date": "25 October 2019",
+        "title": "Lorem ipsum dolor sit amet",
+        "nationality": "Malaysia",
+        "creator": "Ahmad Rifaldi"
+    }, {
+        "no": 3,
+        "date": "25 October 2019",
+        "title": "Lorem ipsum dolor sit amet",
+        "nationality": "Indonesia",
+        "creator": "Ahmad Rifaldi"
+    }, {
+        "no": 4,
+        "date": "25 October 2019",
+        "title": "Lorem ipsum dolor sit amet",
+        "nationality": "Indonesia",
+        "creator": "Ahmad Rifaldi"
+    }, {
+        "no": 5,
+        "date": "25 October 2019",
+        "title": "Lorem ipsum dolor sit amet",
+        "nationality": "Indonesia",
+        "creator": "Ahmad Rifaldi"
+    }, {
+        "no": 6,
+        "date": "25 October 2019",
+        "title": "Lorem ipsum dolor sit amet",
+        "nationality": "Indonesia",
+        "creator": "Ahmad Rifaldi"
+    }, {
+        "no": 7,
+        "date": "25 October 2019",
+        "title": "Lorem ipsum dolor sit amet",
+        "nationality": "Indonesia",
+        "creator": "Ahmad Rifaldi"
+    }, {
+        "no": 8,
+        "date": "25 October 2019",
+        "title": "Lorem ipsum dolor sit amet",
+        "nationality": "Indonesia",
+        "creator": "Ahmad Rifaldi"
+    }]
+}

@@ -1,0 +1,55 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+        "no": 1,
+        "date": "15 September 2019",
+        "question": "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
+        "answer": "5",
+        "status": "open"
+    }, {
+        "no": 2,
+        "date": "15 September 2019",
+        "question": "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem lorem ipsum is lorem ipsum divided by ipsum plus lorem lorem ipsum is lorem ipsum divided by ipsum plus lorem lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
+        "answer": "5",
+        "status": "solved"
+    }, {
+        "no": 3,
+        "date": "15 September 2019",
+        "question": "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
+        "answer": "5",
+        "status": "open"
+    }, {
+        "no": 4,
+        "date": "15 September 2019",
+        "question": "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
+        "answer": "5",
+        "status": "open"
+    }, {
+        "no": 5,
+        "date": "15 September 2019",
+        "question": "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
+        "answer": "5",
+        "status": "open"
+    }, {
+        "no": 6,
+        "date": "15 September 2019",
+        "question": "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
+        "answer": "5",
+        "status": "open"
+    }, {
+        "no": 7,
+        "date": "15 September 2019",
+        "question": "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
+        "answer": "5",
+        "status": "open"
+    }, {
+        "no": 8,
+        "date": "15 September 2019",
+        "question": "What if lorem ipsum is lorem ipsum divided by ipsum plus lorem?",
+        "answer": "5",
+        "status": "open"
+    }]
+}

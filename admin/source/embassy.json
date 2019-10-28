@@ -1,0 +1,39 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+        "no": 1,
+        "embassy": "Indonesian Embassy",
+        "country": "Indonesia"
+    }, {
+        "no": 2,
+        "embassy": "Indonesian Embassy",
+        "country": "Indonesia"
+    }, {
+        "no": 3,
+        "embassy": "Indonesian Embassy",
+        "country": "Indonesia"
+    }, {
+        "no": 4,
+        "embassy": "Indonesian Embassy",
+        "country": "Indonesia"
+    }, {
+        "no": 5,
+        "embassy": "Indonesian Embassy",
+        "country": "Indonesia"
+    }, {
+        "no": 6,
+        "embassy": "Indonesian Embassy",
+        "country": "Indonesia"
+    }, {
+        "no": 7,
+        "embassy": "Indonesian Embassy",
+        "country": "Indonesia"
+    }, {
+        "no": 8,
+        "embassy": "Indonesian Embassy",
+        "country": "Indonesia"
+    }]
+}

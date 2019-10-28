@@ -1,0 +1,39 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+        "no": 1,
+        "topic": "Business",
+        "img": "../assets/media/badge-icon/Asset 7.png"
+    }, {
+        "no": 2,
+        "topic": "Business",
+        "img": "../assets/media/badge-icon/Asset 7.png"
+    }, {
+        "no": 3,
+        "topic": "Business",
+        "img": "../assets/media/badge-icon/Asset 7.png"
+    }, {
+        "no": 4,
+        "topic": "Business",
+        "img": "../assets/media/badge-icon/Asset 7.png"
+    }, {
+        "no": 5,
+        "topic": "Business",
+        "img": "../assets/media/badge-icon/Asset 7.png"
+    }, {
+        "no": 6,
+        "topic": "Business",
+        "img": "../assets/media/badge-icon/Asset 7.png"
+    }, {
+        "no": 7,
+        "topic": "Business",
+        "img": "../assets/media/badge-icon/Asset 7.png"
+    }, {
+        "no": 8,
+        "topic": "Business",
+        "img": "../assets/media/badge-icon/Asset 7.png"
+    }]
+}

@@ -1,0 +1,79 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+        "no": 1,
+        "kategori": "Pekerja",
+        "nama": "Ahmad",
+        "jabatan": "Penggalian",
+        "vendor": "CV. Upana Studio",
+        "tanggal": "29 Agustus 2019",
+        "waktu": "16.00",
+        "status": "masuk"
+    }, {
+        "no": 2,
+        "kategori": "AMT",
+        "nama": "Ahmad",
+        "jabatan": "Penggalian",
+        "vendor": "CV. Upana Studio",
+        "tanggal": "28 Maret 2020",
+        "waktu": "18.00",
+        "status": "keluar"
+    }, {
+        "no": 3,
+        "kategori": "TKJP",
+        "nama": "Ahmad",
+        "jabatan": "Penggalian",
+        "vendor": "CV. Upana Studio",
+        "tanggal": "29 Agustus 2019",
+        "waktu": "15.00",
+        "status": "masuk"
+    }, {
+        "no": 4,
+        "kategori": "Kontraktor",
+        "nama": "Ahmad",
+        "jabatan": "Penggalian",
+        "vendor": "CV. Upana Studio",
+        "tanggal": "28 Agustus 2019",
+        "waktu": "15.00",
+        "status": "masuk"
+    }, {
+        "no": 5,
+        "kategori": "TKJP",
+        "nama": "Ahmad",
+        "jabatan": "Penggalian",
+        "vendor": "CV. Upana Studio",
+        "tanggal": "29 Agustus 2019",
+        "waktu": "15.00",
+        "status": "keluar"
+    }, {
+        "no": 6,
+        "kategori": "AMT",
+        "nama": "Ahmad",
+        "jabatan": "Penggalian",
+        "vendor": "CV. Upana Studio",
+        "tanggal": "28 Agustus 2019",
+        "waktu": "23.00",
+        "status": "masuk"
+    }, {
+        "no": 7,
+        "kategori": "Kontraktor",
+        "nama": "Ahmad",
+        "jabatan": "Penggalian",
+        "vendor": "CV. Upana Studio",
+        "tanggal": "29 Agustus 2019",
+        "waktu": "15.00",
+        "status": "keluar"
+    }, {
+        "no": 8,
+        "kategori": "Pekerja",
+        "nama": "Ahmad",
+        "jabatan": "Penggalian",
+        "vendor": "CV. Upana Studio",
+        "tanggal": "28 Agustus 2019",
+        "waktu": "08.00",
+        "status": "masuk"
+    }]
+}
