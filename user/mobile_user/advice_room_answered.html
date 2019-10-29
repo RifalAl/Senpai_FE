@@ -456,7 +456,7 @@
 												</div>
 												<div class="kt-portlet__footer padding-all-5">
 													<div class="input-group">
-														<input type="text" class="form-control answers-input" placeholder="answers..">
+														<textarea onkeyup="textAreaAdjust(this)" rows="1" type="text" class="form-control answers-input" placeholder="answers.."></textarea>
 														<div class="input-group-append">
 															<button class="btn btn-secondary send-answers" type="button">Send</button>
 														</div>
@@ -529,7 +529,7 @@
 													<div style="" id="komentar">
 														<div class="kt-portlet__footer padding-all-5 padding-top-10">
 															<div class="input-group">
-																<input type="text" class="form-control answers-input" placeholder="add a answers..">
+																<textarea onkeyup="textAreaAdjust(this)" rows="1" type="text" class="form-control answers-input" placeholder="answers.."></textarea>
 																<div class="input-group-append">
 																	<button class="btn btn-secondary send-answers" type="button">Send</button>
 																</div>
@@ -692,7 +692,7 @@
 													<div style="" id="komentar_2">
 														<div class="kt-portlet__footer padding-all-5 padding-top-10">
 															<div class="input-group">
-																<input type="text" class="form-control answers-input" placeholder="add a answers..">
+																<textarea onkeyup="textAreaAdjust(this)" rows="1" type="text" class="form-control answers-input" placeholder="answers.."></textarea>
 																<div class="input-group-append">
 																	<button class="btn btn-secondary send-answers" type="button">Send</button>
 																</div>
@@ -1467,39 +1467,57 @@
 		})
 	</script>
 	<script>
-		var KTSweetAlert2Demo = function() {
-			var initDemos = function() {
-				$('.btn_bookmark').click(function(e) {
-					swal.fire({
-						position: 'center',
-						type: 'success',
-						title: 'This Post Bookmark',
-						showConfirmButton: false,
-						timer: 1300
-					});
-				});
+		$('.btn_bookmark').click(function() {
+			toastr.options = {
+				"closeButton": false,
+				"debug": false,
+				"newestOnTop": false,
+				"progressBar": false,
+				"positionClass": "toast-top-right",
+				"preventDuplicates": false,
+				"onclick": null,
+				"showDuration": "200",
+				"hideDuration": "400",
+				"timeOut": "1500",
+				"extendedTimeOut": "1000",
+				"showEasing": "swing",
+				"hideEasing": "linear",
+				"showMethod": "fadeIn",
+				"hideMethod": "fadeOut"
+			};
 
-				$('.btn_copy_link').click(function(e) {
-					swal.fire({
-						position: 'center',
-						type: 'success',
-						title: 'Link copied',
-						showConfirmButton: false,
-						timer: 1300
-					});
-				});
+			toastr.success("This Post Bookmark");
+			
+		});
+		$('.btn_copy_link').click(function() {
+
+			toastr.options = {
+				"closeButton": false,
+				"debug": false,
+				"newestOnTop": false,
+				"progressBar": false,
+				"positionClass": "toast-top-right",
+				"preventDuplicates": false,
+				"onclick": null,
+				"showDuration": "200",
+				"hideDuration": "400",
+				"timeOut": "1500",
+				"extendedTimeOut": "1000",
+				"showEasing": "swing",
+				"hideEasing": "linear",
+				"showMethod": "fadeIn",
+				"hideMethod": "fadeOut"
 			};
-			return {
-				init: function() {
-					initDemos();
-				},
-			};
-		}();
-		jQuery(document).ready(function() {
-			KTSweetAlert2Demo.init();
+
+			toastr.success("Link has been copied");
 		});
 	</script>
-
+	<script>
+		function textAreaAdjust(o) {
+			o.style.height = "2px";
+			o.style.height = (10+o.scrollHeight)+"px";
+		}
+	</script>
 	<!--end::Page Scripts -->
 </body>
 <!-- end::Body -->

@@ -1115,22 +1115,30 @@
 					</label>`;
 				},
 			},{
+				data: 'type',
+				title: 'Type',
+				render: function(data, type, full, meta) {
+					var type = {
+						Post : {'title' : 'Post', 'class' : 'btn-label-success'},
+						Article : {'title' : 'Article', 'class' : 'btn-label-primary'},
+						Question: {'title': 'Question', 'class': 'btn-label-warning'},
+					};
+					if (typeof type[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + type[data].class + '">' + type[data].title + '</span>';
+				},
+			},{
 				data: 'date',
 				title: 'Date',
 				width: 100,
 			},{
+				data: 'author',
+				title: 'Author',
+			},{
 				data: 'posts',
 				responsivePriority: -1,
 				title: 'Posts',
-			},{
-				data: 'asked_by',
-				title: 'Asked By',
-			},{
-				data: 'answers',
-				title: 'Answers',
-			},{
-				data: 'type',
-				title: 'Type',
 			},{
 				field: 'action',
 				title: 'Action',

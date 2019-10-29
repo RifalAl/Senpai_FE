@@ -31,6 +31,9 @@
 			bottom: 70px;
 			left: 70px;
 		}
+		p,h1,h2,h3,h4,h5,h6 {
+			pointer-events: none
+		}
 		@media (min-width: 1024px) {
 			.kt-login.kt-login--v1 .kt-login__aside {
 				width: 60%;
@@ -79,7 +82,7 @@
 						<div class="kt-login__form">
 							<div class="kt-login__title">
 								<h3>Sign In</h3>
-								<span class="kt-login__signup-label">Don't have an account yet?</span>&nbsp;&nbsp;
+								<span style="pointer-events: none" class="kt-login__signup-label">Don't have an account yet?</span>&nbsp;&nbsp;
 								<a href="sign_up.html" class="kt-link kt-login__signup-link">Sign Up!</a>
 							</div>
 							<!--begin::Form-->
