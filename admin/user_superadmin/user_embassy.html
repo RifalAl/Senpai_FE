@@ -109,6 +109,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!-- begin:: Aside Menu -->
                     <div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
 						<div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
+							<h4 class="sidebar-logo">SUPER ADMIN</h4>
 							<ul class="kt-menu__nav ">
 								<li class="kt-menu__item " aria-haspopup="true"><a href="index.html" class="kt-menu__link "><span class="kt-menu__link-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
 									<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -330,7 +331,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</div>
 								<div class="kt-portlet__body">
-                                    <table class="table table-striped- table-bordered table-hover table-checkable" id="table_embassy"></table>
+                                    <table class="table table-striped table-bordered table-hover table-checkable" id="table_embassy"></table>
 								</div>
 							</div>
 
@@ -376,6 +377,19 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 												</div>
                                                 <div class="form-group row">
+													<label for="example-text-input" class="col-4 col-form-label">Nationality</label>
+													<div class="col-8">
+														<select class="form-control" name="embassy_nationality">
+                                                            <option value="" disabled selected>- Choose Nationality -</option>
+    														<option>Indonesia</option>
+    														<option>Malaysia</option>
+    														<option>Vietnam</option>
+    														<option>United States</option>
+    														<option>United Kingdom</option>
+    													</select>
+													</div>
+												</div>
+                                                <div class="form-group row">
 													<label for="example-text-input" class="col-4 col-form-label">Flag</label>
 													<div class="col-8">
 														<div class="dropzone dropzone-default dropzone-success" id="kt_dropzone_embassy">
@@ -409,31 +423,44 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <div class="form-group row">
 													<label for="example-text-input" class="col-4 col-form-label">Name</label>
 													<div class="col-8">
-														<input type="text" class="form-control" name="embassy_name" value="Indonesian Embassy">
+														<input type="text" class="form-control" name="embassy_name_edit" value="Indonesian Embassy">
 													</div>
 												</div>
                                                 <div class="form-group row">
 													<label for="example-text-input" class="col-4 col-form-label">Username</label>
 													<div class="col-8">
-														<input type="text" class="form-control" name="embassy_username" value="indo">
+														<input type="text" class="form-control" name="embassy_username_edit" value="indo">
 													</div>
 												</div>
                                                 <div class="form-group row">
 													<label for="example-text-input" class="col-4 col-form-label">Password</label>
 													<div class="col-8">
-														<input type="password" class="form-control" name="embassy_password" value="indo">
+														<input type="password" class="form-control" name="embassy_password_edit" value="indo">
 													</div>
 												</div>
                                                 <div class="form-group row">
 													<label for="example-text-input" class="col-4 col-form-label">Re-enter Password</label>
 													<div class="col-8">
-														<input type="password" class="form-control" name="embassy_repassword" value="indo">
+														<input type="password" class="form-control" name="embassy_repassword_edit" value="indo">
 													</div>
 												</div>
                                                 <div class="form-group row">
 													<label for="example-text-input" class="col-4 col-form-label">Email</label>
 													<div class="col-8">
-														<input type="text" class="form-control" name="embassy_email" value="indonesian.embassy@gmail.com">
+														<input type="text" class="form-control" name="embassy_email_edit" value="indonesian.embassy@gmail.com">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="example-text-input" class="col-4 col-form-label">Nationality</label>
+													<div class="col-8">
+														<select class="form-control" name="embassy_nationality_edit">
+                                                            <option value="" disabled>- Choose Nationality -</option>
+    														<option selected>Indonesia</option>
+    														<option>Malaysia</option>
+    														<option>Vietnam</option>
+    														<option>United States</option>
+    														<option>United Kingdom</option>
+    													</select>
 													</div>
 												</div>
                                                 <div class="form-group row">
@@ -582,6 +609,9 @@ License: You must have a valid license purchased only from themeforest(the above
 	                embassy_email: {
 	                    required: true,
                         email: true
+	                },
+					embassy_nationality: {
+	                    required: true
 	                }
 	            },
 
@@ -596,21 +626,24 @@ License: You must have a valid license purchased only from themeforest(the above
 			$("#kt_form_embassy_edit").validate({
 	            // define validation rules
 	            rules: {
-	                embassy_name: {
+	                embassy_name_edit: {
 	                    required: true
 	                },
-	                embassy_username: {
+	                embassy_username_edit: {
 	                    required: true
 	                },
-	                embassy_password: {
+	                embassy_password_edit: {
 	                    required: true
 	                },
-	                embassy_repassword: {
+	                embassy_repassword_edit: {
 	                    required: true
 	                },
-	                embassy_email: {
+	                embassy_email_edit: {
 	                    required: true,
                         email: true
+	                },
+	                embassy_nationality_edit: {
+	                    required: true
 	                }
 	            },
 

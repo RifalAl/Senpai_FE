@@ -439,6 +439,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
     };
 
     var initTableContentCreator = function() {
+        var state_category = "";
+        var href_category = "";
         // begin first table
         var table = $('#table_content_creator').DataTable({
             responsive: true,
@@ -483,6 +485,27 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
             }, {
                 data: 'category',
                 title: 'Category',
+                render: function(data, type, row, meta) {
+                    state_category = data;
+                    var category = {
+                        'Daily Tips': {
+                            'title': 'Daily Tips',
+                            'class': 'btn-label-brand'
+                        },
+                        'Emergency': {
+                            'title': 'Emergency',
+                            'class': 'btn-label-warning'
+                        },
+                        'Article': {
+                            'title': 'Article',
+                            'class': 'btn-label-dark'
+                        },
+                    };
+                    if (typeof category[data] === 'undefined') {
+                        return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-danger">' + data + '</span>';
+                    }
+                    return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + category[data].class + '">' + category[data].title + '</span>';
+                }
             }, {
                 data: 'creator',
                 title: 'Created By',
@@ -494,33 +517,44 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 width: 50,
                 orderable: false,
                 render: function(data, type, full, meta) {
-                    return `
-					<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<i class="flaticon-more"></i>
-					</button>
-					<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
-					<a href="content_edit.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-arrow-right"></i> Edit</button>&nbsp;
-					<a href="#"  class="dropdown-item btn btn-secondary" id="kt_sweetalert_delete">  <i class="fa fa-times"></i> Delete</a>
+                    if (state_category === "Daily Tips") {
+                        href_category = "content_edit_dailytips.html";
+                    }
+                    else if (state_category === "Emergency") {
+                        href_category = "content_edit_emergency.html";
+                    }
+                    else if (state_category === "Article") {
+                        href_category = "content_edit_article.html";
+                    }
+                    else {
+                        href_category = "#";
+                    }
+                    return `<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="flaticon-more"></i>
+                    </button>
+                    <div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
+                    <a href="`+ href_category +`" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-arrow-right"></i> Edit</button>&nbsp;
+                    <a href="#"  class="dropdown-item btn btn-secondary" id="kt_sweetalert_delete">  <i class="fa fa-times"></i> Delete</a>
                     <script>
                         $('#kt_sweetalert_delete').click(function(e) {
-            	            swal.fire({
-            	                title: 'Are you sure?',
-            	                text: "You won't be able to revert this!",
-            	                type: 'warning',
-            	                showCancelButton: true,
-            	                confirmButtonText: 'Yes, delete it!',
-            	                cancelButtonText: 'No, cancel!',
-            	                reverseButtons: true
-            	            }).then(function(result) {
-            	                if (result.value) {
+                            swal.fire({
+                                title: 'Are you sure?',
+                                text: "You won't be able to revert this!",
+                                type: 'warning',
+                                showCancelButton: true,
+                                confirmButtonText: 'Yes, delete it!',
+                                cancelButtonText: 'No, cancel!',
+                                reverseButtons: true
+                            }).then(function(result) {
+                                if (result.value) {
                                     swal.fire(
                                             'Deleted!',
                                             'Post has been deleted.',
                                             'success'
                                         )
-            	                }
-            	            });
-            	        });
+                                }
+                            });
+                        });
                     </script>`;
                 },
             }],
@@ -675,9 +709,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 data: 'title',
                 title: 'Title',
             }, {
-                data: 'nationality',
-                title: 'Nationality',
-            }, {
                 data: 'creator',
                 title: 'Created By',
             }, {
@@ -736,7 +767,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 });
             },
             columnDefs: [{
-                targets: [0, 1, 2, 3, 4],
+                targets: [0, 1, 2, 3],
                 className: 'text-center',
                 orderable: false,
             }],

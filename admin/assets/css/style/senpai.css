@@ -239,4 +239,19 @@ body {
 }
 
 .medium-editor-hidden {
-  display: none !important;}
+      display: none !important;
+}
+
+.sidebar-logo {
+    margin-bottom:0px;
+    font-weight: 800;
+    font-size: 1.7rem;
+    padding: 0px 20px;
+    display: none;
+}
+
+@media (max-width: 1024px){
+    .sidebar-logo {
+        display: unset;
+    }
+}
