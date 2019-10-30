@@ -165,9 +165,7 @@ input[type=file]{
 	left: 0
 }
 
-.user-info span {
-	color: white !important;
-}
+
 
 @media(max-width: 1440px) {
 	.background_user {
