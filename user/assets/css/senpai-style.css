@@ -445,6 +445,10 @@ html {
 	display: inline;
 	margin-left: 10px;
 }
+.vertical-middle {
+	top: 50%;
+	margin-top: -17.5px;
+}
 
 .	
 
