@@ -44,6 +44,9 @@
 	<!-- begin:: Header Mobile -->
 	<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
 		<div class="kt-header-mobile__logo">
+			<button onclick="goBack()" class="btn btn-sm">
+				<span class="fa fa-arrow-left"></span>
+			</button>
 			<a href="index.html">
 				<img class="mobile-logo" alt="Logo" src="../assets/media/logos/logo_senpai.png" />
 			</a>
@@ -1202,6 +1205,11 @@
 
 			toastr.success("Link has been copied");
 		});
+	</script>
+	<script>
+		function goBack() {
+			window.history.back();
+		}
 	</script>
 </body>
 <!-- end::Body -->

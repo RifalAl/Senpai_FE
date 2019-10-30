@@ -35,6 +35,9 @@
 	<!-- begin:: Header Mobile -->
 	<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
 		<div class="kt-header-mobile__logo">
+			<button onclick="goBack()" class="btn btn-sm">
+				<span class="fa fa-arrow-left"></span>
+			</button>
 			<a href="index.html">
 				<img class="mobile-logo" alt="Logo" src="../assets/media/logos/logo_senpai.png" />
 			</a>
@@ -1057,6 +1060,11 @@
 		function textAreaAdjust(o) {
 			o.style.height = "1px";
 			o.style.height = (25+o.scrollHeight)+"px";
+		}
+	</script>
+	<script>
+		function goBack() {
+			window.history.back();
 		}
 	</script>
 </body>

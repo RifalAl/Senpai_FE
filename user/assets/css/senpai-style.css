@@ -449,7 +449,9 @@ html {
 	top: 50%;
 	margin-top: -17.5px;
 }
-
+#kt_header_mobile {
+	padding-left: 5px;
+}
 .	
 
 
