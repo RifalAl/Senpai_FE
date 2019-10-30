@@ -1,7 +1,9 @@
 .mobile-logo {
 	height : 30px;
 }
-
+p,h1,h2,h3,h4,h5,h6 {
+	pointer-events: none;
+}
 
 /*Style warna*/
 .kt-header-mobile {
@@ -215,6 +217,7 @@
 	width: 39px;
 	height: auto;
 	margin-bottom: 10px;
+	display: inline;
 }
 
 .question-info{
@@ -391,7 +394,7 @@ html {
 	border-radius: 0px 20px 20px 0px;
 }
 .dropdown-menu.dropdown-menu-sm {
-	height: 85vh;
+	height: auto;
 }
 .dropdown-menu.dropdown-menu-anim {
 
@@ -415,6 +418,36 @@ html {
 }
 .width-mask {
 	width: 120.617px !important;
+}
+.alert-item {
+	padding: .4rem 1.5rem;
+}
+.spinner-loading:before {
+	width: 35px !important;
+	height: 35px !important;
+}
+.spinner-position {
+	position: absolute;
+	top: 35px;
+	left: 50%;
+	margin-left: -17.5px
+}
+.alert-icon- {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+}
+.head-alert {
+	flex-wrap : nowrap;
+	display: inline;
+}
+.alert-heading {
+	display: inline;
+	margin-left: 10px;
+}
+.vertical-middle {
+	top: 50%;
+	margin-top: -17.5px;
 }
 
 .	
@@ -453,6 +486,14 @@ html {
 	}
 }
 
+@media (min-width: 1337px){
+	.question-info {
+		position: absolute;
+		left: 70px;
+		bottom: 6px;
+	}
+}
+
 @media(max-width: 1440px) {
 	.question-profile {
 		left: 37px !important;
@@ -469,11 +510,7 @@ html {
 	.info-users h6 {
 		margin-bottom: 0px !important;
 	}
-	.question-info {
-		position: absolute;
-		left: 75px;
-		bottom: 4px;
-	}
+	
 	.padding-all {
 		padding: 15px !important;
 	}
@@ -484,6 +521,9 @@ html {
 }
 
 @media (max-width: 1024px) {
+	.dropdown-menu.dropdown-menu-sm {
+		height: 85vh;
+	}
 	.question-profile {
 		left: 40px !important;
 	}

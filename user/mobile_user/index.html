@@ -78,7 +78,7 @@
 				</div>
 				<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-sm">
 					<div class="kt-notification">
-						<a href="my_question.html" class="kt-notification__item">
+						<a href="my_question.html" class="kt-notification__item kt-hidden">
 							<div class="kt-notification__item-icon">
 								<i class="fa fa-question-circle kt-font-success"></i>
 							</div>
@@ -109,6 +109,18 @@
 							<div class="kt-notification__item-details">
 								<div class="kt-notification__item-title kt-font-bold">
 									Settings
+								</div>
+								<div class="kt-notification__item-time">
+								</div>
+							</div>
+						</a>
+						<a href="terms_and_condition.html" class="kt-notification__item">
+							<div class="kt-notification__item-icon">
+								<i class="flaticon2-safe kt-font-primary"></i>
+							</div>
+							<div class="kt-notification__item-details">
+								<div class="kt-notification__item-title kt-font-bold">
+									Terms & Condition
 								</div>
 								<div class="kt-notification__item-time">
 								</div>
@@ -199,12 +211,6 @@
 									<span class="kt-menu__link-text">Profile</span>
 								</a>
 							</li>
-							<li class="kt-menu__item" aria-haspopup="true">
-								<a href="terms_and_condition.html" class="kt-menu__link ">
-									<i class="kt-menu__link-icon fa fa-exclamation-triangle "></i>
-									<span class="kt-menu__link-text">Terms & Condition</span>
-								</a>
-							</li>
 						</ul>
 					</div>
 				</div>
@@ -248,7 +254,7 @@
 								<!--end: Head -->
 								<!--begin: Navigation -->
 								<div class="kt-notification">
-									<a href="my_question.html" class="kt-notification__item">
+									<a href="my_question.html" class="kt-notification__item kt-hidden">
 										<div class="kt-notification__item-icon">
 											<i class="fa fa-question-circle kt-font-success"></i>
 										</div>
@@ -279,6 +285,18 @@
 										<div class="kt-notification__item-details">
 											<div class="kt-notification__item-title kt-font-bold">
 												Settings
+											</div>
+											<div class="kt-notification__item-time">
+											</div>
+										</div>
+									</a>
+									<a href="terms_and_condition.html" class="kt-notification__item">
+										<div class="kt-notification__item-icon">
+											<i class="flaticon2-safe kt-font-primary"></i>
+										</div>
+										<div class="kt-notification__item-details">
+											<div class="kt-notification__item-title kt-font-bold">
+												Terms & Condition
 											</div>
 											<div class="kt-notification__item-time">
 											</div>
@@ -394,6 +412,15 @@
 					<div  class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid" >
 						<div class="row">
 							<div class="col-lg-8">
+								<div class="alert alert-danger fade show alert-itemc" role="alert">
+									<div class="alert-icon"><i class="flaticon-warning"></i></div>
+									<div class="alert-text">Please, verified your email!</div>
+									<div class="alert-close">
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+											<span aria-hidden="true"><i class="la la-close"></i></span>
+										</button>
+									</div>
+								</div>
 								<!--begin::Portlet-->
 								<div class="kt-portlet kt-portlet--mobile">
 									<div class="kt-portlet__head">
@@ -415,10 +442,15 @@
 								
 								<div class="alert alert-warning" role="alert">
 									<div class="alert-text">
-										<h4 class="alert-heading">Emergency Alert!</h4>
-										<span class="emergency-icon">
+										<span class="head-alert">
 											<img class="icon-size" src="../assets/media/icons/senpai/warning.svg">
+											<h4 class="alert-heading">Emergency Alert!</h4>
 										</span>
+										<div class="alert-icon-">
+											<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+												<span aria-hidden="true"><i class="la la-close"></i></span>
+											</button>
+										</div>
 										<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
 										<hr>
 										<p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
@@ -458,6 +490,102 @@
 												For mor information visit:<br>
 												<a href="#">https://jobhubsquare.jp/foreign-event</a>
 											</p>
+										</div>
+										<div style="position: relative;" class="kt-portlet__foot padding-all-10 kt-hidden">
+											<div class="comment-width">
+												<input type="text" id="comment_" name="comment_" class="form-control" placeholder="comment">
+											</div>
+											<div style="position: absolute;right: 15px;bottom: 13px">
+												<button onclick="toggle_comment()" id="btn_comment" class="btn btn-clean  padding-lr-01">
+													<i class="fa fa-comment-alt"></i> <span id="jumlah_komen" name="jumlah_komen">3</span>
+												</button>
+											</div>
+										</div>
+										<div id="comment-portlet" style="display: none" class="kt-portlet__body comment-portlet">
+											<div class="comment-content">
+												<div class="kt-portlet__head">
+													<div class="kt-portlet__head-label">
+														<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
+															<img id="user_pic" name="user_pic" class="with_badge" src="../assets/media/users/100_3.jpg" alt="image">
+														</a>
+													</div>
+													<div class="question-info">
+														<h6>
+															<span id="the_answer" name="the_answer">Fascal Ivandry</span>
+														</h6>
+														<p>
+															<span id="answer_job" name="answer_job">Product Manager at Artistektur</span>
+														</p>
+														<p id="answer_time">
+															4d ago
+														</p>
+													</div>
+													<div class="kt-portlet__head-toolbar">
+														<div class="kt-portlet__head-actions">
+															<!-- <a id="add_user_2" name="add_user_2" href="#" class="btn btn-clean btn-sm padding-lr-01">
+																<i class="fa fa-user-plus"></i>
+															</a> -->
+														</div>
+													</div>
+												</div>
+												<div class="kt-portlet__body padding-all-5 padding-top-5">
+													<p justify="center" id="question_description" name="question_descri">
+														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
+													</p>
+												</div>
+												<div class="kt-separator kt-separator--dashed"></div>
+											</div>
+											<div class="comment-content">
+												<div class="kt-portlet__head">
+													<div class="kt-portlet__head-label">
+														<a href="#" class="kt-media kt-media--sm kt-media--circle">
+															<img class="with_badge" src="../assets/media/users/100_3.jpg" alt="image">
+														</a>
+													</div>
+													<div class="question-info">
+														<h6>
+															<span id="the_answer" name="the_answer">Fascal Ivandry</span>
+														</h6>
+														<p>
+															<span id="answer_job" name="answer_job">Product Manager at Artistektur</span>
+														</p>
+														<p id="answer_time">
+															4d ago
+														</p>
+													</div>
+													<div class="kt-portlet__head-toolbar">
+														<div class="kt-portlet__head-actions">
+															<!-- <a id="add_user_2" name="add_user_2" href="#" class="btn btn-clean btn-sm padding-lr-01">
+																<i class="fa fa-user-plus"></i>
+															</a> -->
+														</div>
+													</div>
+												</div>
+												<div class="kt-portlet__body padding-all-5 padding-top-5">
+													<p justify="center" id="question_description" name="question_descri">
+														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
+													</p>
+												</div>
+												<div class="kt-separator kt-separator--dashed"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="spinner-post">
+									<div class="kt-portlet">
+										<div class="kt-portlet__head">
+											<div class="kt-portlet__head-label">
+												<div class="kt-portlet__head-actions">
+													<!-- <div class="kt-spinner kt-spinner--v2 kt-spinner--lg kt-spinner--info"></div> -->
+												</div>
+											</div>
+										</div>
+										<div style="position: relative;" class=" kt-portlet__body padding-all-10 padding-c">
+											<div align="center" style="height: 50px">
+												<div class="spinner-position">
+													<div class="kt-spinner kt-spinner--v2 kt-spinner--lg kt-spinner--info spinner-loading"></div>
+												</div>
+											</div>
 										</div>
 										<div style="position: relative;" class="kt-portlet__foot padding-all-10 kt-hidden">
 											<div class="comment-width">
@@ -1316,39 +1444,6 @@
 		}
 	</script>
 	<script>
-		var KTSweetAlert2Demo = function() {
-			var initDemos = function() {
-				$('.btn_bookmark').click(function(e) {
-					swal.fire({
-						position: 'center',
-						type: 'success',
-						title: 'This Post Bookmark',
-						showConfirmButton: false,
-						timer: 1300
-					});
-				});
-
-				$('.btn_copy_link').click(function(e) {
-					swal.fire({
-						position: 'center',
-						type: 'success',
-						title: 'Link copied',
-						showConfirmButton: false,
-						timer: 1300
-					});
-				});
-			};
-			return {
-				init: function() {
-					initDemos();
-				},
-			};
-		}();
-		jQuery(document).ready(function() {
-			KTSweetAlert2Demo.init();
-		});
-	</script>
-	<script>
 		$(document).ready(function() {
 			$('#container-same_place').on('click','#btn-follow-following', function (e) {
 				let id = $(this).data('id');
@@ -1386,7 +1481,53 @@
 
 			});
 		})
-	</script>	
+	</script>
+	<script>
+		$('.btn_bookmark').click(function() {
+			toastr.options = {
+				"closeButton": false,
+				"debug": false,
+				"newestOnTop": false,
+				"progressBar": false,
+				"positionClass": "toast-top-right",
+				"preventDuplicates": false,
+				"onclick": null,
+				"showDuration": "200",
+				"hideDuration": "400",
+				"timeOut": "1500",
+				"extendedTimeOut": "1000",
+				"showEasing": "swing",
+				"hideEasing": "linear",
+				"showMethod": "fadeIn",
+				"hideMethod": "fadeOut"
+			};
+
+			toastr.success("This Post Bookmark");
+			
+		});
+		$('.btn_copy_link').click(function() {
+
+			toastr.options = {
+				"closeButton": false,
+				"debug": false,
+				"newestOnTop": false,
+				"progressBar": false,
+				"positionClass": "toast-top-right",
+				"preventDuplicates": false,
+				"onclick": null,
+				"showDuration": "200",
+				"hideDuration": "400",
+				"timeOut": "1500",
+				"extendedTimeOut": "1000",
+				"showEasing": "swing",
+				"hideEasing": "linear",
+				"showMethod": "fadeIn",
+				"hideMethod": "fadeOut"
+			};
+
+			toastr.success("Link has been copied");
+		});
+	</script>
 </body>
 <!-- end::Body -->
 </html>

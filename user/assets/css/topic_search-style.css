@@ -20,6 +20,12 @@
 	bottom: 3px;	
 }
 
+@media (min-width: 1367px) {
+	.question-info {
+		left: 68px;	
+	}
+}
+
 @media (max-width: 1366px) {
 	.question-info {
 		position: absolute;

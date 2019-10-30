@@ -11,7 +11,8 @@
                  "asked_by" : "Rifaldi ",
                  "answers" : "7",
                  "type" : "Post",
-                 "action" : null
+                 "action" : null,
+                 "author" : "Rifal"
                 
              },
              {
@@ -22,7 +23,8 @@
                  "asked_by" : "Rifaldi ",
                  "answers" : "5",
                  "type" : "Question",
-                 "action" : null
+                 "action" : null,
+                 "author" : "Rifal"
                 
              },
              {
@@ -33,7 +35,8 @@
                  "asked_by" : "Rifaldi ",
                  "answers" : "5",
                  "type" : "Article",
-                 "action" : null
+                 "action" : null,
+                 "author" : "Rifal"
                 
              },
              {
@@ -44,7 +47,8 @@
                  "asked_by" : "Rifaldi ",
                  "answers" : "5",
                  "type" : "Article",
-                 "action" : null
+                 "action" : null,
+                 "author" : "Rifal"
                 
              }
 ]

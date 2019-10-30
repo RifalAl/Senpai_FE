@@ -38,6 +38,9 @@
 			background-color: transparent;
 			box-shadow: 0px 0px 13px 0px rgba(82, 63, 105,0) !important;
 		}
+		.input-group {
+			z-index: 0!important;
+		}
 	</style>
 </head>
 <!-- end::Head -->
@@ -89,7 +92,7 @@
 				</div>
 				<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-sm">
 					<div class="kt-notification">
-						<a href="my_question.html" class="kt-notification__item">
+						<a href="my_question.html" class="kt-notification__item kt-hidden">
 							<div class="kt-notification__item-icon">
 								<i class="fa fa-question-circle kt-font-success"></i>
 							</div>
@@ -125,6 +128,18 @@
 								</div>
 							</div>
 						</a>
+						<a href="terms_and_condition.html" class="kt-notification__item">
+							<div class="kt-notification__item-icon">
+								<i class="flaticon2-safe kt-font-primary"></i>
+							</div>
+							<div class="kt-notification__item-details">
+								<div class="kt-notification__item-title kt-font-bold">
+									Terms & Condition
+								</div>
+								<div class="kt-notification__item-time">
+								</div>
+							</div>
+						</a>
 						<a href="login.html" class="kt-notification__item sign-out-item">
 							<div class="kt-notification__item-icon">
 								<i class="fa fa-sign-out-alt  kt-font-brand"></i>
@@ -141,11 +156,6 @@
 					<!--end: Navigation -->
 				</div>
 			</div>
-			<!-- <button style="font-size: 1.5rem;margin-left: 10px;color:#dbdbdb" class="kt-header-mobile__topbar-toggler" id="kt_aside_mobile_toggler">
-				<i class="flaticon-more"></i>
-			</button> -->
-			<!-- <button class="kt-header-mobile__toggler" id="kt_header_mobile_toggler"><span></span></button> -->
-			<!-- <button class="kt-header-mobile__topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button> -->
 		</div>
 	</div>
 	<!-- end:: Header Mobile -->
@@ -219,12 +229,6 @@
 									<span class="kt-menu__link-text">Profile</span>
 								</a>
 							</li>
-							<li class="kt-menu__item" aria-haspopup="true">
-								<a href="terms_and_condition.html" class="kt-menu__link ">
-									<i class="kt-menu__link-icon fa fa-exclamation-triangle "></i>
-									<span class="kt-menu__link-text">Terms & Condition</span>
-								</a>
-							</li>
 						</ul>
 					</div>
 				</div>
@@ -263,7 +267,7 @@
 								<!--end: Head -->
 								<!--begin: Navigation -->
 								<div class="kt-notification">
-									<a href="my_question.html" class="kt-notification__item">
+									<a href="my_question.html" class="kt-notification__item kt-hidden">
 										<div class="kt-notification__item-icon">
 											<i class="fa fa-question-circle kt-font-success"></i>
 										</div>
@@ -294,6 +298,18 @@
 										<div class="kt-notification__item-details">
 											<div class="kt-notification__item-title kt-font-bold">
 												Settings
+											</div>
+											<div class="kt-notification__item-time">
+											</div>
+										</div>
+									</a>
+									<a href="terms_and_condition.html" class="kt-notification__item">
+										<div class="kt-notification__item-icon">
+											<i class="flaticon2-safe kt-font-primary"></i>
+										</div>
+										<div class="kt-notification__item-details">
+											<div class="kt-notification__item-title kt-font-bold">
+												Terms & Condition
 											</div>
 											<div class="kt-notification__item-time">
 											</div>
@@ -456,7 +472,7 @@
 												</div>
 												<div class="kt-portlet__footer padding-all-5">
 													<div class="input-group">
-														<input type="text" class="form-control answers-input" placeholder="answers..">
+														<textarea onkeyup="textAreaAdjust(this)" rows="1" type="text" class="form-control answers-input" placeholder="answers.."></textarea>
 														<div class="input-group-append">
 															<button class="btn btn-secondary send-answers" type="button">Send</button>
 														</div>
@@ -529,7 +545,7 @@
 													<div style="" id="komentar">
 														<div class="kt-portlet__footer padding-all-5 padding-top-10">
 															<div class="input-group">
-																<input type="text" class="form-control answers-input" placeholder="add a answers..">
+																<textarea onkeyup="textAreaAdjust(this)" rows="1" type="text" class="form-control answers-input" placeholder="answers.."></textarea>
 																<div class="input-group-append">
 																	<button class="btn btn-secondary send-answers" type="button">Send</button>
 																</div>
@@ -692,7 +708,7 @@
 													<div style="" id="komentar_2">
 														<div class="kt-portlet__footer padding-all-5 padding-top-10">
 															<div class="input-group">
-																<input type="text" class="form-control answers-input" placeholder="add a answers..">
+																<textarea onkeyup="textAreaAdjust(this)" rows="1" type="text" class="form-control answers-input" placeholder="answers.."></textarea>
 																<div class="input-group-append">
 																	<button class="btn btn-secondary send-answers" type="button">Send</button>
 																</div>
@@ -1467,39 +1483,57 @@
 		})
 	</script>
 	<script>
-		var KTSweetAlert2Demo = function() {
-			var initDemos = function() {
-				$('.btn_bookmark').click(function(e) {
-					swal.fire({
-						position: 'center',
-						type: 'success',
-						title: 'This Post Bookmark',
-						showConfirmButton: false,
-						timer: 1300
-					});
-				});
+		$('.btn_bookmark').click(function() {
+			toastr.options = {
+				"closeButton": false,
+				"debug": false,
+				"newestOnTop": false,
+				"progressBar": false,
+				"positionClass": "toast-top-right",
+				"preventDuplicates": false,
+				"onclick": null,
+				"showDuration": "200",
+				"hideDuration": "400",
+				"timeOut": "1500",
+				"extendedTimeOut": "1000",
+				"showEasing": "swing",
+				"hideEasing": "linear",
+				"showMethod": "fadeIn",
+				"hideMethod": "fadeOut"
+			};
 
-				$('.btn_copy_link').click(function(e) {
-					swal.fire({
-						position: 'center',
-						type: 'success',
-						title: 'Link copied',
-						showConfirmButton: false,
-						timer: 1300
-					});
-				});
+			toastr.success("This Post Bookmark");
+			
+		});
+		$('.btn_copy_link').click(function() {
+
+			toastr.options = {
+				"closeButton": false,
+				"debug": false,
+				"newestOnTop": false,
+				"progressBar": false,
+				"positionClass": "toast-top-right",
+				"preventDuplicates": false,
+				"onclick": null,
+				"showDuration": "200",
+				"hideDuration": "400",
+				"timeOut": "1500",
+				"extendedTimeOut": "1000",
+				"showEasing": "swing",
+				"hideEasing": "linear",
+				"showMethod": "fadeIn",
+				"hideMethod": "fadeOut"
 			};
-			return {
-				init: function() {
-					initDemos();
-				},
-			};
-		}();
-		jQuery(document).ready(function() {
-			KTSweetAlert2Demo.init();
+
+			toastr.success("Link has been copied");
 		});
 	</script>
-
+	<script>
+		function textAreaAdjust(o) {
+			o.style.height = "2px";
+			o.style.height = (10+o.scrollHeight)+"px";
+		}
+	</script>
 	<!--end::Page Scripts -->
 </body>
 <!-- end::Body -->

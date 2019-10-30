@@ -38,6 +38,14 @@
 .nav-fill .nav-item {
 	width: 0vw;
 }
+.user_info {
+	color: white !important;
+}
+.article-post {
+	margin-bottom: 20px;
+}
+
+
 @media (max-width: 720px){
 	.question-info {
 		left: 55px;

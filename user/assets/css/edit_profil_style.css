@@ -165,6 +165,8 @@ input[type=file]{
 	left: 0
 }
 
+
+
 @media(max-width: 1440px) {
 	.background_user {
 		margin-top: 0%;

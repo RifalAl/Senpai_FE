@@ -93,7 +93,7 @@
 				</div>
 				<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-sm">
 					<div class="kt-notification">
-						<a href="my_question.html" class="kt-notification__item">
+						<a href="my_question.html" class="kt-notification__item kt-hidden">
 							<div class="kt-notification__item-icon">
 								<i class="fa fa-question-circle kt-font-success"></i>
 							</div>
@@ -124,6 +124,18 @@
 							<div class="kt-notification__item-details">
 								<div class="kt-notification__item-title kt-font-bold">
 									Settings
+								</div>
+								<div class="kt-notification__item-time">
+								</div>
+							</div>
+						</a>
+						<a href="terms_and_condition.html" class="kt-notification__item">
+							<div class="kt-notification__item-icon">
+								<i class="flaticon2-safe kt-font-primary"></i>
+							</div>
+							<div class="kt-notification__item-details">
+								<div class="kt-notification__item-title kt-font-bold">
+									Terms & Condition
 								</div>
 								<div class="kt-notification__item-time">
 								</div>
@@ -214,12 +226,6 @@
 									<span class="kt-menu__link-text">Profile</span>
 								</a>
 							</li>
-							<li class="kt-menu__item" aria-haspopup="true">
-								<a href="terms_and_condition.html" class="kt-menu__link ">
-									<i class="kt-menu__link-icon fa fa-exclamation-triangle "></i>
-									<span class="kt-menu__link-text">Terms & Condition</span>
-								</a>
-							</li>
 						</ul>
 					</div>
 				</div>
@@ -257,7 +263,7 @@
 								<!--end: Head -->
 								<!--begin: Navigation -->
 								<div class="kt-notification">
-									<a href="my_question.html" class="kt-notification__item">
+									<a href="my_question.html" class="kt-notification__item kt-hidden">
 										<div class="kt-notification__item-icon">
 											<i class="fa fa-question-circle kt-font-success"></i>
 										</div>
@@ -288,6 +294,18 @@
 										<div class="kt-notification__item-details">
 											<div class="kt-notification__item-title kt-font-bold">
 												Settings
+											</div>
+											<div class="kt-notification__item-time">
+											</div>
+										</div>
+									</a>
+									<a href="terms_and_condition.html" class="kt-notification__item">
+										<div class="kt-notification__item-icon">
+											<i class="flaticon2-safe kt-font-primary"></i>
+										</div>
+										<div class="kt-notification__item-details">
+											<div class="kt-notification__item-title kt-font-bold">
+												Terms & Condition
 											</div>
 											<div class="kt-notification__item-time">
 											</div>
@@ -413,10 +431,12 @@
 										</div>
 									</div>
 									<div style="padding: 10px" class="kt-portlet__body">
-										<div style="margin-bottom:20px" id="search_topics" name="search_topics">
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text" id="srch_topics-icon"><i class="flaticon-search"></i></span></div>
-												<input id="srch-topics" type="text" class="form-control" placeholder="Search topics" aria-describedby="basic-addon1">
+										<div style="margin-bottom: 20px" class="input-group">
+											<input type="text" class="form-control" placeholder="Search for...">
+											<div class="input-group-append">
+												<button class="btn btn-secondary" type="button">
+													<span class="fa fa-search"></span>
+												</button>
 											</div>
 										</div>
 										<div style="padding: 5px;margin-top:-10px" class="row no_pad">
