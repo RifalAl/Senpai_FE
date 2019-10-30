@@ -217,6 +217,7 @@ p,h1,h2,h3,h4,h5,h6 {
 	width: 39px;
 	height: auto;
 	margin-bottom: 10px;
+	display: inline;
 }
 
 .question-info{
@@ -431,6 +432,20 @@ html {
 	left: 50%;
 	margin-left: -17.5px
 }
+.alert-icon- {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+}
+.head-alert {
+	flex-wrap : nowrap;
+	display: inline;
+}
+.alert-heading {
+	display: inline;
+	margin-left: 10px;
+}
+
 .	
 
 
