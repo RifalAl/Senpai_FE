@@ -20,9 +20,15 @@ if(isset($_POST["image"]))
 
 	$imageName = time() . '.png';
 
-	file_put_contents($imageName, $data);
+	$dir = __DIR__ . '/img' . '/';
 
-	echo '<img src="'.$imageName.'" class="uploaded_img" />';
+	file_put_contents($dir . $imageName, $data);
+
+	echo '<div class="dropzone dropzone-default dropzone-success">
+			<div class="dropzone-msg dz-message needsclick">
+				<img src="img/'.$imageName.'" class="uploaded_img" />
+			</div>
+		</div>';
 
 }
 
