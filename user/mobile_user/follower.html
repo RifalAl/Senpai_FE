@@ -43,10 +43,14 @@
 	<!-- begin:: Header Mobile -->
 	<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
 		<div class="kt-header-mobile__logo">
+			<button onclick="goBack()" class="btn btn-sm">
+				<span class="fa fa-arrow-left"></span>
+			</button>
 			<a href="index.html">
 				<img class="mobile-logo" alt="Logo" src="../assets/media/logos/logo_senpai.png" />
 			</a>
 		</div>
+
 		<div class="kt-header-mobile__toolbar">
 			<div class="kt-header__topbar-item dropdown kt-hidden">
 				<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
@@ -1131,6 +1135,11 @@
 
 			});
 		})
+	</script>
+	<script>
+		function goBack() {
+			window.history.back();
+		}
 	</script>
 </body>
 <!-- end::Body -->
