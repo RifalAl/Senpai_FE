@@ -471,6 +471,41 @@ html {
 .normal-head-height {
 	height: 50px !important;
 }
+.position-home-icon::before{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+	font-size: 2rem;
+}
+.position-search-icon::before{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+	font-size: 1.95rem;
+}
+.position-chat-icon::before{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -15px;
+	font-size: 2.3rem;
+}
+.position-messages-icon::before{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -12px;
+	font-size: 27.5px;
+}
+.position-user-icon::before{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+	font-size: 22.5px;
+}
 .	
 
 
