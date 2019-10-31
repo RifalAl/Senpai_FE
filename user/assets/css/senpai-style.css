@@ -524,7 +524,8 @@ html {
 
 @media (max-width: 1024px) {
 	.dropdown-menu.dropdown-menu-sm {
-		height: 85vh;
+		/*height: 85vh;*/
+		height: 100vh;
 	}
 	.question-profile {
 		left: 40px !important;
