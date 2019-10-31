@@ -27,7 +27,7 @@ p,h1,h2,h3,h4,h5,h6 {
 }
 
 #profession {
-	color: white;	
+	color: white;
 }
 
 .portlet-description {
@@ -338,7 +338,7 @@ html {
 	right: 55px;
 }
 .verified-badge-out {
-	padding: .4rem .75rem !important; 
+	padding: .4rem .75rem !important;
 }
 .alert {
 	border-radius: 9px;
@@ -359,7 +359,7 @@ html {
 	padding-top: 15px;
 }
 .chat-body {
-	padding: 15px !important;
+	padding: 10px !important;
 }
 .see-all-width {
 	position: absolute;
@@ -419,7 +419,7 @@ html {
 .border-out {
 	border: 1px solid #BBDEFB !important;
 	border-radius: 5px;
-	margin-bottom: 5px; 
+	margin-bottom: 5px;
 }
 .width-mask {
 	width: 120.617px !important;
@@ -506,7 +506,7 @@ html {
 	bottom: -10px;
 	font-size: 22.5px;
 }
-.	
+.
 
 
 /*Responsive*/
@@ -566,7 +566,7 @@ html {
 	.info-users h6 {
 		margin-bottom: 0px !important;
 	}
-	
+
 	.padding-all {
 		padding: 15px !important;
 	}
@@ -712,7 +712,7 @@ html {
 	.tips-icon {
 		width: 80% !important;
 	}
-	
+
 
 }
 
@@ -1166,7 +1166,7 @@ html {
 	.badge_kecil {
 		padding: 5px 5px !important;
 	}
-	
+
 	.reply-portlet{
 		position: fixed;
 		bottom: 45px;
@@ -1464,3 +1464,30 @@ html {
 	}
 }
 
+.kt-widget__item.active {
+	background-color: #f2f3f7;
+	border-right: 3px solid #5d78ff;
+}
+
+.kt-widget__items > .kt-widget__item:not(.active):hover {
+	background-color: #f2f3f7;
+	border-right: 3px solid #afb0b9;
+}
+
+.kt-widget.kt-widget--users .kt-widget__item {
+    padding: 1rem 1rem;
+    margin: 0rem 0.25rem;
+	border-radius: 0.25rem;
+}
+
+#chat_input {
+	height: 40px;
+	resize: none;
+	border: 1px solid #cdd2de !important;
+    border-radius: 4px;
+	padding: 5px;
+}
+
+#chat_input:focus {
+	border: 1px solid #8397ff !important;
+}
