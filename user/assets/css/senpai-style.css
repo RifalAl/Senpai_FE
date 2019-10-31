@@ -452,6 +452,13 @@ html {
 #kt_header_mobile {
 	padding-left: 5px;
 }
+.position-dropdown{
+	/*position: fixed!important;*/
+	will-change: scroll-position !important;
+	transform: none !important;
+	left: auto!important;
+	right: -15px!important;
+}
 .	
 
 
