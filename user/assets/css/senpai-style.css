@@ -227,7 +227,7 @@ p,h1,h2,h3,h4,h5,h6 {
 	bottom: 13px;
 }
 .question-info h6 {
-	margin-bottom: 0rem !important;
+	margin-bottom: 0.3rem !important;
 }
 .question-info h6 span {
 	font-size: 1rem;
@@ -344,13 +344,13 @@ html {
 	border-radius: 9px;
 }
 .nav-tabs.nav-tabs-line {
-	border-bottom: 4px solid #ebedf2;
+	border-bottom: 2px solid #ebedf2;
 	width: 93%;
 	align-self: center;
 }
 .nav-tabs.nav-tabs-line.nav.nav-tabs .nav-link.active,
 .nav-tabs.nav-tabs-line a.nav-link.active {
-	border-bottom: 2px solid #5d78ff;
+	border-bottom: 3px solid #5d78ff;
 }
 .border-style {
 	border: 1.2px solid #e8effc;
@@ -384,7 +384,12 @@ html {
 	width: 70% !important;
 }
 .nav-tabs.nav-tabs-line.nav-tabs-line-2x {
-	border-bottom-width: 4px !important;
+	border-bottom-width: 2px !important;
+}
+.nav-tabs.nav-tabs-line.nav-tabs-line-2x a.nav-link {
+
+    border-bottom-width: 3px !important;
+
 }
 
 .answers-input {
@@ -459,6 +464,12 @@ html {
 	left: auto!important;
 	right: -15px!important;
 	top: -15px!important;
+}
+.kt-portlet .kt-portlet__head .kt-portlet__head-label {
+	height: 65px;
+}
+.normal-head-height {
+	height: 50px !important;
 }
 .	
 
@@ -978,7 +989,7 @@ html {
 	.info-users {
 		position: absolute;
 		left: 52px;
-		bottom: 10px;
+		bottom: 20px;
 	}
 	.info-users p {
 		font-size: .8rem;
@@ -1112,7 +1123,7 @@ html {
 	}
 	.question-info p {
 		font-size: .8rem;
-		margin-bottom: 0px;
+		margin-bottom: 5px;
 	}
 	.kt-portlet .kt-portlet__head {
 		padding-bottom: 0px;
@@ -1129,7 +1140,7 @@ html {
 	}
 	.solved-badge {
 		position: absolute;
-		bottom: 3px;
+		bottom: 7px;
 		right: 188px;
 	}
 	.change-padding {
@@ -1138,7 +1149,7 @@ html {
 	}
 	.verified-badge {
 		position: absolute;
-		bottom: 2px;
+		bottom: 6px;
 		left: 90px;
 		font-size: 0.7rem !important;
 		padding: .1rem .75rem !important;
@@ -1158,16 +1169,19 @@ html {
 	}
 }
 
-@media (max-width: 372px){
-	.solved-unsolved {
+@media (max-width: 320px){
+	/*.solved-unsolved {
 		margin-top: 5px;
 	}
+	.solved-unsolved-hit {
+		margin-top: 0px;
+	}*/
 }
 
 @media(max-width: 360px){
 	.solved-badge {
 		position: absolute;
-		bottom: 3px;
+		bottom: 8px;
 		right: 176px;
 	}
 	.embassy-head {
@@ -1309,7 +1323,7 @@ html {
 	.info-users {
 		position: absolute;
 		left: 52px;
-		bottom: 10px;
+		bottom: 20px;
 	}
 	.question-profile {
 		left: 37px;
@@ -1323,7 +1337,7 @@ html {
 	}
 	.question-info p {
 		font-size: .8rem;
-		margin-bottom: 0px;
+		margin-bottom: 3px;
 	}
 	.kt-portlet .kt-portlet__head {
 		padding-bottom: 0px;
@@ -1342,7 +1356,7 @@ html {
 	}
 	.solved-badge {
 		position: absolute;
-		bottom: 3px;
+		bottom: 6px;
 		right: 135px;
 	}
 	.change-padding {
@@ -1351,7 +1365,7 @@ html {
 	}
 	.verified-badge {
 		position: absolute;
-		bottom: 2px;
+		bottom: 4px;
 		left: 90px;
 		font-size: 0.7rem !important;
 		padding: .1rem .75rem !important;

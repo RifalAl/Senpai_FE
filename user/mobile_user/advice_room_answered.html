@@ -431,7 +431,7 @@
 								<!--begin::Portlet-->
 								<div class="kt-portlet kt-portlet--mobile">
 									<div class="kt-portlet__head">
-										<div class="kt-portlet__head-label">
+										<div class="kt-portlet__head-label normal-head-height">
 											<h6 class="bread_crumb">
 												Answers Room
 											</h6>
@@ -489,8 +489,8 @@
 							</div>
 							<div class="col-lg-10 offset-lg-1">
 								<div class="kt-portlet kt-portlet--mobile">
-									<div style="background-color: #F0FBFF;" class="kt-portlet__head padding-all-15">
-										<div class="kt-portlet__head-label">
+									<div style="background-color: #F0FBFF; margin-bottom: -15px" class="kt-portlet__head padding-all-15">
+										<div style="height: auto" class="kt-portlet__head-label">
 											<h3 class="kt-portlet__head-title kt-font-primary">
 												<span id="total_answers" name="total_answers">2</span> Answers
 											</h3>
@@ -540,9 +540,9 @@
 														<button onclick="toggle_comment()" type="button" class="btn btn-primary btn-sm">
 															<i class="fa fa-comment-alt"></i> Answers
 														</button>
-														<button id="btn_solved" class="btn btn-sm btn-outline-success solved-unsolved">
+														<button id="btn_accept" class="btn btn-sm btn-outline-success solved-unsolved">
 															<i id="icon_solved" class="fa fa-check"></i>
-															<span class="solved-unsolved" id="solved_unsolved">Accept this answer</span>
+															<span class="solved-unsolved" id="solved_unsolved">Accept</span>
 														</button>
 													</div>
 													<div style="" id="komentar">
@@ -703,9 +703,9 @@
 														<button onclick="toggle_comment_2()" type="button" class="btn btn-primary btn-sm">
 															<i class="fa fa-comment-alt"></i> Answers
 														</button>
-														<button id="btn_solved_2" class="btn btn-sm btn-outline-success solved-unsolved">
+														<button id="btn_accept_2" class="btn btn-sm btn-outline-success solved-unsolved">
 															<i id="icon_solved_2" class="fa fa-check"></i>
-															<span class="" id="solved_unsolved_2">Accept this answer</span>
+															<span class="" id="solved_unsolved_2">Accept</span>
 														</button>
 													</div>
 													<div style="" id="komentar_2">
@@ -1451,37 +1451,37 @@
 
 	</script>
 	<script>
-		var btn_solved = document.getElementById('btn_solved');
+		var btn_accept = document.getElementById('btn_accept');
 		var icon_solved = document.getElementById('icon_solved');
 		var tulisan_solved = document.getElementById('solved_unsolved');
 		
-		btn_solved.addEventListener("click",function(){
+		btn_accept.addEventListener("click",function(){
 			var a = tulisan_solved.innerText;
-			if (a == "Accept this answer") {
-				tulisan_solved.innerText = "Accepted answer";
-				jQuery('#btn_solved').addClass('btn-success').removeClass('btn-outline-success');
+			if (a == "Accept") {
+				tulisan_solved.innerText = "Accepted";
+				jQuery('#btn_accept').addClass('btn-success').removeClass('btn-outline-success');
 			}
 			else {
-				tulisan_solved.innerText = "Accept this answer";
-				jQuery('#btn_solved').addClass('btn-outline-success').removeClass('btn-success');
+				tulisan_solved.innerText = "Accept";
+				jQuery('#btn_accept').addClass('btn-outline-success').removeClass('btn-success');
 			}
 		})
 
 
 
-		var btn_solved_2 = document.getElementById('btn_solved_2');
+		var btn_accept_2 = document.getElementById('btn_accept_2');
 		var icon_solved_2 = document.getElementById('icon_solved_2');
 		var tulisan_solved_2 = document.getElementById('solved_unsolved_2');
 		
-		btn_solved_2.addEventListener("click",function(){
+		btn_accept_2.addEventListener("click",function(){
 			var a = tulisan_solved_2.innerText;
-			if (a == "Accept this answer") {
-				tulisan_solved_2.innerText = "Accepted answer";
-				jQuery('#btn_solved_2').addClass('btn-success').removeClass('btn-outline-success');
+			if (a == "Accept") {
+				tulisan_solved_2.innerText = "Accepted";
+				jQuery('#btn_accept_2').addClass('btn-success').removeClass('btn-outline-success');
 			}
 			else {
-				tulisan_solved_2.innerText = "Accept this answer";
-				jQuery('#btn_solved_2').addClass('btn-outline-success').removeClass('btn-success');
+				tulisan_solved_2.innerText = "Accept";
+				jQuery('#btn_accept_2').addClass('btn-outline-success').removeClass('btn-success');
 			}
 		})
 	</script>
@@ -1535,6 +1535,23 @@
 		function textAreaAdjust(o) {
 			o.style.height = "2px";
 			o.style.height = (10+o.scrollHeight)+"px";
+		}
+	</script>
+	<script>
+		var widthScreen = screen.width;
+		if (widthScreen < 321) {
+			$(".fa-caret-square-up").hide();
+			$(".fa-caret-square-down").hide();
+			$(".fa-comment-alt").hide();
+			$(".fa-check").hide();
+
+		}
+		else {
+			$(".fa-caret-square-up").show();
+			$(".fa-caret-square-down").show();
+			$(".fa-comment-alt").show();
+			$(".fa-check").show();
+
 		}
 	</script>
 	<script>
