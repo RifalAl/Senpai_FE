@@ -37,6 +37,7 @@ var KTLoginV1 = function () {
 			});
 
 			if (!form.valid()) {
+
 				return;
 			}
 
@@ -53,7 +54,7 @@ var KTLoginV1 = function () {
 					// similate 2s delay
 					setTimeout(function () {
 						KTApp.unprogress(btn[0]);
-						showErrorMsg(form, 'danger', 'Incorrect username or password. Please try again.');
+						window.location = "./index.html";
 					}, 2000);
 				}
 			});
