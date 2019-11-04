@@ -945,7 +945,7 @@
 			</div>
 		</div>
 	</div>
-	<div style="display: none" class="footer">
+	<div id="footer-mobile-menu" style="display: none" class="footer">
 		<div class="row portlet-menu-footer">
 			<div class="offset-1 col-2">
 				<a href="index.html">
@@ -1142,6 +1142,23 @@
 		function goBack() {
 			window.history.back();
 		}
+	</script>
+	<script>
+		$(document).ready(function(){
+			$("textarea,input").focus(function(){
+				jQuery('#footer-mobile-menu').removeClass('footer');
+			})
+			$("textarea,input").blur(function(){
+				jQuery('#footer-mobile-menu').addClass('footer');
+			});
+			$(".tag-group").focusin(function(){
+				jQuery('#footer-mobile-menu').removeClass('footer');
+			})
+			$(".tag-group").focusout(function(){
+				jQuery('#footer-mobile-menu').addClass('footer');
+			})
+
+		})
 	</script>
 </body>
 <!-- end::Body -->

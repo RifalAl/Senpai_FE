@@ -179,6 +179,23 @@
 	<!--begin::Page Scripts(used by this page) -->
 	<script src="../assets/js/pages/custom/login/login-1.js" type="text/javascript"></script>
 	<!--end::Page Scripts -->
+	<script>
+		$(document).ready(function(){
+			$("textarea,input").focus(function(){
+				jQuery('#footer-mobile-menu').removeClass('footer');
+			})
+			$("textarea,input").blur(function(){
+				jQuery('#footer-mobile-menu').addClass('footer');
+			});
+			$(".tag-group").focusin(function(){
+				jQuery('#footer-mobile-menu').removeClass('footer');
+			})
+			$(".tag-group").focusout(function(){
+				jQuery('#footer-mobile-menu').addClass('footer');
+			})
+
+		})
+	</script>
 </body>
 <!-- end::Body -->
 </html>
