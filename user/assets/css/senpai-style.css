@@ -1491,3 +1491,12 @@ html {
 #chat_input:focus {
 	border: 1px solid #8397ff !important;
 }
+
+.kt-chat .kt-chat__messages .kt-chat__message.kt-chat__message--right .kt-chat__text {
+    text-align: left;
+    padding: 1.1rem 3.5rem 1.1rem 1.6rem;
+}
+
+/* .kt-height-chat {
+    overflow:hidden !important;
+} */
