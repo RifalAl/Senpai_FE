@@ -1203,15 +1203,14 @@ html {
 		padding: 1.1rem 0.5rem !important;
 	}
 }
-
-@media (max-width: 320px){
-	/*.solved-unsolved {
-		margin-top: 5px;
+@media (max-width: 375px){
+	.solved-badge {
+		position: absolute;
+		bottom: 8px;
+		right: 194px;
 	}
-	.solved-unsolved-hit {
-		margin-top: 0px;
-	}*/
 }
+
 
 @media(max-width: 360px){
 	.solved-badge {

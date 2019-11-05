@@ -27,6 +27,13 @@
 		padding:20px !important;
 	}
 }
+@media (max-width: 800px) {
+	.question-info {
+		position: absolute;
+		left: 60px;
+		bottom: 16px;	
+	}
+}
 @media (max-width: 720px) {
 	.question-info {
 		position: absolute;
@@ -56,8 +63,8 @@
 @media (max-width: 320px) {
 	.question-info {
 		position: absolute;
-		left: 55px;
-		bottom: 10px;	
+		left: 57px;
+		bottom: 12px;	
 	}
 	.comment-width {
 		width: 80%;

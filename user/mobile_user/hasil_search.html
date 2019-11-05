@@ -571,13 +571,16 @@
 															</div>
 															<div class="kt-portlet__head-toolbar">
 																<div class="kt-portlet__head-actions">
-																	<button class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
-																		<span class="fa fa-link"></span>
-																	</button>
-																	
+																	<div class="dropdown dropdown-inline">
+																		<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																			<i class="flaticon-more"></i>
+																		</button>
+																		<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(30px, 30px, 0px);">
+																			<button class="dropdown-item btn_bookmark"><i class="la la-bookmark"></i> Bookmark</button>
+																			<button class="dropdown-item btn_copy_link"><i class="la la-link"></i> Copy link</button>
+																			<button class="dropdown-item btn_report"><i class="la la-warning"></i> Report</button>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -606,13 +609,16 @@
 															</div>
 															<div class="kt-portlet__head-toolbar">
 																<div class="kt-portlet__head-actions">
-																	<button type="buttom" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
-																		<span class="fa fa-link"></span>
-																	</button>
-																	
+																	<div class="dropdown dropdown-inline">
+																		<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																			<i class="flaticon-more"></i>
+																		</button>
+																		<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(30px, 30px, 0px);">
+																			<button class="dropdown-item btn_bookmark"><i class="la la-bookmark"></i> Bookmark</button>
+																			<button class="dropdown-item btn_copy_link"><i class="la la-link"></i> Copy link</button>
+																			<button class="dropdown-item btn_report"><i class="la la-warning"></i> Report</button>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -642,12 +648,16 @@
 															</div>
 															<div class="kt-portlet__head-toolbar">
 																<div class="kt-portlet__head-actions">
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
-																		<span class="fa fa-link"></span>
-																	</button>
+																	<div class="dropdown dropdown-inline">
+																		<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																			<i class="flaticon-more"></i>
+																		</button>
+																		<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(30px, 30px, 0px);">
+																			<button class="dropdown-item btn_bookmark"><i class="la la-bookmark"></i> Bookmark</button>
+																			<button class="dropdown-item btn_copy_link"><i class="la la-link"></i> Copy link</button>
+																			<button class="dropdown-item btn_report"><i class="la la-warning"></i> Report</button>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -676,12 +686,16 @@
 															</div>
 															<div class="kt-portlet__head-toolbar">
 																<div class="kt-portlet__head-actions">
-																	<button type="button" class="btn btn-clean btn-sm padding-lr-01 btn_bookmark">
-																		<span class="la la-bookmark"></span>
-																	</button>
-																	<button class="btn btn-clean btn-sm padding-lr-0 btn_copy_link">
-																		<span class="fa fa-link"></span>
-																	</button>
+																	<div class="dropdown dropdown-inline">
+																		<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																			<i class="flaticon-more"></i>
+																		</button>
+																		<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(30px, 30px, 0px);">
+																			<button class="dropdown-item btn_bookmark"><i class="la la-bookmark"></i> Bookmark</button>
+																			<button class="dropdown-item btn_copy_link"><i class="la la-link"></i> Copy link</button>
+																			<button class="dropdown-item btn_report"><i class="la la-warning"></i> Report</button>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -1266,6 +1280,28 @@
 			};
 
 			toastr.success("Link has been copied");
+		});
+		$('.btn_report').click(function() {
+
+			toastr.options = {
+				"closeButton": false,
+				"debug": false,
+				"newestOnTop": false,
+				"progressBar": false,
+				"positionClass": "toast-top-right",
+				"preventDuplicates": false,
+				"onclick": null,
+				"showDuration": "200",
+				"hideDuration": "400",
+				"timeOut": "1500",
+				"extendedTimeOut": "1000",
+				"showEasing": "swing",
+				"hideEasing": "linear",
+				"showMethod": "fadeIn",
+				"hideMethod": "fadeOut"
+			};
+
+			toastr.warning("Post has been reported");
 		});
 	</script>
 	<script>
