@@ -1543,3 +1543,11 @@ html {
 } */
 
 /* new */
+
+.kt-chat .kt-chat__messages .kt-chat__message .kt-chat__user .kt-chat__username:hover {
+    color: #48465b;
+}
+
+.kt-chat .kt-chat__messages .kt-chat__message .kt-chat__user .kt-chat__username {
+    padding: 0px 10px;
+}
