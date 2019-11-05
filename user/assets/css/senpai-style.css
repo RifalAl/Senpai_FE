@@ -1503,6 +1503,43 @@ html {
 	}
 }
 
+.kt-scroll.kt-scroll--pull {
+    padding-right: unset;
+    margin-right: unset;
+}
+
 /* .kt-height-chat {
     overflow:hidden !important;
 } */
+
+/* @media (max-width: 425px) {
+	.kt-chat {
+	    margin-bottom: 85px !important;
+	}
+}
+
+@media (max-width: 768px) {
+	.kt-chat {
+	    margin-bottom: 20px;
+	}
+}
+
+#chat-height {
+    padding-top: 15px;
+    padding-bottom: 10px;
+} */
+
+/* test */
+
+/* .height-test {
+	height: auto !important;
+} */
+
+/* .kt-chat {
+	left: 0;
+	right: 0;
+	position: absolute;
+	margin-bottom: 115px !important;
+} */
+
+/* new */
