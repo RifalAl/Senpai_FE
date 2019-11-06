@@ -278,9 +278,12 @@ License: You must have a valid license purchased only from themeforest(the above
 											New Post
 										</h3>
 									</div>
-									<div class="kt-portlet__head-toolbar">
-										<div style="align-items: center; display: flex;">
-											<select class="form-control" name="content_category" id="content_category_dropdown" onchange="displayCategory()" style="border: 1.2px solid #646c9a;padding: 0.3rem 1rem; height: unset;">
+								</div>
+								<div class="kt-portlet__body">
+									<div class="form-group row">
+										<label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Post Category</label>
+										<div class="col-sm-12 col-md-9">
+											<select class="form-control" name="content_category" id="content_category_dropdown" onchange="displayCategory()">
 												<option disabled selected>- Choose Category -</option>
 												<option value="article">Article</option>
 												<option value="dailytips">Daily Tips</option>
@@ -288,47 +291,37 @@ License: You must have a valid license purchased only from themeforest(the above
 											</select>
 										</div>
 									</div>
-								</div>
-								<div class="kt-portlet__body">
 									<div style="display: none;"  id="content_article">
 										<form id="kt_form_content_article">
-	                                        <div class="modal-body">
-	                                            <div class="form-group row">
-	                                                <label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Post Category</label>
-	                                                <div class="col-sm-12 col-md-9">
-	                                                    <input type="text" class="form-control kt-font-dark" name="content_category_article" value="Article" disabled>
-	                                                </div>
-	                                            </div>
-	                                            <div class="form-group row">
-	                                                <label for="example-text-input" class="col-3 col-form-label">Title</label>
-	                                                <div class="col-sm-12 col-md-9">
-	                                                    <input type="text" class="form-control" name="content_title_article" placeholder="- Content Title -">
-	                                                </div>
-	                                            </div>
-	                                            <div class="form-group row">
-	                                                <label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Description</label>
-	                                                <div class="col-sm-12 col-md-9">
-	                                                    <textarea class="form-control editable" name="content_desc_article" style="height:unset" rows="3">
-	                                                        <h3><b>Header</b></h3>
-	                                                        <p><b><i>Lorem ipsum</i> </b>dolor sit amet, consectetur adipiscing elit. Morbi malesuada, ipsum ac venenatis volutpat, quam risus bibendum arcu, at maximus dolor ex non neque. Proin id semper libero, in porttitor tortor. Morbi purus libero, dignissim quis suscipit vel, ultrices eget felis. Curabitur interdum dignissim odio a tempor. Nunc dolor sem, fringilla in ex et, aliquam molestie lectus. Curabitur auctor sollicitudin nunc, eu sollicitudin enim. Vivamus fringilla eget lectus eu vulputate. Aenean interdum dolor sed cursus venenatis. Nam pulvinar neque quam. Fusce tempor sit amet augue at fermentum. Morbi consequat sed dolor pretium varius.</p>
-	                                                        <p>source : <a href="#">senpai.com</a></p>
-	                                                    </textarea>
-	                                                    <span class="form-text text-muted">Drag image to the text area in order to upload it. Try highlighting the text to edit.</span>
-	                                                </div>
-	                                            </div>
-												<div class="form-group row">
-	                                                <label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Picture</label>
-	                                                <div class="col-sm-12 col-md-9">
-														<div class="custom-file">
-															<input type="file" class="custom-file-input" name="content_article_picture" id="content_article_picture" accept="image/*">
-															<label class="custom-file-label" for="customFile">Choose file</label>
-														</div>
-														<span class="form-text"  style="margin: 1rem 0 1rem 0">Image preview :</span>
-														<div id="uploaded_image" align="center" class="image-cropper"></div>
-	                                                </div>
-	                                            </div>
+                                            <div class="form-group row">
+                                                <label for="example-text-input" class="col-3 col-form-label">Title</label>
+                                                <div class="col-sm-12 col-md-9">
+                                                    <input type="text" class="form-control" name="content_title_article" placeholder="- Content Title -">
+                                                </div>
                                             </div>
-	                                        <div class="kt-portlet__foot">
+                                            <div class="form-group row">
+                                                <label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Description</label>
+                                                <div class="col-sm-12 col-md-9">
+                                                    <textarea class="form-control editable" name="content_desc_article" style="height:unset" rows="3">
+                                                        <h3><b>Header</b></h3>
+                                                        <p><b><i>Lorem ipsum</i> </b>dolor sit amet, consectetur adipiscing elit. Morbi malesuada, ipsum ac venenatis volutpat, quam risus bibendum arcu, at maximus dolor ex non neque. Proin id semper libero, in porttitor tortor. Morbi purus libero, dignissim quis suscipit vel, ultrices eget felis. Curabitur interdum dignissim odio a tempor. Nunc dolor sem, fringilla in ex et, aliquam molestie lectus. Curabitur auctor sollicitudin nunc, eu sollicitudin enim. Vivamus fringilla eget lectus eu vulputate. Aenean interdum dolor sed cursus venenatis. Nam pulvinar neque quam. Fusce tempor sit amet augue at fermentum. Morbi consequat sed dolor pretium varius.</p>
+                                                        <p>source : <a href="#">senpai.com</a></p>
+                                                    </textarea>
+                                                    <span class="form-text text-muted">Drag image to the text area in order to upload it. Try highlighting the text to edit.</span>
+                                                </div>
+                                            </div>
+											<div class="form-group row">
+                                                <label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Picture</label>
+                                                <div class="col-sm-12 col-md-9">
+													<div class="custom-file">
+														<input type="file" class="custom-file-input" name="content_article_picture" id="content_article_picture" accept="image/*">
+														<label class="custom-file-label" for="customFile">Choose file</label>
+													</div>
+													<span class="form-text"  style="margin: 1rem 0 1rem 0">Image preview :</span>
+													<div id="uploaded_image" align="center" class="image-cropper"></div>
+                                                </div>
+                                            </div>
+	                                        <div class="kt-portlet__foot" style="padding-bottom:0px">
 	                                            <div style="text-align:center;">
 	                                                <button type="submit" class="btn btn-success" id="kt_sweetalert_success_article">Submit</button>
 	                                            </div>
@@ -337,32 +330,24 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
 									<div style="display: none;" id="content_dailytips">
 										<form id="kt_form_content_dailytips">
-	                                        <div class="modal-body">
-												<div class="form-group row">
-	                                                <label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Post Category</label>
-	                                                <div class="col-sm-12 col-md-9">
-	                                                    <input type="text" class="form-control kt-font-brand" name="content_category_dailytips" value="Daily Tips" disabled>
-	                                                </div>
-	                                            </div>
-	                                            <div class="form-group row">
-	                                                <label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Title</label>
-	                                                <div class="col-sm-12 col-md-9">
-	                                                    <input type="text" class="form-control" name="content_title_dailytips" placeholder="- Content Title -">
-	                                                </div>
-	                                            </div>
-	                                            <div class="form-group row">
-	                                                <label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Description</label>
-	                                                <div class="col-sm-12 col-md-9">
-	                                                    <textarea class="form-control editable" name="content_desc_dailytips" style="height:unset" rows="3">
-	                                                        <h3><b>Header</b></h3>
-	                                                        <p><b><i>Lorem ipsum</i> </b>dolor sit amet, consectetur adipiscing elit. Morbi malesuada, ipsum ac venenatis volutpat, quam risus bibendum arcu, at maximus dolor ex non neque. Proin id semper libero, in porttitor tortor. Morbi purus libero, dignissim quis suscipit vel, ultrices eget felis. Curabitur interdum dignissim odio a tempor. Nunc dolor sem, fringilla in ex et, aliquam molestie lectus. Curabitur auctor sollicitudin nunc, eu sollicitudin enim. Vivamus fringilla eget lectus eu vulputate. Aenean interdum dolor sed cursus venenatis. Nam pulvinar neque quam. Fusce tempor sit amet augue at fermentum. Morbi consequat sed dolor pretium varius.</p>
-	                                                        <p>source : <a href="#">senpai.com</a></p>
-	                                                    </textarea>
-	                                                    <span class="form-text text-muted">Drag image to the text area in order to upload it. Try highlighting the text to edit.</span>
-	                                                </div>
-	                                            </div>
-	                                        </div>
-	                                        <div class="kt-portlet__foot">
+                                            <div class="form-group row">
+                                                <label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Title</label>
+                                                <div class="col-sm-12 col-md-9">
+                                                    <input type="text" class="form-control" name="content_title_dailytips" placeholder="- Content Title -">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Description</label>
+                                                <div class="col-sm-12 col-md-9">
+                                                    <textarea class="form-control editable" name="content_desc_dailytips" style="height:unset" rows="3">
+                                                        <h3><b>Header</b></h3>
+                                                        <p><b><i>Lorem ipsum</i> </b>dolor sit amet, consectetur adipiscing elit. Morbi malesuada, ipsum ac venenatis volutpat, quam risus bibendum arcu, at maximus dolor ex non neque. Proin id semper libero, in porttitor tortor. Morbi purus libero, dignissim quis suscipit vel, ultrices eget felis. Curabitur interdum dignissim odio a tempor. Nunc dolor sem, fringilla in ex et, aliquam molestie lectus. Curabitur auctor sollicitudin nunc, eu sollicitudin enim. Vivamus fringilla eget lectus eu vulputate. Aenean interdum dolor sed cursus venenatis. Nam pulvinar neque quam. Fusce tempor sit amet augue at fermentum. Morbi consequat sed dolor pretium varius.</p>
+                                                        <p>source : <a href="#">senpai.com</a></p>
+                                                    </textarea>
+                                                    <span class="form-text text-muted">Drag image to the text area in order to upload it. Try highlighting the text to edit.</span>
+                                                </div>
+                                            </div>
+	                                        <div class="kt-portlet__foot" style="padding-bottom:0px">
 	                                            <div style="text-align:center;">
 	                                                <button type="submit" class="btn btn-success" id="kt_sweetalert_success_dailytips">Submit</button>
 	                                            </div>
@@ -371,32 +356,24 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div style="display: none;"  id="content_emergency">
 										<form id="kt_form_content_emergency">
-	                                        <div class="modal-body">
-												<div class="form-group row">
-	                                                <label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Post Category</label>
-	                                                <div class="col-sm-12 col-md-9">
-	                                                    <input type="text" class="form-control kt-font-warning" name="content_category_emergency" value="Emergency" disabled>
-	                                                </div>
-	                                            </div>
-	                                            <div class="form-group row">
-	                                                <label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Title</label>
-	                                                <div class="col-sm-12 col-md-9">
-	                                                    <input type="text" class="form-control" name="content_title_emergency" placeholder="- Content Title -">
-	                                                </div>
-	                                            </div>
-	                                            <div class="form-group row">
-	                                                <label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Description</label>
-	                                                <div class="col-sm-12 col-md-9">
-	                                                    <textarea class="form-control editable" name="content_desc_emergency" style="height:unset" rows="3">
-	                                                        <h3><b>Header</b></h3>
-	                                                        <p><b><i>Lorem ipsum</i> </b>dolor sit amet, consectetur adipiscing elit. Morbi malesuada, ipsum ac venenatis volutpat, quam risus bibendum arcu, at maximus dolor ex non neque. Proin id semper libero, in porttitor tortor. Morbi purus libero, dignissim quis suscipit vel, ultrices eget felis. Curabitur interdum dignissim odio a tempor. Nunc dolor sem, fringilla in ex et, aliquam molestie lectus. Curabitur auctor sollicitudin nunc, eu sollicitudin enim. Vivamus fringilla eget lectus eu vulputate. Aenean interdum dolor sed cursus venenatis. Nam pulvinar neque quam. Fusce tempor sit amet augue at fermentum. Morbi consequat sed dolor pretium varius.</p>
-	                                                        <p>source : <a href="#">senpai.com</a></p>
-	                                                    </textarea>
-	                                                    <span class="form-text text-muted">Drag image to the text area in order to upload it. Try highlighting the text to edit.</span>
-	                                                </div>
-	                                            </div>
-	                                        </div>
-	                                        <div class="kt-portlet__foot">
+                                            <div class="form-group row">
+                                                <label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Title</label>
+                                                <div class="col-sm-12 col-md-9">
+                                                    <input type="text" class="form-control" name="content_title_emergency" placeholder="- Content Title -">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="example-text-input" class="col-sm-12 col-md-3 col-form-label">Description</label>
+                                                <div class="col-sm-12 col-md-9">
+                                                    <textarea class="form-control editable" name="content_desc_emergency" style="height:unset" rows="3">
+                                                        <h3><b>Header</b></h3>
+                                                        <p><b><i>Lorem ipsum</i> </b>dolor sit amet, consectetur adipiscing elit. Morbi malesuada, ipsum ac venenatis volutpat, quam risus bibendum arcu, at maximus dolor ex non neque. Proin id semper libero, in porttitor tortor. Morbi purus libero, dignissim quis suscipit vel, ultrices eget felis. Curabitur interdum dignissim odio a tempor. Nunc dolor sem, fringilla in ex et, aliquam molestie lectus. Curabitur auctor sollicitudin nunc, eu sollicitudin enim. Vivamus fringilla eget lectus eu vulputate. Aenean interdum dolor sed cursus venenatis. Nam pulvinar neque quam. Fusce tempor sit amet augue at fermentum. Morbi consequat sed dolor pretium varius.</p>
+                                                        <p>source : <a href="#">senpai.com</a></p>
+                                                    </textarea>
+                                                    <span class="form-text text-muted">Drag image to the text area in order to upload it. Try highlighting the text to edit.</span>
+                                                </div>
+                                            </div>
+	                                        <div class="kt-portlet__foot" style="padding-bottom:0px">
 	                                            <div style="text-align:center;">
 	                                                <button type="submit" class="btn btn-success" id="kt_sweetalert_success_emergency">Submit</button>
 	                                            </div>
