@@ -1067,6 +1067,7 @@ html {
 	.portlet-description {
 		padding: 15px;
 		margin-top: 0px;
+		padding-bottom: 0px;
 
 	}
 	.kt-portlet-btnEdit {
@@ -1256,6 +1257,7 @@ html {
 	.portlet-description {
 		padding: 15px;
 		margin-top: 0px;
+		padding-bottom: 0px;
 
 	}
 	.kt-portlet-btnEdit {
@@ -1419,17 +1421,7 @@ html {
 
 
 
-@media (max-height: 1280px) {
-	.kt-height-chat {
-		height: 79vh !important;
-	}
-}
 
-@media (max-height: 812px) {
-	.kt-height-chat {
-		height: 71.5vh !important;
-	}
-}
 
 @media (max-width: 1920px) and (max-height: 736px) {
 	.kt-height-chat {
@@ -1443,17 +1435,32 @@ html {
 	}
 }
 
+@media (max-height: 1280px) {
+	.kt-height-chat {
+		height: 79vh !important;
+	}
+}
 
+@media (max-height: 812px) {
+	.kt-height-chat {
+		height: 72.5vh !important;
+	}
+}
 
+@media (max-height: 740px) {
+	.kt-height-chat {
+		height: 69.5vh !important;
+	}
+}
 @media (max-height: 667px) {
 	.kt-height-chat {
-		height: 65vh !important;
+		height: 66.4vh !important;
 	}
 }
 
 @media (max-height: 640px) {
 	.kt-height-chat {
-		height: 64vh !important;
+		height: 65vh !important;
 	}
 }
 
@@ -1496,11 +1503,6 @@ html {
     padding: 1.1rem 3.5rem 1.1rem 1.6rem;
 }
 
-@media (max-height: 640px){
-	.kt-height-chat {
-	    height: 60vh !important;
-	}
-}
 
 /* .kt-height-chat {
     overflow:hidden !important;
