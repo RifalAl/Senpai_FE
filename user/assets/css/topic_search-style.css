@@ -74,11 +74,11 @@
 	}
 }
 
-@media (max-width: 360px) {
+@media (max-width: 376px) {
 	.solved-badge {
 		position: absolute;
-		bottom: 3px;
-		right: 185px;
+		bottom: 8px;
+		right: 189px;
 	}
 }
 
@@ -93,7 +93,7 @@
 	}
 	.solved-badge {
 		position: absolute;
-		bottom: 3px;
-		right: 150px;
+		bottom: 6px;
+		right: 155px;
 	}
 }
