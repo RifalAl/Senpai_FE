@@ -435,7 +435,7 @@
 															<i class="flaticon-more"></i>
 														</button>
 														<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(30px, 30px, 0px);">
-															<button class="dropdown-item btn_bookmark"><i class="la la-bookmark"></i> Bookmark</button>
+															<button class="dropdown-item btn_bookmark_post"><i class="la la-bookmark"></i> Bookmark</button>
 															<button class="dropdown-item btn_copy_link"><i class="la la-link"></i> Copy link</button>
 															<button class="dropdown-item btn_report"><i class="la la-warning"></i> Report</button>
 														</div>
@@ -635,7 +635,7 @@
 		})
 	</script>
 	<script>
-		$('.btn_bookmark').click(function() {
+		$('.btn_bookmark_post').click(function() {
 			toastr.options = {
 				"closeButton": false,
 				"debug": false,
@@ -654,7 +654,7 @@
 				"hideMethod": "fadeOut"
 			};
 
-			toastr.success("This Post Bookmark");
+			toastr.success("Post added to your Bookmarks");
 			
 		});
 		$('.btn_copy_link').click(function() {
