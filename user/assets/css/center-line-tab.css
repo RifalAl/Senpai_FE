@@ -1,4 +1,40 @@
 
+@media (max-width: 1440px) {
+	.nav-tabs.nav-tabs-line .nav-item {
+		margin-right: 60px;
+	}
+	.nav-pertama {
+		margin-left: 28%;
+	}
+	.nav-pertama-profile {
+		margin-left: 28%;
+	}
+	.nav-padding {
+		padding : 0px 7px;
+	}
+	.nav-pertama-advice {
+		margin-left: 34.5%;
+	}
+}
+
+@media (max-width: 1366px) {
+	.nav-tabs.nav-tabs-line .nav-item {
+		margin-right: 60px;
+	}
+	.nav-pertama {
+		margin-left: 27%;
+	}
+	.nav-pertama-profile {
+		margin-left: 25%;
+	}
+	.nav-padding {
+		padding : 0px 7px;
+	}
+	.nav-pertama-advice {
+		margin-left: 33.5%;
+	}
+}
+
 @media (max-width: 800px) {
 	.nav-tabs.nav-tabs-line .nav-item {
 		margin-right: 70px;
