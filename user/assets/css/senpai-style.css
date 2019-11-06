@@ -1545,6 +1545,12 @@ html {
 
 /* new */
 
+@media (max-width: 1024px){
+	.height-test {
+		height: calc(100vh - 231px) !important;
+	}
+}
+
 .kt-chat .kt-chat__messages .kt-chat__message .kt-chat__user .kt-chat__username:hover {
     color: #48465b;
 }
