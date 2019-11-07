@@ -148,7 +148,6 @@ License: You must have a valid license purchased only from themeforest(the above
 											<li class="kt-menu__item " aria-haspopup="true"><a href="user_creator.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Content Creator</span></a></li>
 											<li class="kt-menu__item " aria-haspopup="true"><a href="user_embassy.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Embassy</span></a></li>
 											<li class="kt-menu__item " aria-haspopup="true"><a href="user_user.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Users</span></a></li>
-											<li class="kt-menu__item " aria-haspopup="true"><a href="user_reported_user.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Reported Users</span></a></li>
 										</ul>
 									</div>
 								</li>
@@ -339,7 +338,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!-- begin:: Content -->
 						<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
 							<div class="row">
-								<div class="col-lg-6">
+								<div class="col-xl-6">
 									<div class="kt-portlet kt-portlet--height-fluid">
 										<div class="kt-portlet__head">
 											<div class="kt-portlet__head-label">
@@ -349,32 +348,30 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 										<div class="kt-portlet__body">
 											<div class="kt-portlet__content">
-												<div align="center" style="padding: 40px 0px">
-													<span style="font-size: 100px; font-weight:500; color: #a65657;" name="total_user">3120</span></br>
+												<div align="center" style="padding: 20px 0px; margin-bottom: 10px">
+													<span class="animated-number" style="font-size: 100px; font-weight:500; color: #a65657;" name="total_user">3120</span></br>
 													<span style="font-size: 16px;">Total amount of registered users</span>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col-lg-6">
-									<div class="kt-portlet">
+								<div class="col-xl-6">
+									<div class="kt-portlet kt-portlet--height-fluid">
 										<div class="kt-portlet__head">
 											<div class="kt-portlet__head-label">
-												<span class="kt-portlet__head-icon">
-													<i class="flaticon-questions-circular-button"></i>
-												</span>
-												<h3 class="kt-portlet__head-title">
-													Total Questions per Topic
-												</h3>
+												<span class="kt-portlet__head-icon"><i class="flaticon-questions-circular-button"></i></span>
+												<h3 class="kt-portlet__head-title">Total Questions per Topic</h3>
 											</div>
 										</div>
 										<div class="kt-portlet__body">
-											<div style="width: 100%;height: 300px;" id="question_topic"></div>
+											<div class="kt-portlet__content">
+												<div style="width: 100%;height: 300px;" id="question_topic"></div>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col-lg-12">
+								<div class="col-xl-12">
 									<div class="kt-portlet">
 										<div class="kt-portlet__head">
 											<div class="kt-portlet__head-label">
@@ -598,6 +595,18 @@ License: You must have a valid license purchased only from themeforest(the above
 			chart.cursor = new am4charts.XYCursor();
 
 			}); // end am4core.ready()
+		</script>
+		<script>
+		$('.animated-number').each(function () {
+			var $this = $(this);
+			jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+				duration: 2000,
+				easing: 'swing',
+				step: function () {
+				  $this.text(Math.ceil(this.Counter));
+				}
+			});
+		});
 		</script>
 	</body>
 
