@@ -1136,7 +1136,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
             }, {
                 data: 'date',
                 title: 'Date',
-                width: 100
+                width: 150
             }, {
                 data: 'question',
                 title: 'Question'
@@ -1238,7 +1238,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
             }, {
                 data: 'date',
                 title: 'Date',
-                width: 100
+                width: 150
             }, {
                 data: 'question',
                 title: 'Question'
@@ -1254,6 +1254,140 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 responsivePriority: -1,
                 className: 'text-center',
                 width: 100,
+                orderable: false,
+                render: function(data, type, full, meta) {
+                    return `<a href="question_detail.html" class="btn btn-sm btn-brand" style="color:white;">Details</a>`;
+                },
+            }, ],
+            columnDefs: [{
+                targets: [0, 1, 2, 3, 4],
+                className: 'text-center',
+                orderable: true,
+            }],
+        });
+    };
+
+    var initTablePost = function() {
+        var table = $('#table_post');
+        // begin first table
+        table.DataTable({
+            responsive: true,
+            ajax: {
+                url: '../source/post.json',
+                type: 'POST',
+                data: {
+                    pagination: {
+                        perpage: 50,
+                    },
+                },
+            },
+            columns: [{
+                data: 'null',
+                title: 'No',
+                width: 25,
+                render: function(data, type, row, meta) {
+                    return meta.row + meta.settings._iDisplayStart + 1;
+                },
+                // title: 'No.',
+                orderable: false,
+            }, {
+                data: 'date',
+                title: 'Date',
+                width: 150
+            }, {
+                data: 'post',
+                title: 'Post'
+            }, {
+                data: 'user',
+                title: 'User'
+            }, {
+                field: 'action',
+                title: 'Action',
+                responsivePriority: -1,
+                className: 'text-center',
+                width: 50,
+                orderable: false,
+                render: function(data, type, full, meta) {
+                    return `
+                    <button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="flaticon-more"></i>
+					</button>
+					<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
+					<a href="question_detail.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-arrow-right"></i> Details</button>&nbsp;
+					<a href="#"  class="dropdown-item btn btn-secondary" id="kt_sweetalert_blacklist">  <i class="fa fa-times"></i> Blacklist</a>
+                    <script>
+                        $('#kt_sweetalert_blacklist').click(function(e) {
+            	            swal.fire({
+            	                title: 'Are you sure?',
+            	                text: "You won't be able to revert this!",
+            	                type: 'warning',
+            	                showCancelButton: true,
+            	                confirmButtonText: 'Yes, add to blacklist!',
+            	                cancelButtonText: 'No, cancel!',
+            	                reverseButtons: true
+            	            }).then(function(result) {
+            	                if (result.value) {
+                                    swal.fire(
+                                            'Blacklisted!',
+                                            'Question has been added to blacklist.',
+                                            'success'
+                                        )
+            	                }
+            	            });
+            	        });
+                    </script>`;
+                },
+            }, ],
+            columnDefs: [{
+                targets: [0, 1, 2, 3],
+                className: 'text-center',
+                orderable: true,
+            }],
+        });
+    };
+
+    var initTablePostReported = function() {
+        var table = $('#table_post_reported');
+        // begin first table
+        table.DataTable({
+            responsive: true,
+            ajax: {
+                url: '../source/post.json',
+                type: 'POST',
+                data: {
+                    pagination: {
+                        perpage: 50,
+                    },
+                },
+            },
+            columns: [{
+                data: 'null',
+                title: 'No',
+                width: 25,
+                render: function(data, type, row, meta) {
+                    return meta.row + meta.settings._iDisplayStart + 1;
+                },
+                // title: 'No.',
+                orderable: false,
+            }, {
+                data: 'date',
+                title: 'Date',
+                width: 150
+            }, {
+                data: 'post',
+                title: 'Post'
+            }, {
+                data: 'user',
+                title: 'User'
+            }, {
+                data: 'report',
+                title: 'Report'
+            }, {
+                field: 'action',
+                title: 'Action',
+                responsivePriority: -1,
+                className: 'text-center',
+                width: 50,
                 orderable: false,
                 render: function(data, type, full, meta) {
                     return `<a href="question_detail.html" class="btn btn-sm btn-brand" style="color:white;">Details</a>`;
@@ -1283,6 +1417,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
             initTableContentBlacklist();
             initTableContentEmbassy();
             initTableContentCreator();
+            initTablePost();
+            initTablePostReported();
         },
     };
 
