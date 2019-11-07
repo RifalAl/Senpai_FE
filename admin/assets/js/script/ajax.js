@@ -1142,29 +1142,17 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
     };
 
     var initTableCreator = function() {
+        var table = $('#table_creator');
         // begin first table
-        var table = $('#table_creator').DataTable({
+        table.DataTable({
             responsive: true,
-            // Pagination settings
-            dom: `<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
-            // read more: https://datatables.net/examples/basic_init/dom.html
-            lengthMenu: [5, 10, 25, 50],
-            pageLength: 10,
-            language: {
-                'lengthMenu': 'Display _MENU_',
-            },
-            searchDelay: 500,
-            processing: true,
-            serverSide: false,
             ajax: {
                 url: '../source/creator.json',
                 type: 'POST',
                 data: {
-                    // parameters for custom backend script demo
-                    columnsDef: [
-                        'no', 'depot', 'vendor', 'pekerjaan', 'sifat',
-                        'tanggal', 'status', 'aksi',
-                    ],
+                    pagination: {
+                        perpage: 50,
+                    },
                 },
             },
             columns: [{
@@ -1183,28 +1171,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 data: 'username',
                 title: 'Username'
             }, {
-                data: 'category',
-                title: 'Category',
-                render: function(data, type, row, meta) {
-                    var category = {
-                        'Daily Tips': {
-                            'title': 'Daily Tips',
-                            'class': 'btn-label-brand'
-                        },
-                        'Emergency': {
-                            'title': 'Emergency',
-                            'class': 'btn-label-warning'
-                        },
-                        'Article': {
-                            'title': 'Article',
-                            'class': 'btn-label-dark'
-                        },
-                    };
-                    if (typeof category[data] === 'undefined') {
-                        return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-danger">' + data + '</span>';
-                    }
-                    return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + category[data].class + '">' + category[data].title + '</span>';
-                }
+                data: 'type',
+                title: 'Content Type',
             }, {
                 field: 'action',
                 title: 'Action',
@@ -1238,64 +1206,11 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                     </script>`;
                 },
             }, ],
-            initComplete: function() {
-                this.api().columns().every(function() {
-                    var column = this;
-                    switch (column.title()) {
-                        case 'Category':
-                            column.data().unique().sort().each(function(d, j) {
-                                $('.kt-input[data-col-index="3"]').append('<option value="' + d + '">' + d + '</option>');
-                            });
-                            break;
-                            // case 'Waktu':
-                            // column.data().unique().sort().each(function(d, j) {
-                            //  $('.kt-input[data-col-index="5"]').append('<option value="' + d + '">' + d + '</option>');
-                            // });
-                            // break;
-                    }
-                });
-            },
             columnDefs: [{
-                targets: [0, 1, 2, 3, 4],
+                targets: [0, 1, 2, 3],
                 className: 'text-center',
-                orderable: false,
+                orderable: true,
             }],
-        });
-        table.on('order.dt search.dt', function() {
-            table.column(0, {
-                search: 'applied',
-                order: 'applied'
-            }).nodes().each(function(cell, i) {
-                cell.innerHTML = i + 1;
-            });
-        }).draw();
-        var filter = function() {
-            var val = $.fn.dataTable.util.escapeRegex($(this).val());
-            table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
-        };
-        var asdasd = function(value, index) {
-            var val = $.fn.dataTable.util.escapeRegex(value);
-            table.column(index).search(val ? val : '', false, true);
-        };
-        $('#kt_search_user_category').on('change', function(e) {
-            e.preventDefault();
-            var params = {};
-            $('.kt-input').each(function() {
-                var i = $(this).data('col-index');
-                if (params[i]) {
-                    params[i] += '|' + $(this).val();
-                } else {
-                    params[i] = $(this).val();
-                }
-            });
-            $.each(params, function(i, val) {
-                // apply search params to datatable
-                table.column(i).search(val ? val : '', false, false);
-            });
-            table.table().draw();
-        });
-        $('#kt_search_all').on('keyup', function() {
-            table.search(this.value).draw();
         });
     };
 

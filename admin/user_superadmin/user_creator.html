@@ -361,18 +361,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</div>
 								<div class="kt-portlet__body">
-									<form class="kt-form kt-form--fit kt-margin-b-10">
-        								<div class="row kt-margin-b-2">
-        									<div class="col-lg-4 kt-margin-b-10-tablet-and-mobile">
-        										<select class="form-control kt-input select2_noSearch" data-col-index="3" id="kt_search_user_category">
-        											<option value="">Choose Category</option>
-        										</select>
-        									</div>
-        									<div class="col-lg-4 offset-lg-4 kt-margin-b-10-tablet-and-mobile">
-        										<input type="text" class="form-control kt-input" placeholder="Search" id="kt_search_all">
-        									</div>
-        								</div>
-        							</form>
                                     <table class="table table-striped table-bordered table-hover table-checkable" id="table_creator"></table>
 								</div>
 							</div>
@@ -416,6 +404,26 @@ License: You must have a valid license purchased only from themeforest(the above
 													<label for="example-text-input" class="col-4 col-form-label">Email</label>
 													<div class="col-8">
 														<input type="text" class="form-control" name="creator_email" placeholder="- Insert email -">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label class="col-form-label col-4">Creator Type</label>
+													<div class="col-8">
+														<div class="kt-checkbox-inline">
+															<label class="kt-checkbox">
+																<input type="checkbox" name="creator_type"> Article
+																<span></span>
+															</label>
+															<label class="kt-checkbox">
+																<input type="checkbox" name="creator_type"> Daily Tips
+																<span></span>
+															</label>
+															<label class="kt-checkbox">
+																<input type="checkbox" name="creator_type"> Emergency
+																<span></span>
+															</label>
+														</div>
+														<span class="form-text text-muted">Please select at least 1 and maximum 2 options</span>
 													</div>
 												</div>
 												<div class="form-group row">
@@ -477,6 +485,26 @@ License: You must have a valid license purchased only from themeforest(the above
 													<label for="example-text-input" class="col-4 col-form-label">Email</label>
 													<div class="col-8">
 														<input type="text" class="form-control" name="creator_email_edit" value="upana@gmail.com">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label class="col-form-label col-4">Creator Type</label>
+													<div class="col-8">
+														<div class="kt-checkbox-inline">
+															<label class="kt-checkbox">
+																<input type="checkbox" name="creator_type_edit"> Article
+																<span></span>
+															</label>
+															<label class="kt-checkbox">
+																<input type="checkbox" name="creator_type_edit"> Daily Tips
+																<span></span>
+															</label>
+															<label class="kt-checkbox">
+																<input type="checkbox" name="creator_type_edit"> Emergency
+																<span></span>
+															</label>
+														</div>
+														<span class="form-text text-muted">Please select at least 1 and maximum 2 options</span>
 													</div>
 												</div>
 												<div class="form-group row">
@@ -674,6 +702,9 @@ License: You must have a valid license purchased only from themeforest(the above
 	                    required: true,
                         email: true
 	                },
+					creator_type: {
+	                    required: true
+	                },
 	                creator_picture: {
 	                    required: true
 	                }
@@ -706,6 +737,9 @@ License: You must have a valid license purchased only from themeforest(the above
 	                    required: true,
                         email: true
 	                },
+					creator_type_edit: {
+	                    required: true
+					},
 	                creator_picture_edit: {
 	                    required: true
 	                }

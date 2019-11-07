@@ -7,41 +7,41 @@
         "no": 1,
         "creator": "Vega",
         "username": "vega",
-        "category": "Daily Tips"
+        "type": "Daily Tips, Article"
     }, {
         "no": 2,
         "creator": "Vega",
         "username": "vega",
-        "category": "Emergency"
+        "type": "Article, Emergency"
     }, {
         "no": 3,
         "creator": "Vega",
         "username": "vega",
-        "category": "Article"
+        "type": "Emergency, Article"
     }, {
         "no": 4,
         "creator": "Vega",
         "username": "vega",
-        "category": "Daily Tips"
+        "type": "Daily Tips, Article"
     }, {
         "no": 5,
         "creator": "Vega",
         "username": "vega",
-        "category": "Daily Tips"
+        "type": "Daily Tips, Article"
     }, {
         "no": 6,
         "creator": "Vega",
         "username": "vega",
-        "category": "Daily Tips"
+        "type": "Daily Tips, Emergency"
     }, {
         "no": 7,
         "creator": "Vega",
         "username": "vega",
-        "category": "Daily Tips"
+        "type": "Emergency, Daily Tips"
     }, {
         "no": 8,
         "creator": "Vega",
         "username": "vega",
-        "category": "Daily Tips"
+        "type": "Article, Emergency"
     }]
 }
