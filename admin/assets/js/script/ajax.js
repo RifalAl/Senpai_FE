@@ -184,56 +184,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
             });
             table.table().draw();
         });
-        $('#kt_search_waktu').on('change', function(e) {
-            e.preventDefault();
-            var params = {};
-            $('.kt-input').each(function() {
-                var i = $(this).data('col-index');
-                if (params[i]) {
-                    params[i] += '|' + $(this).val();
-                } else {
-                    params[i] = $(this).val();
-                }
-            });
-            $.each(params, function(i, val) {
-                // apply search params to datatable
-                table.column(i).search(val ? val : '', false, false);
-            });
-            table.table().draw();
-        });
         $('#kt_search_all').on('keyup', function() {
             table.search(this.value).draw();
         });
-        $('#kt_reset').on('click', function(e) {
-            e.preventDefault();
-            $('.kt-input').each(function() {
-                $(this).val('');
-                table.column($(this).data('col-index')).search('', false, false);
-            });
-            table.table().draw();
-        });
-        $.fn.datepicker.dates['id'] = {
-            days: 'Minggu_Senin_Selasa_Rabu_Kamis_Jumat_Sabtu'.split('_'),
-            daysShort: 'Min_Sen_Sel_Rab_Kam_Jum_Sab'.split('_'),
-            daysMin: 'Mg_Sn_Sl_Rb_Km_Jm_Sb'.split('_'),
-            months: 'Januari_Februari_Maret_April_Mei_Juni_Juli_Agustus_September_Oktober_November_Desember'.split('_'),
-            monthsShort: 'Jan_Feb_Mar_Apr_Mei_Jun_Jul_Agt_Sep_Okt_Nov_Des'.split('_'),
-            today: "Hari ini",
-            clear: "Reset",
-            format: "dd MM yyyy",
-            titleFormat: "MM yyyy"
-        };
-        $('#kt_search_waktu').datepicker({
-            todayHighlight: true,
-            language: 'id',
-            rtl: KTUtil.isRTL(),
-            todayBtn: "linked",
-            clearBtn: true,
-            templates: {
-                leftArrow: '<i class="la la-angle-left"></i>',
-                rightArrow: '<i class="la la-angle-right"></i>',
-            },
-        }).datepicker("setDate", new Date());
     };
 
     var initTableContentBlacklist = function() {
@@ -389,56 +342,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
             });
             table.table().draw();
         });
-        $('#kt_search_waktu').on('change', function(e) {
-            e.preventDefault();
-            var params = {};
-            $('.kt-input').each(function() {
-                var i = $(this).data('col-index');
-                if (params[i]) {
-                    params[i] += '|' + $(this).val();
-                } else {
-                    params[i] = $(this).val();
-                }
-            });
-            $.each(params, function(i, val) {
-                // apply search params to datatable
-                table.column(i).search(val ? val : '', false, false);
-            });
-            table.table().draw();
-        });
         $('#kt_search_all').on('keyup', function() {
             table.search(this.value).draw();
         });
-        $('#kt_reset').on('click', function(e) {
-            e.preventDefault();
-            $('.kt-input').each(function() {
-                $(this).val('');
-                table.column($(this).data('col-index')).search('', false, false);
-            });
-            table.table().draw();
-        });
-        $.fn.datepicker.dates['id'] = {
-            days: 'Minggu_Senin_Selasa_Rabu_Kamis_Jumat_Sabtu'.split('_'),
-            daysShort: 'Min_Sen_Sel_Rab_Kam_Jum_Sab'.split('_'),
-            daysMin: 'Mg_Sn_Sl_Rb_Km_Jm_Sb'.split('_'),
-            months: 'Januari_Februari_Maret_April_Mei_Juni_Juli_Agustus_September_Oktober_November_Desember'.split('_'),
-            monthsShort: 'Jan_Feb_Mar_Apr_Mei_Jun_Jul_Agt_Sep_Okt_Nov_Des'.split('_'),
-            today: "Hari ini",
-            clear: "Reset",
-            format: "dd MM yyyy",
-            titleFormat: "MM yyyy"
-        };
-        $('#kt_search_waktu').datepicker({
-            todayHighlight: true,
-            language: 'id',
-            rtl: KTUtil.isRTL(),
-            todayBtn: "linked",
-            clearBtn: true,
-            templates: {
-                leftArrow: '<i class="la la-angle-left"></i>',
-                rightArrow: '<i class="la la-angle-right"></i>',
-            },
-        }).datepicker("setDate", new Date());
     };
 
     var initTableContentCreator = function() {
@@ -570,11 +476,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                                 $('.kt-input[data-col-index="3"]').append('<option value="' + d + '">' + d + '</option>');
                             });
                             break;
-                            // case 'Waktu':
-                            // column.data().unique().sort().each(function(d, j) {
-                            //  $('.kt-input[data-col-index="5"]').append('<option value="' + d + '">' + d + '</option>');
-                            // });
-                            // break;
                     }
                 });
             },
@@ -617,82 +518,27 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
             });
             table.table().draw();
         });
-        $('#kt_search_waktu').on('change', function(e) {
-            e.preventDefault();
-            var params = {};
-            $('.kt-input').each(function() {
-                var i = $(this).data('col-index');
-                if (params[i]) {
-                    params[i] += '|' + $(this).val();
-                } else {
-                    params[i] = $(this).val();
-                }
-            });
-            $.each(params, function(i, val) {
-                // apply search params to datatable
-                table.column(i).search(val ? val : '', false, false);
-            });
-            table.table().draw();
-        });
         $('#kt_search_all').on('keyup', function() {
             table.search(this.value).draw();
         });
-        $('#kt_reset').on('click', function(e) {
-            e.preventDefault();
-            $('.kt-input').each(function() {
-                $(this).val('');
-                table.column($(this).data('col-index')).search('', false, false);
-            });
-            table.table().draw();
-        });
-        $.fn.datepicker.dates['id'] = {
-            days: 'Minggu_Senin_Selasa_Rabu_Kamis_Jumat_Sabtu'.split('_'),
-            daysShort: 'Min_Sen_Sel_Rab_Kam_Jum_Sab'.split('_'),
-            daysMin: 'Mg_Sn_Sl_Rb_Km_Jm_Sb'.split('_'),
-            months: 'Januari_Februari_Maret_April_Mei_Juni_Juli_Agustus_September_Oktober_November_Desember'.split('_'),
-            monthsShort: 'Jan_Feb_Mar_Apr_Mei_Jun_Jul_Agt_Sep_Okt_Nov_Des'.split('_'),
-            today: "Hari ini",
-            clear: "Reset",
-            format: "dd MM yyyy",
-            titleFormat: "MM yyyy"
-        };
-        $('#kt_search_waktu').datepicker({
-            todayHighlight: true,
-            language: 'id',
-            rtl: KTUtil.isRTL(),
-            todayBtn: "linked",
-            clearBtn: true,
-            templates: {
-                leftArrow: '<i class="la la-angle-left"></i>',
-                rightArrow: '<i class="la la-angle-right"></i>',
-            },
-        }).datepicker("setDate", new Date());
     };
 
     var initTableContentEmbassy = function() {
+        var table = $('#table_content_embassy');
         // begin first table
-        var table = $('#table_content_embassy').DataTable({
+        table.DataTable({
+            info: true,
+            paging: true,
+            lengthChange: true,
+            searching: true,
             responsive: true,
-            // Pagination settings
-            dom: `<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
-            // read more: https://datatables.net/examples/basic_init/dom.html
-            lengthMenu: [5, 10, 25, 50],
-            pageLength: 10,
-            language: {
-                'lengthMenu': 'Display _MENU_',
-            },
-            searchDelay: 500,
-            processing: true,
-            serverSide: false,
             ajax: {
                 url: '../source/content_embassy.json',
                 type: 'POST',
                 data: {
-                    // parameters for custom backend script demo
-                    columnsDef: [
-                        'no', 'depot', 'vendor', 'pekerjaan', 'sifat',
-                        'tanggal', 'status', 'aksi',
-                    ],
+                    pagination: {
+                        perpage: 50,
+                    },
                 },
             },
             columns: [{
@@ -752,112 +598,12 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                     </script>`;
                 },
             }],
-            initComplete: function() {
-                this.api().columns().every(function() {
-                    var column = this;
-                    switch (column.title()) {
-                        case 'Nationality':
-                            column.data().unique().sort().each(function(d, j) {
-                                $('.kt-input[data-col-index="3"]').append('<option value="' + d + '">' + d + '</option>');
-                            });
-                            break;
-                            // case 'Waktu':
-                            // column.data().unique().sort().each(function(d, j) {
-                            //  $('.kt-input[data-col-index="5"]').append('<option value="' + d + '">' + d + '</option>');
-                            // });
-                            // break;
-                    }
-                });
-            },
             columnDefs: [{
                 targets: [0, 1, 2, 3],
                 className: 'text-center',
-                orderable: false,
+                orderable: true,
             }],
         });
-        table.on('order.dt search.dt', function() {
-            table.column(0, {
-                search: 'applied',
-                order: 'applied'
-            }).nodes().each(function(cell, i) {
-                cell.innerHTML = i + 1;
-            });
-        }).draw();
-        var filter = function() {
-            var val = $.fn.dataTable.util.escapeRegex($(this).val());
-            table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
-        };
-        var asdasd = function(value, index) {
-            var val = $.fn.dataTable.util.escapeRegex(value);
-            table.column(index).search(val ? val : '', false, true);
-        };
-        $('#kt_search_nationality').on('change', function(e) {
-            e.preventDefault();
-            var params = {};
-            $('.kt-input').each(function() {
-                var i = $(this).data('col-index');
-                if (params[i]) {
-                    params[i] += '|' + $(this).val();
-                } else {
-                    params[i] = $(this).val();
-                }
-            });
-            $.each(params, function(i, val) {
-                // apply search params to datatable
-                table.column(i).search(val ? val : '', false, false);
-            });
-            table.table().draw();
-        });
-        $('#kt_search_waktu').on('change', function(e) {
-            e.preventDefault();
-            var params = {};
-            $('.kt-input').each(function() {
-                var i = $(this).data('col-index');
-                if (params[i]) {
-                    params[i] += '|' + $(this).val();
-                } else {
-                    params[i] = $(this).val();
-                }
-            });
-            $.each(params, function(i, val) {
-                // apply search params to datatable
-                table.column(i).search(val ? val : '', false, false);
-            });
-            table.table().draw();
-        });
-        $('#kt_search_all').on('keyup', function() {
-            table.search(this.value).draw();
-        });
-        $('#kt_reset').on('click', function(e) {
-            e.preventDefault();
-            $('.kt-input').each(function() {
-                $(this).val('');
-                table.column($(this).data('col-index')).search('', false, false);
-            });
-            table.table().draw();
-        });
-        $.fn.datepicker.dates['id'] = {
-            days: 'Minggu_Senin_Selasa_Rabu_Kamis_Jumat_Sabtu'.split('_'),
-            daysShort: 'Min_Sen_Sel_Rab_Kam_Jum_Sab'.split('_'),
-            daysMin: 'Mg_Sn_Sl_Rb_Km_Jm_Sb'.split('_'),
-            months: 'Januari_Februari_Maret_April_Mei_Juni_Juli_Agustus_September_Oktober_November_Desember'.split('_'),
-            monthsShort: 'Jan_Feb_Mar_Apr_Mei_Jun_Jul_Agt_Sep_Okt_Nov_Des'.split('_'),
-            today: "Hari ini",
-            clear: "Reset",
-            format: "dd MM yyyy",
-            titleFormat: "MM yyyy"
-        };
-        $('#kt_search_waktu').datepicker({
-            todayHighlight: true,
-            language: 'id',
-            rtl: KTUtil.isRTL(),
-            todayBtn: "linked",
-            clearBtn: true,
-            templates: {
-                leftArrow: '<i class="la la-angle-left"></i>',
-                rightArrow: '<i class="la la-angle-right"></i>',
-            },
-        }).datepicker("setDate", new Date());
     };
 
     var initTableInterest = function() {
