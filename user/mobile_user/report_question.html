@@ -387,7 +387,7 @@
 										</div>
 										<div align="right" style="padding: 15px" class="kt-portlet__foot">
 											<a onclick="goBack()" class="btn btn-secondary">cancel</a>
-											<button id="btn_send" class="btn btn-primary">Send</button>
+											<button disabled="" id="btn_send" class="btn btn-primary">Send</button>
 										</div>
 									</form>
 								</div>
@@ -496,8 +496,7 @@
 	<!--begin::Page Scripts(used by this page) -->
 	<!--end::Page Scripts -->
 	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#btn_send').attr("disabled",true); 
+		$(document).ready(function() { 
 			$('input:radio[name="problem-item"]').change(
 				function(){
 					if ($(this).is(':checked')) {
