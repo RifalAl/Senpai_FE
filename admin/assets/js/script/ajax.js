@@ -308,6 +308,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 data: 'creator',
                 title: 'Created By',
             }, {
+                data: 'report',
+                title: 'Reports',
+            }, {
                 field: 'action',
                 title: 'Action',
                 responsivePriority: -1,
@@ -348,7 +351,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 });
             },
             columnDefs: [{
-                targets: [0, 1, 2, 3, 4],
+                targets: [0, 1, 2, 3, 4, 5],
                 className: 'text-center',
                 orderable: false,
             }],
@@ -1475,7 +1478,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 title: 'Question'
             }, {
                 data: 'answer',
-                title: 'Answer'
+                title: 'Answers'
             }, {
                 data: 'status',
                 title: 'Status',
@@ -1577,7 +1580,10 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 title: 'Question'
             }, {
                 data: 'answer',
-                title: 'Answer'
+                title: 'Answers'
+            }, {
+                data: 'report',
+                title: 'Reports'
             }, {
                 field: 'action',
                 title: 'Action',
@@ -1590,7 +1596,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 },
             }, ],
             columnDefs: [{
-                targets: [0, 1, 2, 3],
+                targets: [0, 1, 2, 3, 4],
                 className: 'text-center',
                 orderable: true,
             }],
