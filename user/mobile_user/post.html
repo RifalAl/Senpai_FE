@@ -569,70 +569,10 @@
 	<!--begin::Page Scripts(used by this page) -->
 	<!--end::Page Scripts -->
 	<script>
-		function toggle_comment(){
-			var comment = document.getElementById('comment-portlet');
-			if (comment.style.display === "none") {
-				comment.style.display = "block";
-				document.getElementById('komentar').scrollIntoView();
-			} else {
-				comment.style.display = "none";
-			}
-		}
-	</script>
-	<script>
 		function textAreaAdjust(o) {
 			o.style.height = "1px";
 			o.style.height = (40+o.scrollHeight)+"px";
 		}
-	</script>
-	<script>
-		var widthScreen = screen.width;
-		var samePlace = document.getElementById('same_place');
-		var same_interest = document.getElementById('same_interest');
-		console.log(widthScreen);
-		if (widthScreen <= 800) {
-			samePlace.style.display = 'none';
-			same_interest.style.display = 'none';
-		}
-	</script>
-	<script>
-		$(document).ready(function() {
-			$('#container-same_place').on('click','#btn-follow-following', function (e) {
-				let id = $(this).data('id');
-				let btnText = $('.btn_follow_following[data-id="' + id + '"]').text();
-				if (btnText == "Follow") {
-					$('.btn_follow_following[data-id="' + id + '"]').html('Following');
-					$('.btn_follow_following[data-id="' + id + '"]').removeClass('btn-outline-primary');
-					$('.btn_follow_following[data-id="' + id + '"]').addClass('btn-outline-secondary');
-
-				}
-				else {
-					$('.btn_follow_following[data-id="' + id + '"]').html('Follow');
-					$('.btn_follow_following[data-id="' + id + '"]').removeClass('btn-outline-secondary');
-					$('.btn_follow_following[data-id="' + id + '"]').addClass('btn-outline-primary');
-				}
-
-			});
-		})
-
-		$(document).ready(function() {
-			$('#container-same_interest').on('click','#btn-follow-following-interest', function (e) {
-				let id = $(this).data('id');
-				let btnText = $('.btn_follow_following_interest[data-id="' + id + '"]').text();
-				if (btnText == "Follow") {
-					$('.btn_follow_following_interest[data-id="' + id + '"]').html('Following');
-					$('.btn_follow_following_interest[data-id="' + id + '"]').removeClass('btn-outline-primary');
-					$('.btn_follow_following_interest[data-id="' + id + '"]').addClass('btn-outline-secondary');
-
-				}
-				else {
-					$('.btn_follow_following_interest[data-id="' + id + '"]').html('Follow');
-					$('.btn_follow_following_interest[data-id="' + id + '"]').removeClass('btn-outline-secondary');
-					$('.btn_follow_following_interest[data-id="' + id + '"]').addClass('btn-outline-primary');
-				}
-
-			});
-		})
 	</script>
 	<script>
 		$('.btn_bookmark_post').click(function() {
