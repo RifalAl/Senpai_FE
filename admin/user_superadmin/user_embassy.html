@@ -423,7 +423,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	                                                <div class="col-8">
 														<div class="custom-file">
 															<input type="file" class="custom-file-input" name="embassy_flag" id="embassy_flag" accept="image/*">
-															<label class="custom-file-label" for="embassy_flag">Choose file</label>
+															<label class="custom-file-label" for="embassy_flag">- Choose file -</label>
 														</div>
 														<span class="form-text"  style="margin: 1rem 0 1rem 0">Image preview :</span>
 														<div id="uploaded_image" align="center" class="image-cropper"></div>
@@ -497,7 +497,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	                                                <div class="col-8">
 														<div class="custom-file">
 															<input type="file" class="custom-file-input" name="embassy_flag_edit" id="embassy_flag_edit" accept="image/*">
-															<label class="custom-file-label" for="embassy_flag_edit">Choose file</label>
+															<label class="custom-file-label" for="embassy_flag_edit">- Choose file -</label>
 														</div>
 														<span class="form-text"  style="margin: 1rem 0 1rem 0">Image preview :</span>
 														<div id="uploaded_image_edit" align="center" class="image-cropper"></div>
@@ -737,30 +737,6 @@ License: You must have a valid license purchased only from themeforest(the above
 	                //form[0].submit(); // submit the form
 	            }
         	});
-
-			$('#kt_dropzone_embassy').dropzone({
-               url: "https://keenthemes.com/scripts/void.php", // Set the url for your upload script location
-               paramName: "file", // The name that will be used to transfer the file
-               maxFiles: 1,
-               maxFilesize: 10, // MB
-               addRemoveLinks: true,
-               acceptedFiles: "image/*,application/pdf,.psd",
-               accept: function(file, done) {
-                   done();
-               }
-           });
-
-		   $('#kt_dropzone_embassy_edit').dropzone({
-			  url: "https://keenthemes.com/scripts/void.php", // Set the url for your upload script location
-			  paramName: "file", // The name that will be used to transfer the file
-			  maxFiles: 1,
-			  maxFilesize: 10, // MB
-			  addRemoveLinks: true,
-			  acceptedFiles: "image/*,application/pdf,.psd",
-			  accept: function(file, done) {
-				  done();
-			  }
-		  });
 
 		  $(document).ready(function(){
 
