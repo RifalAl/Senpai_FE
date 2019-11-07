@@ -928,6 +928,77 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
         });
     };
 
+    var initTableGoal = function() {
+        var table = $('#table_goal');
+        // begin first table
+        table.DataTable({
+            info: true,
+            paging: true,
+            lengthChange: false,
+            searching: false,
+            responsive: true,
+            ajax: {
+                url: '../source/goal.json',
+                type: 'POST',
+                data: {
+                    pagination: {
+                        perpage: 50,
+                    },
+                },
+            },
+            columns: [{
+                data: 'null',
+                title: 'No',
+                width: 25,
+                render: function(data, type, row, meta) {
+                    return meta.row + meta.settings._iDisplayStart + 1;
+                },
+                // title: 'No.',
+                orderable: false,
+            }, {
+                data: 'goal',
+                title: 'Goal'
+            }, {
+                field: 'action',
+                title: 'Action',
+                responsivePriority: -1,
+                className: 'text-center',
+                width: 200,
+                orderable: false,
+                render: function(data, type, full, meta) {
+                    return `
+                    <a href="#" class="btn btn-sm btn-success" data-toggle="modal" data-target="#kt_modal_edit" style="color:white;">Edit</a>&nbsp;<a href="#" class="btn btn-sm btn-danger" id="kt_sweetalert_delete" style="color:white;">Delete</a>
+                    <script>
+                        $('#kt_sweetalert_delete').click(function(e) {
+            	            swal.fire({
+            	                title: 'Are you sure?',
+            	                text: "You won't be able to revert this!",
+            	                type: 'warning',
+            	                showCancelButton: true,
+            	                confirmButtonText: 'Yes, delete it!',
+            	                cancelButtonText: 'No, cancel!',
+            	                reverseButtons: true
+            	            }).then(function(result) {
+            	                if (result.value) {
+                                    swal.fire(
+                                            'Deleted!',
+                                            'Interest has been deleted.',
+                                            'success'
+                                        )
+            	                }
+            	            });
+            	        });
+                    </script>`;
+                },
+            }, ],
+            columnDefs: [{
+                targets: [0, 1, 2],
+                className: 'text-center',
+                orderable: true,
+            }],
+        });
+    };
+
     var initTableRank = function() {
         var table = $('#table_rank');
         // begin first table
@@ -1530,6 +1601,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
         //main function to initiate the module
         init: function() {
             initTableInterest();
+            initTableGoal();
             initTableRank();
             initTableTopic();
             initTableCreator();
