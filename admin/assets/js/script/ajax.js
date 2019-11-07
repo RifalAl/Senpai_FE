@@ -1402,6 +1402,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 data: 'badge',
                 title: 'Badge'
             }, {
+                data: 'report',
+                title: 'Reports'
+            }, {
                 field: 'action',
                 title: 'Action',
                 responsivePriority: -1,
