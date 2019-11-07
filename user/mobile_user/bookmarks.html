@@ -471,8 +471,8 @@
 														<i class="flaticon-more"></i>
 													</button>
 													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-149px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-														<a class="dropdown-item" href="#"><i class="fa fa-arrow-right"></i> Go</a>
-														<a class="dropdown-item" href="#"><i class="fa fa-times"></i> Delete</a>
+														<a class="dropdown-item btn_go_page" href="#"><i class="fa fa-arrow-right"></i> Go</a>
+														<a class="dropdown-item btn_delete" href="#"><i class="fa fa-times"></i> Delete</a>
 													</div>
 												</div>
 											</div>
@@ -492,8 +492,8 @@
 														<i class="flaticon-more"></i>
 													</button>
 													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-149px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-														<a class="dropdown-item" href="#"><i class="fa fa-arrow-right"></i> Go</a>
-														<a class="dropdown-item" href="#"><i class="fa fa-times"></i> Delete</a>
+														<a class="dropdown-item btn_go_page" href="#"><i class="fa fa-arrow-right"></i> Go</a>
+														<a class="dropdown-item btn_delete" href="#"><i class="fa fa-times"></i> Delete</a>
 													</div>
 												</div>
 											</div>
@@ -513,8 +513,8 @@
 														<i class="flaticon-more"></i>
 													</button>
 													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-149px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-														<a class="dropdown-item" href="#"><i class="fa fa-arrow-right"></i> Go</a>
-														<a class="dropdown-item" href="#"><i class="fa fa-times"></i> Delete</a>
+														<a class="dropdown-item btn_go_page" href="#"><i class="fa fa-arrow-right"></i> Go</a>
+														<a class="dropdown-item btn_delete" href="#"><i class="fa fa-times"></i> Delete</a>
 													</div>
 												</div>
 											</div>
@@ -534,8 +534,8 @@
 														<i class="flaticon-more"></i>
 													</button>
 													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-149px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-														<a class="dropdown-item" href="#"><i class="fa fa-arrow-right"></i> Go</a>
-														<a class="dropdown-item" href="#"><i class="fa fa-times"></i> Delete</a>
+														<a class="dropdown-item btn_go_page" href="#"><i class="fa fa-arrow-right"></i> Go</a>
+														<a class="dropdown-item btn_delete" href="#"><i class="fa fa-times"></i> Delete</a>
 													</div>
 												</div>
 											</div>
@@ -555,8 +555,8 @@
 														<i class="flaticon-more"></i>
 													</button>
 													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-149px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-														<a class="dropdown-item" href="#"><i class="fa fa-arrow-right"></i> Go</a>
-														<a class="dropdown-item" href="#"><i class="fa fa-times"></i> Delete</a>
+														<a class="dropdown-item btn_go_page" href="#"><i class="fa fa-arrow-right"></i> Go</a>
+														<a class="dropdown-item btn_delete" href="#"><i class="fa fa-times"></i> Delete</a>
 													</div>
 												</div>
 											</div>
@@ -576,8 +576,8 @@
 														<i class="flaticon-more"></i>
 													</button>
 													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-149px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-														<a class="dropdown-item" href="#"><i class="fa fa-arrow-right"></i> Go</a>
-														<a class="dropdown-item" href="#"><i class="fa fa-times"></i> Delete</a>
+														<a class="dropdown-item btn_go_page" href="#"><i class="fa fa-arrow-right"></i> Go</a>
+														<a class="dropdown-item btn_delete" href="#"><i class="fa fa-times"></i> Delete</a>
 													</div>
 												</div>
 											</div>
@@ -597,8 +597,8 @@
 														<i class="flaticon-more"></i>
 													</button>
 													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-149px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-														<a class="dropdown-item" href="#"><i class="fa fa-arrow-right"></i> Go</a>
-														<a class="dropdown-item" href="#"><i class="fa fa-times"></i> Delete</a>
+														<a class="dropdown-item btn_go_page" href="#"><i class="fa fa-arrow-right"></i> Go</a>
+														<a class="dropdown-item btn_delete" href="#"><i class="fa fa-times"></i> Delete</a>
 													</div>
 												</div>
 											</div>
@@ -839,6 +839,41 @@ jQuery(document).ready(function() {
 		})
 
 	})
+</script>
+<script>
+	"use strict";
+	var KTSweetAlert2Demo = function() {
+
+		var initDemos = function() {
+			$('.btn_delete').click(function(e) {
+				swal.fire({
+					title: 'Are you sure?',
+					text: "You won't be able to revert this!",
+					type: 'warning',
+					showCancelButton: true,
+					confirmButtonText: 'Yes, delete it!'
+				}).then(function(result) {
+					if (result.value) {
+						swal.fire(
+							'Deleted!',
+							'Your experience data has been deleted.',
+							'success'
+							)
+					}
+				});
+			});
+		};
+		return {
+			init: function() {
+				initDemos();
+			},
+		};
+	}();
+
+	jQuery(document).ready(function() {
+		KTSweetAlert2Demo.init();
+	});
+
 </script>
 <!--end::Page Scripts -->
 </body>

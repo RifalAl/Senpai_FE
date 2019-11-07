@@ -365,7 +365,7 @@ html {
 	border-bottom: 3px solid #5d78ff;
 }
 .border-style {
-	border: 1.2px solid #e8effc;
+	border: 1.2px solid #e8effc !important;
 }
 #chat-height {
 	padding-top: 15px;
@@ -429,7 +429,7 @@ html {
 	font-size: 1.1rem !important;
 }
 .border-out {
-	border: 1px solid #BBDEFB !important;
+	border: 1.2px solid #e8effc !important;
 	border-radius: 5px;
 	margin-bottom: 5px;
 }
