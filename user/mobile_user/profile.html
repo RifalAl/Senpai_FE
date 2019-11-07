@@ -28,6 +28,13 @@
 	<link href="../assets/css/center-line-tab.css" rel="stylesheet" type="text/css" />
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
+	<style>
+		.kt-question .kt-notification__item::after,
+		.kt-answers .kt-notification__item::after,
+		.kt-post .kt-notification__item::after {
+			content: none;
+		}
+	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -640,42 +647,78 @@
 													</li>
 												</ul>
 												<div class="tab-content">
-													<div class="tab-pane active" id="questions_tab" role="tabpanel">
-														<div class="kt-notification">
-															<a href="advice_room_answered.html" class="kt-notification__item item-padding border-out">
+													<div style="position: relative;" class="tab-pane active" id="questions_tab" role="tabpanel">
+														<div class="kt-notification kt-question">
+															<a  class="kt-notification__item item-padding border-out">
 																<div class="kt-notification__item-details">
 																	<div style="font-weight: 500" class="kt-notification__item-title the-question">
 																		Affordable Japanese Language School
+																	</div>
+																	<div style="position: absolute;right: 10px" class="dropdown dropdown-inline">
+																		<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																			<i class="flaticon-more"></i>
+																		</button>
+																		<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end">
+																			<button onclick="location.href='advice_room_answered.html'" class="dropdown-item btn_go_page"><i class="fa fa-arrow-right "></i>Go to page</button>
+																			<button class="dropdown-item btn_delete"><i class="fa fa-trash-alt"></i> Delete</button>
+																		</div>
 																	</div>
 																	<div class="kt-notification__item-time">
 																		<span class="total-answers" id="total_answers">12</span> Answer | Asked <span id="asked_day" name="asked_day">4d</span> Ago
 																	</div>
 																</div>
 															</a>
-															<a href="advice_room_answered.html" class="kt-notification__item item-padding border-out">
+															<a class="kt-notification__item item-padding border-out">
 																<div class="kt-notification__item-details">
 																	<div style="font-weight: 500" class="kt-notification__item-title the-question">
 																		Affordable Japanese Language School
+																	</div>
+																	<div style="position: absolute;right: 10px" class="dropdown dropdown-inline">
+																		<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																			<i class="flaticon-more"></i>
+																		</button>
+																		<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end">
+																			<button onclick="location.href='advice_room_answered.html'" class="dropdown-item btn_go_page"><i class="fa fa-arrow-right "></i>Go to page</button>
+																			<button class="dropdown-item btn_delete"><i class="fa fa-trash-alt"></i> Delete</button>
+																		</div>
 																	</div>
 																	<div class="kt-notification__item-time">
 																		<span class="total-answers" id="total_answers">12</span> Answer | Asked <span id="asked_day" name="asked_day">4d</span> Ago
 																	</div>
 																</div>
 															</a>
-															<a href="advice_room_answered.html" class="kt-notification__item item-padding border-out">
+															<a class="kt-notification__item item-padding border-out">
 																<div class="kt-notification__item-details">
 																	<div style="font-weight: 500" class="kt-notification__item-title the-question">
 																		Affordable Japanese Language School
+																	</div>
+																	<div style="position: absolute;right: 10px" class="dropdown dropdown-inline">
+																		<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																			<i class="flaticon-more"></i>
+																		</button>
+																		<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end">
+																			<button onclick="location.href='advice_room_answered.html'" class="dropdown-item btn_go_page"><i class="fa fa-arrow-right "></i>Go to page</button>
+																			<button class="dropdown-item btn_delete"><i class="fa fa-trash-alt"></i> Delete</button>
+																		</div>
 																	</div>
 																	<div class="kt-notification__item-time">
 																		<span class="total-answers" id="total_answers">12</span> Answer | Asked <span id="asked_day" name="asked_day">4d</span> Ago
 																	</div>
 																</div>
 															</a>
-															<a href="advice_room_answered.html" class="kt-notification__item item-padding border-out">
+															<a class="kt-notification__item item-padding border-out">
 																<div class="kt-notification__item-details">
 																	<div style="font-weight: 500" class="kt-notification__item-title the-question">
 																		Affordable Japanese Language School
+																	</div>
+																	<div style="position: absolute;right: 10px" class="dropdown dropdown-inline">
+																		<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																			<i class="flaticon-more"></i>
+																		</button>
+																		<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end">
+																			<button onclick="location.href='advice_room_answered.html'" class="dropdown-item btn_go_page"><i class="fa fa-arrow-right "></i>Go to page</button>
+																			<button class="dropdown-item btn_delete"><i class="fa fa-trash-alt"></i> Delete</button>
+																		</div>
 																	</div>
 																	<div class="kt-notification__item-time">
 																		<span class="total-answers" id="total_answers">12</span> Answer | Asked <span id="asked_day" name="asked_day">4d</span> Ago
@@ -685,7 +728,7 @@
 														</div>
 													</div>
 													<div class="tab-pane" id="answers_tab" role="tabpanel">
-														<div class="kt-notification">
+														<div class="kt-notification kt-answers">
 															<a href="advice_room_answered.html" class="kt-notification__item item-padding border-out">
 																<div style="position: relative;" class="kt-notification__item-details">
 																	<div style="font-weight: 500" class="kt-notification__item-title the-question">
@@ -757,42 +800,78 @@
 															</a>
 														</div>
 													</div>
-													<div class="tab-pane" id="post_tab" role="tabpanel">
-														<div class="kt-notification">
-															<a href="post.html" class="kt-notification__item item-padding border-out">
+													<div style="position: relative;" class="tab-pane" id="post_tab" role="tabpanel">
+														<div class="kt-notification kt-post">
+															<a class="kt-notification__item item-padding border-out">
 																<div class="kt-notification__item-details ">
 																	<div style="font-weight: 500" class="kt-notification__item-title the-question ">
 																		Affordable Japanese Language School
+																	</div>
+																	<div style="position: absolute;right: 10px" class="dropdown dropdown-inline">
+																		<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																			<i class="flaticon-more"></i>
+																		</button>
+																		<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end">
+																			<button onclick="location.href='post.html'" class="dropdown-item btn_go_page"><i class="fa fa-arrow-right "></i>Go to page</button>
+																			<button class="dropdown-item btn_delete"><i class="fa fa-trash-alt"></i> Delete</button>
+																		</div>
 																	</div>
 																	<div class="kt-notification__item-time">
 																		<span class="total-answers" id="tgl_post" name="tgl_post">20/11/19</span> 
 																	</div>
 																</div>
 															</a>
-															<a href="post.html" class="kt-notification__item item-padding border-out">
+															<a class="kt-notification__item item-padding border-out">
 																<div class="kt-notification__item-details ">
 																	<div style="font-weight: 500" class="kt-notification__item-title the-question ">
 																		Affordable Japanese Language School
+																	</div>
+																	<div style="position: absolute;right: 10px" class="dropdown dropdown-inline">
+																		<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																			<i class="flaticon-more"></i>
+																		</button>
+																		<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end">
+																			<button onclick="location.href='post.html'" class="dropdown-item btn_go_page"><i class="fa fa-arrow-right "></i>Go to page</button>
+																			<button class="dropdown-item btn_delete"><i class="fa fa-trash-alt"></i> Delete</button>
+																		</div>
 																	</div>
 																	<div class="kt-notification__item-time">
 																		<span class="total-answers" id="tgl_post" name="tgl_post">20/11/19</span> 
 																	</div>
 																</div>
 															</a>
-															<a href="post.html" class="kt-notification__item item-padding border-out">
+															<a class="kt-notification__item item-padding border-out">
 																<div class="kt-notification__item-details ">
 																	<div style="font-weight: 500" class="kt-notification__item-title the-question ">
 																		Affordable Japanese Language School
+																	</div>
+																	<div style="position: absolute;right: 10px" class="dropdown dropdown-inline">
+																		<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																			<i class="flaticon-more"></i>
+																		</button>
+																		<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end">
+																			<button onclick="location.href='post.html'" class="dropdown-item btn_go_page"><i class="fa fa-arrow-right "></i>Go to page</button>
+																			<button class="dropdown-item btn_delete"><i class="fa fa-trash-alt"></i> Delete</button>
+																		</div>
 																	</div>
 																	<div class="kt-notification__item-time">
 																		<span class="total-answers" id="tgl_post" name="tgl_post">20/11/19</span> 
 																	</div>
 																</div>
 															</a>
-															<a href="post.html" class="kt-notification__item item-padding border-out">
+															<a class="kt-notification__item item-padding border-out">
 																<div class="kt-notification__item-details ">
 																	<div style="font-weight: 500" class="kt-notification__item-title the-question ">
 																		Affordable Japanese Language School
+																	</div>
+																	<div style="position: absolute;right: 10px" class="dropdown dropdown-inline">
+																		<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																			<i class="flaticon-more"></i>
+																		</button>
+																		<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end">
+																			<button onclick="location.href='post.html'" class="dropdown-item btn_go_page"><i class="fa fa-arrow-right "></i>Go to page</button>
+																			<button class="dropdown-item btn_delete"><i class="fa fa-trash-alt"></i> Delete</button>
+																		</div>
 																	</div>
 																	<div class="kt-notification__item-time">
 																		<span class="total-answers" id="tgl_post" name="tgl_post">20/11/19</span> 
@@ -933,6 +1012,44 @@
 			})
 
 		})
+	</script>
+	<script>
+		"use strict";
+		var KTSweetAlert2Demo = function() {
+
+			var initDemos = function() {
+				$('.btn_delete').click(function(e) {
+					swal.fire({
+						title: 'Are you sure?',
+						text: "You won't be able to revert this!",
+						type: 'warning',
+						showCancelButton: true,
+						confirmButtonText: 'Yes, delete it!'
+					}).then(function(result) {
+						if (result.value) {
+							swal.fire(
+								'Deleted!',
+								'Your experience data has been deleted.',
+								'success'
+								)
+						}
+					});
+				});
+
+
+			};
+
+			return {
+				init: function() {
+					initDemos();
+				},
+			};
+		}();
+
+		jQuery(document).ready(function() {
+			KTSweetAlert2Demo.init();
+		});
+
 	</script>
 </body>
 <!-- end::Body -->

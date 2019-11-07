@@ -539,7 +539,7 @@
 														<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(30px, 30px, 0px);">
 															<button class="dropdown-item btn_bookmark"><i class="la la-bookmark"></i> Bookmark</button>
 															<button class="dropdown-item btn_copy_link"><i class="la la-link"></i> Copy link</button>
-															<button class="dropdown-item btn_report"><i class="la la-warning"></i> Report</button>
+															<a href="report_page.html" class="dropdown-item btn_report"><i class="la la-warning"></i> Report</a>
 														</div>
 													</div>
 
@@ -581,7 +581,7 @@
 														<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(30px, 30px, 0px);">
 															<button class="dropdown-item btn_bookmark"><i class="la la-bookmark"></i> Bookmark</button>
 															<button class="dropdown-item btn_copy_link"><i class="la la-link"></i> Copy link</button>
-															<button class="dropdown-item btn_report"><i class="la la-warning"></i> Report</button>
+															<a href="report_page.html" class="dropdown-item btn_report"><i class="la la-warning"></i> Report</a>
 														</div>
 													</div>
 												</div>
@@ -619,7 +619,7 @@
 														<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(30px, 30px, 0px);">
 															<button class="dropdown-item btn_bookmark"><i class="la la-bookmark"></i> Bookmark</button>
 															<button class="dropdown-item btn_copy_link"><i class="la la-link"></i> Copy link</button>
-															<button class="dropdown-item btn_report"><i class="la la-warning"></i> Report</button>
+															<a href="report_page.html" class="dropdown-item btn_report"><i class="la la-warning"></i> Report</a>
 														</div>
 													</div>
 												</div>
@@ -817,28 +817,6 @@
 			};
 
 			toastr.success("Link has been copied");
-		});
-		$('.btn_report').click(function() {
-
-			toastr.options = {
-				"closeButton": false,
-				"debug": false,
-				"newestOnTop": false,
-				"progressBar": false,
-				"positionClass": "toast-top-right",
-				"preventDuplicates": false,
-				"onclick": null,
-				"showDuration": "200",
-				"hideDuration": "400",
-				"timeOut": "1500",
-				"extendedTimeOut": "1000",
-				"showEasing": "swing",
-				"hideEasing": "linear",
-				"showMethod": "fadeIn",
-				"hideMethod": "fadeOut"
-			};
-
-			toastr.warning("Post has been reported");
 		});
 	</script>
 	<script>
