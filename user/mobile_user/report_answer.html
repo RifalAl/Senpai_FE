@@ -330,7 +330,7 @@
 					<!-- begin:: Content Head -->
 					<div  class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid" >
 						<div class="row">
-							<div class="offset-lg-1 col-lg-10">
+							<div class="offset-lg-2 col-lg-8">
 								<!--begin::Portlet-->
 								<div class="kt-portlet kt-portlet--mobile">
 									<div class="kt-portlet__head">
@@ -340,36 +340,36 @@
 											</h3>
 										</div>
 									</div>
-									<div style="padding: 15px" class="kt-portlet__body">
-										<center>
-											<p>You can report this answer after choose the problem</p>
-										</center>
-										<form>
-											<div  class="form-group">
-												<label>Choose problem :</label>
-												<div id="list-report" class="kt-checkbox-list">
-													<label class="kt-checkbox">
-														<input class="cbox" value="nudity" type="checkbox"> Nudity
+									<form>
+										<div style="padding: 15px" class="kt-portlet__body">
+											<center>
+												<p>You can report this answer after choose the problem</p>
+											</center>
+											<div class="form-group">
+												<label>Choose Problem :</label>
+												<div class="kt-radio-list">
+													<label class="kt-radio kt-radio--brand">
+														<input type="radio" name="problem-item"> Nudity
 														<span></span>
 													</label>
-													<label class="kt-checkbox">
-														<input class="cbox" value="violence" type="checkbox"> Violence
+													<label class="kt-radio kt-radio--brand">
+														<input type="radio" name="problem-item"> Violence
 														<span></span>
 													</label>
-													<label class="kt-checkbox">
-														<input class="cbox" value="harrasment" type="checkbox"> Harrasment
+													<label class="kt-radio kt-radio--brand">
+														<input type="radio" name="problem-item"> Harrasment
 														<span></span>
 													</label>
-													<label class="kt-checkbox">
-														<input class="cbox" value="false-news" type="checkbox"> False News
+													<label class="kt-radio kt-radio--brand">
+														<input type="radio" name="problem-item"> False News
 														<span></span>
 													</label>
-													<label class="kt-checkbox">
-														<input class="cbox" value="spam" type="checkbox"> Spam
+													<label class="kt-radio kt-radio--brand">
+														<input type="radio" name="problem-item"> Spam
 														<span></span>
 													</label>
-													<label class="kt-checkbox">
-														<input class="cbox" value="hate-speech" type="checkbox"> Hate Speech
+													<label class="kt-radio kt-radio--brand">
+														<input type="radio" name="problem-item"> Hate Speech
 														<span></span>
 													</label>
 												</div>
@@ -378,7 +378,7 @@
 											<p>Other step you can take for <span name="username" id="username">Ahmad Rifaldi</span></p>
 											<div id="list-report" class="form-group">
 												<div class="kt-checkbox-list">
-													<label class="kt-checkbox">
+													<label class="kt-checkbox kt-checkbox--brand">
 														<input class="cbox" value="report_users" type="checkbox">Report this person
 														<span></span>
 													</label>
@@ -386,7 +386,8 @@
 											</div>
 										</div>
 										<div align="right" style="padding: 15px" class="kt-portlet__foot">
-											<button id="btn_send" class="btn btn btn-primary">Send</button>
+											<a onclick="goBack()" class="btn btn-secondary">cancel</a>
+											<button disabled="" id="btn_send" class="btn btn-primary">Send</button>
 										</div>
 									</form>
 								</div>
@@ -495,14 +496,13 @@
 	<!--begin::Page Scripts(used by this page) -->
 	<!--end::Page Scripts -->
 	<script type="text/javascript">
-		$(document).ready(function() { 
-
-			$('#btn_send').attr("disabled",true);
-
-			$('.cbox').change(function() {
-				$('#btn_send').attr('disabled', $('.cbox:checked').length == 0);
-			});
-
+		$(document).ready(function() {
+			$('input:radio[name="problem-item"]').change(
+				function(){
+					if ($(this).is(':checked')) {
+						$('#btn_send').attr("disabled",false);
+					}
+				});
 		});
 	</script>
 	<script>
