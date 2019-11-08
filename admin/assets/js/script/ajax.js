@@ -1313,7 +1313,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					<i class="flaticon-more"></i>
 					</button>
 					<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
-					<a href="question_detail.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-arrow-right"></i> Details</button>&nbsp;
+					<a href="post_detail.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-arrow-right"></i> Details</button>&nbsp;
 					<a href="#"  class="dropdown-item btn btn-secondary" id="kt_sweetalert_blacklist">  <i class="fa fa-times"></i> Blacklist</a>
                     <script>
                         $('#kt_sweetalert_blacklist').click(function(e) {
@@ -1390,7 +1390,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 width: 50,
                 orderable: false,
                 render: function(data, type, full, meta) {
-                    return `<a href="question_detail.html" class="btn btn-sm btn-brand" style="color:white;">Details</a>`;
+                    return `<a href="post_detail.html" class="btn btn-sm btn-brand" style="color:white;">Details</a>`;
                 },
             }, ],
             columnDefs: [{
@@ -1447,7 +1447,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					<i class="flaticon-more"></i>
 					</button>
 					<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
-					<a href="question_detail.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-arrow-right"></i> Details</button>&nbsp;
+					<a href="answer_detail.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-arrow-right"></i> Details</button>&nbsp;
 					<a href="#"  class="dropdown-item btn btn-secondary" id="kt_sweetalert_blacklist">  <i class="fa fa-times"></i> Blacklist</a>
                     <script>
                         $('#kt_sweetalert_blacklist').click(function(e) {
@@ -1524,7 +1524,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 width: 50,
                 orderable: false,
                 render: function(data, type, full, meta) {
-                    return `<a href="question_detail.html" class="btn btn-sm btn-brand" style="color:white;">Details</a>`;
+                    return `<a href="answer_detail.html" class="btn btn-sm btn-brand" style="color:white;">Details</a>`;
                 },
             }, ],
             columnDefs: [{
