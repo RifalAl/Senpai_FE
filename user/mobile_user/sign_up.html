@@ -28,12 +28,17 @@
 		.kt-login.kt-login--v6 .kt-login__aside .kt-login__wrapper .kt-login__container .kt-login__form .form-control.form-control-last {
 			border-bottom: 1px solid rgba(235, 237, 242, 0.8);
 		}
-		p,h1,h2,h3,h4,h5,h6 {
+		h1,h2,h3,h4,h5,h6 {
 			pointer-events: none
 		}
 		@media (max-width: 1024px) {
 			#bg-signUp {
 				display: none;
+			}
+		}
+		@media (max-width: 320px) {
+			body {
+				font-size: 11px !important;
 			}
 		}
 	</style>
@@ -76,20 +81,16 @@
 												<input id="rpassword" class="form-control form-control-last" type="password" placeholder=" Repeat password" name="rpassword">
 											</div>
 											<div class="kt-login__actions">
-												<!-- <button id="kt_login_signin_signup" class="btn btn-brand btn-pill btn-elevate">Sign Up</button> -->
 												<button id="kt_login_signup_submit" class="btn btn-brand btn-pill btn-elevate">Sign Up</button>
 											</div>
+											<center>
+												<p>Already have an account sign in <a href="login.html">here</a></p>
+											</center>
 										</form>
 									</div>
 								</div>
 								
 							</div>
-						</div>
-						<div class="kt-login__account kt-hidden">
-							<span class="kt-login__account-msg">
-								Don't have an account yet ?
-							</span>&nbsp;&nbsp;
-							<a href="javascript:;" id="kt_login_signup" class="kt-login__account-link">Sign Up!</a>
 						</div>
 					</div>
 				</div>
