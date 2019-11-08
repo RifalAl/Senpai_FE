@@ -1,0 +1,55 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+        "no": 1,
+        "date": "15 September 2019",
+        "answer": "lorem ipsum dolor sit amet consectetur adipiscing elit integer non magna vitae tellus",
+        "report": "10",
+        "status": "Accepted Answer"
+    }, {
+        "no": 2,
+        "date": "15 September 2019",
+        "answer": "lorem ipsum dolor sit amet consectetur adipiscing elit integer non magna vitae tellus",
+        "report": "10",
+        "status": "Accepted Answer"
+    }, {
+        "no": 3,
+        "date": "15 September 2019",
+        "answer": "lorem ipsum dolor sit amet consectetur adipiscing elit integer non magna vitae tellus",
+        "report": "10",
+        "status": "Normal Answer"
+    }, {
+        "no": 4,
+        "date": "15 September 2019",
+        "answer": "lorem ipsum dolor sit amet consectetur adipiscing elit integer non magna vitae tellus",
+        "report": "10",
+        "status": "Normal Answer"
+    }, {
+        "no": 5,
+        "date": "15 September 2019",
+        "answer": "lorem ipsum dolor sit amet consectetur adipiscing elit integer non magna vitae tellus",
+        "report": "10",
+        "status": "Normal Answer"
+    }, {
+        "no": 6,
+        "date": "15 September 2019",
+        "answer": "lorem ipsum dolor sit amet consectetur adipiscing elit integer non magna vitae tellus",
+        "report": "10",
+        "status": "Normal Answer"
+    }, {
+        "no": 7,
+        "date": "15 September 2019",
+        "answer": "lorem ipsum dolor sit amet consectetur adipiscing elit integer non magna vitae tellus",
+        "report": "10",
+        "status": "Normal Answer"
+    }, {
+        "no": 8,
+        "date": "15 September 2019",
+        "answer": "lorem ipsum dolor sit amet consectetur adipiscing elit integer non magna vitae tellus",
+        "report": "10",
+        "status": "Normal Answer"
+    }]
+}

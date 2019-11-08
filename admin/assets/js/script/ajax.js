@@ -1401,6 +1401,140 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
         });
     };
 
+    var initTableAnswer = function() {
+        var table = $('#table_answer');
+        // begin first table
+        table.DataTable({
+            responsive: true,
+            ajax: {
+                url: '../source/answer.json',
+                type: 'POST',
+                data: {
+                    pagination: {
+                        perpage: 50,
+                    },
+                },
+            },
+            columns: [{
+                data: 'null',
+                title: 'No',
+                width: 25,
+                render: function(data, type, row, meta) {
+                    return meta.row + meta.settings._iDisplayStart + 1;
+                },
+                // title: 'No.',
+                orderable: false,
+            }, {
+                data: 'date',
+                title: 'Date',
+                width: 150
+            }, {
+                data: 'answer',
+                title: 'Answer'
+            }, {
+                data: 'status',
+                title: 'Status'
+            }, {
+                field: 'action',
+                title: 'Action',
+                responsivePriority: -1,
+                className: 'text-center',
+                width: 50,
+                orderable: false,
+                render: function(data, type, full, meta) {
+                    return `
+                    <button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="flaticon-more"></i>
+					</button>
+					<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
+					<a href="question_detail.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-arrow-right"></i> Details</button>&nbsp;
+					<a href="#"  class="dropdown-item btn btn-secondary" id="kt_sweetalert_blacklist">  <i class="fa fa-times"></i> Blacklist</a>
+                    <script>
+                        $('#kt_sweetalert_blacklist').click(function(e) {
+            	            swal.fire({
+            	                title: 'Are you sure?',
+            	                text: "You won't be able to revert this!",
+            	                type: 'warning',
+            	                showCancelButton: true,
+            	                confirmButtonText: 'Yes, add to blacklist!',
+            	                cancelButtonText: 'No, cancel!',
+            	                reverseButtons: true
+            	            }).then(function(result) {
+            	                if (result.value) {
+                                    swal.fire(
+                                            'Blacklisted!',
+                                            'Question has been added to blacklist.',
+                                            'success'
+                                        )
+            	                }
+            	            });
+            	        });
+                    </script>`;
+                },
+            }, ],
+            columnDefs: [{
+                targets: [0, 1, 2, 3],
+                className: 'text-center',
+                orderable: true,
+            }],
+        });
+    };
+
+    var initTableAnswerReported = function() {
+        var table = $('#table_answer_reported');
+        // begin first table
+        table.DataTable({
+            responsive: true,
+            ajax: {
+                url: '../source/answer.json',
+                type: 'POST',
+                data: {
+                    pagination: {
+                        perpage: 50,
+                    },
+                },
+            },
+            columns: [{
+                data: 'null',
+                title: 'No',
+                width: 25,
+                render: function(data, type, row, meta) {
+                    return meta.row + meta.settings._iDisplayStart + 1;
+                },
+                // title: 'No.',
+                orderable: false,
+            }, {
+                data: 'date',
+                title: 'Date',
+                width: 150
+            }, {
+                data: 'answer',
+                title: 'Answer'
+            }, {
+                data: 'status',
+                title: 'Status'
+            }, {
+                data: 'report',
+                title: 'Report'
+            }, {
+                field: 'action',
+                title: 'Action',
+                responsivePriority: -1,
+                className: 'text-center',
+                width: 50,
+                orderable: false,
+                render: function(data, type, full, meta) {
+                    return `<a href="question_detail.html" class="btn btn-sm btn-brand" style="color:white;">Details</a>`;
+                },
+            }, ],
+            columnDefs: [{
+                targets: [0, 1, 2, 3, 4],
+                className: 'text-center',
+                orderable: true,
+            }],
+        });
+    };
+
     return {
         //main function to initiate the module
         init: function() {
@@ -1419,6 +1553,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
             initTableContentCreator();
             initTablePost();
             initTablePostReported();
+            initTableAnswer();
+            initTableAnswerReported();
         },
     };
 
