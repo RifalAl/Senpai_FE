@@ -397,7 +397,7 @@
 									<div class="kt-portlet__body portlet_profil">
 										<div class="kt-widget kt-widget--user-profile-4">
 											<div id="bg-image" class="bg" style="position: relative;">
-												<div align="center" class="image-cropper-background">
+												<div id="img_cropper" align="center" class="image-cropper-background">
 													<div class="masking-black">
 													</div>
 													<img class="background_user" id="bg_user" name="foto_user" style="" src="../assets/media/bg/bg-12.jpg" alt="image">
@@ -660,6 +660,15 @@
 			})
 
 		})
+	</script>
+	<script>
+		var h_info = $('.user_info').height();
+		if (h_info >= 40) {
+			$('#img_cropper').addClass('img_height');
+		}
+		else {
+			$('#img_cropper').removeClass('img_height');
+		}	
 	</script>
 </body>
 <!-- end::Body -->
