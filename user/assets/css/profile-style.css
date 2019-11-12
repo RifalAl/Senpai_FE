@@ -75,12 +75,15 @@
 	.image-cropper-background {
 		height: 190px !important;
 	}
+	.img_height {
+		height: 202px !important;
+	}
 	
 }
 
 @media(max-width: 375px) {
 	.img_height {
-		height: 207px !important;
+		height: 202px !important;
 	}
 }
 
