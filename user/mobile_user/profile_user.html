@@ -394,7 +394,7 @@
 									<div class="kt-portlet__body portlet_profil">
 										<div class="kt-widget kt-widget--user-profile-4">
 											<div id="bg-image" class="bg" style="position: relative;">
-												<div align="center" class="image-cropper-background">
+												<div id="img_cropper" align="center" class="image-cropper-background">
 													<div class="masking-black">
 													</div>
 													<img class="background_user" id="bg_user" name="foto_user" style="" src="../assets/media/bg/bg-13.jpg" alt="image">
@@ -414,7 +414,7 @@
 																Ahmad Rifaldi
 															</span>
 															<div class="kt-align-center user_info">
-																<span id="profession" name="profession">Product Manager</span> at <span id="workplace" name="workplace">Pasona</span> <br>
+																<span id="profession" name="profession">Product Manager</span> at <span id="workplace" name="workplace">Nitchi assorted wafer stciks mantul</span> <br>
 																<span style="font-size: 1.2rem;color: white"><i class="fa fa-map-marker-alt"></i> <span id="location" name="location">Kyoto </span> </span>
 															</div>
 														</div>
@@ -943,6 +943,15 @@
 			})
 
 		})
+	</script>
+	<script>
+		var h_info = $('.user_info').height();
+		if (h_info >= 40) {
+			$('#img_cropper').addClass('img_height');
+		}
+		else {
+			$('#img_cropper').removeClass('img_height');
+		}	
 	</script>
 </body>
 <!-- end::Body -->

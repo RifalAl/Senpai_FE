@@ -84,4 +84,7 @@
 	.image-cropper-background {
 		height: 190px !important;
 	}
+	.img_height {
+		height: 207px !important;
+	}
 }

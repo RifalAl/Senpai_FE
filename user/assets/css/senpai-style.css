@@ -530,6 +530,15 @@ html {
 .badge-accepted {
 	pointer-events: none;
 }
+.plus_height{
+	height: 75px !important;
+}
+.tab-content > .tab-pan {
+	visibility: hidden;
+}
+.tab-content > .active {
+	display: block;
+}
 .
 
 
@@ -1180,6 +1189,7 @@ html {
 		position: absolute;
 		left: 52px;
 		bottom: 3px;
+		width: 73%;
 	}
 	.question-info p {
 		font-size: .8rem;
@@ -1379,6 +1389,7 @@ html {
 		position: absolute;
 		left: 52px;
 		bottom: 3px;
+		width: 70%;
 	}
 	.info-users {
 		position: absolute;

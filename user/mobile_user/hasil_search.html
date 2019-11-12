@@ -35,6 +35,9 @@
 		.kt-portlet .kt-portlet__body {
 			padding: 25px;
 		}
+		.plus_height {
+			height: 77px !important;
+		}
 	</style>
 </head>
 <!-- end::Head -->
@@ -556,15 +559,15 @@
 												</div>
 											</div>
 											<div class="tab-pane" id="question_search" role="tabpanel">
-												<div  class="" id="all_questions" name="all_questions">
+												<div  class="question" id="all_questions" name="all_questions">
 													<div style="position: relative;" class="kt-portlet border-style">
 														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
+															<div id="head_question_1" class="kt-portlet__head-label">
 																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
 																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_3.jpg" alt="image">
 																</a>
 															</div>
-															<div class="question-info">
+															<div id="question_info_1" class="question-info">
 																<h6>Fascal Ivandry</h6>
 																<p>Product Manager at Artistektur</p>
 																<p>2d Ago</p>
@@ -594,17 +597,17 @@
 														</div>
 													</div>
 												</div>
-												<div  class="" id="all_questions" name="all_questions">
+												<div  class="question" id="all_questions" name="all_questions">
 													<div style="position: relative;" class="kt-portlet border-style">
 														<div class="kt-portlet__head">
-															<div class="kt-portlet__head-label">
+															<div id="head_question_2" class="kt-portlet__head-label">
 																<a href="profile_user.html" class="kt-media kt-media--sm kt-media--circle">
 																	<img id="user_pic" name="user_pic" src="../assets/media/users/100_3.jpg" alt="image">
 																</a>
 															</div>
-															<div class="question-info">
+															<div id="question_info_2" class="question-info">
 																<h6>Fascal Ivandry</h6>
-																<p>Product Manager at Artistektur</p>
+																<p>Product Manager at Artistektur ramah lingkungan pemuda pemudi</p>
 																<p>2d Ago</p>
 															</div>
 															<div class="kt-portlet__head-toolbar">
@@ -1345,6 +1348,19 @@
 			})
 
 		})
+	</script>
+	<script>
+		var numItems = $('.question').length;
+		var i;
+		for(i=1; i<=numItems; i++){
+			var questHeight = $('#question_info_'+i).height();
+			if (questHeight > 60) {
+				$('#head_question_'+i).addClass('plus_height');
+			}
+			else {
+				$('#head_question_'+i).removeClass('plus_height');
+			}
+		}
 	</script>
 </body>
 <!-- end::Body -->
