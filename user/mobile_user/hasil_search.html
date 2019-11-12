@@ -1350,17 +1350,20 @@
 		})
 	</script>
 	<script>
-		var numItems = $('.question').length;
-		var i;
-		for(i=1; i<=numItems; i++){
-			var questHeight = $('#question_info_'+i).height();
-			if (questHeight > 60) {
-				$('#head_question_'+i).addClass('plus_height');
+		$('.nav-tabs a').on('shown.bs.tab',function(event){
+			var numItems = $('.question').length;
+			var i;
+			for(i=1; i<=numItems; i++){
+				var questHeight = $('#question_info_'+i).height();
+				console.log(questHeight, $('#question_info_'+i));
+				if (questHeight > 60) {
+					$('#head_question_'+i).addClass('plus_height');
+				}
+				else {	
+					$('#head_question_'+i).removeClass('plus_height');
+				}
 			}
-			else {
-				$('#head_question_'+i).removeClass('plus_height');
-			}
-		}
+		})
 	</script>
 </body>
 <!-- end::Body -->

@@ -657,13 +657,17 @@
 	<!--begin::Page Scripts(used by this page) -->
 	<script>
 		var widthScreen = screen.width;
-		if (widthScreen > 410) {
+		if (widthScreen > 414) {
 			$(".badge-verified").hide();
 			$(".badge-verified-2").show();
 		}
-		if (widthScreen >= 400) {
+		if (widthScreen >= 415) {
 			$(".solved-badge").hide();
 			$(".solved-badge-2").show();
+		}
+		if (widthScreen <= 414) {
+			$(".solved-badge").show();
+			$(".solved-badge-2").hide();
 		}
 	</script>
 	<script>
