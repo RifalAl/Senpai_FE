@@ -1860,12 +1860,17 @@
 	<!--begin::Page Scripts(used by this page) -->
 	<script>
 		var widthScreen = screen.width;
+		console.log(widthScreen);
 		if (widthScreen >= 1024) {
 			$("#portlet-pesan").removeClass("position-fixed");
 		}
-		if (widthScreen >= 400) {
+		if (widthScreen >= 415) {
 			$(".solved-badge").hide();
 			$(".solved-badge-2").show();
+		}
+		if (widthScreen <= 414) {
+			$(".solved-badge").show();
+			$(".solved-badge-2").hide();
 		}
 		// if (widthScreen >= 1024) {
 		// 	$("#btn_make_question").hide();
@@ -1942,24 +1947,44 @@
 		})
 	</script>
 	<script>
-		$(document).ready(function(){
+		$('.nav-tabs a').on('shown.bs.tab',function(event){
 			var numItems = $('.question').length;
 			var i;
 			for(i=1; i<=numItems; i++){
-				
-				if ($('#solved_tab').is(':visible')){
-					var questHeight = $('#question_info_'+i).height();
-					if (questHeight > 60) {
-						$('#head_question_'+i).addClass('plus_height');
-					}
-					else {
-						$('#head_question_'+i).removeClass('plus_height');
-					}
+				var questHeight = $('#question_info_'+i).height();
+				console.log(questHeight, $('#question_info_'+i));
+				if (questHeight > 60) {
+					$('#head_question_'+i).addClass('plus_height');
 				}
-				
-				
+				else {	
+					$('#head_question_'+i).removeClass('plus_height');
+				}
 			}
-		});
+		})
+		var numItems = $('.question').length;
+		var i;
+		for(i=1; i<=numItems; i++){
+			var questHeight = $('#question_info_'+i).height();
+			console.log(questHeight, $('#question_info_'+i));
+			if (questHeight > 60) {
+				$('#head_question_'+i).addClass('plus_height');
+			}
+			else {	
+				$('#head_question_'+i).removeClass('plus_height');
+			}
+		}
+		// 
+		// $(document).ready(function(){
+		// 	// if ($('#show_all_tab').is(':visible')){
+		// 	// 	window.alert('show all')
+		// 	// }
+		// 	// else if ($('#solved_tab').is(':visible')) {
+		// 	// 	window.alert('solved')
+		// 	// }
+		// 	// else if ($('#unsolved_tab').is(':visible')) {
+		// 	// 	window.alert('unsolved')
+		// 	// }
+		// });
 	</script>
 </body>
 <!-- end::Body -->

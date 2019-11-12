@@ -531,7 +531,7 @@ html {
 	pointer-events: none;
 }
 .plus_height{
-	height: 75px !important;
+	height: 78px !important;
 }
 .tab-content > .tab-pan {
 	visibility: hidden;
@@ -1189,7 +1189,7 @@ html {
 		position: absolute;
 		left: 52px;
 		bottom: 3px;
-		width: 73%;
+		width: 70%;
 	}
 	.question-info p {
 		font-size: .8rem;
@@ -1236,6 +1236,13 @@ html {
 	}
 	.item-padding {
 		padding: 1.1rem 0.5rem !important;
+	}
+}
+@media(max-width: 414px) {
+	.solved-badge {
+		position: absolute;
+		bottom: 7px;
+		right: 230px;
 	}
 }
 @media (max-width: 375px){
@@ -1389,7 +1396,7 @@ html {
 		position: absolute;
 		left: 52px;
 		bottom: 3px;
-		width: 70%;
+		width: 68%;
 	}
 	.info-users {
 		position: absolute;
