@@ -137,16 +137,191 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                                 $('.kt-input[data-col-index="3"]').append('<option value="' + d + '">' + d + '</option>');
                             });
                             break;
-                            // case 'Waktu':
-                            // column.data().unique().sort().each(function(d, j) {
-                            //  $('.kt-input[data-col-index="5"]').append('<option value="' + d + '">' + d + '</option>');
-                            // });
-                            // break;
                     }
                 });
             },
             columnDefs: [{
                 targets: [0, 1, 2, 3, 4],
+                className: 'text-center',
+                orderable: false,
+            }],
+        });
+        table.on('order.dt search.dt', function() {
+            table.column(0, {
+                search: 'applied',
+                order: 'applied'
+            }).nodes().each(function(cell, i) {
+                cell.innerHTML = i + 1;
+            });
+        }).draw();
+        var filter = function() {
+            var val = $.fn.dataTable.util.escapeRegex($(this).val());
+            table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+        };
+        var asdasd = function(value, index) {
+            var val = $.fn.dataTable.util.escapeRegex(value);
+            table.column(index).search(val ? val : '', false, true);
+        };
+        $('#kt_search_content_category').on('change', function(e) {
+            e.preventDefault();
+            var params = {};
+            $('.kt-input').each(function() {
+                var i = $(this).data('col-index');
+                if (params[i]) {
+                    params[i] += '|' + $(this).val();
+                } else {
+                    params[i] = $(this).val();
+                }
+            });
+            $.each(params, function(i, val) {
+                // apply search params to datatable
+                table.column(i).search(val ? val : '', false, false);
+            });
+            table.table().draw();
+        });
+        $('#kt_search_all').on('keyup', function() {
+            table.search(this.value).draw();
+        });
+    };
+
+    var initTableContentReported = function() {
+        var state_category = "";
+        var href_category = "";
+        // begin first table
+        var table = $('#table_content_reported').DataTable({
+            responsive: true,
+            // Pagination settings
+            dom: `<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+            // read more: https://datatables.net/examples/basic_init/dom.html
+            lengthMenu: [5, 10, 25, 50],
+            pageLength: 10,
+            language: {
+                'lengthMenu': 'Display _MENU_',
+            },
+            searchDelay: 500,
+            processing: true,
+            serverSide: false,
+            ajax: {
+                url: '../source/content.json',
+                type: 'POST',
+                data: {
+                    // parameters for custom backend script demo
+                    columnsDef: [
+                        'no', 'depot', 'vendor', 'pekerjaan', 'sifat',
+                        'tanggal', 'status', 'aksi',
+                    ],
+                },
+            },
+            columns: [{
+                data: 'null',
+                title: 'No',
+                width: 25,
+                render: function(data, type, row, meta) {
+                    return meta.row + meta.settings._iDisplayStart + 1;
+                },
+                // title: 'No.',
+                // orderable: false,
+            }, {
+                data: 'date',
+                title: 'Date',
+                width: 150
+            }, {
+                data: 'title',
+                title: 'Title',
+            }, {
+                data: 'category',
+                title: 'Category',
+                render: function(data, type, row, meta) {
+                    state_category = data;
+                    var category = {
+                        'Daily Tips': {
+                            'title': 'Daily Tips',
+                            'class': 'btn-label-brand'
+                        },
+                        'Emergency': {
+                            'title': 'Emergency',
+                            'class': 'btn-label-warning'
+                        },
+                        'Article': {
+                            'title': 'Article',
+                            'class': 'btn-label-dark'
+                        },
+                    };
+                    if (typeof category[data] === 'undefined') {
+                        return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-danger">' + data + '</span>';
+                    }
+                    return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + category[data].class + '">' + category[data].title + '</span>';
+                }
+            }, {
+                data: 'creator',
+                title: 'Created By',
+            }, {
+                data: 'report',
+                title: 'Reports',
+            }, {
+                field: 'action',
+                title: 'Action',
+                responsivePriority: -1,
+                className: 'text-center',
+                width: 50,
+                orderable: false,
+                render: function(data, type, full, meta) {
+                    if (state_category === "Daily Tips") {
+                        href_category = "content_detail_dailytips.html";
+                    }
+                    else if (state_category === "Emergency") {
+                        href_category = "content_detail_emergency.html";
+                    }
+                    else if (state_category === "Article") {
+                        href_category = "content_detail_article.html";
+                    }
+                    else {
+                        href_category = "content_detail_embassy.html";
+                    }
+                    return `
+					<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="flaticon-more"></i>
+					</button>
+					<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
+					<a href="`+ href_category +`" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-arrow-right"></i> Details</button>&nbsp;
+					<a href="#"  class="dropdown-item btn btn-secondary" id="kt_sweetalert_blacklist">  <i class="fa fa-times"></i> Blacklist</a>
+                    <script>
+                        $('#kt_sweetalert_blacklist').click(function(e) {
+            	            swal.fire({
+            	                title: 'Are you sure?',
+            	                text: "You won't be able to revert this!",
+            	                type: 'warning',
+            	                showCancelButton: true,
+            	                confirmButtonText: 'Yes, add to blacklist!',
+            	                cancelButtonText: 'No, cancel!',
+            	                reverseButtons: true
+            	            }).then(function(result) {
+            	                if (result.value) {
+                                    swal.fire(
+                                            'Blacklisted!',
+                                            'Content has been added to blacklist.',
+                                            'success'
+                                        )
+            	                }
+            	            });
+            	        });
+                    </script>`;
+                },
+            }],
+            initComplete: function() {
+                this.api().columns().every(function() {
+                    var column = this;
+                    switch (column.title()) {
+                        case 'Category':
+                            column.data().unique().sort().each(function(d, j) {
+                                $('.kt-input[data-col-index="3"]').append('<option value="' + d + '">' + d + '</option>');
+                            });
+                            break;
+                    }
+                });
+            },
+            columnDefs: [{
+                targets: [0, 1, 2, 3, 4, 5],
                 className: 'text-center',
                 orderable: false,
             }],
@@ -261,9 +436,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 data: 'creator',
                 title: 'Created By',
             }, {
-                data: 'report',
-                title: 'Reports',
-            }, {
                 field: 'action',
                 title: 'Action',
                 responsivePriority: -1,
@@ -295,16 +467,11 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                                 $('.kt-input[data-col-index="3"]').append('<option value="' + d + '">' + d + '</option>');
                             });
                             break;
-                            case 'Waktu':
-                            column.data().unique().sort().each(function(d, j) {
-                             $('.kt-input[data-col-index="5"]').append('<option value="' + d + '">' + d + '</option>');
-                            });
-                            break;
                     }
                 });
             },
             columnDefs: [{
-                targets: [0, 1, 2, 3, 4, 5],
+                targets: [0, 1, 2, 3, 4],
                 className: 'text-center',
                 orderable: false,
             }],
@@ -1246,9 +1413,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 data: 'answer',
                 title: 'Answers'
             }, {
-                data: 'report',
-                title: 'Reports'
-            }, {
                 field: 'action',
                 title: 'Action',
                 responsivePriority: -1,
@@ -1257,6 +1421,92 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 orderable: false,
                 render: function(data, type, full, meta) {
                     return `<a href="question_detail.html" class="btn btn-sm btn-brand" style="color:white;">Details</a>`;
+                },
+            }, ],
+            columnDefs: [{
+                targets: [0, 1, 2, 3],
+                className: 'text-center',
+                orderable: true,
+            }],
+        });
+    };
+
+    var initTableQuestionReported = function() {
+        var table = $('#table_question_reported');
+        // begin first table
+        table.DataTable({
+            info: true,
+            paging: true,
+            lengthChange: true,
+            searching: true,
+            responsive: true,
+            ajax: {
+                url: '../source/question.json',
+                type: 'POST',
+                data: {
+                    pagination: {
+                        perpage: 50,
+                    },
+                },
+            },
+            columns: [{
+                data: 'null',
+                title: 'No',
+                width: 25,
+                render: function(data, type, row, meta) {
+                    return meta.row + meta.settings._iDisplayStart + 1;
+                },
+                // title: 'No.',
+                orderable: false,
+            }, {
+                data: 'date',
+                title: 'Date',
+                width: 150
+            }, {
+                data: 'question',
+                title: 'Question'
+            }, {
+                data: 'answer',
+                title: 'Answers'
+            }, {
+                data: 'report',
+                title: 'Reports'
+            }, {
+                field: 'action',
+                title: 'Action',
+                responsivePriority: -1,
+                className: 'text-center',
+                width: 50,
+                orderable: false,
+                render: function(data, type, full, meta) {
+                    return `
+					<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="flaticon-more"></i>
+					</button>
+					<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
+					<a href="question_detail.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-arrow-right"></i> Details</button>&nbsp;
+					<a href="#"  class="dropdown-item btn btn-secondary" id="kt_sweetalert_blacklist">  <i class="fa fa-times"></i> Blacklist</a>
+                    <script>
+                        $('#kt_sweetalert_blacklist').click(function(e) {
+            	            swal.fire({
+            	                title: 'Are you sure?',
+            	                text: "You won't be able to revert this!",
+            	                type: 'warning',
+            	                showCancelButton: true,
+            	                confirmButtonText: 'Yes, add to blacklist!',
+            	                cancelButtonText: 'No, cancel!',
+            	                reverseButtons: true
+            	            }).then(function(result) {
+            	                if (result.value) {
+                                    swal.fire(
+                                            'Blacklisted!',
+                                            'Question has been added to blacklist.',
+                                            'success'
+                                        )
+            	                }
+            	            });
+            	        });
+                    </script>`;
                 },
             }, ],
             columnDefs: [{
@@ -1329,7 +1579,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
             	                if (result.value) {
                                     swal.fire(
                                             'Blacklisted!',
-                                            'Question has been added to blacklist.',
+                                            'Post has been added to blacklist.',
                                             'success'
                                         )
             	                }
@@ -1390,11 +1640,90 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 width: 50,
                 orderable: false,
                 render: function(data, type, full, meta) {
-                    return `<a href="post_detail.html" class="btn btn-sm btn-brand" style="color:white;">Details</a>`;
+                    return `
+                    <button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="flaticon-more"></i>
+					</button>
+					<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
+					<a href="post_detail.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-arrow-right"></i> Details</button>&nbsp;
+					<a href="#"  class="dropdown-item btn btn-secondary" id="kt_sweetalert_blacklist">  <i class="fa fa-times"></i> Blacklist</a>
+                    <script>
+                        $('#kt_sweetalert_blacklist').click(function(e) {
+            	            swal.fire({
+            	                title: 'Are you sure?',
+            	                text: "You won't be able to revert this!",
+            	                type: 'warning',
+            	                showCancelButton: true,
+            	                confirmButtonText: 'Yes, add to blacklist!',
+            	                cancelButtonText: 'No, cancel!',
+            	                reverseButtons: true
+            	            }).then(function(result) {
+            	                if (result.value) {
+                                    swal.fire(
+                                            'Blacklisted!',
+                                            'Post has been added to blacklist.',
+                                            'success'
+                                        )
+            	                }
+            	            });
+            	        });
+                    </script>`;
                 },
             }, ],
             columnDefs: [{
                 targets: [0, 1, 2, 3, 4],
+                className: 'text-center',
+                orderable: true,
+            }],
+        });
+    };
+
+    var initTablePostBlacklist = function() {
+        var table = $('#table_post_blacklist');
+        // begin first table
+        table.DataTable({
+            responsive: true,
+            ajax: {
+                url: '../source/post.json',
+                type: 'POST',
+                data: {
+                    pagination: {
+                        perpage: 50,
+                    },
+                },
+            },
+            columns: [{
+                data: 'null',
+                title: 'No',
+                width: 25,
+                render: function(data, type, row, meta) {
+                    return meta.row + meta.settings._iDisplayStart + 1;
+                },
+                // title: 'No.',
+                orderable: false,
+            }, {
+                data: 'date',
+                title: 'Date',
+                width: 150
+            }, {
+                data: 'post',
+                title: 'Post'
+            }, {
+                data: 'user',
+                title: 'User'
+            }, {
+                field: 'action',
+                title: 'Action',
+                responsivePriority: -1,
+                className: 'text-center',
+                width: 50,
+                orderable: false,
+                render: function(data, type, full, meta) {
+                    return `<a href="post_detail.html" class="btn btn-sm btn-brand" style="color:white;">Details</a>`;
+                },
+            }, ],
+            columnDefs: [{
+                targets: [0, 1, 2, 3],
                 className: 'text-center',
                 orderable: true,
             }],
@@ -1463,7 +1792,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
             	                if (result.value) {
                                     swal.fire(
                                             'Blacklisted!',
-                                            'Question has been added to blacklist.',
+                                            'Answer has been added to blacklist.',
                                             'success'
                                         )
             	                }
@@ -1524,11 +1853,90 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 width: 50,
                 orderable: false,
                 render: function(data, type, full, meta) {
-                    return `<a href="answer_detail.html" class="btn btn-sm btn-brand" style="color:white;">Details</a>`;
+                    return `
+                    <button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="flaticon-more"></i>
+					</button>
+					<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
+					<a href="answer_detail.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-arrow-right"></i> Details</button>&nbsp;
+					<a href="#"  class="dropdown-item btn btn-secondary" id="kt_sweetalert_blacklist">  <i class="fa fa-times"></i> Blacklist</a>
+                    <script>
+                        $('#kt_sweetalert_blacklist').click(function(e) {
+            	            swal.fire({
+            	                title: 'Are you sure?',
+            	                text: "You won't be able to revert this!",
+            	                type: 'warning',
+            	                showCancelButton: true,
+            	                confirmButtonText: 'Yes, add to blacklist!',
+            	                cancelButtonText: 'No, cancel!',
+            	                reverseButtons: true
+            	            }).then(function(result) {
+            	                if (result.value) {
+                                    swal.fire(
+                                            'Blacklisted!',
+                                            'Answer has been added to blacklist.',
+                                            'success'
+                                        )
+            	                }
+            	            });
+            	        });
+                    </script>`;
                 },
             }, ],
             columnDefs: [{
                 targets: [0, 1, 2, 3, 4],
+                className: 'text-center',
+                orderable: true,
+            }],
+        });
+    };
+
+    var initTableAnswerBlacklist = function() {
+        var table = $('#table_answer_blacklist');
+        // begin first table
+        table.DataTable({
+            responsive: true,
+            ajax: {
+                url: '../source/answer.json',
+                type: 'POST',
+                data: {
+                    pagination: {
+                        perpage: 50,
+                    },
+                },
+            },
+            columns: [{
+                data: 'null',
+                title: 'No',
+                width: 25,
+                render: function(data, type, row, meta) {
+                    return meta.row + meta.settings._iDisplayStart + 1;
+                },
+                // title: 'No.',
+                orderable: false,
+            }, {
+                data: 'date',
+                title: 'Date',
+                width: 150
+            }, {
+                data: 'answer',
+                title: 'Answer'
+            }, {
+                data: 'status',
+                title: 'Status'
+            }, {
+                field: 'action',
+                title: 'Action',
+                responsivePriority: -1,
+                className: 'text-center',
+                width: 50,
+                orderable: false,
+                render: function(data, type, full, meta) {
+                    return `<a href="answer_detail.html" class="btn btn-sm btn-brand" style="color:white;">Details</a>`;
+                },
+            }, ],
+            columnDefs: [{
+                targets: [0, 1, 2, 3],
                 className: 'text-center',
                 orderable: true,
             }],
@@ -1546,15 +1954,19 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
             initTableEmbassy();
             initTableUser();
             initTableQuestionAll();
+            initTableQuestionReported();
             initTableQuestionBlacklist();
             initTableContent();
+            initTableContentReported();
             initTableContentBlacklist();
             initTableContentEmbassy();
             initTableContentCreator();
             initTablePost();
             initTablePostReported();
+            initTablePostBlacklist();
             initTableAnswer();
             initTableAnswerReported();
+            initTableAnswerBlacklist();
         },
     };
 
