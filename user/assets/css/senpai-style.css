@@ -539,6 +539,9 @@ html {
 .tab-content > .active {
 	display: block;
 }
+.icon-back {
+	font-size: 1.25rem !important;
+}
 .
 
 
@@ -1244,6 +1247,17 @@ html {
 		bottom: 7px;
 		right: 230px;
 	}
+	.icon-back {
+		font-size: 1.6rem !important;
+	}
+	.fa-bell {
+		font-size: 2rem !important;
+		margin-right: 14px !important;
+		margin-top: 3.5px !important;
+	}
+	.img-user{
+		width: 27px;
+	}
 }
 @media (max-width: 375px){
 	.solved-badge {
@@ -1338,7 +1352,7 @@ html {
 		font-size: 1.8rem !important;
 	}
 	.img-user {
-		width: 25px;
+		width: 27px;
 		border-radius: 50%;
 	}
 	.info-portlet {
@@ -1457,6 +1471,17 @@ html {
 	}
 	.tips-icon {
 		width: 100% !important;
+	}
+	.icon-back {
+		font-size: 1.4rem !important;
+	}
+	.fa-bell {
+		font-size: 1.8rem !important;
+		margin-right: 14px !important;
+		margin-top: 3.5px !important;
+	}
+	.img-user{
+		width: 25px;
 	}
 
 }
