@@ -117,7 +117,7 @@ input[type=file]{
 	outline: 0;
 	font-size: 1.3rem;
 	width: 210px;
-	height: 20px;
+	min-height: 25px;
 	color: white;
 	text-align: center;
 	border-bottom: 1px solid gray;
@@ -129,7 +129,7 @@ input[type=file]{
 	background-color: transparent;
 	outline: 0;
 	width: 210px;
-	height: 30px;
+	min-height: 25px;
 }
 
 .center { 
