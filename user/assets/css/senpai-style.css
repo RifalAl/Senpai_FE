@@ -542,6 +542,9 @@ html {
 .icon-back {
 	font-size: 1.25rem !important;
 }
+.topic-session {
+	font-weight: 400;
+}
 .
 
 
@@ -1410,7 +1413,7 @@ html {
 		position: absolute;
 		left: 52px;
 		bottom: 3px;
-		width: 68%;
+		width: 67%;
 	}
 	.info-users {
 		position: absolute;
@@ -1450,6 +1453,8 @@ html {
 		position: absolute;
 		bottom: 6px;
 		right: 135px;
+		/*top: 7.5px;
+		right: 7.5px;*/
 	}
 	.change-padding {
 		font-size: 0.8rem !important;
