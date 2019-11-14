@@ -28,6 +28,13 @@
 	<link href="../assets/css/edit_profil_style.css" rel="stylesheet" type="text/css" />
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
+	<style>
+		html,body{
+			-webkit-overflow-scrolling : touch !important;
+			overflow: auto !important;
+			height: 100% !important;
+		}
+	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -906,13 +913,6 @@
 			})
 
 		})
-	</script>
-	<script>
-		$(document).on('blur', 'input, textarea', function () {
-			setTimeout(function () {
-				window.scrollTo(document.body.scrollLeft, document.body.scrollTop);
-			}, 0);
-		});
 	</script>
 </body>
 <!-- end::Body -->
