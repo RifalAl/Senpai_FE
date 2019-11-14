@@ -1,473 +1,409 @@
 <!DOCTYPE html>
-
-<!--
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4 & Angular 8
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
 <html lang="en">
-
-	<!-- begin::Head -->
-	<head>
-		<meta charset="utf-8" />
-		<title>Embassy | Profile</title>
-		<meta name="description" content="Page with empty content">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-		<!--begin::Fonts -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
-
-		<!--end::Fonts -->
-
-		<!--begin::Page Vendors Styles(used by this page) -->
-        <link href="../assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
-
-		<!--end::Page Vendors Styles -->
-
-		<!--begin::Global Theme Styles(used by all pages) -->
-		<link href="../assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-
-		<!--end::Global Theme Styles -->
-
-		<!--begin::Layout Skins(used by all pages) -->
-		<link href="../assets/css/skins/header/base/light.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/css/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/css/skins/brand/dark.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/css/skins/aside/dark.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/css/style/senpai.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/css/style/senpai-theme.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/css/style/profile.css" rel="stylesheet" type="text/css" />
-
-		<!--end::Layout Skins -->
-		<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
-	</head>
-
-	<!-- end::Head -->
-
-	<!-- begin::Body -->
-	<body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
-
-		<!-- begin:: Page -->
-
-		<!-- begin:: Header Mobile -->
-		<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
-			<div class="kt-header-mobile__logo">
-				<a href="index.html">
-					<img style="height:20px" alt="Logo" src="../assets/media/logos/logo_senpai.png" />
-				</a>
-			</div>
-			<div class="kt-header-mobile__toolbar">
-				<button class="kt-header-mobile__toggler kt-header-mobile__toggler--left" id="kt_aside_mobile_toggler"><span></span></button>
-				<button class="kt-header-mobile__topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button>
-			</div>
+<!-- begin::Head -->
+<head>
+	<meta charset="utf-8" />
+	<title>Embassy | Profile</title>
+	<meta name="description" content="Page with empty content">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--begin::Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
+	<!--end::Fonts -->
+	<!--begin::Page Vendors Styles(used by this page) -->
+	<link href="../assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+	<!--end::Page Vendors Styles -->
+	<!--begin::Global Theme Styles(used by all pages) -->
+	<link href="../assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+	<!--end::Global Theme Styles -->
+	<!--begin::Layout Skins(used by all pages) -->
+	<link href="../assets/css/skins/header/base/light.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/skins/brand/dark.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/skins/aside/dark.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/style/senpai.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/style/senpai-theme.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/style/profile.css" rel="stylesheet" type="text/css" />
+	<!--end::Layout Skins -->
+	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
+</head>
+<!-- end::Head -->
+<!-- begin::Body -->
+<body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+	<!-- begin:: Page -->
+	<!-- begin:: Header Mobile -->
+	<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
+		<div class="kt-header-mobile__logo">
+			<a href="index.html">
+				<img style="height:20px" alt="Logo" src="../assets/media/logos/logo_senpai.png" />
+			</a>
 		</div>
-
-		<!-- end:: Header Mobile -->
-		<div class="kt-grid kt-grid--hor kt-grid--root">
-			<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
-
+		<div class="kt-header-mobile__toolbar">
+			<button class="kt-header-mobile__toggler kt-header-mobile__toggler--left" id="kt_aside_mobile_toggler"><span></span></button>
+			<button class="kt-header-mobile__topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button>
+		</div>
+	</div>
+	<!-- end:: Header Mobile -->
+	<div class="kt-grid kt-grid--hor kt-grid--root">
+		<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+			<!-- begin:: Aside -->
+			<div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" id="kt_aside">
 				<!-- begin:: Aside -->
-				<div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" id="kt_aside">
-
-					<!-- begin:: Aside -->
-					<div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
-						<div class="kt-aside__brand-logo">
-							<a href="index.html">
-								<img style="height:30px" alt="Logo" src="../assets/media/logos/logo_senpai.png" />
-							</a>
-						</div>
-						<div class="kt-aside__brand-tools">
-							<button class="kt-aside__brand-aside-toggler" id="kt_aside_toggler">
-								<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-											<polygon points="0 0 24 0 24 24 0 24" />
-											<path d="M5.29288961,6.70710318 C4.90236532,6.31657888 4.90236532,5.68341391 5.29288961,5.29288961 C5.68341391,4.90236532 6.31657888,4.90236532 6.70710318,5.29288961 L12.7071032,11.2928896 C13.0856821,11.6714686 13.0989277,12.281055 12.7371505,12.675721 L7.23715054,18.675721 C6.86395813,19.08284 6.23139076,19.1103429 5.82427177,18.7371505 C5.41715278,18.3639581 5.38964985,17.7313908 5.76284226,17.3242718 L10.6158586,12.0300721 L5.29288961,6.70710318 Z" fill="#000000" fill-rule="nonzero" transform="translate(8.999997, 11.999999) scale(-1, 1) translate(-8.999997, -11.999999) " />
-											<path d="M10.7071009,15.7071068 C10.3165766,16.0976311 9.68341162,16.0976311 9.29288733,15.7071068 C8.90236304,15.3165825 8.90236304,14.6834175 9.29288733,14.2928932 L15.2928873,8.29289322 C15.6714663,7.91431428 16.2810527,7.90106866 16.6757187,8.26284586 L22.6757187,13.7628459 C23.0828377,14.1360383 23.1103407,14.7686056 22.7371482,15.1757246 C22.3639558,15.5828436 21.7313885,15.6103465 21.3242695,15.2371541 L16.0300699,10.3841378 L10.7071009,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(15.999997, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-15.999997, -11.999999) " />
-										</g>
-									</svg></span>
-								<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-											<polygon points="0 0 24 0 24 24 0 24" />
-											<path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero" />
-											<path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999) " />
-										</g>
-									</svg></span>
-							</button>
-						</div>
+				<div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
+					<div class="kt-aside__brand-logo">
+						<a href="index.html">
+							<img style="height:30px" alt="Logo" src="../assets/media/logos/logo_senpai.png" />
+						</a>
 					</div>
-
-					<!-- end:: Aside -->
-
-					<!-- begin:: Aside Menu -->
-					<div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
-						<div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
-							<h4 class="sidebar-logo">EMBASSY</h4>
-							<ul class="kt-menu__nav ">
-								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-									<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-										<rect id="bound" x="0" y="0" width="24" height="24"></rect>
-										<path d="M2.56066017,10.6819805 L4.68198052,8.56066017 C5.26776695,7.97487373 6.21751442,7.97487373 6.80330086,8.56066017 L8.9246212,10.6819805 C9.51040764,11.267767 9.51040764,12.2175144 8.9246212,12.8033009 L6.80330086,14.9246212 C6.21751442,15.5104076 5.26776695,15.5104076 4.68198052,14.9246212 L2.56066017,12.8033009 C1.97487373,12.2175144 1.97487373,11.267767 2.56066017,10.6819805 Z M14.5606602,10.6819805 L16.6819805,8.56066017 C17.267767,7.97487373 18.2175144,7.97487373 18.8033009,8.56066017 L20.9246212,10.6819805 C21.5104076,11.267767 21.5104076,12.2175144 20.9246212,12.8033009 L18.8033009,14.9246212 C18.2175144,15.5104076 17.267767,15.5104076 16.6819805,14.9246212 L14.5606602,12.8033009 C13.9748737,12.2175144 13.9748737,11.267767 14.5606602,10.6819805 Z" id="Combined-Shape" fill="#000000" opacity="0.3"></path>
-										<path d="M8.56066017,16.6819805 L10.6819805,14.5606602 C11.267767,13.9748737 12.2175144,13.9748737 12.8033009,14.5606602 L14.9246212,16.6819805 C15.5104076,17.267767 15.5104076,18.2175144 14.9246212,18.8033009 L12.8033009,20.9246212 C12.2175144,21.5104076 11.267767,21.5104076 10.6819805,20.9246212 L8.56066017,18.8033009 C7.97487373,18.2175144 7.97487373,17.267767 8.56066017,16.6819805 Z M8.56066017,4.68198052 L10.6819805,2.56066017 C11.267767,1.97487373 12.2175144,1.97487373 12.8033009,2.56066017 L14.9246212,4.68198052 C15.5104076,5.26776695 15.5104076,6.21751442 14.9246212,6.80330086 L12.8033009,8.9246212 C12.2175144,9.51040764 11.267767,9.51040764 10.6819805,8.9246212 L8.56066017,6.80330086 C7.97487373,6.21751442 7.97487373,5.26776695 8.56066017,4.68198052 Z" id="Combined-Shape" fill="#000000"></path>
-									</g>
-								</svg></span><span class="kt-menu__link-text">Contents</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-									<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
-										<ul class="kt-menu__subnav">
-											<li class="kt-menu__item " aria-haspopup="true"><a href="index.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">New Post</span></a></li>
-											<li class="kt-menu__item " aria-haspopup="true"><a href="content_my.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">My Posts</span></a></li>
-										</ul>
-									</div>
-								</li>
-								<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true"><a href="profile.html" class="kt-menu__link "><span class="kt-menu__link-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-								    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-								        <polygon id="Shape" points="0 0 24 0 24 24 0 24"/>
-								        <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" id="Mask" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
-								        <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" id="Mask-Copy" fill="#000000" fill-rule="nonzero"/>
-								    </g>
-								</svg></span><span class="kt-menu__link-text">Profile</span></a></li>
-							</ul>
-						</div>
+					<div class="kt-aside__brand-tools">
+						<button class="kt-aside__brand-aside-toggler" id="kt_aside_toggler">
+							<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<polygon points="0 0 24 0 24 24 0 24" />
+									<path d="M5.29288961,6.70710318 C4.90236532,6.31657888 4.90236532,5.68341391 5.29288961,5.29288961 C5.68341391,4.90236532 6.31657888,4.90236532 6.70710318,5.29288961 L12.7071032,11.2928896 C13.0856821,11.6714686 13.0989277,12.281055 12.7371505,12.675721 L7.23715054,18.675721 C6.86395813,19.08284 6.23139076,19.1103429 5.82427177,18.7371505 C5.41715278,18.3639581 5.38964985,17.7313908 5.76284226,17.3242718 L10.6158586,12.0300721 L5.29288961,6.70710318 Z" fill="#000000" fill-rule="nonzero" transform="translate(8.999997, 11.999999) scale(-1, 1) translate(-8.999997, -11.999999) " />
+									<path d="M10.7071009,15.7071068 C10.3165766,16.0976311 9.68341162,16.0976311 9.29288733,15.7071068 C8.90236304,15.3165825 8.90236304,14.6834175 9.29288733,14.2928932 L15.2928873,8.29289322 C15.6714663,7.91431428 16.2810527,7.90106866 16.6757187,8.26284586 L22.6757187,13.7628459 C23.0828377,14.1360383 23.1103407,14.7686056 22.7371482,15.1757246 C22.3639558,15.5828436 21.7313885,15.6103465 21.3242695,15.2371541 L16.0300699,10.3841378 L10.7071009,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(15.999997, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-15.999997, -11.999999) " />
+								</g>
+							</svg></span>
+							<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<polygon points="0 0 24 0 24 24 0 24" />
+									<path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero" />
+									<path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999) " />
+								</g>
+							</svg></span>
+						</button>
 					</div>
-
-					<!-- end:: Aside Menu -->
 				</div>
-
 				<!-- end:: Aside -->
-				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
-
-					<!-- begin:: Header -->
-					<div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
-
-						<!-- begin:: Header Menu -->
-						<div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
-							<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout-default ">
-								<div class="kt-menu__nav ">
-									<div class="kt-menu__item" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-										<h4 class="kt-menu__link-text" style="margin-bottom:0px; font-weight: 800;">EMBASSY</h4>
-									</div>
-								</div>
+				<!-- begin:: Aside Menu -->
+				<div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
+					<div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
+						<h4 class="sidebar-logo">EMBASSY</h4>
+						<ul class="kt-menu__nav ">
+							<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<rect id="bound" x="0" y="0" width="24" height="24"></rect>
+									<path d="M2.56066017,10.6819805 L4.68198052,8.56066017 C5.26776695,7.97487373 6.21751442,7.97487373 6.80330086,8.56066017 L8.9246212,10.6819805 C9.51040764,11.267767 9.51040764,12.2175144 8.9246212,12.8033009 L6.80330086,14.9246212 C6.21751442,15.5104076 5.26776695,15.5104076 4.68198052,14.9246212 L2.56066017,12.8033009 C1.97487373,12.2175144 1.97487373,11.267767 2.56066017,10.6819805 Z M14.5606602,10.6819805 L16.6819805,8.56066017 C17.267767,7.97487373 18.2175144,7.97487373 18.8033009,8.56066017 L20.9246212,10.6819805 C21.5104076,11.267767 21.5104076,12.2175144 20.9246212,12.8033009 L18.8033009,14.9246212 C18.2175144,15.5104076 17.267767,15.5104076 16.6819805,14.9246212 L14.5606602,12.8033009 C13.9748737,12.2175144 13.9748737,11.267767 14.5606602,10.6819805 Z" id="Combined-Shape" fill="#000000" opacity="0.3"></path>
+									<path d="M8.56066017,16.6819805 L10.6819805,14.5606602 C11.267767,13.9748737 12.2175144,13.9748737 12.8033009,14.5606602 L14.9246212,16.6819805 C15.5104076,17.267767 15.5104076,18.2175144 14.9246212,18.8033009 L12.8033009,20.9246212 C12.2175144,21.5104076 11.267767,21.5104076 10.6819805,20.9246212 L8.56066017,18.8033009 C7.97487373,18.2175144 7.97487373,17.267767 8.56066017,16.6819805 Z M8.56066017,4.68198052 L10.6819805,2.56066017 C11.267767,1.97487373 12.2175144,1.97487373 12.8033009,2.56066017 L14.9246212,4.68198052 C15.5104076,5.26776695 15.5104076,6.21751442 14.9246212,6.80330086 L12.8033009,8.9246212 C12.2175144,9.51040764 11.267767,9.51040764 10.6819805,8.9246212 L8.56066017,6.80330086 C7.97487373,6.21751442 7.97487373,5.26776695 8.56066017,4.68198052 Z" id="Combined-Shape" fill="#000000"></path>
+								</g>
+							</svg></span><span class="kt-menu__link-text">Contents</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+							<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
+								<ul class="kt-menu__subnav">
+									<li class="kt-menu__item " aria-haspopup="true"><a href="index.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">New Post</span></a></li>
+									<li class="kt-menu__item " aria-haspopup="true"><a href="content_my.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">My Posts</span></a></li>
+								</ul>
 							</div>
-						</div>
-
-						<!-- end:: Header Menu -->
-
-						<!-- begin:: Header Topbar -->
-						<div class="kt-header__topbar">
-
-							<!--begin: User Bar -->
-							<div class="kt-header__topbar-item kt-header__topbar-item--user">
-								<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
-									<div class="kt-header__topbar-user">
-										<span id="userName" name="userName" class="kt-header__topbar-username kt-hidden-mobile">Sean Stone</span>
-										<img id="userImage" name="userImage" style="margin-left: 5px" alt="Pic" class="kt-radius-100" src="../assets/media/users/user5.jpg" data-pagespeed-url-hash="619118654" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-									</div>
-								</div>
-							</div>
-
-							<!--end: User Bar -->
-
-							<!--begin: Notifications -->
-							<div class="kt-header__topbar-item dropdown">
-								<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="30px,0px" aria-expanded="true">
-									<span class="kt-header__topbar-icon"><i class="fa fa-bell"></i></span>
-								</div>
-								<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
-									<form>
-
-										<!--begin: Head -->
-										<div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url(../assets/media/misc/bg-1.jpg); height:90px;">
-											<h3 class="kt-head__title">
-												User Notifications
-												&nbsp;
-												<span class="btn btn-success btn-sm btn-bold btn-font-md">23 new</span>
-											</h3>
-										</div>
-
-										<!--end: Head -->
-										<div class="tab-content">
-											<div class="tab-pane active show" id="topbar_notifications_notifications" role="tabpanel">
-												<div class="kt-notification kt-margin-t-10 kt-margin-b-10 kt-scroll" data-scroll="true" data-height="300" data-mobile-height="200">
-													<a href="#" class="kt-notification__item">
-														<div class="kt-notification__item-icon">
-															<i class="flaticon2-line-chart kt-font-success"></i>
-														</div>
-														<div class="kt-notification__item-details">
-															<div class="kt-notification__item-title">
-																New order has been received
-															</div>
-															<div class="kt-notification__item-time">
-																2 hrs ago
-															</div>
-														</div>
-													</a>
-													<a href="#" class="kt-notification__item">
-														<div class="kt-notification__item-icon">
-															<i class="flaticon2-box-1 kt-font-brand"></i>
-														</div>
-														<div class="kt-notification__item-details">
-															<div class="kt-notification__item-title">
-																New customer is registered
-															</div>
-															<div class="kt-notification__item-time">
-																3 hrs ago
-															</div>
-														</div>
-													</a>
-												</div>
-											</div>
-										</div>
-									</form>
-								</div>
-							</div>
-
-							<!--end: Notifications -->
-
-                            <!-- begin: Sign Out -->
-							<div class="kt-header__topbar-item">
-								<div class="kt-header__topbar-wrapper">
-									<a class="kt-header__topbar-icon" data-toggle="kt-tooltip" data-placement="left" title="Sign Out"><i class="fa fa-sign-out-alt"></i></a>
-								</div>
-							</div>
-							<!-- end: Sign Out -->
-						</div>
-
-						<!-- end:: Header Topbar -->
-					</div>
-
-					<!-- end:: Header -->
-					<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-
-						<!-- begin:: Subheader -->
-						<div class="kt-subheader   kt-grid__item" id="kt_subheader">
-							<div class="kt-container  kt-container--fluid ">
-								<div class="kt-subheader__main">
-									<h3 class="kt-subheader__title">
-										Profile </h3>
-									<span class="kt-subheader__separator kt-hidden"></span>
-									<div class="kt-subheader__breadcrumbs">
-										<a href="profile.html" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- end:: Subheader -->
-
-						<!-- begin:: Content -->
-						<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-                            <div class="col-10 offset-1">
-    							<div class="kt-portlet">
-    								<div class="kt-portlet__body portlet_profil">
-    									<div class="kt-widget kt-widget--user-profile-4">
-    										<div id="bg-image" class="bg" style="position: relative;">
-    											<div align="center" class="image-cropper-background">
-    												<div class="masking-black">
-    												</div>
-    												<img class="background_user" id="bg_user" name="foto_user" style="" src="../assets/media/bg/bg-7.jpg" alt="image">
-    											</div>
-    											<div class="kt-widget__head" style="position: relative; margin-top: 2.2rem;">
-    												<div class="kt-widget__media">
-    													<img style="" class="kt-widget__img kt-hidden-" src="../assets/media/users/100_5.jpg" alt="image">
-    													<div class="round-badge">
-    													</div>
-    													<div class="kt-widget__pic kt-widget__pic--danger kt-font-danger kt-font-boldest kt-font-light kt-hidden">
-    														JD
-    													</div>
-    												</div>
-    												<div class="kt-widget__content">
-    													<div class="kt-widget__section">
-    														<span id="userName" name="userName" class="kt-widget__username">
-    															Ahmad Rifaldi
-    														</span>
-    													</div>
-    												</div>
-    											</div>
-    										</div>
-    										<div class="kt-align-center portlet-description" style="margin-top:40px">
-    											<span id="description" name="description">I help clients find the subject and medium that best fits their unique indetity in branding company in Kyoto. Looking forward to explore new things in japan</span>
-    										</div>
-    										<!-- <div class="kt-align-center kt-portlet-btnEdit">
-    											<a href="edit_profile.html" class="btn btn-label-primary btn_edit_profil"> <i class="fa fa-edit"></i> Edit Profile</a>
-    										</div> -->
-    									</div>
-    									<div class="kt-portlet__foot kt-hidden">
-    										<div class="row">
-    											<div class="col-lg-6">
-    												Portlet footer:
-    											</div>
-    											<div class="col-lg-6">
-    												<button type="submit" class="btn btn-primary">Submit</button>
-    												<span class="kt-margin-left-10">or <a href="#" class="kt-link kt-font-bold">Cancel</a></span>
-    											</div>
-    										</div>
-    									</div>
-    								</div>
-    							</div>
-                                <div class="embassy-post">
-									<div class="kt-portlet">
-										<div class="kt-portlet__head embassy-head">
-											<div class="kt-portlet__head-label">
-												<div>
-													<h4 class="alert-heading embassy-head">UPDATE FROM INDONESIA EMBASSY</h4>
-												</div>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<span class="">
-													<img class="icon-size" src="../assets/media/icons/senpai/indonesia.svg">
-												</span>
-											</div>
-										</div>
-										<div class=" kt-portlet__body padding-all-10 padding-c">
-											<p>
-												To Celebrate our 74th Indonesian Independence Day, <br>
-												the Indonesian Embassy in Tokyo presents : <br>
-												<br>
-												"People's Party" - United for Forward. <br>
-												Location : Kasai Rinkai Park <br>
-												Date : Sunday, 15 September 2019, <br>
-												Time : 09.00 - 17.00
-											</p>
-										</div>
-									</div>
-								</div>
-                                <div class="embassy-post">
-									<div class="kt-portlet">
-										<div class="kt-portlet__head embassy-head">
-											<div class="kt-portlet__head-label">
-												<div>
-													<h4 class="alert-heading embassy-head">UPDATE FROM INDONESIA EMBASSY</h4>
-												</div>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<span class="">
-													<img class="icon-size" src="../assets/media/icons/senpai/indonesia.svg">
-												</span>
-											</div>
-										</div>
-										<div class=" kt-portlet__body padding-all-10 padding-c">
-											<p>
-												To Celebrate our 74th Indonesian Independence Day, <br>
-												the Indonesian Embassy in Tokyo presents : <br>
-												<br>
-												"People's Party" - United for Forward. <br>
-												Location : Kasai Rinkai Park <br>
-												Date : Sunday, 15 September 2019, <br>
-												Time : 09.00 - 17.00
-											</p>
-										</div>
-									</div>
-								</div>
-                                <div class="embassy-post">
-									<div class="kt-portlet">
-										<div class="kt-portlet__head embassy-head">
-											<div class="kt-portlet__head-label">
-												<div>
-													<h4 class="alert-heading embassy-head">UPDATE FROM INDONESIA EMBASSY</h4>
-												</div>
-											</div>
-											<div class="kt-portlet__head-toolbar">
-												<span class="">
-													<img class="icon-size" src="../assets/media/icons/senpai/indonesia.svg">
-												</span>
-											</div>
-										</div>
-										<div class=" kt-portlet__body padding-all-10 padding-c">
-											<p>
-												To Celebrate our 74th Indonesian Independence Day, <br>
-												the Indonesian Embassy in Tokyo presents : <br>
-												<br>
-												"People's Party" - United for Forward. <br>
-												Location : Kasai Rinkai Park <br>
-												Date : Sunday, 15 September 2019, <br>
-												Time : 09.00 - 17.00
-											</p>
-										</div>
-									</div>
-								</div>
-    						</div>
-                        </div>
-
-						<!-- end:: Content -->
-					</div>
-
-					<!-- begin:: Footer -->
-					<div class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop" id="kt_footer">
-						<div class="kt-container  kt-container--fluid centered-content">
-							<div class="kt-footer__copyright">
-								2019&nbsp;&copy;&nbsp;<a href="http://upanastudio.com" target="_blank" class="kt-link">Upana Studio</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- end:: Footer -->
+						</li>
+						<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true"><a href="profile.html" class="kt-menu__link "><span class="kt-menu__link-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+							<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<polygon id="Shape" points="0 0 24 0 24 24 0 24"/>
+								<path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" id="Mask" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+								<path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" id="Mask-Copy" fill="#000000" fill-rule="nonzero"/>
+							</g>
+						</svg></span><span class="kt-menu__link-text">Profile</span></a></li>
+					</ul>
 				</div>
 			</div>
+			<!-- end:: Aside Menu -->
 		</div>
-
-		<!-- end:: Page -->
-
-		<!-- begin::Scrolltop -->
-		<div id="kt_scrolltop" class="kt-scrolltop">
-			<i class="fa fa-arrow-up"></i>
+		<!-- end:: Aside -->
+		<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
+			<!-- begin:: Header -->
+			<div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
+				<!-- begin:: Header Menu -->
+				<div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
+					<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout-default ">
+						<div class="kt-menu__nav ">
+							<div class="kt-menu__item" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+								<h4 class="kt-menu__link-text" style="margin-bottom:0px; font-weight: 800;">EMBASSY</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end:: Header Menu -->
+				<!-- begin:: Header Topbar -->
+				<div class="kt-header__topbar">
+					<!--begin: User Bar -->
+					<div class="kt-header__topbar-item kt-header__topbar-item--user">
+						<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
+							<div class="kt-header__topbar-user">
+								<span id="userName" name="userName" class="kt-header__topbar-username kt-hidden-mobile">Sean Stone</span>
+								<img id="userImage" name="userImage" style="margin-left: 5px" alt="Pic" class="kt-radius-100" src="../assets/media/users/user5.jpg" data-pagespeed-url-hash="619118654" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+							</div>
+						</div>
+					</div>
+					<!--end: User Bar -->
+					<!--begin: Notifications -->
+					<div class="kt-header__topbar-item dropdown">
+						<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="30px,0px" aria-expanded="true">
+							<span class="kt-header__topbar-icon"><i class="fa fa-bell"></i></span>
+						</div>
+						<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
+							<form>
+								<!--begin: Head -->
+								<div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url(../assets/media/misc/bg-1.jpg); height:90px;">
+									<h3 class="kt-head__title">
+										User Notifications
+										&nbsp;
+										<span class="btn btn-success btn-sm btn-bold btn-font-md">23 new</span>
+									</h3>
+								</div>
+								<!--end: Head -->
+								<div class="tab-content">
+									<div class="tab-pane active show" id="topbar_notifications_notifications" role="tabpanel">
+										<div class="kt-notification kt-margin-t-10 kt-margin-b-10 kt-scroll" data-scroll="true" data-height="300" data-mobile-height="200">
+											<a href="#" class="kt-notification__item">
+												<div class="kt-notification__item-icon">
+													<i class="flaticon2-line-chart kt-font-success"></i>
+												</div>
+												<div class="kt-notification__item-details">
+													<div class="kt-notification__item-title">
+														New order has been received
+													</div>
+													<div class="kt-notification__item-time">
+														2 hrs ago
+													</div>
+												</div>
+											</a>
+											<a href="#" class="kt-notification__item">
+												<div class="kt-notification__item-icon">
+													<i class="flaticon2-box-1 kt-font-brand"></i>
+												</div>
+												<div class="kt-notification__item-details">
+													<div class="kt-notification__item-title">
+														New customer is registered
+													</div>
+													<div class="kt-notification__item-time">
+														3 hrs ago
+													</div>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!--end: Notifications -->
+					<!-- begin: Sign Out -->
+					<div class="kt-header__topbar-item">
+						<div class="kt-header__topbar-wrapper">
+							<a class="kt-header__topbar-icon" data-toggle="kt-tooltip" data-placement="left" title="Sign Out"><i class="fa fa-sign-out-alt"></i></a>
+						</div>
+					</div>
+					<!-- end: Sign Out -->
+				</div>
+				<!-- end:: Header Topbar -->
+			</div>
+			<!-- end:: Header -->
+			<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+				<!-- begin:: Subheader -->
+				<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+					<div class="kt-container  kt-container--fluid ">
+						<div class="kt-subheader__main">
+							<h3 class="kt-subheader__title">
+							Profile </h3>
+							<span class="kt-subheader__separator kt-hidden"></span>
+							<div class="kt-subheader__breadcrumbs">
+								<a href="profile.html" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end:: Subheader -->
+				<!-- begin:: Content -->
+				<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+					<div class="col-10 offset-1">
+						<div class="kt-portlet">
+							<div class="kt-portlet__body portlet_profil">
+								<div class="kt-widget kt-widget--user-profile-4">
+									<div id="bg-image" class="bg" style="position: relative;">
+										<div align="center" class="image-cropper-background">
+											<div class="masking-black">
+											</div>
+											<img class="background_user" id="bg_user" name="foto_user" style="" src="../assets/media/bg/bg-7.jpg" alt="image">
+										</div>
+										<div class="kt-widget__head" style="position: relative; margin-top: 2.2rem;">
+											<div class="kt-widget__media">
+												<img style="" class="kt-widget__img kt-hidden-" src="../assets/media/users/100_5.jpg" alt="image">
+												<div class="round-badge">
+												</div>
+												<div class="kt-widget__pic kt-widget__pic--danger kt-font-danger kt-font-boldest kt-font-light kt-hidden">
+													JD
+												</div>
+											</div>
+											<div class="kt-widget__content">
+												<div class="kt-widget__section">
+													<span id="userName" name="userName" class="kt-widget__username">
+														Ahmad Rifaldi
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="kt-align-center portlet-description" style="margin-top:40px">
+										<span id="description" name="description">I help clients find the subject and medium that best fits their unique indetity in branding company in Kyoto. Looking forward to explore new things in japan</span>
+									</div>
+									<div class="kt-align-center kt-portlet-btnEdit">
+										<a href="edit_profile.html" class="btn btn-label-primary btn_edit_profil"> <i class="fa fa-edit"></i> Edit Profile</a>
+									</div>
+								</div>
+								<div class="kt-portlet__foot kt-hidden">
+									<div class="row">
+										<div class="col-lg-6">
+											Portlet footer:
+										</div>
+										<div class="col-lg-6">
+											<button type="submit" class="btn btn-primary">Submit</button>
+											<span class="kt-margin-left-10">or <a href="#" class="kt-link kt-font-bold">Cancel</a></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="embassy-post">
+							<div class="kt-portlet">
+								<div class="kt-portlet__head embassy-head">
+									<div class="kt-portlet__head-label">
+										<div>
+											<h4 class="alert-heading embassy-head">UPDATE FROM INDONESIA EMBASSY</h4>
+										</div>
+									</div>
+									<div class="kt-portlet__head-toolbar">
+										<span class="">
+											<img class="icon-size" src="../assets/media/icons/senpai/indonesia.svg">
+										</span>
+									</div>
+								</div>
+								<div class=" kt-portlet__body padding-all-10 padding-c">
+									<p>
+										To Celebrate our 74th Indonesian Independence Day, <br>
+										the Indonesian Embassy in Tokyo presents : <br>
+										<br>
+										"People's Party" - United for Forward. <br>
+										Location : Kasai Rinkai Park <br>
+										Date : Sunday, 15 September 2019, <br>
+										Time : 09.00 - 17.00
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="embassy-post">
+							<div class="kt-portlet">
+								<div class="kt-portlet__head embassy-head">
+									<div class="kt-portlet__head-label">
+										<div>
+											<h4 class="alert-heading embassy-head">UPDATE FROM INDONESIA EMBASSY</h4>
+										</div>
+									</div>
+									<div class="kt-portlet__head-toolbar">
+										<span class="">
+											<img class="icon-size" src="../assets/media/icons/senpai/indonesia.svg">
+										</span>
+									</div>
+								</div>
+								<div class=" kt-portlet__body padding-all-10 padding-c">
+									<p>
+										To Celebrate our 74th Indonesian Independence Day, <br>
+										the Indonesian Embassy in Tokyo presents : <br>
+										<br>
+										"People's Party" - United for Forward. <br>
+										Location : Kasai Rinkai Park <br>
+										Date : Sunday, 15 September 2019, <br>
+										Time : 09.00 - 17.00
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="embassy-post">
+							<div class="kt-portlet">
+								<div class="kt-portlet__head embassy-head">
+									<div class="kt-portlet__head-label">
+										<div>
+											<h4 class="alert-heading embassy-head">UPDATE FROM INDONESIA EMBASSY</h4>
+										</div>
+									</div>
+									<div class="kt-portlet__head-toolbar">
+										<span class="">
+											<img class="icon-size" src="../assets/media/icons/senpai/indonesia.svg">
+										</span>
+									</div>
+								</div>
+								<div class=" kt-portlet__body padding-all-10 padding-c">
+									<p>
+										To Celebrate our 74th Indonesian Independence Day, <br>
+										the Indonesian Embassy in Tokyo presents : <br>
+										<br>
+										"People's Party" - United for Forward. <br>
+										Location : Kasai Rinkai Park <br>
+										Date : Sunday, 15 September 2019, <br>
+										Time : 09.00 - 17.00
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end:: Content -->
+			</div>
+			<!-- begin:: Footer -->
+			<div class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop" id="kt_footer">
+				<div class="kt-container  kt-container--fluid centered-content">
+					<div class="kt-footer__copyright">
+						2019&nbsp;&copy;&nbsp;<a href="http://upanastudio.com" target="_blank" class="kt-link">Upana Studio</a>
+					</div>
+				</div>
+			</div>
+			<!-- end:: Footer -->
 		</div>
-
-		<!-- end::Scrolltop -->
-
-		<!-- begin::Global Config(global config for global JS sciprts) -->
-		<script>
-			var KTAppOptions = {
-				"colors": {
-					"state": {
-						"brand": "#5d78ff",
-						"dark": "#282a3c",
-						"light": "#ffffff",
-						"primary": "#5867dd",
-						"success": "#34bfa3",
-						"info": "#36a3f7",
-						"warning": "#ffb822",
-						"danger": "#fd3995"
-					},
-					"base": {
-						"label": [
-							"#c5cbe3",
-							"#a1a8c3",
-							"#3d4465",
-							"#3e4466"
-						],
-						"shape": [
-							"#f0f3ff",
-							"#d9dffa",
-							"#afb4d4",
-							"#646c9a"
-						]
-					}
-				}
-			};
-		</script>
-
-		<!-- end::Global Config -->
-
-		<!--begin::Global Theme Bundle(used by all pages) -->
-		<script src="../assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
-		<script src="../assets/js/scripts.bundle.js" type="text/javascript"></script>
-
-		<!--end::Global Theme Bundle -->
-
-		<!--begin::Page Vendors(used by this page) -->
-
-		<!--end::Page Vendors -->
-
-		<!--begin::Page Scripts(used by this page) -->
-
-		<!--end::Page Scripts -->
-	</body>
-
-	<!-- end::Body -->
+	</div>
+</div>
+<!-- end:: Page -->
+<!-- begin::Scrolltop -->
+<div id="kt_scrolltop" class="kt-scrolltop">
+	<i class="fa fa-arrow-up"></i>
+</div>
+<!-- end::Scrolltop -->
+<!-- begin::Global Config(global config for global JS sciprts) -->
+<script>
+	var KTAppOptions = {
+		"colors": {
+			"state": {
+				"brand": "#5d78ff",
+				"dark": "#282a3c",
+				"light": "#ffffff",
+				"primary": "#5867dd",
+				"success": "#34bfa3",
+				"info": "#36a3f7",
+				"warning": "#ffb822",
+				"danger": "#fd3995"
+			},
+			"base": {
+				"label": [
+				"#c5cbe3",
+				"#a1a8c3",
+				"#3d4465",
+				"#3e4466"
+				],
+				"shape": [
+				"#f0f3ff",
+				"#d9dffa",
+				"#afb4d4",
+				"#646c9a"
+				]
+			}
+		}
+	};
+</script>
+<!-- end::Global Config -->
+<!--begin::Global Theme Bundle(used by all pages) -->
+<script src="../assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
+<script src="../assets/js/scripts.bundle.js" type="text/javascript"></script>
+<!--end::Global Theme Bundle -->
+<!--begin::Page Vendors(used by this page) -->
+<!--end::Page Vendors -->
+<!--begin::Page Scripts(used by this page) -->
+<!--end::Page Scripts -->
+</body>
+<!-- end::Body -->
 </html>
