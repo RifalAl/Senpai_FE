@@ -1095,22 +1095,22 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 orderable: false,
                 render: function(data, type, full, meta) {
                     return `
-                    <a href="#" class="btn btn-sm btn-success" style="color:white;" data-toggle="modal" data-target="#kt_modal_creator_edit">Edit</a>&nbsp;<a href="#" class="btn btn-sm btn-danger" id="kt_sweetalert_delete" style="color:white;">Delete</a>
+                    <a href="#" class="btn btn-sm btn-success" style="color:white;" data-toggle="modal" data-target="#kt_modal_creator_edit">Edit</a>&nbsp;<a href="#" class="btn btn-sm btn-danger" id="kt_sweetalert_blacklist" style="color:white;">Blacklist</a>
                     <script>
-                        $('#kt_sweetalert_delete').click(function(e) {
+                        $('#kt_sweetalert_blacklist').click(function(e) {
             	            swal.fire({
             	                title: 'Are you sure?',
             	                text: "You won't be able to revert this!",
             	                type: 'warning',
             	                showCancelButton: true,
-            	                confirmButtonText: 'Yes, delete it!',
+            	                confirmButtonText: 'Yes, add to blacklist!',
             	                cancelButtonText: 'No, cancel!',
             	                reverseButtons: true
             	            }).then(function(result) {
             	                if (result.value) {
                                     swal.fire(
-                                            'Deleted!',
-                                            'User content creator has been deleted.',
+                                            'Blacklisted!',
+                                            'User content creator has been added to blacklist.',
                                             'success'
                                         )
             	                }
@@ -1165,22 +1165,22 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 orderable: false,
                 render: function(data, type, full, meta) {
                     return `
-                    <a href="#" class="btn btn-sm btn-success" style="color:white;" data-toggle="modal" data-target="#kt_modal_embassy_edit">Edit</a>&nbsp;<a href="#" class="btn btn-sm btn-danger" id="kt_sweetalert_delete" style="color:white;">Delete</a>
+                    <a href="#" class="btn btn-sm btn-success" style="color:white;" data-toggle="modal" data-target="#kt_modal_embassy_edit">Edit</a>&nbsp;<a href="#" class="btn btn-sm btn-danger" id="kt_sweetalert_blacklist" style="color:white;">Blacklist</a>
                     <script>
-                        $('#kt_sweetalert_delete').click(function(e) {
+                        $('#kt_sweetalert_blacklist').click(function(e) {
             	            swal.fire({
             	                title: 'Are you sure?',
             	                text: "You won't be able to revert this!",
             	                type: 'warning',
             	                showCancelButton: true,
-            	                confirmButtonText: 'Yes, delete it!',
+            	                confirmButtonText: 'Yes, add to blacklist!',
             	                cancelButtonText: 'No, cancel!',
             	                reverseButtons: true
             	            }).then(function(result) {
             	                if (result.value) {
                                     swal.fire(
-                                            'Deleted!',
-                                            'User embassy has been deleted.',
+                                            'Blacklisted!',
+                                            'User embassy has been added to blacklist.',
                                             'success'
                                         )
             	                }
@@ -1241,22 +1241,22 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                 orderable: false,
                 render: function(data, type, full, meta) {
                     return `
-                    <a href="user_userdetail.html" class="btn btn-sm btn-brand" style="color:white;">Details</a>&nbsp;<a href="#" class="btn btn-sm btn-danger" id="kt_sweetalert_delete" style="color:white;">Delete</a>
+                    <a href="user_userdetail.html" class="btn btn-sm btn-brand" style="color:white;">Details</a>&nbsp;<a href="#" class="btn btn-sm btn-danger" id="kt_sweetalert_blacklist" style="color:white;">Blacklist</a>
                     <script>
-                        $('#kt_sweetalert_delete').click(function(e) {
+                        $('#kt_sweetalert_blacklist').click(function(e) {
             	            swal.fire({
             	                title: 'Are you sure?',
             	                text: "You won't be able to revert this!",
             	                type: 'warning',
             	                showCancelButton: true,
-            	                confirmButtonText: 'Yes, delete it!',
+            	                confirmButtonText: 'Yes, add to blacklist!',
             	                cancelButtonText: 'No, cancel!',
             	                reverseButtons: true
             	            }).then(function(result) {
             	                if (result.value) {
                                     swal.fire(
-                                            'Deleted!',
-                                            'User has been deleted.',
+                                            'Blacklisted!',
+                                            'User has been added to blacklist.',
                                             'success'
                                         )
             	                }
