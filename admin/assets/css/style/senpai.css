@@ -9,6 +9,9 @@ body {
     background-attachment: fixed;
 }
 
+#kt_header_mobile_topbar_toggler {
+    display: none;
+}
 .kt-header .kt-header__topbar .kt-header__topbar-item .kt-header__topbar-icon svg g [fill] {
     /* fill: #34abab; */
 }
