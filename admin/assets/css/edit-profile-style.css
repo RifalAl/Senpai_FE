@@ -195,10 +195,16 @@ input[type=file]{
 		height: 200px;
 		width: 100%;
 	}
+	.portlet-description {
+		margin-top: 58px;
+	}
 }
 
 @media (max-width: 320px) {
 	.background_user {
 		margin-top: 0%;
+	}
+	.portlet-description {
+		margin-top: 58px;
 	}
 }

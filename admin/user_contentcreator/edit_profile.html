@@ -3,7 +3,7 @@
 <!-- begin::Head -->
 <head>
 	<meta charset="utf-8" />
-	<title>Content Creator | Profile</title>
+	<title>Content Creator | Edit Profile</title>
 	<meta name="description" content="Page with empty content">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--begin::Fonts -->
@@ -271,6 +271,30 @@
 														<label for="description">Description</label>
 														<textarea class="form-control" id="description" placeholder="tell everyone about you" rows="3"></textarea>
 													</div>
+													<div class="form-group">
+														<label>Email</label>
+														<input  id="e_mail" name="e_mail" type="email" class="form-control" value="aldi4rifaldi@gmail.com">
+													</div>
+													<div class="form-group">
+														<label>Username</label>
+														<input  id="user_name" name="user_name" type="text" class="form-control" value="aldirifaldi">
+													</div>
+													<div class="form-group">
+														<label>Nationality</label>
+														<select class="form-control kt-select2" id="select_nation" name="param">
+															<option value="0">--choose Nationality--</option>
+															<option value="1">Indonesai</option>
+															<option value="2">Malysia</option>
+															<option value="3">Brunei</option>
+															<option value="4">Timor-Timor</option>
+															<option value="5">Australia</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<button type="button" data-toggle="modal" data-target="#modal_change_password" class="btn btn-sm btn-default btn-bold btn-upper">
+															<i class="fa fa-lock"></i>change password
+														</button>
+													</div>
 												</div>
 											</div>
 											<div class="kt-portlet__foot kt-align-right">
@@ -337,6 +361,35 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="modal_change_password" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="form-group">
+								<label>Current Password :</label>
+								<input  id="c_password" name="c_password" type="password" class="form-control" value="123454331">
+							</div>
+							<div class="form-group">
+								<label>New Password :</label>
+								<input  id="c_password" name="c_password" type="password" class="form-control" placeholder="input new password">
+							</div>
+							<div class="form-group">
+								<label>Confirm New Password :</label>
+								<input  id="cn_password" name="cn_password" type="password" class="form-control" placeholder="confirm password">
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
 						</div>
 					</div>
 				</div>
@@ -571,6 +624,25 @@
 		});
 
 	});  
+</script>
+<script>
+	var KTSelect2 = function() {
+		var demos = function() {
+			$('#select_nation, #select_nation_validate').select2({
+				placeholder: "Select a state"
+			});
+		}
+
+		return {
+			init: function() {
+				demos();
+				modalDemos();
+			}
+		};
+	}();
+	jQuery(document).ready(function() {
+		KTSelect2.init();
+	});
 </script>
 </body>
 <!-- end::Body -->
