@@ -48,7 +48,7 @@
 	<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
 		<div class="kt-header-mobile__logo">
 			<button onclick="goBack()" class="btn btn-sm">
-				<span class="fa fa-arrow-left"></span>
+				<span class="fa fa-arrow-left icon-back"></span>
 			</button>
 			<a href="index.html">
 				<img class="mobile-logo" alt="Logo" src="../assets/media/logos/logo_senpai.png" />
@@ -568,9 +568,14 @@
 																</a>
 															</div>
 															<div id="question_info_1" class="question-info">
-																<h6>Fascal Ivandry</h6>
-																<p>Product Manager at Artistektur</p>
-																<p>2d Ago</p>
+																<h6 id="user_name" name="user_name">
+																	Sulfikar Hasan
+																</h6>
+																<p>
+																	<span id="user_job" name="user_job">Product Manager</span> at 
+																	<span id="job_place" name="job_place">Lorem Ipsum Dolor Sit Amet</span>
+																</p>
+																<p><span id="question_time" name="question_time">4d Ago</span></p>
 															</div>
 															<div class="kt-portlet__head-toolbar">
 																<div class="kt-portlet__head-actions">
@@ -594,6 +599,9 @@
 															<p justify="center" id="question_description" name="question_descri">
 																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
 															</p>
+															<div class="topic-session">
+																Topic : <span class="kt-badge kt-badge--info kt-badge--inline kt-badge--rounded">Apartment</span>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -606,9 +614,14 @@
 																</a>
 															</div>
 															<div id="question_info_2" class="question-info">
-																<h6>Fascal Ivandry</h6>
-																<p>Product Manager at Artistektur ramah lingkungan pemuda pemudi</p>
-																<p>2d Ago</p>
+																<h6 id="user_name" name="user_name">
+																	George Malama
+																</h6>
+																<p>
+																	<span id="user_job" name="user_job">Product Manager</span> at 
+																	<span id="job_place" name="job_place">Lorem Ipsum Dolor Sit Amet</span>
+																</p>
+																<p><span id="question_time" name="question_time">4d Ago</span></p>
 															</div>
 															<div class="kt-portlet__head-toolbar">
 																<div class="kt-portlet__head-actions">
@@ -632,6 +645,9 @@
 															<p justify="center" id="question_description" name="question_descri">
 																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
 															</p>
+															<div class="topic-session">
+																Topic : <span class="kt-badge kt-badge--info kt-badge--inline kt-badge--rounded">Apartment</span>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -1355,7 +1371,6 @@
 			var i;
 			for(i=1; i<=numItems; i++){
 				var questHeight = $('#question_info_'+i).height();
-				console.log(questHeight, $('#question_info_'+i));
 				if (questHeight > 60) {
 					$('#head_question_'+i).addClass('plus_height');
 				}

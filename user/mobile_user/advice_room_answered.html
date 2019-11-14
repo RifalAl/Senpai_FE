@@ -51,7 +51,7 @@
 	<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
 		<div class="kt-header-mobile__logo">
 			<button onclick="goBack()" class="btn btn-sm">
-				<span class="fa fa-arrow-left"></span>
+				<span class="fa fa-arrow-left icon-back"></span>
 			</button>
 			<a href="index.html">
 				<img class="mobile-logo" alt="Logo" src="../assets/media/logos/logo_senpai.png" />
@@ -363,9 +363,14 @@
 														</a>
 													</div>
 													<div id="question_info_1" class="question-info">
-														<h6>Fascal Ivandry</h6>
-														<p>Graphic designer and ui/ux in low profile company asiata profile company</p>
-														<p>2d Ago</p>
+														<h6 id="user_name" name="user_name">
+															Sulfikar Hasan
+														</h6>
+														<p>
+															<span id="user_job" name="user_job">Product Manager</span> at 
+															<span id="job_place" name="job_place">Lorem Ipsum Dolor Sit Amet</span>
+														</p>
+														<p><span id="question_time" name="question_time">4d Ago</span></p>
 													</div>
 													<span style="" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill solved-badge change-padding">Solved</span>
 													<div class="kt-portlet__head-toolbar">
@@ -391,6 +396,9 @@
 													<p justify="center" id="question_description" name="question_descri">
 														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet egestas odio. Integer et urna in mi pretium euismod nec non neque.
 													</p>
+													<div class="topic-session">
+														Topic : <span class="kt-badge kt-badge--info kt-badge--inline kt-badge--rounded">Apartment</span>
+													</div>
 												</div>
 												<div class="kt-portlet__footer padding-all-5">
 													<div class="input-group">
