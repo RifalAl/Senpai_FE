@@ -1127,6 +1127,47 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
         });
     };
 
+    var initTableCreatorBlacklist = function() {
+        var table = $('#table_creator_blacklist');
+        // begin first table
+        table.DataTable({
+            responsive: true,
+            ajax: {
+                url: '../source/creator.json',
+                type: 'POST',
+                data: {
+                    pagination: {
+                        perpage: 50,
+                    },
+                },
+            },
+            columns: [{
+                data: 'null',
+                title: 'No',
+                width: 25,
+                render: function(data, type, row, meta) {
+                    return meta.row + meta.settings._iDisplayStart + 1;
+                },
+                // title: 'No.',
+                // orderable: false,
+            }, {
+                data: 'creator',
+                title: 'Content Creator'
+            }, {
+                data: 'username',
+                title: 'Username'
+            }, {
+                data: 'type',
+                title: 'Content Type',
+            }, ],
+            columnDefs: [{
+                targets: [0, 1, 2, 3],
+                className: 'text-center',
+                orderable: true,
+            }],
+        });
+    };
+
     var initTableEmbassy = function() {
         var table = $('#table_embassy');
         // begin first table
@@ -1188,6 +1229,44 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
             	        });
                     </script>`;
                 },
+            }, ],
+            columnDefs: [{
+                targets: [0, 1, 2],
+                className: 'text-center',
+                orderable: true,
+            }],
+        });
+    };
+
+    var initTableEmbassyBlacklist = function() {
+        var table = $('#table_embassy_blacklist');
+        // begin first table
+        table.DataTable({
+            responsive: true,
+            ajax: {
+                url: '../source/embassy.json',
+                type: 'POST',
+                data: {
+                    pagination: {
+                        perpage: 50,
+                    },
+                },
+            },
+            columns: [{
+                data: 'null',
+                title: 'No',
+                width: 25,
+                render: function(data, type, row, meta) {
+                    return meta.row + meta.settings._iDisplayStart + 1;
+                },
+                // title: 'No.',
+                orderable: false,
+            }, {
+                data: 'embassy',
+                title: 'Embassy'
+            }, {
+                data: 'country',
+                title: 'Country'
             }, ],
             columnDefs: [{
                 targets: [0, 1, 2],
@@ -1267,6 +1346,47 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
             }, ],
             columnDefs: [{
                 targets: [0, 1, 2, 3, 4],
+                className: 'text-center',
+                orderable: true,
+            }],
+        });
+    };
+
+    var initTableUserBlacklist = function() {
+        var table = $('#table_user_blacklist');
+        // begin first table
+        table.DataTable({
+            responsive: true,
+            ajax: {
+                url: '../source/user.json',
+                type: 'POST',
+                data: {
+                    pagination: {
+                        perpage: 50,
+                    },
+                },
+            },
+            columns: [{
+                data: 'null',
+                title: 'No',
+                width: 25,
+                render: function(data, type, row, meta) {
+                    return meta.row + meta.settings._iDisplayStart + 1;
+                },
+                // title: 'No.',
+                orderable: false,
+            }, {
+                data: 'name',
+                title: 'Name'
+            }, {
+                data: 'username',
+                title: 'Username'
+            }, {
+                data: 'badge',
+                title: 'Badge'
+            }, ],
+            columnDefs: [{
+                targets: [0, 1, 2, 3],
                 className: 'text-center',
                 orderable: true,
             }],
@@ -1951,8 +2071,11 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
             initTableRank();
             initTableTopic();
             initTableCreator();
+            initTableCreatorBlacklist();
             initTableEmbassy();
+            initTableEmbassyBlacklist();
             initTableUser();
+            initTableUserBlacklist();
             initTableQuestionAll();
             initTableQuestionReported();
             initTableQuestionBlacklist();

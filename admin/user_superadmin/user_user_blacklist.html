@@ -17,7 +17,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
-		<title>Super Admin | User Details</title>
+		<title>Super Admin | Blacklisted Users</title>
 		<meta name="description" content="Page with empty content">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -27,6 +27,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Fonts -->
 
 		<!--begin::Page Vendors Styles(used by this page) -->
+        <link href="../assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 
 		<!--end::Page Vendors Styles -->
 
@@ -43,7 +44,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="../assets/css/skins/aside/dark.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/css/style/senpai.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/css/style/senpai-theme.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/css/style/profile.css" rel="stylesheet" type="text/css" />
 
 		<!--end::Layout Skins -->
 		<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
@@ -336,8 +336,8 @@ License: You must have a valid license purchased only from themeforest(the above
 										<a href="user_user.html" class="kt-subheader__breadcrumbs-link">
 											Users </a>
 										<span class="kt-subheader__breadcrumbs-separator"></span>
-										<a href="" class="kt-subheader__breadcrumbs-link">
-											User Details </a>
+										<a href="user_user_blacklist.html" class="kt-subheader__breadcrumbs-link">
+											Blacklist </a>
 									</div>
 								</div>
 							</div>
@@ -348,366 +348,21 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!-- begin:: Content -->
 						<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
 
-							<div class="row">
-                                <div class="col-12">
-                                    <div class="kt-portlet">
-        								<div class="kt-portlet__head">
-        									<div class="kt-portlet__head-label">
-        										<span class="kt-portlet__head-icon">
-        											<i class="flaticon2-user-outline-symbol"></i>
-        										</span>
-        										<h3 class="kt-portlet__head-title">
-        											User Details
-        										</h3>
-        									</div>
-                                            <div class="kt-portlet__head-toolbar">
-        										<div class="kt-portlet__head-wrapper">
-        											<div class="kt-portlet__head-actions">
-        												<button type="button" class="btn btn-sm btn-danger" id="kt_sweetalert_blacklist">Blacklist</button>&nbsp;
-                                                        <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#kt_modal_badge">Badges</button>
-        											</div>
-        										</div>
-        									</div>
-        								</div>
-        							</div>
-                                </div>
-
-                                <div class="col-sm-12 col-md-10 offset-1">
-    								<div class="kt-portlet">
-    									<div class="kt-portlet__body portlet_profil">
-    										<div class="kt-widget kt-widget--user-profile-4">
-    											<div id="bg-image" class="bg" style="position: relative;">
-    												<div align="center" class="image-cropper-background">
-    													<img id="background_user" name="foto_user" style="" src="../assets/media/bg/bg-2.jpg" alt="image" data-pagespeed-url-hash="409251992" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-    												</div>
-    												<div class="kt-widget__head" style="position: relative;">
-    													<div class="kt-widget__media">
-    														<img style="" class="kt-widget__img kt-hidden-" src="data:image/webp;base64,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" alt="image" data-pagespeed-url-hash="552235771" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-    														<div class="round-badge">
-    														</div>
-    														<div class="kt-widget__pic kt-widget__pic--danger kt-font-danger kt-font-boldest kt-font-light kt-hidden">
-    															JD
-    														</div>
-    													</div>
-    													<div class="kt-widget__content">
-    														<div class="kt-widget__section">
-    															<span class="kt-widget__username">
-    																Sean Stone
-    															</span>
-    															<div class="kt-align-center">
-    																<span id="profession" name="profession">Product Manager at Pasona</span> <br>
-    																<span style="font-size: 1.2rem;color: white"><i class="fa fa-map-marker-alt"></i> <span id="location" name="location">Kyoto </span> </span>
-    															</div>
-    														</div>
-    													</div>
-    												</div>
-    											</div>
-    											<div class="kt-align-center portlet-description">
-    												<span id="description" name="description">I help clients find the subject and medium that best fits their unique indetity in branding company in Kyoto. Looking forward to explore new things in japan</span>
-    											</div>
-    											<div class="kt-align-center">
-    												<div class="row portlet-follow">
-    													<div class="col-sm">
-    														<!-- <h6><span id="following" name="following">99</span> Following</h6> -->
-    														<button data-toggle="modal" data-target="#modal_follower_following" class="btn btn-sm btn-label-link btn-flw">
-    															<span id="following" name="following">99</span> Following
-    														</button>
-    													</div>
-    													<div class="col-sm">
-    														<button data-toggle="modal" data-target="#modal_follower_following" class="btn btn-sm btn-label-link btn-flw">
-    															<span id="followers" name="followers">99</span> Followers
-    														</button>
-    													</div>
-    												</div>
-    											</div>
-    											<!-- <div class="kt-align-center kt-portlet-btnEdit">
-    												<a href="edit_profile.html" class="btn btn-label-primary btn_edit_profil"> <i class="fa fa-edit"></i> Edit Profile</a>
-    											</div> -->
-    										</div>
-    										<div class="kt-portlet__foot kt-hidden">
-    											<div class="row">
-    												<div class="col-lg-6">
-    													Portlet footer:
-    												</div>
-    												<div class="col-lg-6">
-    													<button type="submit" class="btn btn-primary">Submit</button>
-    													<span class="kt-margin-left-10">or <a href="#" class="kt-link kt-font-bold">Cancel</a></span>
-    												</div>
-    											</div>
-    										</div>
-    									</div>
-    								</div>
-                                </div>
-
-								<div class="col-sm-12 col-md-10 offset-1">
-									<div class="kt-portlet info-portlet">
-										<div class="kt-portlet__body padding-all-10">
-											<ul class="nav nav-tabs nav-tabs-line" role="tablist">
-												<li class="nav-item">
-													<a class="nav-link nav_tab active" data-toggle="tab" href="#about_tab" role="tab" aria-selected="true">About</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link nav_tab" data-toggle="tab" href="#experience_tab" role="tab" aria-selected="false">Experience</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link nav_tab" data-toggle="tab" href="#activities_tab" role="tab" aria-selected="false">Activities</a>
-												</li>
-											</ul>
-											<div style="padding: 0px 40px" class="tab-content">
-												<div class="tab-pane active" id="about_tab" role="tabpanel">
-													<div style="margin-bottom: 20px">
-														<h6>Badge</h6>
-														<div class="badge-portlet">
-															<span class="badge-icon kt-media kt-media--sm kt-media--circle  kt-margin-t-5 kt-margin-r-5">
-																<img src="../assets/media/badge-icon/Asset 1.png" alt="image" data-pagespeed-url-hash="724513077" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-															</span>
-															<span class="badge-icon kt-media kt-media--sm kt-media--circle  kt-margin-t-5 kt-margin-r-5">
-																<img src="data:image/webp;base64,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" alt="image" data-pagespeed-url-hash="1019012998" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-															</span>
-															<span class="badge-icon kt-media kt-media--sm kt-media--circle  kt-margin-t-5 kt-margin-r-5">
-																<img src="../assets/media/badge-icon/Asset 3.png" alt="image" data-pagespeed-url-hash="1313512919" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-															</span>
-															<span class="badge-icon kt-media kt-media--sm kt-media--circle  kt-margin-t-5 kt-margin-r-5">
-																<img src="../assets/media/badge-icon/Asset 4.png" alt="image" data-pagespeed-url-hash="1608012840" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-															</span>
-															<span class="badge-icon kt-media kt-media--sm kt-media--circle  kt-margin-t-5 kt-margin-r-5">
-																<img src="../assets/media/badge-icon/Asset 5.png" alt="image" data-pagespeed-url-hash="1902512761" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-															</span>
-															<span class="badge-icon kt-media kt-media--sm kt-media--circle  kt-margin-t-5 kt-margin-r-5">
-																<img src="../assets/media/badge-icon/Asset 6.png" alt="image" data-pagespeed-url-hash="2197012682" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-															</span>
-															<span class="badge-icon kt-media kt-media--sm kt-media--circle  kt-margin-t-5 kt-margin-r-5">
-																<img src="../assets/media/badge-icon/Asset 7.png" alt="image" data-pagespeed-url-hash="2491512603" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-															</span>
-															<span class="badge-icon kt-media kt-media--sm kt-media--circle  kt-margin-t-5 kt-margin-r-5">
-																<img src="../assets/media/badge-icon/Asset 8.png" alt="image" data-pagespeed-url-hash="2786012524" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-															</span>
-															<span class="badge-icon kt-media kt-media--sm kt-media--circle  kt-margin-t-5 kt-margin-r-5">
-																<img src="../assets/media/badge-icon/Asset 9.png" alt="image" data-pagespeed-url-hash="3080512445" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-															</span>
-															<span class="badge-icon kt-media kt-media--sm kt-media--circle  kt-margin-t-5 kt-margin-r-5">
-																<img src="../assets/media/badge-icon/Asset 10.png" alt="image" data-pagespeed-url-hash="862593753" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-															</span>
-															<span class="badge-icon kt-media kt-media--sm kt-media--circle  kt-margin-t-5 kt-margin-r-5">
-																<img src="../assets/media/badge-icon/Asset 11.png" alt="image" data-pagespeed-url-hash="1157093674" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-															</span>
-														</div>
-													</div>
-													<div style="margin-bottom: 20px">
-														<h6>Rank</h6>
-														<span style="pointer-events: none" id="rank_status" name="rank_status" class="btn btn-clean btn-bold">
-															Kouhai
-														</span>
-													</div>
-													<div style="margin-bottom: 20px">
-														<h6>
-															Interest
-														</h6>
-														<div id="interest_badge" name="interest_badge">
-															<span class="btn btn-label-link interest">
-																#DataVisualization
-															</span>
-															<span class="btn btn-label-link interest">
-																#DataAnalysis
-															</span>
-															<span class="btn btn-label-link interest">
-																#BigData
-															</span>
-															<span class="btn btn-label-link interest">
-																#Housing
-															</span>
-														</div>
-													</div>
-													<div style="margin-bottom: 20px">
-														<h6>
-															Current Goals
-														</h6>
-														<div id="interest_badge" name="interest_badge">
-															<span class="btn btn-label-info interest">
-																Find Mentor
-															</span>
-															<span class="btn btn-label-info interest">
-																Get Inspired
-															</span>
-															<span class="btn btn-label-info interest">
-																Find Freelancer Gigs
-															</span>
-														</div>
-													</div>
-													<div style="margin-bottom: 20px">
-														<h6>Social Media</h6>
-														<div id="socialMedia_badge" name="socialMedia_badge">
-															<div class="kt-widget__action">
-																<a href="#" class="btn btn-facebook kt-margin-r-5"><span class="socicon-facebook"></span></a>
-																<a href="#" class="btn btn-twitter kt-margin-r-5"><span class="socicon-twitter"></span></a>
-																<a href="#" class="btn btn-linkedin kt-margin-r-5 	"><span class="socicon-linkedin"></span></a>
-																<a href="#" class="btn btn-google kt-margin-r-5 kt-hidden"><span class="socicon-google"></span></a>
-																<a href="#" class="btn btn-instagram kt-margin-r-5 kt-hidden"><span class="socicon-instagram"></span></a>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="tab-pane" id="experience_tab" role="tabpanel">
-													<h4 style="margin-bottom: 20px">Experience</h4>
-													<div class="padding-lr-5">
-														<div class="experince-portlet" id="experience" name="experience">
-															<h5>
-																<span id="experince_title" name="experience_title">New Business Development</span>
-															</h5>
-															<h6>
-																<span id="experience_office" name="expericence_office">Pasona Group Inc. Global Network</span>
-															</h6>
-															<h6>
-																<span class="experience_date" id="experince_date" name="experince_date">Nov 2017 - Present | Awaji, Japan</span>
-															</h6>
-															<div style="margin-top: 20px">
-																<p align="justify" id="experince_discription">
-																	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
-																</p>
-															</div>
-														</div>
-														<div class="experince-portlet" id="experience" name="experience">
-															<h5><span id="experince_title" name="experience_title">New Business Development</span></h5>
-															<h6><span id="experience_office" name="expericence_office">Pasona Group Inc. Global Network</span></h6>
-															<h6><span class="experience_date" id="experince_date" name="experince_date">Nov 2017 - Present | Awaji, Japan</span></h6>
-															<div style="margin-top: 20px">
-																<p align="justify" id="experince_discription"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="tab-pane" id="activities_tab" role="tabpanel">
-													<h4 style="margin-bottom: 20px">Activities</h4>
-													<ul class="nav nav-pills nav-fill" role="tablist">
-														<li class="nav-item">
-															<a class="nav-link link-questions active" data-toggle="tab" href="#questions_tab">Questions</a>
-														</li>
-														<li class="nav-item">
-															<a class="nav-link link-answers" data-toggle="tab" href="#answers_tab">Answers</a>
-														</li>
-													</ul>
-													<div class="tab-content">
-														<div class="tab-pane active" id="questions_tab" role="tabpanel">
-															<div class="kt-notification">
-																<a href="#" class="kt-notification__item">
-																	<div class="kt-notification__item-details">
-																		<div style="font-weight: 500" class="kt-notification__item-title">
-																			Affordable Japanese Language School
-																		</div>
-																		<div class="kt-notification__item-time">
-																			<span class="total-answers" id="total_answers">12</span> Answer | Answered by <span id="answered_by" name="answered_by">Senpai</span> | Asked <span id="asked_day" name="asked_day">4d</span> Ago
-																		</div>
-																	</div>
-																</a>
-																<a href="#" class="kt-notification__item">
-																	<div class="kt-notification__item-details">
-																		<div style="font-weight: 500" class="kt-notification__item-title">
-																			Affordable Japanese Language School
-																		</div>
-																		<div class="kt-notification__item-time">
-																			<span class="total-answers" id="total_answers">12</span> Answer | Answered by <span id="answered_by" name="answered_by">Senpai</span> | Asked <span id="asked_day" name="asked_day">4d</span> Ago
-																		</div>
-																	</div>
-																</a>
-																<a href="#" class="kt-notification__item">
-																	<div class="kt-notification__item-details">
-																		<div style="font-weight: 500" class="kt-notification__item-title">
-																			Affordable Japanese Language School
-																		</div>
-																		<div class="kt-notification__item-time">
-																			<span class="total-answers" id="total_answers">12</span> Answer | Answered by <span id="answered_by" name="answered_by">Senpai</span> | Asked <span id="asked_day" name="asked_day">4d</span> Ago
-																		</div>
-																	</div>
-																</a>
-																<a href="#" class="kt-notification__item">
-																	<div class="kt-notification__item-details">
-																		<div style="font-weight: 500" class="kt-notification__item-title">
-																			Affordable Japanese Language School
-																		</div>
-																		<div class="kt-notification__item-time">
-																			<span class="total-answers" id="total_answers">12</span> Answer | Answered by <span id="answered_by" name="answered_by">Senpai</span> | Asked <span id="asked_day" name="asked_day">4d</span> Ago
-																		</div>
-																	</div>
-																</a>
-															</div>
-														</div>
-														<div class="tab-pane" id="answers_tab" role="tabpanel">
-															<div class="kt-notification">
-																<a href="#" class="kt-notification__item">
-																	<div class="kt-notification__item-details">
-																		<div style="font-weight: 500" class="kt-notification__item-title">
-																			Affordable Japanese Language School
-																		</div>
-																		<div class="kt-notification__item-time">
-																			Asked by <span id="asked_bay" name="asked_bay">Ahmad Rifaldi</span> | Answered <span id="answered_day" name="answered_day">4d</span> Ago
-																		</div>
-																	</div>
-																</a>
-																<a href="#" class="kt-notification__item">
-																	<div class="kt-notification__item-details">
-																		<div style="font-weight: 500" class="kt-notification__item-title">
-																			Affordable Japanese Language School
-																		</div>
-																		<div class="kt-notification__item-time">
-																			Asked by <span id="asked_bay" name="asked_bay">Ahmad Rifaldi</span> | Answered <span id="answered_day" name="answered_day">4d</span> Ago
-																		</div>
-																	</div>
-																</a>
-																<a href="#" class="kt-notification__item">
-																	<div class="kt-notification__item-details">
-																		<div style="font-weight: 500" class="kt-notification__item-title">
-																			Affordable Japanese Language School
-																		</div>
-																		<div class="kt-notification__item-time">
-																			Asked by <span id="asked_bay" name="asked_bay">Ahmad Rifaldi</span> | Answered <span id="answered_day" name="answered_day">4d</span> Ago
-																		</div>
-																	</div>
-																</a>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
+                            <div class="kt-portlet">
+								<div class="kt-portlet__head">
+									<div class="kt-portlet__head-label">
+										<span class="kt-portlet__head-icon">
+											<i class="flaticon2-graph-1"></i>
+										</span>
+										<h3 class="kt-portlet__head-title">
+											Blacklisted Users
+										</h3>
 									</div>
 								</div>
-
-                            </div>
-
-							<!--begin::Modal-->
-							<div class="modal fade" id="kt_modal_badge" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-											<h5 class="modal-title" id="exampleModalLabel">Add Badges</h5>
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											</button>
-										</div>
-										<form id="kt_form_badge">
-											<div class="modal-body">
-                                                <div class="form-group row">
-													<label for="example-text-input" class="col-4 col-form-label">Badges</label>
-													<div class="col-8">
-														<select class="form-control kt-select2" id="kt_select2_badge" name="badges" multiple="multiple">
-															<option>Transportation</option>
-															<option>Business</option>
-														</select>
-													</div>
-													<!-- <select class="form-control kt-select2" id="kt_select2_badges" name="param">
-														<option></option>
-													</select> -->
-												</div>
-											</div>
-											<div class="modal-footer" style="justify-content:center;">
-												<button type="reset" class="btn btn-secondary" data-dismiss="modal">Close</button>
-												<button type="submit" class="btn btn-success" id="kt_sweetalert_success">Submit</button>
-											</div>
-										</div>
-									</form>
+								<div class="kt-portlet__body">
+                                    <table class="table table-striped table-bordered table-hover table-checkable" id="table_user_blacklist"></table>
 								</div>
 							</div>
-
-							<!--end::Modal-->
 
                         </div>
 
@@ -784,64 +439,6 @@ License: You must have a valid license purchased only from themeforest(the above
 
 		<!--begin::Page Scripts(used by this page) -->
         <script src="../assets/js/script/ajax.js" type="text/javascript"></script>
-		<!-- <script src="../assets/js/pages/crud/forms/widgets/select2.js" type="text/javascript"></script> -->
-        <script>
-			$('#kt_sweetalert_success').click(function(e) {
-				swal.fire({
-					title: "Success",
-					text: "New badge has been added to the user!",
-					type: "success",
-					confirmButtonText: "Ok",
-					confirmButtonClass: "btn btn-brand"
-				}).then(function(result) {
-                    // Button Result
-					// location.reload();
-				});
-			});
-
-			$("#kt_form_badge").validate({
-	            // define validation rules
-                rules: {
-	                badges: {
-	                    required: true
-	                }
-	            },
-
-	            invalidHandler: function(event, validator) {
-	                KTUtil.scrollTop();
-	            },
-	            submitHandler: function(form) {
-	                //form[0].submit(); // submit the form
-	            }
-        	});
-
-	        $('#kt_modal_badge').on('shown.bs.modal', function() {
-	            // multi select
-	            $('#kt_select2_badge').select2({
-	                placeholder: "- Choose badge -",
-	            });
-	        });
-
-			$('#kt_sweetalert_blacklist').click(function(e) {
-				swal.fire({
-					title: 'Are you sure?',
-					text: "You won't be able to revert this!",
-					type: 'warning',
-					showCancelButton: true,
-					confirmButtonText: 'Yes, add to blacklist!',
-					cancelButtonText: 'No, cancel!',
-					reverseButtons: true
-				}).then(function(result) {
-					if (result.value) {
-						swal.fire(
-								'Blacklisted!',
-								'User has been added to blacklist.',
-								'success'
-							)
-					}
-				});
-			});
-		</script>
 
 		<!--end::Page Scripts -->
 	</body>
