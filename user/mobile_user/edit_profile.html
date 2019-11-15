@@ -34,6 +34,9 @@
 			overflow: auto !important;
 			height: 100% !important;
 		}
+		.fixfixed_header, .fixfixed_footer {
+			position: absolute !important;
+		}
 	</style>
 </head>
 <!-- end::Head -->
@@ -901,12 +904,14 @@
 		$(document).ready(function(){
 			$("textarea,input").focus(function(){
 				jQuery('#footer-mobile-menu').removeClass('footer');
+				jQuery('#kt_header_mobile').addClass('fixfixed_header');
 			})
 			$("textarea,input").blur(function(){
 				jQuery('#footer-mobile-menu').addClass('footer');
 			});
 			$(".tag-group").focusin(function(){
 				jQuery('#footer-mobile-menu').removeClass('footer');
+				jQuery('#kt_header_mobile').addClass('fixfixed_header');
 			})
 			$(".tag-group").focusout(function(){
 				jQuery('#footer-mobile-menu').addClass('footer');
