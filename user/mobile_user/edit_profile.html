@@ -35,7 +35,7 @@
 			height: 100% !important;
 		}
 		.fixfixed_header, .fixfixed_footer {
-			position: sticky !important;
+			position: absolute !important;
 			top: 0px !important;
 		}
 	</style>
@@ -909,6 +909,7 @@
 			})
 			$("textarea,input").blur(function(){
 				jQuery('#footer-mobile-menu').addClass('footer');
+				jQuery('#kt_header_mobile').removeClass('fixfixed_header');
 			});
 			$(".tag-group").focusin(function(){
 				jQuery('#footer-mobile-menu').removeClass('footer');
@@ -916,6 +917,7 @@
 			})
 			$(".tag-group").focusout(function(){
 				jQuery('#footer-mobile-menu').addClass('footer');
+				jQuery('#kt_header_mobile').removeClass('fixfixed_header');
 			})
 
 		})
