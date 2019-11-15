@@ -22,7 +22,7 @@
 	<link href="../assets/css/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/css/skins/brand/dark.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/css/skins/aside/dark.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/css/senpai-style.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/senpai-style.css" rel="stylesheet" type="text/css" /> 
 	<link href="../assets/css/senpai-theme.css" rel="stylesheet" type="text/css" />
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
@@ -31,11 +31,7 @@
 			pointer-events: none;
 			color: #48465b !important;
 		}
-		.kt-app__aside{
-			width: 100vw !important;
-			top: 60px;
-			left: 420px;
-		}
+		
 		.kt-app__aside-overlay{
 			z-index: 0;
 		}
@@ -43,29 +39,83 @@
 			top: 55px;
 			left: 15px;
 		}
+
 		@media(max-height: 812px){
+			.kt-app__aside{
+				width: 100vw !important;
+				top: 60px;
+				left: 420px;
+			}
 			#kt_chat_aside {
 				height: 85.5vh;
 			}
+			.kt-scroll--pull {
+				height: 544px !important;
+			}
 		}
 		@media(max-height: 740px){
+			.kt-app__aside{
+				width: 100vw !important;
+				top: 60px;
+				left: 420px;
+			}
 			#kt_chat_aside {
 				height: 85vh;
 			}
+			.kt-scroll--pull {
+				height: 544px !important;
+			}
 		}
 		@media(max-height: 667px){
+			.kt-app__aside{
+				width: 100vw !important;
+				top: 60px;
+				left: 420px;
+			}
 			#kt_chat_aside {
 				height: 82vh;
 			}
+			.kt-scroll--pull {
+				height: 462px !important;
+			}
 		}
 		@media(max-height: 640px){
+			.kt-app__aside{
+				width: 100vw !important;
+				top: 60px;
+				left: 420px;
+			}
 			#kt_chat_aside {
 				height: 83vh;
 			}
+			.kt-scroll--pull {
+				height: 446px !important;
+			}
 		}
 		@media (max-height: 568px) {
+			.kt-app__aside{
+				width: 100vw !important;
+				top: 60px;
+				left: 420px;
+
+			}
 			#kt_chat_aside {
 				height: 81vh;
+				animation: kt-animate-fade-in .3s linear 1;
+			}
+			.kt-scroll--pull {
+				height: 385px !important;
+			}
+		}
+		@media(min-width: 1025px) {
+			.kt-app .kt-app__aside.kt-app__aside--lg {
+				width: 450px !important;
+			}
+			#kt_chat_aside {
+				height: auto !important;
+			}
+			.kt-scroll--pull {
+				height: 464px !important;
 			}
 		}
 	</style>
@@ -371,7 +421,7 @@
 						<div class="kt-grid kt-grid--desktop kt-grid--ver kt-grid--ver-desktop kt-app">
 
 							<!--Begin:: App Aside Mobile Toggle-->
-							<button class="kt-app__aside-close" id="kt_chat_aside_close">
+							<button class="kt-app__aside-close kt-hidden" id="kt_chat_aside_close">
 								<i class="la la-close"></i>
 							</button>
 
@@ -383,7 +433,7 @@
 								<!--begin::Portlet-->
 								<div class="kt-portlet kt-portlet--last">
 									<div class="kt-portlet__body chat-body">
-										<div id="search-chat" class="kt-searchbar chat-searchbar" style="padding: 15px 10px">
+										<div id="search-chat" class="kt-searchbar chat-searchbar" style="padding: 5px 10px">
 											<div class="input-group">
 												<div class="input-group-prepend"><span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
 													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -398,7 +448,7 @@
 										<div class="kt-widget kt-widget--users kt-mt-20">
 											<div class="kt-scroll kt-scroll--pull">
 												<div class="kt-widget__items">
-													<a href="#" class="kt-widget__item active">
+													<a onclick="tutupJendela()" href="#portlet-pesan" class="kt-widget__item active">
 														<span class="kt-media kt-media--circle">
 															<img src="../assets/media/users/300_9.jpg" alt="image">
 														</span>
@@ -467,7 +517,7 @@
 															<span class="kt-widget__date">4 Days</span>
 														</div>
 													</a>
-													<a href="#" class="kt-widget__item">
+													<!-- <a href="#" class="kt-widget__item">
 														<span class="kt-media kt-media--circle">
 															<img src="../assets/media/users/100_8.jpg" alt="image">
 														</span>
@@ -530,7 +580,7 @@
 														<div class="kt-widget__action">
 															<span class="kt-widget__date">1 Year</span>
 														</div>
-													</a>
+													</a> -->
 													<a href="#" class="kt-widget__item">
 														<span class="kt-media kt-media--circle">
 															<img src="../assets/media/users/300_9.jpg" alt="image">
@@ -1010,7 +1060,11 @@
 
     	})
     </script>
-
+    <script>
+    	$(".kt-widget__item").click(function(){
+    		$("#kt_chat_aside_close").click();
+    	})
+    </script>
 </body>
 <!-- end::Body -->
 </html>
