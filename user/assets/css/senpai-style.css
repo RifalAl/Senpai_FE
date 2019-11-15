@@ -1285,6 +1285,8 @@ html {
 }
 
 @media (max-width: 320px) {
+	body { font-size: 16px !important; }
+	input, select { font-size: 100% !important; }
 	.mobile-logo {
 		height : 20px;
 	}
