@@ -33,13 +33,15 @@
 		}
 		
 		.kt-app__aside-overlay{
-			z-index: 0;
-			animation-direction: reverse;
+			z-index: 999;
 
 		}
 		.kt-app__aside--on .kt-app__aside-close {
 			top: 55px;
 			left: 15px;
+		}
+		.kt-app_aside {
+			transition: none !important;
 		}
 
 		@media(max-height: 812px){
@@ -103,8 +105,6 @@
 			}
 			#kt_chat_aside {
 				height: 81vh;
-				animation: kt-animate-fade-in .3s linear 1;
-				animation-direction: reverse;
 			}
 			.kt-scroll--pull {
 				height: 385px !important;
