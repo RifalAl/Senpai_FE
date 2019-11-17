@@ -421,8 +421,8 @@
 																	Fascal Ivandry
 																</h6>
 																<p>
-																	<span id="user_job" name="user_job">Product Manager</span> at 
-																	<span id="job_place" name="job_place">Pasona</span>
+																	<span id="user_job" name="user_job">Chief Cleaning Service</span> at 
+																	<span id="job_place" name="job_place">Senpai Internationl Corporation</span>
 																</p>
 																<p><span id="question_time" name="question_time">2d Ago</span></p>
 															</div>
@@ -1939,10 +1939,6 @@
 			$(".solved-badge").show();
 			$(".solved-badge-2").hide();
 		}
-		// if (widthScreen >= 1024) {
-		// 	$("#btn_make_question").hide();
-		// 	$("#make_question").show();
-		// }
 	</script>
 	<!--end::Page Scripts -->
 	<script>
@@ -2032,9 +2028,9 @@
 		var numItems = $('.question').length;
 		var jumlah = numItems + 1;
 		var i;
-		for(i=0; i<=jumlah; i++){
+		for(i=1; i<=jumlah; i++){
 			var questHeight = $('#question_info_'+i).height();
-			// console.log(questHeight, $('#question_info_'+i));
+			console.log(questHeight, $('#question_info_'+i));
 			if (questHeight > 60) {
 				$('#head_question_'+i).addClass('plus_height');
 			}
