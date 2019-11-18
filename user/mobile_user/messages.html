@@ -356,7 +356,7 @@
 										<div class="kt-widget kt-widget--users kt-mt-20">
 											<div class="kt-scroll kt-scroll--pull">
 												<div class="kt-widget__items">
-													<a onclick="tutupJendela()" href="#portlet-pesan" class="kt-widget__item active">
+													<a href="#portlet-pesan" class="kt-widget__item active">
 														<span class="kt-media kt-media--circle">
 															<img src="../assets/media/users/300_9.jpg" alt="image">
 														</span>
@@ -969,12 +969,15 @@
     	})
     </script>
     <script>
-    	$(".kt-widget__item").click(function(){
-    		$("#kt_chat_aside_close").click();
-    	})
-    	jQuery(function(){
-    		jQuery('#kt_chat_aside_mobile_toggle').click();
-    	});
+    	if (widthScreen <= 1024) {
+    		$(".kt-widget__item").click(function(){
+    			$("#kt_chat_aside_close").click();
+    		})
+    		jQuery(function(){
+    			jQuery('#kt_chat_aside_mobile_toggle').click();
+    		});
+    	}
+    	
     </script>
 </body>
 <!-- end::Body -->

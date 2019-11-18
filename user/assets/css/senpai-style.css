@@ -546,6 +546,15 @@ html {
 .topic-session {
 	font-weight: 400;
 }
+.user-info {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
+	/*background: -webkit-linear-gradient(50deg, black, black,black,#eee);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;*/
+}
 .
 
 
