@@ -27,6 +27,12 @@
 	<link href="../assets/css/senpai-theme.css" rel="stylesheet" type="text/css" />
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
+	<style>
+		.bookmark-active {
+			background: #ffb822 !important;
+			color: black !important;
+		}
+	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -399,14 +405,14 @@
 										<img class="article_img" src="../assets/media/bg/bg-11.jpg">
 
 										<div class="bookmark-portlet">
-											<button id="btn_bookmark" class="btn btn-warning btn-elevate">
+											<button id="btn_bookmark" class="btn btn-outline-warning">
 												<span class="fa fa-bookmark"></span>
 											</button>
 										</div>
 									</div>
 									<div class=" kt-portlet__body padding-all-5 ">
 										<div class="alert-text padding-all-10">
-											<h5 id="judul_article" class="alert-heading">Best Place to Stay in Japan</h5>
+											<h5 id="judul_article">Best Place to Stay in Japan</h5>
 											<span class="emergency-icon">
 											</span>
 											<p id="isi_article" align="justify">
@@ -539,6 +545,14 @@
 			})
 
 		})
+	</script>
+
+	<script>
+		$(document).ready(function() {
+		  $('#btn_bookmark').click(function() {
+		    $(this).toggleClass("bookmark-active");
+		  });
+		});
 	</script>
 </body>
 <!-- end::Body -->
