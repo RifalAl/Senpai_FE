@@ -33,6 +33,15 @@
 		    top: -10px !important;
 		    right: -15px !important;
 		}
+		.masking {
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			position: fixed;
+			top:0; left:0; right:0; bottom:0;
+			z-index: 10;
+			display: none
+		}
 	</style>
 </head>
 <!-- end::Head -->
@@ -333,8 +342,10 @@
 				</div>
 				<!-- end:: Header -->
 				<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+					<div class="masking">
+					</div>
 					<!-- begin:: Content Head -->
-					<div  class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid" >
+					<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid" >
 						<div class="row">
 							<div class="col-lg-8">
 								<div style="position: fixed;top: 50px;right: 0;left: 0;z-index: 96" class="progress progress-sm kt-hidden">
@@ -1090,6 +1101,15 @@
 			})
 
 		})
+	</script>
+	<script>
+		$('.btn-icon').click(function() {
+			$(".masking").css("display", "block");
+		});
+
+		$('.masking').click(function() {
+			$(".masking").css("display", "none");
+		});
 	</script>
 </body>
 <!-- end::Body -->
