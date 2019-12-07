@@ -38,6 +38,9 @@
 			position: absolute !important;
 			top: 0px !important;
 		}
+		.height_content{
+			height: 102vh;
+		}
 	</style>
 </head>
 <!-- end::Head -->
@@ -331,7 +334,7 @@
 				<!-- end:: Header -->
 				<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 					<!-- begin:: Content Head -->
-					<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+					<div id="height-content" class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
 						<div class="row">
 							<div class="col-md-12 col-lg-10 offset-lg-1">
 								<div class="kt-portlet kt-portlet--mobile">
@@ -905,19 +908,20 @@
 		$(document).ready(function(){
 			$("textarea,input").focus(function(){
 				jQuery('#footer-mobile-menu').removeClass('footer');
-				jQuery('#kt_header_mobile').addClass('fixfixed_header');
+				jQuery('#height-content').addClass('height_content');
 			})
 			$("textarea,input").blur(function(){
 				jQuery('#footer-mobile-menu').addClass('footer');
-				jQuery('#kt_header_mobile').removeClass('fixfixed_header');
+				jQuery('#height-content').removeClass('height_content');
 			});
 			$(".tag-group").focusin(function(){
 				jQuery('#footer-mobile-menu').removeClass('footer');
-				jQuery('#kt_header_mobile').addClass('fixfixed_header');
+				jQuery('#height-content').addClass('height_content');
+				
 			})
 			$(".tag-group").focusout(function(){
 				jQuery('#footer-mobile-menu').addClass('footer');
-				jQuery('#kt_header_mobile').removeClass('fixfixed_header');
+				jQuery('#height-content').removeClass('height_content');
 			})
 
 		})

@@ -1,4 +1,43 @@
-	.kt-widget__username, #profession, #location {
+.m-messenger .m-messenger__form .m-messenger__form-tools {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 0 0 10px;
+}
+.m-messenger .m-messenger__form .m-messenger__form-tools .m-messenger__form-attachment {
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-ms-border-radius: 100%;
+	-o-border-radius: 100%;
+	border-radius: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	text-align: center;
+	vertical-align: middle;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 0;
+	cursor: pointer;
+
+}
+.m-messenger .m-messenger__form .m-messenger__form-attachment {
+	background-color:#f7f8fa;
+	color:#cfcedb;
+}
+
+.kt-widget__username, #profession, #location {
 	pointer-events: none;
 	color: #48465b !important;
 }
@@ -35,7 +74,7 @@
 		height: calc(100vh - 190px) !important;
 	}
 	.height-test {
-    	height: calc(100vh - 170px) !important;
+		height: calc(100vh - 170px) !important;
 	}
 
 }
@@ -52,7 +91,7 @@
 		width: 450px !important;
 	}
 	.height-test {
-    	height: calc(100vh - 286px) !important;
+		height: calc(100vh - 286px) !important;
 	}
 }
 

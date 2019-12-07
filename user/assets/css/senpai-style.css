@@ -552,7 +552,7 @@ html {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	width: 100%;/*
+	width: 80%;/*
 	background: -webkit-linear-gradient(50deg, black, black,black,#eee);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;*/

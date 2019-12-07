@@ -48,6 +48,12 @@
 		.img {
 			width: var(--ukuran-width);
 		}
+		.btn-wrap {
+			left: 50%;
+			position: absolute;
+			width: 100%;
+			margin-top: 20px;
+		}
 		
 		@media (min-width: 512px) {
 			:root {
@@ -84,8 +90,14 @@
 	<div class="page-container">
 		<div class="the_image">
 			<img class="img" src="../assets/media/misc/404_.svg">
+			<div class="btn-wrap">
+				<center>
+					<button style="background: #0582C1" class="btn btn-info"><i class="fa fa-arrow-left"></i>Go Back</button>
+				</center>
+			</div>
 		</div>
 	</div>	
+
 </body>
 <script>
 	var KTAppOptions = {
