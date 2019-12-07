@@ -92,25 +92,59 @@ img {vertical-align: middle;}
 }
 
 
-@media (max-width: 800px){
+
+@media(max-height: 1280px){
 	.mySlides{
-		margin-top: 20%;
+		margin-top: 45%;
 	}
+}
+@media(max-height: 812px){
+	.mySlides{
+		margin-top: 60%;
+	}
+}
+@media(max-height: 740px){
+	.mySlides{
+		margin-top: 50%;
+	}
+}
+
+@media(max-height: 640px){
+	.mySlides{
+		margin-top: 45%;
+	}
+}
+
+@media(max-height: 568px){
+	.mySlides{
+		margin-top: 35%;
+	}
+}
+
+@media (max-width: 800px){
 	.dot_position{
 		text-align: center;
 		position: absolute;
 		bottom: 10px;
-		left: calc(50% - 13%);
+		left: calc(50% - 47px);
 	}
 
 	.modal-content{
-		height: 97.5vh;
+		height: 98vh;
+		border:none;
 	}
 
 	.modal-body{
 		padding: .5rem;
+	}
+	.modal-backdrop.show {
+		opacity: 1;
+	}
+	.modal-backdrop {
+		background-color: white;
 	}	
 }
+
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
