@@ -100,24 +100,24 @@ img {vertical-align: middle;}
 }
 @media(max-height: 812px){
 	.mySlides{
-		margin-top: 60%;
+		margin-top: 45%;
 	}
 }
 @media(max-height: 740px){
 	.mySlides{
-		margin-top: 50%;
+		margin-top: 35%;
 	}
 }
 
 @media(max-height: 640px){
 	.mySlides{
-		margin-top: 45%;
+		margin-top: 30%;
 	}
 }
 
 @media(max-height: 568px){
 	.mySlides{
-		margin-top: 35%;
+		margin-top: 20%;
 	}
 }
 
