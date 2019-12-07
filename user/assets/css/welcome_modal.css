@@ -92,7 +92,7 @@ img {vertical-align: middle;}
 }
 
 
-
+ 
 @media(max-height: 1280px){
 	.mySlides{
 		margin-top: 45%;
@@ -145,6 +145,11 @@ img {vertical-align: middle;}
 	}	
 }
 
+@media(min-width: 1280px){
+	.mySlides{
+		margin-top: 2%;
+	}
+}
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
