@@ -25,3 +25,18 @@ function showSlides(n) {
 $(window).on('load',function(){
 	$('#how_to_modal').modal('show');
 });
+
+$(window).resize(function() {
+	let width = $(window).width();
+	if (width <= 1024) {
+		$("#dot-position").addClass("dot_position");
+		$("#modal_content").addClass("height_modal");
+		$("#modal-body").addClass("modal-padding");
+
+	}
+	else {
+		$("#dot-position").removeClass("dot_position");
+		$("#modal_content").removeClass("height_modal");
+		$("#modal-body").removeClass("modal-padding");
+	}
+});

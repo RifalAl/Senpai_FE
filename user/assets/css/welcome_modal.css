@@ -90,6 +90,28 @@ img {vertical-align: middle;}
 	from {opacity: .4} 
 	to {opacity: 1}
 }
+
+
+@media (max-width: 800px){
+	.mySlides{
+		margin-top: 20%;
+	}
+	.dot_position{
+		text-align: center;
+		position: absolute;
+		bottom: 10px;
+		left: calc(50% - 13%);
+	}
+
+	.modal-content{
+		height: 97.5vh;
+	}
+
+	.modal-body{
+		padding: .5rem;
+	}	
+}
+
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
 	.prev, .next,.text {font-size: 11px}
